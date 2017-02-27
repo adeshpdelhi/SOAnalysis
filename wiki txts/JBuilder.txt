@@ -1,0 +1,6 @@
+ which was eventually purchased by Embarcadero Technologies in 2008.
+Oracle had based the first versions of 
+
+
+User interface and features changed much from prior versions, first version redone to work on Eclipse
+JBuilder 1 through 3 were based on the Delphi IDE. JBuilder 3.5 through 2006 were based on Primetime, their all-Java IDE framework. JBuilder 2007 "Peloton" was the first JBuilder release to be based on the Eclipse IDE framework.

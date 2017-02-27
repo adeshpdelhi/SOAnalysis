@@ -1,0 +1,17 @@
+.
+iText was written by Bruno Lowagie, Paulo Soares and others, and as of version 5.0.0 (released Dec 7, 2009) is distributed under the , distributed by iText Software Corp.
+iText provides support for most advanced PDF features such as 
+
+
+iText (formerly 
+In 1999, Lowagie threw away the rugPdf code and wrote a new library, iText, from scratch. Lowagie created iText as a library that Java developers could use to create PDF documents without knowing PDF syntax, (FOSS) product on February 14, 2000. In the summer of 2000, Paulo Soares joined the project and is now considered one of the main developers.
+In late 2008, iText became available for proprietary license, and in early 2009 
+iText has since been ported to the . While it has a separate codebase, it is synchronized to the main iText release schedule.
+iText adheres to most modern day PDF standards, including:
+Watch PDF and Standards, at the iText Summit in 2012.
+iText was originally released under the MPL/LGPL. At the end of 2009, with the release of iText 5, the license was switched to the 
+iText is a registered trademark by iText Group NV.
+In 2007, 
+In 2011, iText was featured on 
+In 2013, Deloitte nominated the iText Software Group for the Technology Fast 50 Award in the Benelux. The company was ranked 10th in the Benelux and Third in Belgium.
+In 2014, iText won the BelCham Entrepreneurship Award in the category "Most Promising Company of the Year" iText was also featured on the PDF Days in Cologne, Washington DC en New York, on Java One in San Francisco, on Devoxx in Antwerp, and many other events.

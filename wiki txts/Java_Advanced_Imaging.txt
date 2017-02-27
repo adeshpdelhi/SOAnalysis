@@ -1,0 +1,4 @@
+ which allows developers to create their own image manipulation routines without the additional cost or licensing restrictions, associated with commercial image processing software.
+ and later ships with it preinstalled.
+While the API is provided in  technology on the platform to provide better performance.
+

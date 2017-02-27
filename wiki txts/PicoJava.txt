@@ -1,0 +1,9 @@
+				 and competitive performance on code not written in the Java language.
+The picoJava specification does not include any .
+
+
+picoJava was originally designed to be used in consumer electronic products that run Java applications.
+ code of picoJava was later released under open-source, but the download page is currently not available.
+In 2000 , a development system featuring a picoJava Architecture processor.
+The open-source version of picoJava has been implemented in an 
+

@@ -1,0 +1,3 @@
+ with the following new features:
+In August 2001, the developers made a  capable of working with Java. Most Pizza applications can run in a Java environment, but certain cases will cause problems.
+Work on Pizza has more or less stopped since 2002. Its main developers have concentrated instead on the 

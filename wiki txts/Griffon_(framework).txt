@@ -1,0 +1,11 @@
+ programming language (which is in turn based on the Java platform). Griffon is intended to be a high-productivity framework by rewarding use of the Model-View-Controller paradigm, providing a stand-alone development environment and hiding much of the configuration detail from the developer.
+The first release is the fruit of the effort by the Groovy Swing team and an attempt to take the best of rapid application development, as indicated by its Grails-like structure, the agility of Groovy, and the availability of components for Swing.
+
+
+Griffon aims to reduce the typical confusion that occurs with traditional Java UI development. Due to the MVC structure of Griffon, developers never have to go searching for files or be confused on how to start a new project. Everything begins with:
+The generated project follows this structure:
+The builder infrastructure enables seamless integration of different widget libraries such as Swing, JIDE, and SwingX.
+In the first release, three sample applications are included&#160;:
+Griffon can be extended with the use of plugins. Plugins provide run-time access to testing libraries such as Easyb and FEST, and all widget libraries besides core Swing are provided as plugins. The plugin system allows for a wide range of additions, for example
+Features that would eventually become integral parts of Griffon (UI builders) were featured in these books:
+Books that cover Griffon:

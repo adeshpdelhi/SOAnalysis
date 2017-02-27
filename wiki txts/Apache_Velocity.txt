@@ -1,0 +1,8 @@
+ design pattern).
+Velocity is an .
+
+
+Some common types of applications that use Velocity are:
+The following :
+processed by Velocity produce the following HTML:
+The syntax and overall concept of the Apache Velocity templates is similar to the syntax of the older 

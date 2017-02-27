@@ -1,0 +1,4 @@
+.
+HotJava Views consisted of four applications:
+The  icon bar was used to switch between applications. Other third-party Java applications could be added to the Selector.
+

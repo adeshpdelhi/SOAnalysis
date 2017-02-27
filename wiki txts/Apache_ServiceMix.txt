@@ -1,0 +1,12 @@
+.
+The productized and supported release of ServiceMix 4 is from JBoss and called .
+ is a free Apache 2.0 Licensed upstream community for the JBoss Fuse product from Red Hat.
+The current version of ServiceMix fully supports the 
+ServiceMix is composed the latest versions of .
+Additional installation features include:
+
+ServiceMix is an 
+
+It was accepted as an official Apache project by the ASF Board of Directors on September 19, 2007.
+
+

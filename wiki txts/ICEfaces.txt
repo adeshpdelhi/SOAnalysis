@@ -1,0 +1,4 @@
+.
+
+
+ICEfaces is designed to work with Java EE servers, encapsulating  of a web page from the server-side.

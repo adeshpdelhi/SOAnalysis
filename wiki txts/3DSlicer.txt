@@ -1,0 +1,31 @@
+.
+
+
+3D Slicer is a free open source software (BSD-style license) that is a flexible, modular platform for image analysis and visualization. 3D Slicer can be extended to enable development of both interactive and  tools for a variety of applications.
+3D Slicer provides , among other capabilities. 3D Slicer has a modular organization that allows the addition of new functionality and provides a number of generic features not available in competing tools.
+The interactive visualization capabilities of 3D Slicer include the ability to display arbitrarily oriented image slices, build surface models from image labels, and hardware accelerated volume rendering. 3D Slicer also supports a rich set of annotation features ( and measurement widgets, customized colormaps).
+Slicer's capabilities include:
+Slicer is compiled for use on multiple computing platforms, including .
+Slicer is distributed under a  style, free, open source license. The license has no restrictions on use of the software in academic or commercial projects. However, no claims are made on the software being useful for any particular task. It is entirely the responsibility of the user to ensure compliance with local rules and regulations. Slicer has not been formally approved for clinical use in the FDA in the US or by any other regulatory body elsewhere.
+Hardware accelerated volume rendering with nVidia drivers, (on Windows and Linux only).
+ProstateNav Module for MRI guided robot assisted biopsy of the prostate.
+Left: 3D rendering. Right: Open MR system
+Visualization of some atlas-based ROIs which correspond to major anatomical fiber tracts. The atlas was provided as part of a download of .
+High resolution data acquired on 3-Tesla magnet and post-processed using automated tracking procedure.
+High-dimensional white matter atlas generation and group analysis: result of automatic segmentation of novel subjects.
+Patient-specific modeling in a patient with congenital heart disease.
+Left: Three-dimensional model of levator ani subdivisions including the pubic bone and pelvic viscera. Right: The same model without the pubic bone.
+Cortical parcellations derived from SPGR images obtained from a tumor patient.
+Intraoperative colocalization using iMRI images and 3-D Slicer software.
+Slicer started as a masters 
+Slicer software has enabled a variety of research 
+This significant software project has been enabled by the participation of several large-scale .
+Slicer's platform provides functionalities for segmentation, registration and  are supported, and the application integrates interface capabilities to biomedical research software.
+Slicer has been used in a variety of 
+In addition to producing 3D models from conventional MRI images, Slicer has also been used to present information derived from fMRI (using MRI to assess blood flow in the brain related to 
+The Slicer Developer Orientation offers resources for developers new to the platform. Slicer development is coordinated on the slicer-devel mailing list, and a summary of development statistics is available on Ohloh.
+3D Slicer is built on  wrapper to facilitate rapid, iterative development and visualization in the included Python console. The user interface is implemented in Qt, and may be extended using either C++ or Python.
+Slicer supports several types of modular development. Fully interactive, custom interfaces may be written in C++ or Python. Command-line programs in any language may be wrapped using a light-weight  specification, from which a graphical interface is automatically generated.
+For modules that are not distributed in the Slicer core application, a system is available to automatically build and distribute for selective download from within Slicer. This mechanism facilitates the incorporation of code with different license requirements from the permissive BSD-style license used for the Slicer core.
+The Slicer build process utilizes  to automatically build prerequisite and optional libraries (excluding Qt). The core development cycle incorporates automatic testing, as well as incremental and nightly builds on all platforms, monitored using an online dashboard.
+With development still in progress, Slicer is sometimes accused by users of being poorly documented and a lacking in automation facilities (which is useful in batch processing). Other users report that Slicer has excellent documentation and training materials. Also Slicer's user interface and internal processing logic is fully scriptable. Although bugs can be reported to the mailing list and issue tracker, they are addressed based on developer availability. Updated versions are periodically released with updated features, while the development version with the latest source code is available daily.

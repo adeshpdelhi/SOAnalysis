@@ -1,0 +1,1 @@
+				 (IIOP) to propagate the transactions between multiple JTS transaction managers.

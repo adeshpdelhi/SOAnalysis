@@ -1,0 +1,7 @@
+".
+The CXF key design considerations include:
+CXF is often used with  (SOA) infrastructure projects.
+
+
+CXF includes a broad feature set, but it is primarily focused on the following areas:
+Enterprise support for CXF is available from independent vendors, including  for details on all support options.

@@ -1,0 +1,12 @@
+The , and more.
+Electric is currently part of the  (GPL), version 3 or any later.
+
+
+Unlike other systems that design  (wires). This has advantages and disadvantages.
+One advantage is that circuits are always extracted, so analyses that need to know the topology (, etc.) can run faster. Also, by presenting a schematic-capture-like user interface, the system offers a uniform user experience for both IC layout and schematic design. And finally, the nodes-and-arcs view of a circuit makes it easy to add layout constraints to the arcs which allow the designer to "program" the layout so that it stays connected as changes are made.
+This style of design also has disadvantages. One disadvantage is that designers are not used to such an interaction and require training in order to use it. It has been observed that people with no previous experience in IC layout are comfortable with Electric's unusual style, but those who have done IC layout on other systems find Electric difficult to use. Another disadvantage is that it is hard to import polygons from traditional systems because they have to be node-extracted, and the polygons don't always match the set of nodes and arcs provided by Electric.
+Electric was written in the  in the early 1980s (the earliest internal memo on Electric is dated November 19, 1982). For some time after that, Electric was distributed free of charge to universities and research institutions, and found widespread international use.
+In the mid 1980s, Electric was sold commercially by , under the name "Bravo3VLSI".
+In 1988, Electric Editor Incorporated was founded, and sold the system commercially. The company released the source code through the  in 1998.
+In 2000, Static Free Software was created to manage Electric's distribution.
+In September, 2003 the  language. The work was completed in June, 2005. Although the C code is still available, it is no longer developed or supported. The new and improved Java code remains free to all users.

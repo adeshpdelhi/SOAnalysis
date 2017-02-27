@@ -1,0 +1,4 @@
+				 (Container managed persistence). An entity bean is identified by a primary key. If the container in which an entity bean is hosted crashes, the entity bean, its primary key, and any remote references survive the crash.
+In EJB 3.0, entity beans were superseded by the .
+Entity Beans before EJB 2.0 should not be used in great numbers you are essentially limited to using 65536 entity beans at a time. For example, if a client application wanted to monitor the state of 1024 database entries it would take 1024 entity bean references and thus 1024 RMI connections to the EJB server, the EJB server would in turn need to support all 1024 connections from each client application, and would be limited to serving at most 64 client applications at which point all further internet connections would be ignored. These limitations are impossible to overcome when using entity beans over RMI.
+

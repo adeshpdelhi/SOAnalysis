@@ -1,0 +1,9 @@
+, it became a top-level Apache project in 2005.
+The , which reached its first full release in February 2007.
+
+
+In a standard  (JSP) document that intermingles HTML and Java code to achieve the same result. Both approaches are often considered inadequate for large projects because they mix application logic with presentation and make maintenance difficult.
+The goal of Struts is to separate the  that binds together model, view, and controller.
+Requests from the client are sent to the controller in the form of "Actions" defined in the configuration file; if the controller receives such a request it calls the corresponding Action class that interacts with the application-specific model code. The model code returns an "ActionForward", a string telling the controller what output page to send to the client. Information is passed between model and view in the form of special . A powerful custom tag library allows it from the presentation layer to read and write the content of these beans without the need for any embedded Java code.
+Struts is categorized as a 
+Struts also supports  by web forms, and includes a template mechanism called "Tiles" that (for instance) allows the presentation layer to be composed from independent header, footer, menu navigation and content components.

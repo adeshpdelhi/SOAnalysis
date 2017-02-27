@@ -1,0 +1,5 @@
+.
+It features a powerful , but using a more conventional syntax.
+Nice aims to be .
+Source programs are compiled to .
+Work on the Nice language appears to have slowed since early 2006.

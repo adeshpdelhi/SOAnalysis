@@ -1,0 +1,4 @@
+.
+Kaffe, first released in 1996, was the original open-source Java implementation. Initially developed as part of another project, it grew so popular that developers Tim Wilkinson and Peter Mehlitz founded  in the #kaffe channel on irc.freenode.net.
+Kaffe is a lean and portable .
+Unlike other implementations, in the past Kaffe used . Subsequently GNU Classpath introduced GMP support in version 0.98.

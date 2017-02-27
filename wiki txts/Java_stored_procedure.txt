@@ -1,0 +1,7 @@
+				.)
+
+
+SQL/JRT allows a Java function to be called from SQL code like this:
+SQL/JRT also allows Java code to dynamically generate tables using a 
+SQL/JRT stored procedures are implemented in 
+

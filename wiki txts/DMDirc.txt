@@ -1,0 +1,13 @@
+The following tables compare general and technical information between a number of  in independent published literature.
+
+
+Basic general information about the clients: creator/company, license etc. Clients listed on a light purple background are no longer in active development.
+(HexChat is free of charge)
+A brief overview of the release history.
+2.42 
+Lion
+2.38 
+The  on which the clients can run natively (without emulation).
+ operating systems:
+What IRC related protocols and standards are supported by each client.
+Information on what features each of the clients support.

@@ -1,0 +1,10 @@
+ of an enterprise.
+OFBiz is an  top level project.
+
+
+Apache OFBiz is a framework that provides a common . All applications are built around a common architecture using common data, logic and process components. Beyond the framework itself, Apache OFBiz offers functionality including:
+All of Apache OFBiz functionality is built on a common framework. The functionality can be divided into the following distinct layers:
+Apache OFBiz uses the concept of "screens" to represent the Apache OFBiz pages. Each page is, normally, represented as a screen. A page in Apache OFBiz consists of components. A component can be a header, footer, etc. When the page is rendered all the components are combined together as specified in the screen definition. Components might be Java Server Pages ([JSP]s) &lt;deprecated&gt;, FTL pages built around , Forms and Menus Widgets. Widgets are an OFBiz specific technology.
+The business, or application layer defines services provided to the user. The services can be of several types: Java methods, SOAP, simple services, workflow, etc. A service engine is responsible for invocation, transactions and security.
+Apache OFBiz uses a set of well established, open source technologies and standards such as . Although Apache OFBiz is built around the concepts used by Java EE, many of its concepts are implemented in different ways; either because Apache OFBiz was designed prior to many recent improvements in Java EE or because Apache OFBiz authors didn’t agree with those implementations.
+The data layer is responsible for database access, storage and providing a common data interface to the Business layer. Data is accessed not in  name.

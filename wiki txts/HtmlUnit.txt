@@ -1,0 +1,5 @@
+
+The goal is to simulate real browsers; namely  (experimental).
+The most common use of HtmlUnit is , or downloading website content.
+
+

@@ -1,0 +1,12 @@
+
+It is developed alongside a data collection and log parsing engine called . The three products are designed to be used as an integrated solution, referred to as the "ELK stack".
+
+
+Shay Banon created the precursor to Elasticsearch, called Compass, in 2004.
+
+In March 2015, the company 
+Elasticsearch can be used to search all kinds of documents. It provides scalable search, has near 
+Elasticsearch uses  which can be useful for notifying if new documents match for registered queries.
+Another feature is called "gateway" and handles the long-term persistence of the index;
+Notable users of Elasticsearch
+Several organizations offer Elasticsearch as a managed service, including .

@@ -1,0 +1,11 @@
+ project that develops it.
+The project intends to encompass all tools necessary to develop PHP based software. It uses the existing Eclipse Web Tools Project to provide developers with PHP capabilities. All these php tools are easy to use and developers can speed up the development process by using these tools. .
+
+
+
+The project officially began around March 8, 2006. By the end of 2006, the project was approaching the 0.7 release. On April 6, 2007, 0.7 RC3 was released as the final 0.7 version.
+In the latter half of 2007, a series of 1.0 milestones were reached, and on September 18, 2007, PDT 1.0 Final was released.
+The PHP Development Tools project has had two names during its development. * It was initially named PHP Development Tools, then changed to PHP IDE, and reverted to PHP Development Tools on January 1, 2007. Various documentation and reviews use either name.
+Significant PDT development is being done by Zend Technologies. Zend sells a competing product named 
+After the release of PHP, several PHP development tool introduced till 2017. But which have all features that developer want, which are popular. This all answer has Webandmobiletech blog.
+

@@ -1,0 +1,11 @@
+ sharing.
+OneSwarm is based on the Azureus (
+
+
+Oneswarm is still very much in  codebase.
+Feature development and debugging has been slow in spite of its  was stable enough to support a nearly constant swarm of 200,000+ users.
+A separate  have been deployed by those involved with the technology.
+Features of OneSwarm beyond the privacy aspects of the product: file search, sharing permissions, web UI with streaming, real-time transcoding, and remote access.
+To provide privacy, OneSwarm uses source-address rewriting with  downloading.
+OneSwarm's 
+

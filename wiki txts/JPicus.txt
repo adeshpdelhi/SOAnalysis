@@ -1,0 +1,4 @@
+ I/O analysis tool created by Pavel Genevski and other SAP employees in 2009. Its main purpose is to analyze I/O operations inside a Java application, providing JVM internal information, such as which thread opened a file. JPicus consists of the following major parts:
+JPicus is similar to Java CPU and  profilers with the difference that it operates in the I/O domain.
+Since Feb 2014 JPicus has been available on github.com as an open source project. Only the agent and the API has been made open source, while the UI has been discontinued with the intention to create a HTML5 based UI.
+

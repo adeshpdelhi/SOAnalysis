@@ -1,0 +1,5 @@
+ packages and work done at the University of Kent.
+Alex Panayotopoulos, a Masters research student at  robotics platform.
+JCSP re has fundamental classes that stem from the original JCSP packages they enable developers to take advantage of the underlying  model for concurrency. JCSP re has classes such as Parallel, Alternative, One2OneChannel, and One2OneChannelInt.
+Research with JCSP re has demonstrated that concurrency can be applied to robots and mobile environments. The constraints placed on software developers with robotics environments should not be an issue. The process orientated architecture can be applied to robotics software design by using JCSP re.
+JCSP re has demonstrated the robustness of the CSP concurrency model for robot environments. As software can be scaled up easily enough JCSP re has shown that it can be scaled down and still perform concurrently.

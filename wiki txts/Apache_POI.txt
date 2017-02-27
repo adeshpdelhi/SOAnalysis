@@ -1,0 +1,9 @@
+.
+
+
+The name was originally an 
+POI supports the ISO/IEC 29500:2008 
+The Apache POI project contains the following subcomponents (meaning of acronyms is taken from old documentation):
+The HSSF component is the most advanced feature of the library.
+The POI library is also provided as a  extension.
+Version number

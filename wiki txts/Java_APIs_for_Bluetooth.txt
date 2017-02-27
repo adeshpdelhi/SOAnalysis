@@ -1,0 +1,11 @@
+				
+JSR 82 implementations for  (J2SE) are also available.
+
+
+The original Java Specification Request (JSR-82) was submitted by 
+JABWT provides support for discovery of nearby Bluetooth devices. Java applications can use the API to scan for discoverable devices, identify services provided by discovered devices, and search for devices that the device frequently contacts.
+JABWT provides an object exchange API for transfer of data objects between devices. For example, two devices conforming to the OBEX protocol could exchange virtual business cards or calendar appointments.
+JABWT allows management of the local device’s state. JABWT applications are able to access information about the host device (such as Bluetooth address), mark their host device as discoverable to other Bluetooth devices, and register to provide services.
+JABWT supports connections with different levels of security. Applications using the APIs can pass parameters to the Connector.open() method indicating the level of security required to establish a connection to another device.
+Hundreds of mobile devices from different manufacturers comply with the JSR-82 specification. of devices that conform to the JSR-82 specification.
+Several open-source implementations of the JSR-82 specification are available:

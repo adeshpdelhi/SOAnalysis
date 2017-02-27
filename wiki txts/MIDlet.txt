@@ -1,0 +1,10 @@
+				
+The  cards can sometimes install .jar or .jad files that have been transferred to the memory card.
+
+
+MIDP 2.0 (JSR 118) includes a comprehensive security model based on protection domains. MIDlet suites are installed into a protection domain that determines access to protected functions. The MIDP 2.0 specification also includes a recommended practice for using public key cryptography to verify and authenticate MIDlet suites.
+For definitive information, consult the MIDP 2.0 specification. For an overview of MIDlet signing using the Sun JavaTM Wireless Toolkit for CLDC, read the article .
+If you need more background on public key cryptography, try the article .
+The MIDP 1.0 specification constrained each MIDlet suite to operate in a sandbox wherein all of the APIs available to the MIDlets would prevent access to sensitive APIs or functions of the device. That sandbox concept is used in this specification and all untrusted MIDlet suites are subject to its limitations. Every implementation of this specification MUST support running untrusted MIDlet suites.
+MIDP 2.0 introduces the concept of trusted applications that may be permitted to use APIs that are considered sensitive and are restricted. If and when a device determines that a MIDlet suite can be trusted then access is allowed as indicated by the domain policy. The Trusted MIDlet Suite Security section below describes the concepts. Any MIDlet suite that is not trusted by the device MUST be run as untrusted. If errors occur in the process of verifying that a MIDlet suite is trusted then the MIDlet suite MUST be rejected.
+Unlike a  files and the number of concurrent HTTP connections based on the MIDP specification.

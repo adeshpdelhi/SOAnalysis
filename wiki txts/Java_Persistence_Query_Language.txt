@@ -1,0 +1,11 @@
+The  (JPA) specification.
+JPQL is used to make queries against entities stored in a relational database. It is heavily inspired by , and its queries resemble SQL queries in syntax, but operate against JPA entity objects rather than directly with database tables.
+In addition to retrieving objects ( queries.
+
+
+Example JPA Classes, getters and setters omitted for simplicity.
+Then a simple query to retrieve the list of all authors, ordered alphabetically, would be:
+To retrieve the list of authors that have ever been published by XYZ Press:
+JPQL supports named parameters, which begin with the colon (). We could write a function returning a list of authors with the given last name as follows:
+JPQL is based on the  library.
+Hibernate and the HQL were created before the JPA specification. As of Hibernate 3 JPQL is a subset of HQL.

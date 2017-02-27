@@ -1,0 +1,8 @@
+.
+
+
+Core OpenGL API and  routines which are not exposed through the public API.
+All platform specific libraries (available from the  attributes and performing platform specific Framebuffer operations.
+Platform-specific extensions are not included in the public API. Each implementation can choose to export some of these APIs via the  method calls which return Objects whose data types are specific to the given implementation.
+This example shows how to draw a polygon (without initialization or repaint code). implementation:
+Which translates to the following  implementation:

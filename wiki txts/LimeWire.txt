@@ -1,0 +1,30 @@
+.
+On October 26, 2010, U.S. federal court judge 
+
+
+Written in the  controller in that it can automatically set up packet-forwarding rules with UPnP-capable routers.
+LimeWire offers sharing of its library through the 
+Until October 2010, Lime Wire LLC, the New York City based developer of LimeWire, distributed two versions of the program: a basic free version, and an enhanced version, LimeWire PRO, sold for a fee of US$21.95 with 6 months of updates, or $34.95 with 1 year of updates.
+Being 
+LimeWire was the second file sharing program after Frostwire to support firewall-to-firewall file transfers, a feature introduced in version 4.2, which was released in November 2004. LimeWire also now includes  Protocol, an open source communication protocol. Users can now chat and share files with individuals or a group of friends in their buddy list.
+From version 5.5.1, LimeWire has added a key activation, which requires the user to enter the unique key before activating the "Pro" version of the software. This has stopped people from illegally downloading the "Pro" versions. However, there are still ways to bypass this security feature, which was done when creating the pirate edition. For example, there are currently cracks available on the internet, and people can continue using the LimeWire Pro 5.5.1 Beta, which also includes  for LimeWire and is the first version to include AVG. The most recent stable version of LimeWire is 5.5.16.
+Versions of LimeWire prior to 5.5.10 can still connect to the Gnutella network and users of these versions are still able to download files, even though a message is displayed concerning the injunction during the startup process of the software. LimeWire versions 5.5.11 and newer feature an auto-update feature that allowed Lime Wire LLC to disable newer versions of the LimeWire software. Older versions of LimeWire prior to version 5.5.11, however, do not include the auto-update feature and are still fully functional. As a result, neither the Recording Industry Association of America (RIAA) nor Lime Wire LLC have the ability to disable older versions of LimeWire, unless the user chooses to upgrade to a newer version of LimeWire.
+On November 10, 2010, a secret group of developers called the "Secret Dev Team" sought to keep the application working by releasing the "LimeWire Pirate Edition".
+A number of  from LimeWire have appeared, with the goal of giving users more freedom, or objecting to decisions made by LimeWire LLC they disagreed with.
+FrostWire was started in September 2004 by members of the LimeWire  (LimeWire's file sharing network).
+In November 2010, as a response to the legal challenges regarding LimeWire, an anonymous individual by the handle of Meta Pirate released a modified version of LimeWire Pro, which was entitled LimeWire Pirate Edition.
+In response to allegations that a current or former member of Lime Wire LLC staff wrote and released the software, the company has stated that: LimeWire is not behind these efforts. LimeWire does not authorize them. LimeWire is complying with the Court’s October 26, 2010 injunction."
+The LimeWire team, after being accused by the RIAA of being complicit in the development of LimeWire Pirate Edition,
+According to its 
+On February 15, 2010, LimeWire reversed its previous anti-bundling stance and announced the inclusion of an Ask.com-powered browser toolbar that users had to explicitly opt-out of to prevent installation. The toolbar sends web and bittorrent searches to Ask.com, and LimeWire searches to an instance of LimeWire on the user's machine.
+In LimeWire versions before 5.0, users could accidentally configure the software to allow access to any file on their computer, including documents with personal information. Recent versions of LimeWire do not allow unintentional sharing of documents or applications. In 2005, the US Federal Trade Commission issued a consumer warning regarding the dangers of using 
+One investigation showed that of 123 randomly selected downloaded files, 37 contained  The ability to distribute such malware and viruses has also been reduced in versions of LimeWire 5.0 and greater, with the program defaulting to not share or search for executable files.
+Prior to April 2004, the free version of LimeWire was distributed with a bundled program called 
+An 
+LimeWire automatically receives a cryptographically signed file, called simpp.xml, containing an IP block list. Blocking certain IPs has become commonplace and even considered essential in P2P filesharing.
+According to a June 2005 report in 
+On May 12, 2010, Judge 
+In response to the ruling, a company spokesperson said that the company is not shutting down, but will use its "best efforts" to cease distributing and supporting P2P software.
+In early 2011, the RIAA announced their intention to sue LimeWire, pursuing a statutory damages theory that claimed up to $72 trillion in damages
+A trial to decide on the eventual amount of damages owed by Limewire to thirteen record labels, including , all of which are represented by the RIAA, started early in May and went on until on May 13, 2011, when Gorton agreed to pay the 13 record companies $105 million in an out-of-court settlement.
+Mitch Bainwol, chairman of the RIAA, referred to the "resolution of the case [as] another milestone in the continuing evolution of online music to a legitimate marketplace that appropriately rewards creators."

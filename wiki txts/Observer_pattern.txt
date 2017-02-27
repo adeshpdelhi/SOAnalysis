@@ -1,0 +1,9 @@
+				.
+It is mainly used to implement distributed  systems.
+The Observer pattern is also a key part in the familiar  toolkits.
+The observer pattern can cause  to the observers.
+Related patterns: .
+
+
+Below is an example written in  is then called, in order to notify all observers of the event's occurrence, in the form of an invocation of their 'update' methods.
+A similar example in :

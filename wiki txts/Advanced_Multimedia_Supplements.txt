@@ -1,0 +1,6 @@
+In computing, the  as JSR 234.
+
+
+JSR-234 defines six feature sets, namely Media Capabilities, and each define minimum implementation requirements in order to try to avoid fragmentation and to define a common minimal base line for the implementations. Every JSR-234 implementation must support at least one Media Capability. The six Media Capabilities are described in the table below.
+In addition to the Media Capabilities, the device is free to support any of the optional features including:
+There are also implementations targeted mainly for mobile device manufacturers.

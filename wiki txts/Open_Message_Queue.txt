@@ -1,0 +1,2 @@
+.
+In addition to support for the JMS API, OpenMQ provides additional enterprise features including clustering for scalability and .

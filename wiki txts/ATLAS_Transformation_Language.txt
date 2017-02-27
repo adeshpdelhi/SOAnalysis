@@ -1,0 +1,11 @@
+ team (previously called ATLAS Group). In the field of Model-Driven Engineering (MDE), ATL provides ways to produce a set of target models from a set of source models.
+Released under the terms of the  (EMP).
+
+
+ATL is a .
+ATL is the ATLAS INRIA &amp; LINA research group answer to the OMG MOF/QVT RFP. It is a model transformation language specified both as a metamodel and as a textual concrete syntax. It is a hybrid of declarative and imperative. The preferred style of transformation writing is declarative, which means simple mappings can be expressed simply. However, imperative constructs are provided so that some mappings too complex to be declaratively handled can still be specified. An ATL transformation program is composed of rules that define how source model elements are matched and navigated to create and initialize the elements of the target models.
+A model-transformation-oriented virtual machine has been defined and implemented to provide execution support for ATL while maintaining a certain level of flexibility. As a matter of fact, ATL becomes executable simply because a specific transformation from its metamodel to the virtual machine bytecode exists. Extending ATL is therefore mainly a matter of specifying the new language features execution semantics in terms of simple instructions: basic actions on models (elements creations and properties assignments).
+An ATL program (T1.atl here) will take model  notation is a simple and neutral metamodel specification language.
+The ATL program itself ( here) is also a model, so it conforms to a metamodel (the ATL metamodel) not presented here.
+An ATL program is composed of a header, of a set of .
+There is an associated ATL Development Toolkit .

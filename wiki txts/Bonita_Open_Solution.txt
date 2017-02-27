@@ -1,0 +1,10 @@
+.
+
+
+Bonita BPM has three major components:
+Bonita BPM is .
+Bonita can be applied for various projects requiring complex workflows like  etc.
+Bonita BPM can be used for creating high-tech workflows and spreadsheets similar to document creation using Microsoft Excel and/or .
+.
+
+Bonita Sample Programs to use out of the box: 

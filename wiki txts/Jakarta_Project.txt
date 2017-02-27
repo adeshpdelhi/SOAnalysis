@@ -1,0 +1,6 @@
+The . As of December 21, 2011 the Jakarta project was retired because no subprojects were remaining.
+
+
+Major contributions by the Jakarta Project include tools,  such as:
+The following projects were formerly part of Jakarta, but now form independent projects within the Apache Software Foundation:
+Jakarta is not directly named after the 

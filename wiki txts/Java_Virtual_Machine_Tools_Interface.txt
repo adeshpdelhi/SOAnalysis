@@ -1,0 +1,4 @@
+				.
+The JVMTI is a native interface of the JVM. A library, written in ) functions and can register to receive JVMTI events using event handler functions that are called by the JVM when such an event occurs.
+JVMTI was defined through the . The JVMTI replaces the JVMPI (Java Virtual Machine Profiling Interface) and the JVMDI (Java Virtual Machine Debug Interface). The JVMPI and the JVMDI are declared as being deprecated in J2SE 5.0 and were removed in Java SE6.
+JVMTI is the lowest level of the .

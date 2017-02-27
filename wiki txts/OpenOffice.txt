@@ -1,0 +1,78 @@
+
+In 2011  (commercial, only for macOS).
+OpenOffice.org's default  with OpenOffice.org. It could also read a wide variety of other file formats, with particular attention to those from Microsoft Office.
+OpenOffice.org included a 
+OpenOffice.org was primarily developed for  (SISSL).
+
+
+OpenOffice.org originated as 
+On 19 July 2000 at 
+OpenOffice.org became the standard office suite on Linux and spawned many derivative versions. It quickly became noteworthy competition to Microsoft Office,
+The , particularly given there was a free implementation of it readily available.
+Development of OpenOffice.org was sponsored primarily by Sun Microsystems, which used the code as the basis for subsequent versions of StarOffice. Developers who wished to contribute code were required to sign a Contributor Agreement
+After 
+In June 2011, Oracle contributed the trademarks to the 
+During Sun's sponsorship, the OpenOffice.org project was governed by the 
+Both Sun and Oracle are claimed to have made decisions without consulting the Council or in contravention to the council's recommendations,
+The project and software were informally referred to as 
+Due to a similar trademark issue (a Rio de Janeiro company that owned that trademark in Brazil), the )
+OpenOffice.org 1.0 was launched under the following 
+The mission of OpenOffice.org is to create, as a community, the leading international office suite that will run on all major platforms and provide access to all functionality and data through open-component based APIs and an XML-based file format.
+The suite contained no 
+The last version, 3.4 Beta 1, was available for 
+The latest versions of OpenOffice.org on other operating systems were:
+OpenOffice.org included  OpenOffice.org also used the default fonts of the running operating system.
+
+From version 2.0.4, OpenOffice.org supported third-party extensions.
+OpenOffice.org included OpenOffice Basic, a  OpenOffice.org also had some Microsoft VBA macro support.
+OpenOffice.org could interact with databases (local or remote) using ODBC (
+From Version 2.0 onward, OpenOffice.org used ISO/IEC 26300:2006 as its native format. Versions 2.0–2.3.0 default to the ODF 1.0 file format; versions 2.3.1–2.4.3 default to ODF 1.1; versions 3.0 onward default to ODF 1.2.
+OpenOffice.org 1 used 
+OpenOffice.org also claimed support for the following formats:
+OpenOffice.org converted all external formats to and from an internal XML representation.
+The OpenOffice.org .
+OpenOffice.org 1.0 was criticized for not having the 
+The issue had been particularly pronounced on Mac OS X. Early versions of OpenOffice.org required the installation of 
+Although originally written in C++, OpenOffice.org became increasingly reliant on the Java Runtime Environment, even including a bundled 
+The issue came to the fore in May 2005, when 
+On 13 November 2006, Sun committed to releasing Java under the , by May 2007.
+In 2006, Lt. Col. Eric Filiol of the Laboratoire de Virologie et de Cryptologie de l'ESAT demonstrated security weaknesses, in particular within macros. This showed OpenOffice.org viruses are possible, but there is no known virus "in the wild".
+As of October 2011, 
+The preview, Milestone 638c, was released October 2001.
+OpenOffice.org 1.1 introduced One-click Export to PDF and Export presentations to Flash (.SWF). It also allowed third-party addons.
+OpenOffice.org was used in 2005 by 
+Work on version 2.0 began in early 2003 with the following goals (the "Q Product Concept"): better interoperability with Microsoft Office; improved speed and lower memory usage; greater 
+On 2 September 2005, Sun announced that it was retiring SISSL to reduce 
+On 20 October 2005, OpenOffice.org 2.0 was released.
+The OpenOffice.org 2 series attracted considerable press attention.
+On 13 October 2008, version 3.0 was released, featuring the ability to import (though not export) 
+Version 3.2 included support for PostScript-based 
+Version 3.3, the last Oracle version, was released in January 2011.
+A beta version of OpenOffice.org 3.4 was released on 12 April 2011, including new SVG import, improved ODF 1.2 support, and spreadsheet functionality.
+Before the final version of OpenOffice.org 3.4 could be released, Oracle cancelled its sponsorship of development
+Problems arise in estimating the  listing known distribution totals, known deployments and conversions and analyst statements and surveys.
+According to 
+A market-share analysis conducted by a  0.2% in China, 9% in the US and the UK and over 20% in Poland, the Czech Republic, and Germany.
+Although Microsoft Office retained 95% of the general market — as measured by revenue — as of August 2007,
+The project claimed more than 98 million downloads as of September 2007
+Large-scale users of OpenOffice.org included 
+In  which use Linux, completely relied on OpenOffice.org for their administration.
+In 
+In July 2007, 
+A number of open source and proprietary products derive at least some code from OpenOffice.org, including AndrOpen Office,
+The OpenOffice.org website also listed a large variety of complementary products, including 
+Major derivatives include:
+In June 2011, Oracle contributed the OpenOffice.org code and trademarks to the Apache Software Foundation. The developer pool for the Apache project was proposed to be seeded by IBM employees, Linux distribution companies and public sector agencies.
+The codebase for IBM's Lotus Symphony was donated to the Apache Software Foundation in 2012 and merged for Apache OpenOffice 4.0,
+While the project considers itself the unbroken continuation of OpenOffice.org,
+In October 2014, 
+Sun had stated in the original OpenOffice.org announcement in 2000 that the project would be run by a neutral foundation,
+Oracle was invited to become a member of the Document Foundation and was asked to donate the OpenOffice.org brand.
+Most Linux distributions promptly replaced OpenOffice.org with LibreOffice;
+
+The ooo-build  ooo-build.
+Sun's contributions to OpenOffice.org had been declining for a number of years
+Go-oo also encouraged outside contributions, with rules similar to those later adopted for LibreOffice. When LibreOffice forked, Go-oo was deprecated in favour of that project.
+OpenOffice Novell edition was a supported version of Go-oo.
+The Workplace Managed Client in 
+Sun used OpenOffice.org as a base for its commercial proprietary StarOffice application software, which was OpenOffice.org with some added proprietary components. 

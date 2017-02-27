@@ -1,0 +1,12 @@
+ The headquarters are located in A Coruña, Spain.
+LibrePlan was formerly known as NavalPlan. It was created "to improve management of the production of the companies of the Galician naval auxiliary sector". However, it is of much more general applicability.
+It is written in 
+
+
+Within the overall framework of LibrePlan and the management of the planning, 
+LibrePlan is a tool that allows you to plan, monitor, control and organize the tasks and projects of an organization. Within each group of processes, LibrePlan provides functionality in three areas: planning, monitoring and control.
+At the level of planning, LibrePlan offers the following features:
+At the level of monitoring, LibrePlan offers:
+To control the situation, LibrePlan has the following features:
+In addition to the above, cade highlight other features that distinguish the similar applications programme:
+Since LibrePlan contains 'naval' references in its name, it is important to stress that it is a  organization/person who wants to plan several projects and resources.

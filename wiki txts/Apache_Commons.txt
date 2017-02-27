@@ -1,0 +1,7 @@
+The  Java software. The Commons is composed of three parts: proper, sandbox, and dormant.
+
+
+The Commons Proper is dedicated to creating and maintaining reusable 
+The Commons Sandbox provides a workspace where Commons contributors collaborate and experiment on projects not included in the Commons Proper. Commons members champion projects in the Sandbox for promotion to the Commons Proper, and groups of developers work to enhance Sandbox projects until they meet the standards for promotion.
+The Commons Dormant is a collection of components that have been declared inactive due to little recent development activity. These components may be used, but must be built yourself. It is best to assume that these components will not be released in the near future.
+

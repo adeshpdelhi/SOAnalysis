@@ -1,0 +1,22 @@
+ connections by means of the placement of non-hexagonal (pentagonal or heptagonal) rings, also referred as defects or disclinations.
+The software is a set of tools dedicated to the construction of complex  and many of the possible three-tube junctions.
+CoNTub generates the  (MWNTs).
+Although the current version of CoNTub is v2.0, this version does not supersedes v1.0, as v2.0 is dedicated currently to only three-nanotube junctions, although the incorporation of v1.0 functionality into v.2.0 is planned. Nanotube heterojunctions can be generated only with v1.0.
+CoNTub v1.0 is organized in five Tabbed panels CoNTub, and the fifth contains a short help section.
+CoNTub v2.0 has experimented a major redesign, and the panes have been removed, instead, a conventional menubar has been added where the type of structure to be generated can be chosen. Although the menu item for heterojunction generation appears in the menu, the button is disabled, so NTHJ's can be only generated with v1.0
+
+
+To generate a SWNT, it is only necessary to introduce the indices of the tube, its desired length (
+MWNT - multiple tubes with the same axis and length - are created by providing the indices of the most inner tube (i,j), the desired length (l), the number of shells (N), and the approximate distance between shells or spacing (S) in  as that of the inner nanotube.
+This is the core of the CoNTub. There is always a possible connection between two tubes and strip algebra ensues that the solution is unique and depending only of the indices (i,j) of both tubes.
+A further implementation of the Strip Algebra has been released in the second version of CoNTub, in order to elucidate the precise location of atoms and rings that lead to a junction of three nanotubes.
+Connection between three nanotubes requires, at least, the presence of six heptagons, instead of the single pentagon and heptagon required for an heterojunction. In this case, the set of equations that rule the geometry has more variables to solve than restrictions, so the possible geometries constitute an infinite set. The detailed procedure for the nanotube construction has been also published,
+Imposing additional restrictions to the geometry can ease the finding of viable geometries, and this is what is applied in the current version of CoNTub: Forcing the tubes connected to be of the same kind, and forcing an additional C symmetry, an automated way to construct the geometry can be found. However, even with these restrictions, the possibilities are still infinite. Therefore, a way to estimate the viability of the junction, even before constructing it, had to be developed. Given that non-hexagonal rings
+CoNTub v1.0 - 3D viewer panel (zoom in).
+CoNTub v1.0 - 3D viewer panel (cutback and ball&amp;stick modes).
+CoNTub v1.0 HETEROJUNTION panel.
+CoNTub v1.0 HETEROJUNTION panel.
+CoNTub v1.0 SWNT panel.
+CoNTub v1.0 SWNT panel.
+CoNTub v1.0 MWNT panel.
+CoNTub v1.0 output panel.

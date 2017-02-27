@@ -1,0 +1,12 @@
+The 
+An example of this would be an abstract factory class  class, not the specific version that it got from the concrete factory.
+A .
+Use of this pattern makes it possible to interchange concrete implementations without changing the code that uses them, even at , may result in unnecessary complexity and extra work in the initial writing of code. Additionally, higher levels of separation and abstraction can result in systems that are more difficult to debug and maintain.
+
+
+The essence of the Abstract Factory Pattern is to "Provide an interface for creating families of related or dependent objects without specifying their concrete classes.".
+The .
+This insulates client code from 
+As the factory only returns an abstract pointer, the client code (that requested the object from the factory) does not know — and is not burdened by — the actual concrete type of the object that was just created. However, the type of a concrete object (and hence a concrete factory) is known by the abstract factory; for instance, the factory may read it from a configuration file. The client has no need to specify the type, since it has already been specified in the configuration file. In particular, this means:
+The method  is handling the method call.
+It should render a button in either a Windows style or Mac OS X style depending on which kind of factory was used. Note that the Application has no idea what kind of  that factory creates.

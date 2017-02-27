@@ -1,0 +1,8 @@
+ implementation, along with several libraries of JSF components that can be deployed on the core implementation. The project is divided into several sub-projects:
+The standard is based on the 
+
+
+The MyFaces Core subproject is an 
+The core subproject is divided into two submodules:
+These two submodules are distributed in two libraries, myfaces-api.jar and myfaces-impl.jar. Both of them are needed to be able to deploy a JSF based web application.
+The latest release of MyFaces Core is 2.2.9. It requires 

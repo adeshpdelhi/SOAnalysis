@@ -1,0 +1,11 @@
+
+IKVM.NET includes the following components:
+With IKVM.NET you can run compiled Java code ( and executed.
+This is in contrast to . J# is a Java syntax on the .NET framework, whereas IKVM.NET is effectively a Java framework running on top of .NET's framework.
+Jeroen Frijters is the main contributor to IKVM.NET. He is Technical Director of Sumatra Software, based in The Netherlands.
+
+
+The "IKVM" portion of the name is a play on "
+As of June 2007
+IKVM has very limited support for 
+

@@ -1,0 +1,22 @@
+Apache .
+Gülcü has since started the  projects, with the intention of offering a successor to Log4j.
+The Apache Log4j team has created a successor to Log4j 1 with version number 2. although an "adapter" is available.
+On August 5, 2015 the Apache Logging Services Project Management Committee announced that Log4j 1 had reached end of life and that users of Log4j 1 are recommended to upgrade to Apache Log4j 2.
+
+
+Apache Log4j 2 is the successor of Log4j 1 which was released as GA version in July 2014. The framework was rewritten from scratch and has been inspired by existing logging solutions, including Log4j 1 and java.util.logging. The main differences to Log4j 1 are:
+One of the most recognized features of Log4j 2 is the performance of the "Asynchronous Loggers". The library reduces the need for kernel locking and increases the logging performance by a factor 12. For example, in the same environment Log4j 2 can write more than 18,000,000 messages per second, whereas other frameworks like Logback and Log4j 1 just write &lt; 2,000,000 messages per second.
+The following table defines the built-in log levels and messages in Log4j, in decreasing order of severity. The left column lists the log level designation in Log4j and the right column provides a brief description of each log level.
+Log4j 2 allows users to define their own log levels. A source code generator tool is provided to create Loggers that support custom log levels identically to the built-in log levels. Custom log levels can either complement or replace the built-in log levels.
+Log4j can be configured format. Within a configuration you can define three main components: Loggers, Appenders and Layouts. Configuring logging via a file has the advantage that logging can be turned on or off without modifying the application that uses Log4j. The application can be allowed to run with logging off until there's a problem, for example, and then logging can be turned back on simply by modifying the configuration file.
+ are named log message destinations. They are the names that are known to the Java application. Each logger is independently configurable as to what level of logging (FATAL, ERROR, etc.) it currently logs. In early versions of Log4j, these were called category and priority, but now they're called logger and level, respectively. A Logger can send log messages to multiple Appenders.
+The actual outputs are done by  listener on another computer.
+Appenders use 
+In Log4j 2,  script filters.
+To debug a misbehaving configuration:
+To find out where a log4j2.xml configuration file was loaded from inspect .
+There is also an implicit "unconfigured" or "default" configuration of Log4j, that of a Log4j-instrumented Java application which lacks any Log4j configuration. This prints to stdout a warning that the program is unconfigured, and the URL to the Log4j web site where details on the warning and configuration may be found. As well as printing this warning, an unconfigured Log4j application will only print ERROR or FATAL log entries to standard out.
+TTCC is a message format used by log4j.. It uses the following pattern:
+Where
+
+467 [main] INFO org.apache.log4j.examples.Sort - Exiting main method.

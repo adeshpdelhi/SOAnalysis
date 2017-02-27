@@ -1,0 +1,8 @@
+				 and provides a convenient programming model for Java portlet developers.
+
+
+The Java Portlet Specification V1.0 was developed under the 
+The Java Portlet Specification V1.0 introduces the basic portlet programming model with:
+
+
+

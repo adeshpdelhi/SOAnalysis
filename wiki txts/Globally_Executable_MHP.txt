@@ -1,0 +1,6 @@
+ players). GEM defines profiles for different device classes (targets) - these define the set of available features of GEM for this device class. Currently GEM defines targets (API profiles) for broadcast, packaged media (Blu-Ray) and IPTV. Combinations of these targets can be combined into a hybrid GEM platform, which enables to build devices with multiple network interfaces, such as a combined broadcast/IPTV set-top box.
+
+
+A few years ago, the DVB project started the development of a 
+At the time of writing, the following platforms are defined, which base on/extend GEM:
+As all these platforms are based on the common GEM-core, making it possible to write Java applications that will run interoperably on all these systems.

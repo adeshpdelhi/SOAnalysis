@@ -1,0 +1,4 @@
+ graphical user interface library. The primary developer, Carl Burch, has worked on Logisim since its inception in 2001.
+The software is used most often by students in  Design features for more sophisticated circuits, such as the "subcircuits" and "wire bundles" found in Logisim, are available in few other open-source graphical tools.
+While users can design complete CPU implementations within Logisim, the software is designed primarily for educational use. Professionals typically design such large-scale circuits using a .
+Logisim has been indefinitely suspended in development, but a fork, called , is still actively developed.

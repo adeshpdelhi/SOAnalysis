@@ -1,0 +1,11 @@
+
+
+
+NewGenLib has following main modules:
+Some advanced functional features:
+NewGenLib uses a number of well supported and widely used, reliable and well tested open source components like PostgreSQL, Apache Tomcat, and Solr Lucene.,.
+NewGenLib is platform independent and can be installed on Linux and Windows operating systems.
+Standards supported by NewGenLib
+It is also  Compliant.
+NewGenLib has a growing user community with a good discussion form at .
+NewGenLib can be used for any type of library. Presently, it is used by Libraries of following types.

@@ -1,0 +1,12 @@
+
+GATE has been compared to 
+GATE community and research has been involved in several European research projects including , as well as many other projects.
+As of May 28, 2011, 881 people are on the gate-users mailing list at SourceForge.net, and 111,932 downloads from 
+
+
+GATE includes an  functionality, or provide a starting point for more specific tasks.
+Languages currently handled in GATE include .
+Plugins are included for 
+GATE accepts input in various formats, such as .
+
+The screenshot shows the document viewer used to display a document and its annotations. In pink are &lt;A&gt; hyperlink annotations from an  file. The right list is the annotation sets list, and the bottom table is the annotation list. In the center is the annotation editor window.

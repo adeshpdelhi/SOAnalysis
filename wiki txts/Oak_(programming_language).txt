@@ -1,0 +1,12 @@
+				.
+The name  that stood outside his office.
+
+
+In 1991,  was attempting to develop a new technology for programming next generation smart appliances, which Sun expected to be a major new opportunity.
+The team originally considered using ).
+Initially, Gosling attempted to modify and extend C++ but soon abandoned that in favor of creating a new platform called 
+By the summer of 1992, they were able to demonstrate portions of the new platform including the Green  which had a graphical interface and a smart agent called "Duke" to assist the user.
+Oak was renamed 
+Oak was the basis for what Java 1.0 became later, but there were also some differences: Several concepts were planned in the Oak specification but remained not implemented in the original language because of time constraints:
+Other concepts were different from, or improved later, for Java:
+And finally some concepts were later scraped out:

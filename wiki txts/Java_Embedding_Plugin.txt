@@ -1,0 +1,6 @@
+				
+The latest released version: 0.9.7.5 requires Mac OS X 10.4.11 or higher.
+
+
+Originally for the 
+Version: 0.9.6.1 had a security vulnerability that allowed remote attackers to crash the browser.

@@ -1,0 +1,9 @@
+ tool to teach students programming and related information technology skills through game design.
+AgentSheets is supported by a middle and high school curriculum called Scalable Game Design aligned with the ISTE 
+The results of the NSF ITEST program supported research investigating motivational and educational aspects of introducing computer science at the middle school level are extremely positive in terms of motivational levels, number of participants and participation of women and underrepresented communities. The participation is extremely high because most middle schools participating in the study have made Scalable Game Design a module that is part of existing required courses (e.g., computer power with keyboarding and power point). Many of the middle schools instruct all of their students in scalable game design reaching in some schools over 900 students per year, per school. Of the well over 1000 students participating in the project in the first semester over 52% were girls. Of the girls 85% enjoyed the scalable game design course and 78% would like to take another game design course.
+
+
+The built-in  source code.
+Similar to a spreadsheet, an agentsheet is a computational grid. Unlike spreadsheets, this grid does not just contain numbers and strings but so called agents. These agents are represented by pictures, can be animated, make sounds, react to mouse/keyboard interactions, can read web pages, can speak and even recognize speech commands (Mac). This grid is well suited to build  education.
+AgentSheets is used in a number of contexts worldwide:
+The original goal of this research was to explore new models of computational thinking. The first prototype of AgentSheets ran in 1989 at the :

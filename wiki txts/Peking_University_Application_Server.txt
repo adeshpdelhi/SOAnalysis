@@ -1,0 +1,4 @@
+-Bell Labs Software Technologies Joint Lab.
+The project began in 2001. Up to 2005, PKUAS had implemented J2EE 1.4 and .
+A long-term goal of PKUAS is to support the  paradigm.
+

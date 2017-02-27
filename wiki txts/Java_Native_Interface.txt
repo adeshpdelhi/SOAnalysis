@@ -1,0 +1,31 @@
+In .
+
+
+JNI enables programmers to write native methods to handle situations when an application cannot be written entirely in the Java programming language, e.g. when the standard Java  does not support the platform-specific features or program library. It is also used to modify an existing application—written in another programming language—to be accessible to Java applications. Many of the standard library classes depend on JNI to provide functionality to the developer and the user, e.g. file I/O and sound capabilities. Including performance- and platform-sensitive API implementations in the standard library allows all Java applications to access this functionality in a safe and platform-independent manner.
+The JNI framework lets a native method use Java  in the same way that Java code uses these objects. A native method can create Java objects and then inspect and use these objects to perform its tasks. A native method can also inspect and use objects created by Java application code.
+In the JNI framework, native functions are implemented in separate .c or .cpp files. (C++ provides a slightly simpler interface with JNI.) When the JVM invokes the function, it passes a  pointer, and any Java arguments declared by the Java method. A JNI function may look like this:
+The , albeit with considerably less ease.
+The argument  is a reference to the Java object inside which this native method has been declared.
+For example, the following converts a Java string to a native string:
+Native .
+The following table shows the mapping of types between Java (JNI) and native code.
+long long
+__int64
+In addition, the signature  code.
+Here, these types are interchangeable. You can use  required.
+However, mapping between Java Strings and arrays to native strings and arrays is different. If you use a  would be, your code could crash the JVM.
+This is similar with Java arrays, as illustrated in the example below that takes the sum of all the elements in an array.
+Of course, there is much more to it than this. Look for links below for more information.
+A JNI environment pointer (
+To attach to the current thread and get a JNI interface pointer:
+To detach from the current thread:
+Not only can native code interface with Java, it can also draw on a Java  1.3.
+JNI also allows direct access to 
+Microsoft's discontinued proprietary implementation of a Java Virtual Machine ( is no longer maintained.
+RNI was less clumsy to use than JNI, because no bookkeeping with a Java environment pointer was needed. Instead, all Java objects could be accessed directly. To facilitate this, a tool was used that generated header files from Java classes. Similarly, J/Direct was easier to use than using the necessary intermediate native library and JNI, although at present JNA is an alternative.
+make.sh
+build.bat
+HelloWorld.java
+HelloWorld.h
+libHelloWorld.c
+Invocation:

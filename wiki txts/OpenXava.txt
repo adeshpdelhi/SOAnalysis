@@ -1,0 +1,11 @@
+ modules and report generation, but also provides flexibility to develop complex real life business applications like accounting packages, customer relationship, invoicing, warehouse management, etc.
+OpenXava allows developers to define applications with .
+Currently OpenXava generates Java  applications.
+The essence of OpenXava is that the  any part of the application, in this way it is flexible enough to solve any particular cases. OpenXava is based on the concept of the business component.
+
+
+A business component includes all software artifacts needed to define a business concept. OpenXava is a business component , validations, calculations, etc.) is defined there.
+In an  technology or data access technology is high.
+In OpenXava, the addition of a new field to an Invoice only requires changing a single file: Invoice.java. But  mapping, etc.
+Using OpenXava makes it possible to allocate the development work using a business logic oriented task distribution. For example,  to another.
+These are some of the main features of OpenXava:

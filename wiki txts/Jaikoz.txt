@@ -1,0 +1,9 @@
+.
+Jaikoz generates 
+Jaikoz uses a relatively unusual spreadsheet metaphor for both viewing and editing data, and allows editing of over fifty fields
+Jaikoz is commercially licensed software, written in  to support MusicBrainz development.
+
+
+Originally released in 2006 as a standalone music tagger without any MusicBrainz support, but support for MusicBrainz was soon added. Changes in Jaikoz have always reflected changes in MusicBrainz, for example Jaikoz was the first application to make use of the new web service released as part of the MusicBrainz NGS release in 2011, and the first application to use the MusicBrainz seeding mechanism for adding new releases.
+Jaikoz has been favorably received worldwide. Jaikoz was recommended in a 
+In 2006, Julien Chaveau of the University of Angers cited Jaikoz as an exemplar of an automated information extraction system,

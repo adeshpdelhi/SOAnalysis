@@ -1,0 +1,9 @@
+				
+
+
+Originally, the Glassfish project developed two semi-independent projects&#160;:
+In June 2007, it has been decided to bundle these two components as a single component named .
+Metro is bundled with 
+Metro is bundled with numerous Application Servers  such as&#160;:
+The ) and Application Servers.
+Metro compares well with other web service frameworks in terms of functionality. A comparison is provided by Codehaus at  1.x, Axis 2.x, Celtix, Glue, JBossWS, Xfire 1.2 and JAX-WS RI + WSIT (the bundle was not yet named Metro at this time).

@@ -1,0 +1,49 @@
+. Most Java code is also syntactically valid Groovy, although semantics may be different.
+Groovy 1.0 was released on January 2, 2007, and Groovy 2.0 in July, 2012. Since version 2, Groovy can also be 
+
+
+ (JCP) standardization process began, the version numbering changed and a version called "1.0" was released on January 2, 2007. After various betas and release candidates numbered 1.1, on December 7, 2007, Groovy 1.1 Final was released and immediately rebranded as Groovy 1.5 as a reflection of the many changes made.
+In 2007, Groovy won the first prize at JAX 2007 innovation award.
+In November 2008, 
+Strachan had left the project silently a year before the Groovy 1.0 release in 2007.
+In March 2004, Groovy had been submitted to the JCP as JSR 241 and accepted by ballot. After 8 years of inactivity, the Spec Lead changed its status to dormant in April 2012.
+On July 2, 2012, Groovy 2.0 was released, which, among other new features, added static compilation and a static type checker to Groovy.
+When the 
+Most valid Java files are also valid Groovy files. Although the two languages are similar, Groovy code can be more compact, because it does not require all the elements that Java requires.
+Groovy features not available in Java include both static and 
+Since version 2 Groovy also supports modularity (being able to ship only the needed jars according to the project needs, thus reducing the size of groovy's lib), type checking, static compilation, Project Coin syntax enhancements, 
+Groovy provides native support for various 
+Unlike Java, a Groovy source code file can be executed as an (uncompiled) 
+
+Groovy offers simple, consistent syntax for handling 
+Groovy offers support for 
+ExpandoMetaClass offers a  open class concept:
+Groovy's changes in code through prototyping are not visible in Java, since each attribute/method invocation in Groovy goes through the metaclass registry. The changed code can only be accessed from Java by going to the metaclass registry.
+Groovy also allows overriding methods as  property:
+The Grails framework uses metaprogramming extensively to enable 
+Groovy's syntax permits omitting parentheses and dots in some situations. The following groovy code
+can be written as
+enabling the development of  (DSLs) which look like plain English.
+Although Groovy is mostly an object-oriented language, it also offers  features.
+According to Groovy's documentation: "Closures in Groovy work similar to a 'method pointer', enabling code to be written and run in a later point in time".), delegation, implicit, typed and untyped parameters.
+When working on Collections of a determined type, the closure passed to an operation on the collection can be inferred:
+A group of expressions can be written in a closure block without reference to an implementation and the responding object can be assigned at a later point using delegation:
+Usually called  this Groovy feature allows closures' parameters to be set to a default parameter in any of their arguments, creating a new closure with the bound value. If you supply one argument to the curry() method you will fix the first argument. If you supply N arguments you will fix arguments 1..N.
+Curry can also be used in the reversed direction (fixing arguments N to N-1) using rcurry.
+Groovy also supports 
+On XML and , making the production of the data structure less verbose. For example, the following XML:
+Can be generated through the following Groovy code:
+And also can be processed in a streaming way through 
+To parse it and search for a functional language we can use Groovy's  method:
+In Groovy we can interpolate the string with variables and expressions by using GStrings:
+GStrings containing variables and expressions must be declared using double quotes.
+A complex expression must be enclosed in curly brackets. This prevents parts of it from being interpreted as belonging to the surrounding string instead of to the expression:
+Expression evaluation can be deferred by employing arrow syntax:
+According to Groovy's own documentation, "When the Groovy compiler compiles Groovy scripts and classes, at some point in the process, the source code will end up being represented in memory in the form of a Concrete Syntax Tree, then transformed into an Abstract Syntax Tree. The purpose of AST Transformations is to let developers hook into the compilation process to be able to modify the AST before it is turned into bytecode that will be run by the JVM. AST Transformations provides Groovy with improved compile-time metaprogramming capabilities allowing powerful flexibility at the language level, without a runtime performance penalty.".
+Examples of ASTs in Groovy are:
+Among others.
+According to Groovy's documentation, " are a structural construct of the language which allow: composition of behaviors, runtime implementation of interfaces, behavior overriding, and compatibility with static type checking/compilation."
+Traits can be seen as interfaces carrying both default implementations and state. A trait is defined using the trait keyword:
+Then it can be used like a normal interface using the implements keyword:
+Traits allow a wide range of capabilities, from simple composition to testing.
+Many  support Groovy:

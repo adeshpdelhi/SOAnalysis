@@ -1,0 +1,1 @@
+CrE-ME is a . The product is based on Sun MicroSystems reference implementations as well as NSIcom-proprietary technology termed JSCP. CrE-ME is reported to be the fastest Java Virtual Machine out on Windows Mobile devices with moderate system requirements. It supports Java applets in Internet Explorer Mobile.

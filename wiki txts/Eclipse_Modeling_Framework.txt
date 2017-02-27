@@ -1,0 +1,8 @@
+.
+From a model specification described in  documents, or modeling tools, then imported into EMF. Most important of all, EMF provides the foundation for interoperability with other EMF-based tools and applications.
+
+
+ is the core (meta-)model at the heart of EMF. It allows expressing other models by leveraging its constructs. Ecore is also its own metamodel (i.e.: Ecore is defined in terms of itself).
+According to 
+Using Ecore as a foundational meta-model allows a modeler to take advantage of the entire EMF ecosystem and tooling - in as much as it's then reasonably easy to map application-level models back to Ecore. This isn't to say that it's best practice for applications to directly leverage Ecore as their metamodel; rather they might consider defining their own metamodels based on Ecore.
+

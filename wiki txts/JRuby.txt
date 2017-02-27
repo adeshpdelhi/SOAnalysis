@@ -1,0 +1,37 @@
+ for the Python language).
+JRuby's lead developers are 
+In July 2009, the JRuby developers left Sun to continue JRuby development at 
+
+
+JRuby was originally created by Jan Arne Petersen, in 2001. At that time and for several years following, the code was a direct port of the Ruby 1.6 ) core team of around six members.
+JRuby 1.1 added 
+JRuby packages are available for most platforms; 
+In July 2009, the core JRuby developers at Sun Microsystems, 
+JRuby has supported compatibility with  versions 1.6 through 1.9.3. JRuby 1.0 supported Ruby 1.8.6, with JRuby 1.4.0 updating that compatibility to Ruby 1.8.7. JRuby 1.6.0 added simultaneous support for Ruby 1.9.2, with JRuby 1.7.0 making Ruby 1.9.3 the default execution mode (Ruby 1.8.7 compatibility is available via a command-line flag). JRuby 9.0.0.0 added support for Ruby 2.2.
+JRuby has been able to run the 
+On February 27, 2008, 
+ proposes:
+The 
+The JRuby team has implemented dynamic invocation into their codebase. Dynamic invocation initially shipped with the 1.1.5 release in a primitive form.
+This table presents only releases that present significant steps in JRuby history, aside from versions that mainly fixed bugs and improved performance. Performance improvements are also not shown in the table below, as every release has usually brought such improvements.
+The project gets coordinated .
+Fully ported encoding/transcoding logic from MRI
+Fixed several keyword argument issues
+Fixed several parser issues
+Reduced memory use of the JIT
+Update Psych to 2.2.2
+Update jruby-openssl to 0.9.18
+72 issues fixed ()
+Since early 2006, the current JRuby core team has endeavored to move JRuby beyond being a simple C port, to support better performance and to aid eventual compilation to  unmodified using JRuby. In the process of achieving this goal, the JRuby test suite expanded to such extent that the team gained confidence in the "correctness" of JRuby. As a result, toward the end of 2006 and in the beginning of 2007, they began to commit much more complicated redesigns and refactorings of JRuby's core subsystems.
+JRuby is designed to work as a mixed-mode virtual machine for Ruby, where code can be either interpreted directly,  as Java class files.
+JRuby has built-in support for  does.
+The  It is no longer included in NetBeans 7.0 and later.
+JRuby is similar to the standard Ruby interpreter except written in  Java has significant footing in the development of web applications.
+One powerful feature of JRuby is its ability to invoke the classes of the :
+JRuby also allows the user to call Java code using the more Ruby-like  properties as attributes:
+JRuby can just as easily be called from Java, using either the .
+According to some benchmarks, JRuby is faster than alternatives. Since implementations vary in how much code is loaded before execution, different methods of measuring speed can lead to biased interpretations of performance advantages. The time it takes for a  itself to load is often excluded from execution times when calculating benchmarks.
+JRuby has the significant architectural advantage to be able to leverage JVM threads without being constrained by a ), therefore achieving full parallelism within a process, which Ruby MRI cannot achieve despite leveraging OS threads.
+In a real 
+In a 2007 benchmark of Ruby implementations, JRuby was faster than Ruby MRI 1.8 in some tests, but 
+As of April 2014, in the Computer Language Benchmarks Game, JRuby 1.7.4 typically has the same performance as Ruby MRI 2.1.0, but uses more memory.

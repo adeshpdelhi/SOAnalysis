@@ -1,0 +1,2 @@
+
+aicas provides  for time and safety critical applications, such as in avionics, automotive and industrial process control.

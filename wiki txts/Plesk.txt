@@ -1,0 +1,9 @@
+
+
+
+Plesk's -based interface. The administrator can create client and site templates, which predetermine resource-allocation parameters for the domains and/or clients.
+The latest version of Plesk has integrated support for Github, Docker, Multi-server management, and framework ready environment for Node.js, PHP, Python, Ruby on rails and more. The previous version of Plesk(12.5) for 
+Plesk installs custom versions of or manages versions of  server.
+The Plesk Platform includes extensions for .
+Plesk has several software packs that are not part of the main Plesk code base. These add-ons are designed to fully interact with Plesk, and they include:
+Plesk offers users the possibility to easily install web applications using the (APS)  APS packages are updated by the packaging vendor when a security update is made available.

@@ -1,0 +1,4 @@
+				
+It works as follows:
+The advantage of such a method is that it allows the Web service to be implemented at server-side as a  container. Thus, Servlet or EJB applications are made available through Web services.
+

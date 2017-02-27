@@ -1,0 +1,13 @@
+The  to support abstract window toolkit.
+
+
+When  application when run on a Mac, etc. However, some application developers dislike this model because they prefer their applications to look exactly the same on every platform.
+In  or a cross-platform look and feel (the "Java Look and Feel") that looks the same on all windowing systems.
+The AWT provides two levels of :
+AWT also makes some higher level functionality available to applications, such as:
+Neither AWT nor Swing are inherently  allows applications to perform time-consuming tasks following user-interaction events in the event dispatching thread.
+Prior to 
+Starting in 
+As the AWT is a bridge to the underlying native user-interface, its implementation on a new  may involve a lot of work, especially if it involves any of the AWT GUI widgets, because each of them requires that its native peers be developed from scratch.
+A new project, 
+

@@ -1,0 +1,8 @@
+
+ImageJ can be run as an online 
+The project developer, Wayne Rasband, retired from the Research Services Branch of the  in 2010, but continues to develop the software.
+
+
+ImageJ can display, edit, analyze, process, save, and print , rotation, and flips. The program supports any number of images simultaneously, limited only by available memory.
+Before the release of ImageJ in 1997, a similar freeware image analysis program known as 
+

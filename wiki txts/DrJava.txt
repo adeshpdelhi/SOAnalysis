@@ -1,0 +1,3 @@
+. DrJava has the ability to interactively evaluate Java code from a console and to present output as well to the same console. It has many other features that have been designed for advanced users as well. DrJava offers a JUnit test facility.
+There have been 2,963,997 downloads as of September 16, 2016
+The version history of DrJava, as well as links for downloading the various versions, is maintained at .

@@ -1,0 +1,14 @@
+				.
+When a class varies often, the features of . The bridge pattern can also be thought of as two layers of abstraction.
+When there is only one fixed implementation, this pattern is known as the  world.
+The , e.g. in the Java code below.
+: The implementation can be decoupled even more by deferring the presence of the implementation to the point where the abstraction is utilized.
+
+
+
+Bridge pattern compose objects in tree structure. It decouples abstraction from implementation. Here abstraction represents the client from which the objects will be called. An example to implement in C# is given below
+As you can see, the Bridge classes are the Implementation that uses the same interface-oriented architecture to create objects. On the other hand, the abstraction takes an object of the implementation phase and runs its method. Thus, it makes completely decoupled from one another.
+Output
+The following  (SE 6) program illustrates a 'shape'.
+It will output:
+Output:

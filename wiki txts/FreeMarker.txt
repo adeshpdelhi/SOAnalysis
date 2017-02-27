@@ -1,0 +1,8 @@
+.
+
+
+FreeMarker had a somewhat hectic history until about 2004, caused by , who released FreeMarker 2, which started a sequence of several substantial changes. The main goal of the changes was to make the template language more strict, i.e., to detect as many of the typos and other typical mistakes as possible. Also, automatic object wrapping was introduced, along with gradual advancement of the type system of the template language. The language has gained many power-user features, such as more powerful macro programming capabilities and namespaces. The language has reached a quite settled state with version 2.3, released in 2004 Q3. As of 2016, the product has remained backward compatible. No significant backward incompatible changes are expected in the FreeMarker 2 series in the future.
+In late 2015, FreeMarker was granted to the Apache Software Foundation, where it has entered the  (means, it tries to grow to a fully accepted Apache project).
+The following template:
+processed by FreeMarker will produce something like:
+Variables like "name" and "messages" are coming from outside the template, and thus the template author has to deal with the presentation issues only. The template remains the same regardless if these variables are coming from a database or from a cookie or calculated on whatever other ways. Also the exact Java  (and hence the class) of the values can be hidden in FreeMarker using a technique called object wrapping. For example, "messages" seems to be a list or array of Java beans that have "from" and "body" properties, but it might as well be something very different, and the template is not affected (as long as a proper object wrapper is used).

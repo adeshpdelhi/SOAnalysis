@@ -1,0 +1,5 @@
+				
+Written entirely in the  formats.
+Common uses range from a  for use in executing formula calculations. The ExtenXLS API can be used as a desktop spreadsheet component or embedded in a server application. With the ability to reuse existing spreadsheets, ExtenXLS can update template XLS files with fresh data from databases and output to custom reports. It has an Excel compatibility, template input files can range from a variety of complex legacy spreadsheets such as: surveys, checklists, what-if scenarios, and historical portfolio data.
+ExtenXLS contains methods that can create new WorkBooks from scratch, allowing for the insertion of new cells containing text, and numeric data. The product allows for customization of output with hundreds of fonts, colors, patterns, borders, formulas, named ranges, and built-in formats such as: currency, date, financial and numeric formatting patterns.
+Other potential uses include: user interfaces built with the included  spreadsheet components, and transformations of spreadsheets into HTML, and XML.

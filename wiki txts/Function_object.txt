@@ -1,0 +1,68 @@
+A , usually with the same syntax (a function parameter that can also be a function).
+
+
+A typical use of a function object is in writing  for a full object, carrying its own state.
+Many modern (and some older) languages, e.g.  converts the closures into function objects.
+Consider the example of a sorting routine that uses a callback function to define an ordering relation between a pair of items. A C program using function pointers may appear as:
+In C++, a function object may be used instead of an ordinary function by defining a class that  member function. In C++, this may appear as follows:
+Notice that the syntax for providing the callback to the  function is identical, but an object is passed instead of a function pointer. When invoked, the callback function is executed just as any other member function, and therefore has full access to the other members (data or functions) of the object. Of course, this is just a trivial example. To understand what power a functor provides more than a regular function, consider the common use case of sorting objects by a particular field. In the following example, a functor is used to sort a simple employee database by each employee's ID number.
+In , the lambda expression provides a more succinct way to do the same thing.
+
+It is possible to use function objects in situations other than as callback functions. In this case, the shortened term  used about the function object. Continuing the example,
+In addition to class type functors, other kinds of function objects are also possible in C++. They can take advantage of C++'s member-pointer or  (STL) makes heavy use of template-based function objects.
+Another advantage of function objects is their ability to maintain a state that affects  counting from 10 upwards and is invoked 11 times.
+In . Here is an example using a named method.
+Here is an example using a lambda expression.
+, respectively:
+The difference between a  in D is automatically and conservatively determined by the compiler. D also supports function literals, that allow a lambda-style definition:
+To allow the compiler to inline the code (see above), function objects can also be specified C++-style via :
+In the .
+Within software text, the language keyword  allows agents to be constructed in a compact form. In the following example, the goal is to add the action of stepping the gauge forward to the list of actions to be executed in the event that a button is clicked.
+The routine  capabilities.
+In other library classes, agents are seen to be used for different purposes. In a library supporting data structures, for example, a class modeling linear structures effects  contain the character '!':
+When agents are created, the arguments to the routines they model and even the target object to which they are applied can be either  in this example.)
+When the target of an agent is left open, the class name of the expected target, enclosed in braces, is substituted for an object reference as shown in the text  in the example above. When an argument is left open, the question mark character ('?') is coded as a placeholder for the open argument.
+The ability to close or leave open targets and arguments is intended to improve the flexibility of the agent mechanism. Consider a class that contains the following procedure to print a string on standard output after a new line:
+The following snippet, assumed to be in the same class, uses  to demonstrate the mixing of open arguments and open targets in agents used as arguments to the same routine.
+This example uses the procedure  for linear structures, which executes the routine modeled by an agent for each item in the structure.
+The sequence of three instructions prints the strings in , converts the strings to lowercase, and then prints them again.
+Procedure ).
+Open and closed arguments and targets also allow the use of routines that call for more arguments than are required by closing all but the necessary number of arguments:
+The Eiffel agent mechanism is detailed in the .
+.
+For an example from Java's standard library,  and a functor whose role is to compare objects in the List. Without first-class functions, the function is part of the Comparator interface. This could be used as follows.
+In Java 8+, this can be written as:
+In , functions are first class objects. JavaScript also supports closures.
+Compare the following with the subsequent Python example.
+An example of this in use:
+In Lisp family languages such as , just like operator () in C++.
+The closure constructor has the syntax  part consists of expressions that are evaluated when the functor is called.
+Many uses of functors in languages like C++ are simply emulations of the missing closure constructor. Since the programmer cannot directly construct a closure, they must define a class that has all of the necessary state variables, and also a member function. Then, construct an instance of that class instead, ensuring that all the member variables are initialized through its constructor. The values are derived precisely from those local variables that ought to be captured directly by a closure.
+A function-object using the class system, no use of closures:
+Since there is no standard way to make funcallable objects in Lisp, we fake it by defining a generic function called FUNCTOR-CALL. This can be specialized for any class whatsoever. The standard FUNCALL function is not generic; it only takes function objects.
+It is this FUNCTOR-CALL generic function that gives us function objects, which are , whether they be class objects or closures is no more complicated than making a + operator that works with different kinds of numbers, such as integers, reals or complex numbers.
+Now, a counter implemented using a closure. This is much more brief and direct. The INITIAL-VALUE argument of the MAKE-COUNTER .
+Scheme makes closures even simpler, and Scheme code tends to use such higher-order programming somewhat more idiomatically.
+More than one closure can be created in the same lexical environment. A vector of closures, each implementing a specific kind of operation, can quite faithfully emulate an object that has a set of virtual operations. That type of  object-oriented programming can be done fully with closures.
+Thus there exists a kind of tunnel being dug from both sides of the proverbial mountain. Programmers in OOP languages discover function objects by restricting objects to have one  type OOP.
+In :
+An advantage of .
+In , a function object can be created either from a class's constructor returning a function closed over the object's instance data, blessed into the class:
+or by overloading the &amp;{} operator so that the object can be used as a function:
+In both cases the function object can be used either using the dereferencing arrow syntax :
+or using the coderef dereferencing syntax :
+ that can be used e.g. as parameter to the usort() function:
+It is also possible in PHP 5.3+ to make objects invokable by adding a magic __invoke() method to their class:
+In the  type System.Management.Automation.ScriptBlock.
+In  method can be called using function-call syntax.
+An example is this accumulator class (based on 
+An example of this in use (using the interactive interpreter):
+Since functions are objects, they can also be defined locally, given attributes, and returned by other functions , as demonstrated in the following two examples:
+Function object creation using a  in Python 3:
+In 
+Now, method 
+Because of the variety of forms, the term Functor is not generally used in Ruby to mean a Function object. Just a type of dispatch  project is named as Functor. The most basic definition of which is:
+This usage is more akin to that used by functional programming languages, like , and the original mathematical terminology.
+In a more theoretical context a .
+The .
+In .

@@ -1,0 +1,4 @@
+, in order to easily write tests that verify the proper behaviour of a web site.
+The use of HttpUnit allows for automated testing of web applications and as a result, assists in .
+
+

@@ -1,0 +1,3 @@
+ (the JPOX project started in 2003 and was relaunched as DataNucleus in 2008 with broader scope).
+-compliant so can be used equally in an OSGi environment.
+DataNucleus Access Platform is also utilised by the persistence layer behind  though those projects are not connected to, nor supported by the DataNucleus project as such.

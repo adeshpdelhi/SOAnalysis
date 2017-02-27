@@ -1,0 +1,1 @@
+, Continuum emails developers when the build is broken, requesting that the culprit fix the problem.

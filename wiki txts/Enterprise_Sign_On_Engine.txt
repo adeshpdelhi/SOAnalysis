@@ -1,0 +1,7 @@
+The .
+ESOE is standards based, complying with .
+Furthermore, ESOE is able to act as hub for identity protocols and is able to translate tokens from  to its internal SAML 2.0 token type.
+The design goals of ESOE are such that it should interact with any type of service and even aggregate identity data across them. Support for  are implemented as reference plugins for the authentication 'pipeline'.
+The underlying architecture of ESOE is such that all modules are able to be removed, replaced or reimplemented to suit a specific deployment. This is achieved with heavy utilization of the  design. Development is carried out with using Agile principals and the software includes hundreds of automated test cases.
+For added flexibility each core part of the system has been developed using a pluggable pipeline approach. This means that authentication, identity and SSO events must each traverse a pipeline of plugins which all perform different tasks. This allows organizations to add functionality specific to their deployment while still taking advantage of the core logic.
+The entire system is built using a centralized ESOE Build system which relies on .

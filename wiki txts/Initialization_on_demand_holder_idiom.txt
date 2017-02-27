@@ -1,0 +1,3 @@
+				
+The implementation of the idiom relies on the initialization phase of execution within the  without incurring any additional synchronization overhead.
+While the implementation is an efficient thread-safe "singleton" cache without synchronization overhead, and better performing than uncontended synchronization, failure.

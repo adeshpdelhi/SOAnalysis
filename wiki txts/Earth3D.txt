@@ -1,0 +1,5 @@
+.
+One of the strengths of Earth3D is the capacity of showing metereological phenomena, like 
+The original version of Earth3D was developed using Trolltech's  also has an open source Java version. So most people wanted to use a C++ based globe in their applications. That was the reason why a minimalized version, the Earth3dlib was developed. It contains only the most necessary functions to display the earth itself and to add own visualizations to it.
+All these three projects can be retrieved from Sourceforge's CVS (C++) or Subversion (Java) repository.
+

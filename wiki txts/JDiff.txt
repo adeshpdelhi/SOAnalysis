@@ -1,0 +1,1 @@
+				 are compared. This is very useful for describing exactly what has changed between two releases of a product. Only the API of each version is compared. It does not compare what the source code does when executed.

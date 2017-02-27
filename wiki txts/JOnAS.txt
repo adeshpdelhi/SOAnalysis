@@ -1,0 +1,9 @@
+ open-source license.
+
+
+JOnAS 5.1 is .
+JOnAS 5.3 is 
+JOnAS has a comparatively clear remote management console, providing easily accessible tools for remote uploading and deploying of the web applications.
+JOnAS is an open source Java EE 6 application server. It provides a fully compliant  is available.
+As of its version 5, JOnAS is fully based on the  or Knopflerfish (though the default JOnAS packaging comes with Apache Felix). This means that all JOnAS components are packaged as bundles, for example the full JOnAS profile comes with more than 250 bundles.
+The service layer is implemented using , therefore most Java-EE-certified JOnAS services (persistence, EJB, resources, ...) are directly available as OSGi services to all OSGi bundles deployed on JOnAS. The inverse is also true: for example, an EJB3 can directly access any number of OSGi services using dynamic injection.

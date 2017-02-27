@@ -1,0 +1,4 @@
+
+The design of the J9 VM has been aimed at portability to different platforms, as well as scaling from mobile phones all the way to  mainframes.
+IBM released the source code for VM, GC, JIT and RAS tools under .
+

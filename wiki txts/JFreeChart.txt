@@ -1,0 +1,8 @@
+.
+JFreeChart supports a number of various charts, including combined charts:
+It is possible to place various markers and annotations on the plot.
+JFreeChart also works with 
+JFreeChart automatically draws the axis scales and legends. Charts in GUI automatically get the capability to zoom in with mouse and change some settings through local menu. The existing charts can be easily updated through the listeners that the library has on its data collections.
+
+
+

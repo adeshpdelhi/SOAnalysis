@@ -1,0 +1,9 @@
+
+As with other mind mapping software packages, FreeMind allows the user to edit a hierarchical set of ideas around a central concept. The non-linear approach assists in brainstorming new outlines and projects as ideas are added around the mind map.
+FreeMind was a finalist for Best Project in 
+
+
+FreeMind's most significant features are as follows:
+FreeMind uses the  for Java.
+FreeMind developers or developers of other projects have made  software so that Freemind files can be viewed and in some cases created via the web interface.
+There are (at least) two active  support.

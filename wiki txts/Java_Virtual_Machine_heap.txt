@@ -1,0 +1,46 @@
+A .
+.
+ open source project, which is governed by Oracle.
+
+
+The Java virtual machine is an abstract (virtual) computer defined by a specification. This specification omits implementation details that are not essential to ensure interoperability: the memory layout of run-time data areas, the garbage-collection algorithm used, and any internal optimization of the Java virtual machine instructions (their translation into machine code). The main reason for this omission is to not unnecessarily constrain implementers. Any Java application can be run only inside some concrete implementation of the abstract specification of the Java virtual machine.
+Starting with  The preface states:
+We intend that this specification should sufficiently document the Java Virtual Machine to make possible compatible clean-room implementations. Oracle provides tests that verify the proper operation of implementations of the Java Virtual Machine.
+One of Oracle's JVMs is named . Oracle owns the Java trademark and may allow its use to certify implementation suites as fully compatible with Oracle's specification.
+One of the organizational units of JVM byte code is a class. A class loader implementation must be able to recognize and load anything that conforms to the Java class file format. Any implementation is free to recognize other binary forms besides  files.
+The class loader performs three basic activities in this strict order:
+In general, there are two types of class loader: bootstrap class loader and user defined class loader.
+Every Java virtual machine implementation must have a bootstrap class loader, capable of loading trusted classes. The Java virtual machine specification doesn't specify how a class loader should locate classes.
+The JVM has  for the following groups of tasks:
+The aim is binary compatibility. Each particular host  that must be mapped to each host operating system.
+A JVM language is any language with functionality that can be expressed in terms of a valid class file which can be hosted by the Java Virtual Machine. A class file contains Java Virtual Machine instructions (
+There are several JVM languages, both old languages ported to JVM and completely new languages. 
+Java 7 JVM implements 
+A basic philosophy of Java is that it is inherently , and the verifier.
+The JVM  all bytecode before it is executed. This verification consists primarily of three types of checks:
+The first two of these checks take place primarily during the  step that occurs when a class is loaded and made eligible for use. The third is primarily performed dynamically, when data items or methods of a class are first accessed by another class.
+The verifier permits only some bytecode sequences in valid programs, e.g. a  when using a JIT compiler. In the face of the code-verified JVM architecture, it makes no difference to a JIT compiler whether it gets named imaginary registers or imaginary stack positions that must be allocated to the target architecture's registers. In fact, code verification makes the JVM different from a classic stack architecture, of which efficient emulation with a JIT compiler is more complicated and typically carried out by a slower interpreter.
+The original specification for the bytecode verifier used natural language that was 
+A virtual machine architecture allows very fine-grained control over the actions that code within the machine is permitted to take. It assumes the code is "semantically" correct, that is, it successfully passed the (formal) bytecode verifier process, materialized by a tool, possibly off-board the virtual machine. This is designed to allow safe execution of untrusted code from remote sources, a model used by , execute external pieces of software, or network.
+Formal proof of bytecode verifiers have been done by the Javacard industry (Formal Development of an Embedded Verifier for Java Card Byte Code)
+For each  is needed. When a computer has a Java bytecode interpreter, it can run any Java bytecode program, and the same program can be run on any computer that has such an interpreter.
+When Java bytecode is executed by an interpreter, the execution will always be slower than the execution of the same program compiled into native machine language. This problem is mitigated by  for executing Java bytecode. A JIT compiler may translate Java bytecode into native machine language while executing the program. The translated parts of the program can then be executed much more quickly than they could be interpreted. This technique gets applied to those parts of a program frequently executed. This way a JIT compiler can significantly speed up the overall execution time.
+There is no necessary connection between the Java programming language and Java bytecode. A program written in Java can be compiled directly into the machine language of a real computer and programs written in other languages than Java can be compiled into Java bytecode.
+Java bytecode is intended to be platform-independent and secure.
+Since very early stages of the design process, Java (and JVM) has been marketed as a web technology for creating .
+On the client side, web browsers may be extended with a , the main competing technology, works in the same way in this respect. Java applets are not restricted to Java and in general can be created in any JVM language.
+As of April 2014, 
+As of June 2015
+As of May 2016, 
+With the continuing improvements in JavaScript execution speed, combined with the increased use of mobile devices whose web browsers do not implement support for plugins, there are efforts to target those users through compilation to JavaScript. It is possible to either compile the source code or JVM bytecode to JavaScript. Compiling the JVM bytecode which is universal across JVM languages allows building upon the existing compiler to bytecode.
+Main JVM bytecode to JavaScript compilers are TeaVM,
+Leading compilers from JVM languages to JavaScript include the Java to JavaScript compiler contained in 
+The Java Runtime Environment (JRE) released by Oracle is a software distribution containing a stand-alone Java VM (), browser plugin, Java standard libraries and a configuration tool. It is the most common Java environment installed on Windows computers. It is freely available for download at the website java.com.
+The JVM specification gives a lot of leeway to implementors regarding the implementation details. Since Java 1.3, JRE from Oracle contains a JVM called HotSpot. It has been designed to be a high-performance JVM.
+To speed-up code execution, HotSpot relies on just-in-time compilation. To speed-up object allocation and garbage collection, HotSpot uses generational heap.
+The 
+In HotSpot the heap is divided into :
+The 
+Originally there was no permanent generation, and objects and classes were stored together in the same area. But as class unloading occurs much more rarely than objects are collected, moving class structures to a specific area allowed significant performance improvements.
+Oracle's JRE is installed on a large number of computers. Since any web page the user visits may run Java applets, Java provides an easily accessible 
+In the past, end users were often using an out-of-date version of JRE which was vulnerable to many known attacks. This led to the widely shared belief between users that Java is inherently insecure. Since Java 1.7, Oracle's JRE for Windows includes automatic update functionality.

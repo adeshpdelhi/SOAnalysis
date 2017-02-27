@@ -1,0 +1,7 @@
+				 at runtime.
+Swing allows an application to specialize the look and feel of widgets by modifying the default (via runtime parameters), deriving from an existing one, by creating one from scratch, or, beginning with  property file. The look and feel can be changed at runtime.
+
+
+The corresponding  includes:
+The 
+Numerous other look and feels have been developed by third parties, such as:

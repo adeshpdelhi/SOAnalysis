@@ -1,0 +1,36 @@
+ where a function or method call is dynamically dispatched based on the actual derived type of the object on which the method has been called. Multiple dispatch routes the dynamic dispatch to the implementing function or method using the combined characteristics of one or more arguments.
+
+
+Developers of computer software typically organize source code into named blocks variously called subroutines, procedures,  that follows the reference.
+Function names are usually selected so as to be descriptive of the function's purpose. It is sometimes desirable to give several functions the same name, often because they perform conceptually similar tasks, but operate on different types of input data. In such cases, the name reference at the function call site is not sufficient for identifying the block of code to be executed. Instead, the number and type of the arguments to the function call are also used to select among several function implementations.
+In more conventional, i.e.  would produce a cheep.
+By contrast, in languages with multiple dispatch, the selected method is simply the one whose arguments match the number and type of the function call. There is no  the function/method carried out in a particular call.
+The  (CLOS) is an early and well-known example of multiple dispatch.
+When working with languages that can discriminate  a function.
+In programming languages that defer data type identification until run-time (i.e., late binding), the selection among alternative functions must occur at run-time, based on the dynamically determined types of function arguments. Functions whose alternative implementations are selected in this manner are referred to most generally as .
+There is some run-time cost associated with dynamically dispatching function calls. In some languages, the distinction between overloading and multimethods can be blurred, with the compiler determining whether compile-time selection can be applied to a given function call, or whether slower run-time dispatch is needed.
+In order to estimate how often multiple dispatch is used in practice, Muschevici et al.. Their results show that 13–32% of generic functions use the dynamic type of a one argument, while 2.7–6.5% of them use the dynamic type of multiple arguments. The remaining 65–93% of generic functions have one concrete method (overrider), and thus are not considered to use the dynamic types of their arguments. Further, the study reports that 2–20% of generic functions had two and 3–6% had three concrete function implementations. The numbers decrease rapidly for functions with more concrete overriders.
+The theory of multiple dispatching languages was first developed by Castagna et al., by defining a model for overloaded functions with late binding.
+Distinguishing multiple and single dispatch may be made clearer by an example. Imagine a game that has, among its (user-visible) objects, spaceships and asteroids. When two objects collide, the program may need to do different things according to what has just hit what.
+In a language with multiple dispatch, such as , it might look more like this:
+and similarly for the other methods. Explicit testing and "dynamic casting" are not used.
+In the presence of multiple dispatch, the traditional idea of methods as being defined in classes and contained in objects becomes less appealing—each .
+, like past versions, uses proven ideas from other languages, and type systems have shown themselves to offer compelling advantages in compiler-side code analysis and powerful user-side semantics via multiple dispatch.
+It has both multi methods, and multi subs. Since most operators are actually subroutines, it has multiple dispatched operators as well.
+Along with the usual type constraints, it also has "where" constraints that allow you to make very specialized subroutines.
+In languages that do not support multiple dispatch at the language definition or syntactic level, such as  without changing the underlying syntax or keywords of the language.
+Functionally, this is very similar to the CLOS example, but the syntax is conventional Python.
+Using Python 2.4  with a simplified syntax:
+and then it goes on to define the multimethod decorator.
+The PEAK-Rules package provides multiple dispatch with a syntax similar to the above example.
+C does not have dynamic dispatch, so it must be implemented manually in some form. Often an enum is used to identify the subtype of an object. Dynamic dispatch can be done by looking up this value in a . Here is a simple example in C:
+With the C Object System library, C does support dynamic dispatch similar to CLOS. It is fully extensible and does not need any manual handling of the methods. Dynamic message (methods) are dispatched by the dispatcher of COS, which is faster than Objective-C. Here is an example in COS:
+As of 2015 or dynamic cast:
+or pointer-to-method lookup table:
+The  automates this approach.
+Stroustrup mentions in 
+In a language with only single dispatch, such as , multiple dispatch can be emulated with multiple levels of single dispatch:
+Run time  checks at one or both levels can also be used.
+Programming languages that support general multimethods:
+Multimethods in other programming languages via extensions:
+Also, multi-parameter  in Haskell and Scala can be used to emulate multiple dispatch.

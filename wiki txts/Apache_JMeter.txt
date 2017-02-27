@@ -1,0 +1,7 @@
+.
+JMeter can be used as a unit-test tool for JDBC database connections,
+JMeter supports variable parameterization, assertions (response validation), per-thread cookies, configuration variables and a variety of reports.
+JMeter architecture is based on . Most of its "out of the box" features are implemented with plugins. Off-site developers can easily extend JMeter with custom plugins.
+
+
+Source:

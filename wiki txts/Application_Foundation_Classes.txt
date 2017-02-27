@@ -1,0 +1,6 @@
+				 (AWT), but its architecture made it easier to extend components to better fit user needs.
+AFC components were announced to be cross-platform, but they worked better with 
+
+
+The release of AFC (along with 
+With the release of , interest for AFC dropped, and they later were no longer maintained.

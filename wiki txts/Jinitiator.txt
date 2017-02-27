@@ -1,0 +1,6 @@
+ is accessed. This behavior is implemented by a plugin or an activex control, depending on the browser.
+The first two numbers of the version roughly follow the Sun Java numbering convention. It means that for instance Jinitiator 1.3.1.25 is based upon JDK 1.3 or later.
+The main reason for Oracle to develop Jinitiator was to support Oracle Forms on the web in earlier releases due to bugs in earlier releases of the JDK.
+In 2007 Oracle announced, that for the upcoming release of Forms version 11, Jinitiator would no longer be needed
+The latest version (released in 2008) is 1.3.1.30 and is still available at the Oracle website. Obsolete versions of Jinitiator can be made to work under 
+

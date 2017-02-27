@@ -1,0 +1,15 @@
+				 on December 16, 1996.
+The Java IFC was fairly close to the early versions of the Objective C NeXTStep classes for NeXT. A builder tool was also included under the IFC umbrella that was close in spirit (but significantly limited in functionality) to NeXT's Interface Builder. This ecosystem was attractive to NeXT application developers interested in looking at the Java language.
+
+
+On April 2, 1997, 
+Ultimately, Sun merged the IFC with other technologies under the name "Swing", adding the capability for a pluggable  of the widgets.
+Because its technology has been merged to constitute , IFC is now no longer maintained.
+ drew a lot of features from IFC:
+However, Swing also improved IFC in a lot of ways:
+This is the classic  in IFC:
+To be compared with the equivalent  code:
+The last places, where to download the IFC:
+All find from
+The web-archive where is the last place to find really  files:
+Additional you can still find IFC here:

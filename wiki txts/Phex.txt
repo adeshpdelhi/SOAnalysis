@@ -1,0 +1,16 @@
+ 5.0 or later.
+
+
+Phex supports most of the recent features of the gnutella network. shows client country flags, and can export the list of shared files into multiple formats, some of which can also be read out and downloaded directly by another Phex.
+Version 3.2.0.102 also supports  downloads, yet completely decentralized by design.
+. The software was capable of running on Java 1.1 as long as the user downloaded external Swing libraries. If these libraries were unavailable, Java 1.2 was required.
+Officially, the program never left Beta status. The author eventually stopped maintaining the software, resulting in users migrating to other clients like 
+In April 2001 Konrad Haenel  to form Phex. While he participated in the Phex project initially, he left in late 2001. The project member Gregor K. continued to develop Phex and is the lead developer today.
+Early versions of Phex were released simply as a java  file, limiting their ease of use on some platforms such as the Mac OS. MacPhex was an alternative version made available on the Phex website and supported by macXster. It wrapped Phex in a double click-able application and occasionally added small additional features unique to the Mac OS.
+Since 2006, an anonymous version of Phex has been available: 
+Rather than use the public IP network,  privacy/encryption network.
+Traffic is mixed with other network traffic (see  system, making it difficult for outside observers to identify originators or the recipients of a file through traffic analysis.
+Anonymous networks have been remiss to host file sharing protocols due to bandwidth considerations. Often only searching (or tracking for  system could refuse to route file sharing traffic. This makes inbound and outbound connections easier to locate. Outbound traffic is unencrypted so associating it with the inbound node will break the anonymity.
+ content and makes it more difficult to trace traffic.
+It is possible to use Phex with  to Tor client.
+Various academic studies are based on Phex:

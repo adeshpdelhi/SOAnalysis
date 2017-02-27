@@ -1,0 +1,29 @@
+).
+It used to be owned by 
+
+
+ consists of 5 parts: the framework, the container, the components,the Integrated Development Environment and the development plugins.
+OpenESB main parts
+JBI high level schema
+The framework consists of a lightweight JBI implementation in Java. This implementation is container-agnostic and can work on any platform and any container. Even if development and support are mainly focused on Glassfish V2 and V3 platforms, beta projects on JBoss and standalone  work well and are in progress (2012 Q2). In addition to the OpenESB framework being lightweight, it is also reliable and highly scalable. It is embedded in a Java virtual machine and communicates with other framework instances through Binding components. This architecture matches perfectly with new cloud architectures and allows easy deployment and management on very complex infrastructures. The framework is fully manageable with any JMX-based tool such as Jconsole or more sophisticated tools like Opsview or Nagios.
+The framework implements a virtual bus known as the Normalised Message Router (NMR). This is a powerful asynchronous intelligent communication channel between components.
+The JBI specification defines 2 component types: The services engine (SE) and the binding component (BC). The SE and BC implement the same interface contract, however, they behave differently:
+- Binding components act as the interface between the outside world and the bus, being able to generate bus messages upon receipt of stimuli from an external source, or generate an external action/interaction in response to a message received from the bus.
+- Service engines receive messages from the bus and send messages to the bus. SE’s have no direct contact with the outside world. They rely on the bus for interaction with other components, whether binding components or other service engines.
+ includes many Components 'out of the box'.
+
+
+
+
+OpenESB offers a set of graphical tools to ease complex SOA and integration developments. Powerful XLM, XML Schema, WSDL, BPEL editor, data mapping and Composition Applications graphical editors are proposed with OpenESB. Similarly, build, deploy, un-deploy, run, test and debug tasks are managed by graphical tools. OpenESB provides the best ergonomics for ESB and SOA developments.
+XSD Editor
+WSDL Editor
+BPEL Editor
+Complex BPEL sample
+Data Mapper Editor
+Composite Application Editor
+At present, OpenESB comes with Glassfish V2 as a container. OpenESB on Glassfish is reliable, easily manageable and very scalable with or without . Next versions were planned for 2013.
+Containers available for OpenESB
+The table below lists the web sites and forum managed by OpenESB community
+
+

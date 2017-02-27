@@ -1,0 +1,11 @@
+ are supported.
+
+
+The first preview release was presented to the public at the 2006 CeBIT tradeshow in Hannover, Germany. The first official release, 2.0, was released in December 2006. Version 2.2.0 was released in December 2007. On June 25, 2008, version 2.3.0 beta, was released, adding support for the  and E-mail Archiving.
+Much like  (WSS), O3Spaces contains the concept of workspaces. These are working areas document repositories created for a particular task or project. In addition to document storage, a workspace contains a set of standard collaboration tools. These include team calendaring and a discussion forum for communications and dispute resolutions O3Spaces Workplace provides three main entry points:
+In addition, O3Spaces Workplace delivers:
+The repository can be accessed in several ways. External applications can access the repository by using the WebDAV or the CMIS protocol. End users can control the repository using a web browser or using the desktop client.
+The browser based repository access is a full AJAX application (built on the  framework). The browser environment can be split into a so-called Studio environment and a so-called Spaces environment. The Studio entry point is the entry point to be used by repostory administrators. The Spaces web application is the end-user entry point.
+The desktop client (called Workplace Assistant) can be used to access the repository without a web browser. This desktop client can install the appropriate plugins into supported Office suites.
+O3Spaces Workplace is available for different platforms like for instance , Translucent Technologies, etc.
+The package comes in three different configurations: On Demand, Enterprise, and Workgroup. The On Demand configuration is a  model, can be accessed from anywhere, and includes feature upgrades through the life of the contract. The Workgroup and Enterprise editions are deployed in the company network and can also be used with secure Internet access.

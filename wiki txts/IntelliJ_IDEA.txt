@@ -1,0 +1,16 @@
+
+
+
+The first version of IntelliJ IDEA was released in January 2001, and was one of the first available Java IDEs with advanced code navigation and 
+In a 2010 
+In December 2014, Google announced version 1.0 of 
+Version 12.1 includes support for .
+The IDE provides certain features and providing options to fix inconsistencies via suggestions.
+The IDE provides can be accessed directly from the IDE.
+IntelliJ supports plugins through which one can add additional functionality to the IDE. One can download and install plugins either from IntelliJ's plugin repository website or through IDE's inbuilt plugin search and install feature. Currently IntelliJ IDEA Community edition has 1495 plugins available.
+The Community and Ultimate editions differ in their support for working with different programming languages as per the below table.
+Community Edition supports the following:
+Ultimate Edition supports the following:
+Ultimate Edition also supports the 
+There was a free 
+The two editions also differ in their support systems.

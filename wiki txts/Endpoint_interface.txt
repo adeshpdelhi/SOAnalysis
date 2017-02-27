@@ -1,0 +1,3 @@
+A soap based web service can be implemented as a single java class.An , a Web service endpoint interface defines the business methods of the bean.
+In contrast to a remote interface, a Web service endpoint interface is not accompanied by a , which defines the bean's life-cycle methods. The only methods of the bean that may be invoked by a Web service client are the business methods that are defined in the Web service endpoint interface.
+The methods of an endpoint interface for a Web service are implemented in a session bean class that is stateless.

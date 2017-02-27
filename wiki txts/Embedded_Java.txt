@@ -1,0 +1,11 @@
+. Since 2010 convergence has occurred and embedded implementations are now virtually identical to PC based version.
+
+
+Although in the past some differences existed between embedded Java and traditional PC based Java solutions, the only difference now is that embedded Java code in these , healthcare, metering, smart markets in general)
+Recent developments in the field are
+In order for a software component to run on any Java system, it must target the core minimal API provided by the different providers of the embedded Java ecosystem. Companies such as Aplix, Google, IS2T, Myriad, Oracle, ... share the same eight packages of pre-written programs. The packages (java.lang, java.io, java.util, ... ) form the CORE Embedded Java API, which means that embedded programmers using the Java language can use them in order to make any worthwhile use of the Java language.
+Java SE embedded is based on desktop  architectures.
+Java ME embedded is based on the .
+The offering of Java for embedded devices is growing fast with a large ecosystem of companies that provide Embedded Java virtual machines for  MCU based Cortex-M serie (such as ST, Freescale, Renesas, NXP), and MPU based solution (such as TI, Renesas, Freescale).
+Embedded Java minimal requirements starts at only 30KB of (internal) flash and less than 2KB of (internal) RAM. In order to save Bill Of Material, most Embedded Java engines execute code in place, which avoids copying the code in RAM.
+The Embedded Device Configuration specification defines the minimal embedded standard runtime environment for embedded Java devices. It defines all the default CORE API packages (138 classes/interfaces):

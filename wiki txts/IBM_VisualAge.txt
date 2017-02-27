@@ -1,0 +1,15 @@
+
+
+
+VisualAge was born in the IBM development lab in  which were just starting to be widely available.
+Eventually, the availability of usable implementations of .
+The original prototype which led to VisualAge was an attempt "to make something like the .
+The name VisualAge was the result of a contest between the members of the development team. After the initial release of VisualAge/Smalltalk the name VisualAge became a brand of its own and VisualAges were produced for several different combinations of languages and platforms.
+Languages (not every language is available on every platform listed):
+Platforms:
+Most of the members of the VisualAge family were written in Smalltalk no matter which language they supported for development. The IBM implementation of Smalltalk was produced by  which was acquired by IBM and run as a wholly owned subsidiary for several years before being absorbed into the overall IBM organization.
+VisualAge for Java was based on an extended Smalltalk 
+VisualAge Micro Edition, which supported development of embedded Java applications and cross system development, was a re-implementation of the IDE in Java. This version of VisualAge morphed into the .
+Various members of the family have been replaced by products in the  series.
+VisualAge - Smalltalk
+IBM VisualAge for COBOL Standard is “Year 2000 ready” and Requires: Warp Version 4.0 plus FixPak 1 or Windows NT 4.0 plus Service Pack 3

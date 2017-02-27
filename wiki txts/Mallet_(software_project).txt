@@ -1,0 +1,6 @@
+ "MAchine Learning for LanguagE Toolkit".
+
+
+MALLET is an integrated collection of Java code useful for statistical  applications to text.
+MALLET was developed primarily by .
+

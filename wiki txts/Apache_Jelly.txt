@@ -1,0 +1,7 @@
+.
+Custom XML languages are commonly created to perform some kind of processing action. Jelly is intended to provide a simple XML based processing engine that can be extended to support various custom actions.
+
+
+Clarity PPM Software, a product of , uses Jelly and an additional custom tag library extensively in the implementation of its XML Open Gateway application architecture. The Clarity language is known as GEL (Generic Execution Language) and is a scripting language that is based on the Jelly libraries.
+The following example shows how Clarity implements the classical "
+

@@ -1,0 +1,14 @@
+'.
+The software is currently released by the not-for-profit Compendium Institute. The current version operationalises the  to the issue-based notation derived from IBIS.
+Compendium source code was fully released under 
+
+
+Compendium visually represents thoughts and illustrates the various interconnections between different issues (or questions), ideas (or answers), and arguments. It can be used for applications as varied as: issue mapping in meetings, ).
+The creation of 'issue maps' graphically represents the relations between issues and ideas, and facilitates the understanding of interconnected topics through diagrammatic representation.
+The software can be used by a group of people in a collaborative manner to convey ideas to each other using visual diagrams. A group 
+
+Ideas are represented as icons called 'nodes'. There are ten types of node: question, answer, list view, map view, pro, con, note, decision, reference, argument. There are three types of relationship between nodes: associative, transclusive, categorical. Images can be placed directly into a view, assigned to a node, or assigned to the background picture.
+Users can choose to use Compendium with either the .
+The software is networked and supports concurrency and different views when using .
+Compendium is the result of fifteen years of development in collaborative modeling, initiated in the mid-1990s by Al Selvin and Maarten Sierhuis at 
+Many associations have thence contributed ideas to the development of Compendium. These institutions include Blue Oxen Associates, Center for Creative Leadership, 

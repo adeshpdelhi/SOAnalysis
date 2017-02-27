@@ -1,0 +1,13 @@
+.
+OpenAM originated as  which was initiated following Oracle's purchase of Sun.
+
+
+Announced by , and was the core of Sun's commercial access management and federation product, OpenSSO Enterprise (formerly Sun Access Manager and Sun Federation Manager).
+In July 2008, Sun announced paid support for regular "Express" builds of OpenSSO. Sun’s stated intent was that Express builds would be released approximately every three months, allowing customers early access to new features.
+In September 2008, Sun announced OpenSSO Enterprise 8.0, the first commercial product derived from the OpenSSO project.
+OpenSSO Enterprise won the "Security" category of the 
+In May 2009, shortly after  was announced, OpenSSO Enterprise 8.0 Update 1 was released.
+Oracle completed their acquisition of Sun Microsystems in February 2010 and shortly thereafter removed OpenSSO downloads from their website in an unannounced policy change. OpenSSO was 
+ ForgeRock renamed the product to OpenAM as Oracle retained the rights to the name OpenSSO.
+ForgeRock announced that they would continue delivering on the original Sun Microsystems roadmap.
+OpenAM supports the following features:

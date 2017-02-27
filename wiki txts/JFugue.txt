@@ -1,0 +1,15 @@
+				
+
+
+Here's an example Java program that will play the  in JFugue.
+The string passed to JFugue contains a series of musical instructions that JFugue parses and turns into musical events, which by default are rendered in MIDI. This format, called "Staccato," can represent all of the musical features of MIDI  Staccato to LilyPond). Below is an example converting a MIDI file to the Staccato format.
+JFugue 5.0 contains a set of classes that represent ideas in music theory, including intervals, scales, chords, and chord progressions.
+The notion of Patterns is integral to JFugue. Patterns are used to represent phrases of music that can be combined, repeated, and altered using tools that are aware of the musical content of the pattern.
+JFugue 5.0 makes extensive use of , which lets developers write short, expressive pieces of code like the following:
+JFugue is capable of producing  by using a Staccato element consisting of the letter 'm' followed by the frequency in Hertz of the desired tone. Like other notes in JFugue, this tone may be followed by a duration (such as 'w' for a whole note or 'q' for a quarter note) and note dynamics (e.g., "note on" and "note off" velocities). JFugue converts the microtone frequency to a sequence of MIDI Pitch Wheel and Note events to achieve the desired tone.
+JFugue provides an intuitive programming interface for creating beats and rhythms. The characters in the strings below each correspond to a percussion note that is played on the percussive MIDI Channel (the tenth channel); default settings are provided for common sounds (e.g., "O" for "[BASS_DRUM]q"), although any Java Map or Character to String may be passed to the Rhythm constructor.
+In addition to allowing music to be converted from one music format to another, the architecture of JFugue can be used to create programmatic tools that are capable of both performing computations on incoming music (from any format) and changing incoming music. The example below is a simple tool that keeps track of all instruments used in a musical piece.
+JFugue provides functionality on top of Java's MIDI Transmitter and Receiver classes to reduce the amount of code that a developer would need to write to connect to external MIDI devices.
+JFugue has been used in a number of applications, including software projects and artistic installations.
+JFugue has been used to play music when a software build fails or succeeds.
+JFugue is one of the few Java libraries that lets one do something interesting in as little as one or two lines of code. This distinction earned JFugue a place in the book "Groovy in Action"

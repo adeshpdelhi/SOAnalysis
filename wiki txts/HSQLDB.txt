@@ -1,0 +1,14 @@
+ and disk-based tables. Both embedded and server modes are available for purchase.
+Additionally, it includes tools such as a minimal .
+HSQLDB is available under a 
+
+
+HSQLDB version 2.0 has three transaction control modes. It supports 
+HSQLDB has two main table types used for durable read-write data storage, i.e., if a transaction has been successfully committed, it is guaranteed that the data will survive system failure and will keep their integrity.
+The default MEMORY type stores all data changes to the disk in the form of a  script. During engine start-up, these commands are executed and data are reconstructed into the memory. While this behavior is not suitable for very large tables, it provides highly regarded performance benefits and is easy to debug.
+Another table type is CACHED, which allows one to store gigabytes of data, at the cost of the slower performance. HSQLDB engine loads them only partially and synchronizes the data to the disk on transaction commits. However, the engine always loads all rows affected during an update into the memory. This renders very large updates impossible without splitting the work into smaller parts.
+Other table types allow for read-write -file access (these tables can participate, for example, in queries with JOINs and simplify spreadsheet processing) and read-write non-durable in-memory data storage.
+HSQLDB 2.0 supports all the core features and 148.
+At the time of this release, HyperSQL supports the widest range of SQL standard features among all open source RDBMS.
+Several versions of HSQLDB have been released since 2001. Early versions were based on the discontinued HypersonicSQL database engine. Version 2.0, released in 2010, is mostly new code, written to conform to Standard 
+Version 2.3.2 (released in 2014) is fully multithreaded and supports high performance  transaction control models. See the list of new features in version 2.3.2.

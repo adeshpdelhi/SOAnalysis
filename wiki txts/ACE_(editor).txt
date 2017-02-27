@@ -1,0 +1,17 @@
+ at the same time.
+
+
+ACE is a simple .
+Once a user has joined a shared document, he can freely edit the document at the same time with all participants as a virtual team. So-called awareness information helps to avoid unnecessary conflicts (that is, two users editing at the same time and text location). Awareness information includes the cursor and the currently selected text of the other users marked with the color of the respective user.
+The heart of the application is a concurrency control algorithm based on the innovative concept of , which allows for lock-free editing of a document by multiple users. It imposes no editing constraints and resolves all conflicts automatically. The algorithm overcomes one of the most significant challenges in designing and implementing real-time collaborative editing systems, namely consistency preservation. That is to ensure that at quiescence (that is, when no messages are in transit) the shared document is identical for all participants.
+ACE builds upon open technologies such as ) and zero-conf networking. All this leaves the possibility open to communicate even with different applications that understand the public protocol of ACE.
+ACE runs on all major operating systems such as .
+
+Consider a collaborative editing session with three participants, named Bill, Steve, and Scott, as depicted by the figure. There is also a fourth user, named Sam, who does not participate in the session. The document which the users collaboratively edit is .
+Here is a list with a few examples on how ACE can be used:
+The last point reveals some more potential for cooperative editing systems: Groups of two to three students can write essays together. On the one hand, they teach each other how to use the written language, and on the other hand, they can have fun together using a hands-on application on the computer, thus losing fear of contact with the computer, which is essential in today's education.
+class
+A real-time cooperative editing system such as ACE allows multiple users to view and edit the same document at the same time from multiple geographically dispersed sites. The sites are connected by communication networks. The following requirements have been identified for such systems:
+A real-time cooperative editing system consists of  instances, each instance run by a different user. All instances are connected by a network. One of the most significant challenges in designing and implementing real-time cooperative editing systems is consistency maintenance among the different document replicas (one for each site). A cooperative editing system is said to be consistent if it always maintains the following properties:
+One solution to achieve consistency control is provided by  (OT) algorithms. The OT algorithm approach consists of two main components:
+The theory on consistency maintenance stems from the research field called .

@@ -1,0 +1,34 @@
+Founded in 2000,  platform, also known as the Nuxeo Platform, which offers different types of information management solutions such as Document Management, Digital Asset Management, and Case Management. The company’s revenue model is built upon the Nuxeo Online Services subscription program, designed to deliver support, maintenance and services to the customer and partner community.
+
+
+Nuxeo was founded in the year 2000 by Stefane Fermigier. Eric Barroca became the CEO and Director of the management Board in December 2008. Most of the senior management team comes right from that early founding period. North America has been a big area for expansion for Nuxeo. For the first 5 years, the company focused on building a content management framework and platform and the related services to deploy and support them. Sometime around 2005, Nuxeo went through a technology re-architecture and developed a base content management framework on the Java environment. The digital asset management product was officially launched in February 2010, although it went into public beta in December 2009, and since then it has found a wide base of interest both in Europe and North America.
+In September 2007, Nuxeo received a funding of $150,000 from Angel. In December 2008, the company raised $2.6 million in Series A funding from OTC Asset Management, and another $3.3 million in June 2010.
+The Nuxeo platform is used by architects and developers to build, deploy, and run content-centric business applications. Nuxeo's Enterprise Content Management (ECM) technology allows for  and other applications. The Nuxeo Platform offers modularity, a plug-in model and packaging capabilities. Using an open source development model, Nuxeo provides a subscription program with software maintenance, technical support and customization tools. Nuxeo Platform usages can be deployed on-premises or in the cloud via services like Nuxeo Studio to deliver cloud content management services.
+Nuxeo Platform consists of four independent layers. Layers do not require the other layers, so an application builder can choose the one or more layers required for a particular solution:
+In September 2006, the Nuxeo Platform project was announced as a complete rewrite of the 
+In February 2007, the first stable version of the platform, Nuxeo EP 5.0, was released.
+August 2007 saw the release of the next version, Nuxeo EP 5.1.
+In July 2009, Nuxeo launched its Galaxy Partner Program for ECM Application and Solution Providers. This program is designed for application and solution providers in the Enterprise Content Management (ECM) space. The Galaxy Program enables business and field experts to package their knowledge and offer vertical solutions and applications, called Content-Enabled Vertical Applications (CEVAs), to their customers and to the Nuxeo community. Nuxeo EP and DM 5.3 were released in October 2009.
+In October 2009, Nuxeo EP and DM 5.3 were released.
+In February 2010, Nuxeo Released its First CMIS-Enabled Digital Asset Management Application. Nuxeo DAM was the first application of its kind to meet the then available draft of the OASIS Content Management Interoperability Services (CMIS) specification.
+Nuxeo Studio was unveiled in the same month. It is a configuration tool designed to help Nuxeo subscription customers create customized versions of Nuxeo Enterprise, Nuxeo Document Management and Nuxeo Digital Asset Management.
+In June 2010, Nuxeo introduced its first ECM-Based Open Source Case Management Framework (CMF). Nuxeo CMF is the first case management framework from an ECM provider released as open source.
+Nuxeo introduced the New Cloud Edition of Digital Asset Management Application in July 2010. The company announced an update to Nuxeo Digital Asset Management product with the release of Nuxeo DAM 1.1, and also launched the hosted version, Nuxeo DAM – Cloud Edition. This release of Nuxeo DAM incorporated feature enhancements driven directly by early adopter customers and the Nuxeo developer community.
+In November 2010, Nuxeo announced the Nuxeo Marketplace, the first ECM App Store, as part of the release of the 5.4 version of Nuxeo Enterprise Platform (Nuxeo EP) and Nuxeo Document Management (Nuxeo DM). Nuxeo Marketplace is a solution catalog offering a range of packaged modules created by Nuxeo developers and Galaxy partners. Nuxeo Marketplace can be accessed by Nuxeo Online Services subscribers which provides them access to a range of applications, plug-ins and feature extensions to enhance their content management experience and deployment of new packages.
+In October 2011, Nuxeo introduced Nuxeo Integrated Development Environment, a plugin that brings support into Eclipse for the Nuxeo Platform, facilitating customization for developers.
+In December 2011, Nuxeo unveiled version 5.5 and Nuxeo EP was renamed the Nuxeo Platform, integrating all the modules of the platform for Document Management, Digital Asset Management and Case Management into a single product package and adding a new social dimension to the platform with the Social Collaboration module.
+Nuxeo Platform 5.6 has been released on 5 September 2012.
+In June 2013, Nuxeo launched its first fast-track release. The fast track program was launched for customers looking for a more rapid upgrade cycle. The company still keep a long-term support with year-long upgrade cycles.
+Nuxeo introduced Nuxeo Mobile in Apr 2013. Nuxeo Mobile is a customizable app that enables mobile access to a Nuxeo content repository, on premises or in the Cloud, from an iOS or Android device.
+Nuxeo Platform 5.7.1 was released on June 2013.
+Nuxeo Platform 5.8 has been released on 5 November 2013.
+In June 2014, Nuxeo rolled out beta hosting service Nuxeo.io for building and managing Nuxeo Platform cloud clusters.
+In November 2014, the latest LTS version, Nuxeo Platform 6.0, was released. This release included some new features, such as improved search using natively integrated elastic search, spreadsheet mode, collections, &amp;c.
+2007
+2008
+2009
+2010
+2011
+2012
+2014
+2015

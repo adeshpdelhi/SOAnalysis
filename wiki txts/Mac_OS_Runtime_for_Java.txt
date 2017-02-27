@@ -1,0 +1,7 @@
+ (SDK) are available.
+The runtime environment includes a .
+The SDK includes  tools and Macintosh applications), additional tools for packaging Java applications as double-clickable Macintosh applications, libraries for Macintosh-specific functionality, and documentation for the MRJ-specific classes and tools.
+Since the transition to OS X, Apple has discontinued MRJ and instead maintains and distributes a port of 
+Java 1.0.2 with Mac OS Runtime for Java v 1.5.1 
+Java 2.2.6 with Mac OS Runtime for Java v 2.2.6 
+

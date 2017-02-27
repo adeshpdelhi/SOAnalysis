@@ -1,0 +1,33 @@
+
+On October 29, 2011 a vote was started by the project lead Tim Ellison whether to retire the project. The outcome was 20 to 2 in favor,
+
+
+The Harmony project was initially conceived as an effort to unite all developers of the 
+Despite the impression given by the preparatory planning, it was decided not to use the code from 
+One major point of incompatibility between the GNU Classpath and Apache Harmony projects was their incompatible licenses: Classpath's 
+On April 10, 2007, the 
+Sun answered on a company blog as quickly as possible.
+This answer triggered some reactions, either criticizing 
+Since Sun's release of 
+On December 9, 2010, the Apache Software Foundation resigned from the Java Community Process Executive Committee,
+The virtual machine that is used in  are not supported).
+
+On October 11, 2010, 
+On March 2011, 
+On October 29, 2011, a poll was started on the harmony-dev mailing list by the project lead Tim Ellison whether to retire the project. The outcome on November 3, was 20 to 2 in favor of retirement.
+At the start, Apache Harmony received some large code contributions from several companies. Development discussions have taken place on open mailing lists. Later, the Apache Software foundation mentors put a lot of effort into bringing the development process more in line with "the Apache way," and it seemed that their efforts were successful.
+Apache Harmony was accepted among the official Apache projects on October 29, 2006.
+The Dynamic Runtime Layer virtual machine consists of the following components:
+The project provided a portable implementation that ease development on many platforms and operating systems. The main focus was on 
+The expected donations from software companies were actually received. The Apache Harmony now contains the working code, including the .
+The Harmony project currently achieve (as of February 2011) 99% completeness for 
+The progress of the Apache Harmony project can be tracked against J2SE 1.4 and Java SE 5.0. Also, there is a branch for Harmony v6.0 in development for Java SE 6.0.
+Apache Harmony developers integrate several existing, field-tested open-source projects to meet their goal (not ). Many of these projects are mature and well known and other parts of the library needed to be written from scratch.
+This is a list of existing open source components that are used in the Apache Harmony project; some of them were in use before the project started.
+Harmony is currently less documented than the alternative free Java implementations. For instance, in GNU Classpath every method of the central ) fully unimplemented.
+A complete implementation of the Java platform also needs a .
+Harmony currently has seven  implementations that run Harmony Class Library, all of which were donations by external groups:
+In the end of November 2006, the language support provided by these virtual machine was still incomplete, and the build instructions recommended to use  J9 instead to run the class library test suite. However, this is not necessary anymore (as of July 2007).
+As for the rest of the project, DRLVM 
+Since its conception, Harmony grew in its ability to execute non-trivial Java applications., supported applications include:
+However, Harmony's incomplete library prevented it from launching some other applications:

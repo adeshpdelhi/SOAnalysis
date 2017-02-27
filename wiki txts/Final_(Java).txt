@@ -1,0 +1,24 @@
+				 is used in several different contexts to define an entity that can only be assigned once.
+Once a 
+
+
+A .
+Example:
+A final 
+Example:
+A common misconception is that declaring a method as 
+Machine code compilers which generate directly executable, platform-specific  may be inlined.
+A , if it was originally mutable.)
+Unlike the value of a 
+Example:
+Any attempt to reassign  will result in a compile error. In fact, even if the constructor doesn't set a final variable, attempting to set it outside the constructor will result in a compilation error.
+To illustrate that finality doesn't guarantee immutability: suppose we replace the three position variables with a single one:
+where  cannot be assigned to, but the three properties can, unless they are final themselves.
+Like full s.
+Though it appears to violate the  principle, the following is a legal statement:
+Since the obj variable goes out of scope with each iteration of the loop, it is actually redeclared each iteration, allowing the same token (i.e. 
+When an anonymous  has been removed, the original variable is gone but the inner class's private copy persists in the class's own memory.
+The 
+In .
+Further, because C and C++ expose pointers and references directly, there is a distinction between whether the pointer itself is constant, and whether the data pointed to by the pointer is constant. Applying .
+Due to casting, C++  objects with final members.

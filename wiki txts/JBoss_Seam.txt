@@ -1,0 +1,13 @@
+.
+
+
+Seam 3 provides a modular set of extensions to the  programming model. Seam's mission is to provide a fully integrated development platform for building rich, standards-based Internet applications tailored for traditional and cloud deployments. Seam 3 is intended to be a more scalable, feature rich set of extensions than Seam 2, which is under maintenance development only.
+Seam sources on Github 
+Seam 2 combines the two frameworks  components in a unified manner. Thus, one can access any back-end EJB component from the front-end by addressing it by its Seam component name. This Java web framework incorporates identity management features.
+Seam 2 introduces the concept of  feature where objects can be in-jected or out-jected to/from assigned variables using the @In and @Out annotations.
+The framework also expands the concept of  captures all actions of a user until he/she logs out or closes the browser - even across multiple uses of the browser back-button.
+One can automatically generate a  supplied with the framework.
+Seam facilitates .
+Seam integrates out of the box with the  libraries, as well as with many other Ajax libraries - without the need to write JavaScript code.
+Seam also includes a PDF document creator, e-mailing, graph creation, and the creation of .
+

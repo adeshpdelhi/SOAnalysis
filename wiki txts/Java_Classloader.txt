@@ -1,0 +1,15 @@
+				 is an important concept to understand when learning about classloaders.
+A . A class can be thought of as a named unit of code. The class loader is responsible for locating libraries, reading their contents, and loading the classes contained within the libraries. This loading is typically done "on demand", in that it does not occur until the class is called by the program. A class with a given name can only be loaded once by a given classloader.
+Each Java class must be loaded by a class loader. (that is, libraries written and provided by someone other than the author of the program) or they may be composed, at least in part, of a number of libraries.
+When the JVM is started, three class loaders are used:
+The bootstrap class loader loads the core Java libraries directory. This class loader, which is part of the core JVM, is written in native code.
+The extensions class loader loads the code in the extensions directories ( class.
+The system class loader loads code found on  class.
+
+
+The Java class loader is written in Java. It is therefore possible to create your own class loader without understanding the finer details of the Java Virtual Machine. Every Java class loader has a parent class loader, defined when a new class loader is instantiated or set to the virtual machine's system default class loader.
+This makes it possible (for example):
+
+JAR hell is a term similar to  Three ways JAR hell can occur are:
+The , JAR files (called bundles) are wired on a per-package basis. Bundles can export packages, import packages and keep packages private, providing the basic constructs of modularity and versioned dependency management.
+To remedy the JAR hell problems, a .

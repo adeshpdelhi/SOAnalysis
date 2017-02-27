@@ -1,0 +1,7 @@
+				 applications development.
+The API includes the Xlet classes in the package javax.tv.xlet. Other packages of the public API include
+
+
+While the framework is general, Sun currently provides support only on .
+A point of confusion is that in platforms supported as of 2008, examples such as the SvcDispXlet example from the introduction to the API, written circa 2001, are not deployable because it uses 
+Sun's reference implementation for Java TV attempts to limit its exposure to support issues to the full 

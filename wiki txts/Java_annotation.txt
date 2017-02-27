@@ -1,0 +1,19 @@
+				
+
+
+The Java platform has various  compiler in version 1.6.
+Java defines a set of annotations that are built into the language. Of the seven standard annotations, three are part of java.lang, and the remaining four are imported from java.lang.annotation.
+
+
+Since Java 7, three additional annotations has been added to the language.
+This example shows the use of the  annotation was absent, a new method of name gettype() would be created in class Cat.
+Annotation type declarations are similar to normal interface declarations. An at-sign (@) precedes the interface keyword. Each method declaration defines an element of the annotation type. Method declarations must not have any parameters or a throws clause. Return types are restricted to primitives, String, Class, enums, annotations, and arrays of the preceding types. Methods can have default values.
+Annotations may include an optional list of key-value pairs:
+Annotations themselves may be annotated to indicate where and when they can be used:
+The compiler reserves a set of special annotations (including ) for syntactic purposes.
+Annotations are often used by  data class:
+The annotations are not method calls and will not, by themselves, do anything. Rather, the class object is passed to the .
+A complete example is given below:
+When Java source code is compiled, annotations can be processed by compiler plug-ins called annotation processors. Processors can produce informational messages or create additional Java source files or resources, which in turn may be compiled and processed, and also modify the annotated code itself. The Java compiler conditionally stores annotation metadata in the class files, if the annotation has a  or other programs can look for the metadata to determine how to interact with the program elements or change their behavior.
+In addition to processing an annotation using an annotation processor, a Java programmer can write their own code that uses reflections to process the annotation. . The implementations of this interface are used to represent an annotated element of the program currently running in the Java Virtual Machine. This interface allows annotations to be read reflectively.
+The  methods. Because annotation types are compiled and stored in byte code files just like classes, the annotations returned by these methods can be queried just like any regular Java object. A complete example of processing an annotation is provided below:

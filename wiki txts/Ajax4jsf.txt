@@ -1,0 +1,8 @@
+.
+It was an early entrant to the JSF space, but did implement a still-rare feature, that of .
+Ajax4jsf is now contained entirely within the 
+Ajax4jsf was created by Alexander Smirnov in early 2005. New technologies of the time were 
+The project began on ).
+Later that same year, Smirnov joined  while RichFaces became a commercial JSF component library.
+In March 2007,  This made sense as both libraries now had the same free, open source licence. Having just one product also simplified versioning and compatibility issues.
+Although now part of ' .

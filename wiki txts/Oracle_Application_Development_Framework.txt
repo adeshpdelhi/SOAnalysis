@@ -1,0 +1,14 @@
+In -driven and visual tools.
+
+
+Based on the . Oracle ADF can support any combination of the following:
+The Oracle  provides a graphical interface for creating data-management applications using ADF.
+Oracle also offers Eclipse based tooling for ADF in Oracle Enterprise Pack For Eclipse.
+Implementers can deploy Oracle ADF applications on . Oracle WebLogic and IBM WebSphere are officially supported. Users of the free ADF Essentials edition can buy support for these applications on GlassFish.
+Oracle MAF includes a controller layer based on the ADF Taskflow concepts, as well as support for the ADF binding solution for easy binding of UI to services. Oracle MAF support interaction with device features such as GPS, contacts, SMS and more.
+Oracle Corporation has marketed parts of Oracle ADF since 1999 — specifically ADF Business Components — then known as "JBO" and later as "BC4J" ("Business Components for Java").
+The current ADF architecture with the generic model/binding layer was introduced with JDeveloper 9.0.5.
+In June 2006 Oracle Corporation donated the ADF Faces component library to .
+Oracle ADF Essentials is a free to develop and deploy packaging of the key core technologies of Oracle ADF. See the license terms for Oracle ADF Essentials:  For the "full" Oracle ADF: The Oracle Application Server licence includes a component for a license fee for Oracle ADF. This means that all users who have purchased an Oracle Application Server licence may use Oracle ADF for free. Users who want to deploy ADF to a third-party application-server can purchase an ADF runtime license at their local Oracle sales office. Users can develop and test Oracle ADF applications free of charge exclusively within Oracle JDeveloper.
+Oracle Corporation purchased WebLogic in June 2008, and thus no longer regards it as a third-party application-server, so ADF is included in every WebLogic license.
+Supported customers can get access to the source code for Oracle ADF through a request to Oracle Support.

@@ -1,0 +1,16 @@
+.
+
+
+jEdit development was started in 1998 by 
+jEdit includes  and many other encodings.
+It has extensive  capabilities as well as text wrapping that takes indents into account.
+The application is highly customizable and can be extended with .
+There are over 150 available jEdit  for many different application areas.
+Plug-ins are used to customize the application for individual use and can make it into an advanced XML/HTML editor, or an , code completion, context-sensitive help, debugging, visual differentiation and language-specific tools.
+The plug-ins are downloaded via an integrated plug-in manager which finds and installs them along with any dependencies. The plugin manager will track new versions and can download associated updates automatically.
+Some available plug-ins include:
+In general jEdit has received positive reviews from developers.
+Rob Griffiths wrote in April 2002 for 
+Also reviewing the application in April 2002, Daniel Steinberg writing for O'Reilly Media said "The strength of jEdit for Java developers comes from the plug-ins contributed by the community...For the most part, there's nothing here that couldn't be done with 
+Scott Beatty reviewing jEdit on 
+Writing in December 2011, reviewer Rares Aioanei praised jEdit's versatility, stating "jEdit's design allows you to use it as a simple editor, but also use it as an IDE and expand its functionality via plugins so that it becomes exactly what you want it to be for the task or language at hand." but also adding that "jEdit is not, however, an IDE with everything but the Christmas tree, like 

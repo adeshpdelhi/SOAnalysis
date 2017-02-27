@@ -1,0 +1,5 @@
+.
+FreeTTS supports end-of-speech markers. 
+
+
+As of February 2014 the newest version of that project originates from March 2009.

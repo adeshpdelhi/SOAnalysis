@@ -1,0 +1,6 @@
+ is a YouTube downloader and MP3 converter that allows users to download videos and music from YouTube.
+
+
+The MP3 Rocket software project was started in November 2005 by MP3 Rocket Inc. MP3 Rocket was first released in December 2005 as a  network application.
+In January 2011 MP3 Rocket closed its P2P service and converted its software into a YouTube downloader.
+MP3 Rocket comes in two versions, a freely downloadable basic version and the MP3 Rocket Pro 

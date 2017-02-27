@@ -1,0 +1,19 @@
+A .
+To connect with individual databases,  and database.
+JDBC technology drivers fit into one of four categories.
+
+
+The JDBC type 1 driver, also known as the  driver to connect to the database. The driver converts JDBC method calls into ODBC function calls.
+The driver is platform-dependent as it makes use of ODBC which in turn depends on native libraries of the underlying  is running upon. Also, use of this driver leads to other installation dependencies; for example, ODBC must be installed on the computer having the driver and the database must support an ODBC driver. The use of this driver is discouraged if the alternative of a pure-Java driver is available. The other implication is that any application using a type 1 driver is non-portable given the binding between the driver and platform. This technology isn't suitable for a high-transaction environment. Type 1 drivers also don't support the complete Java command set and are limited by the functionality of the ODBC driver.
+Sun (now Oracle) provided a JDBC-ODBC Bridge driver: 
+If a driver has been written so that loading it causes an instance to be created and also calls  with that instance as the parameter (as it should do), then it is in the DriverManager's list of drivers and available for creating a connection.
+It may sometimes be the case that more than one JDBC driver is capable of connecting to a given URL. For example, when connecting to a given remote database, it might be possible to use a JDBC-ODBC bridge driver, a JDBC-to-generic-network-protocol driver, or a driver supplied by the database vendor. In such cases, the order in which the drivers are tested is significant because the DriverManager will use the first driver it finds that can successfully connect to the given URL.
+First the DriverManager tries to use each driver in the order it was registered. (The drivers listed in jdbc.drivers are always registered first.) It will skip any drivers that are untrusted code unless they have been loaded from the same source as the code that is trying to open the connection.
+It tests the drivers by calling the method Driver.connect on each one in turn, passing them the URL that the user originally passed to the method . The first driver that recognizes the URL makes the connection.
+The JDBC type 2 driver, also known as the  method calls into native calls of the database API. For example: Oracle OCI driver is a type 2 driver.
+The JDBC type 3 driver, also known as the Pure Java driver for database middleware, protocol.
+This differs from the type 4 driver in that the protocol conversion logic resides not at the client, but in the middle-tier. Like type 4 drivers, the type 3 driver is written entirely in Java.
+The same client-side JDBC driver may be used for multiple databases. It depends on the number of databases the middleware has been configured to support. The type 3 driver is  as the platform-related differences are taken care of by the middleware. Also, making use of the middleware provides additional advantages of security and firewall access.
+The JDBC type 4 driver, also known as the Direct to Database  protocol.
+Written completely in  of the client. This provides better performance than the type 1 and type 2 drivers as it does not have the overhead of conversion of calls into ODBC or database API calls. Unlike the type 3 drivers, it does not need associated software to work.
+As the database protocol is vendor specific, the JDBC client requires separate drivers, usually vendor supplied, to connect to different types of databases. This type includes, for example, the widely used  thin driver.

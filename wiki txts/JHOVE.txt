@@ -1,0 +1,4 @@
+ took over stewardship of JHOVE in February 2015.
+JHOVE is currently available for downloading as version 1.14.
+Currently supported formats are . Documents are analyzed and checked for being well-formed (consistent with the basic requirements of the format) and valid (generally signifying internal consistency). JHOVE notes when a file satisfies specific profiles within formats (e.g., PDF/X, HTML 4.0).
+A successor called  is currently available; however, it has a completely separate code base.

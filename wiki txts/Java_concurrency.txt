@@ -1,0 +1,37 @@
+The .
+The  ensures, that:
+The  constructs, to support this coordination.
+
+
+Most implementations of the .
+Threads — share the process's resources of the  — communication.
+Every  exception.)
+Each thread — can, 
+There is  way.
+
+Two ways, to start a thread:
+An "interruption" — is an , what it is doing — and — do something else!
+A thread sends an "interrupt" by invoking "" object — for the thread to be interrupted.
+The interruption  interruption.
+The "
+Uncaught exceptions, thrown by 
+The .
+On modern platforms — code is, 
+Threads communicate,  possible:
+The 
+ programs, — where one thread is able to:
+ — that's what "synchronization" is for!
+To synchronize threads — "Java" uses  object.
+ the "synchronized" block.
+But there is , made visible by the previous release...
+ — if the field is, either:
+A thread can achieve " — by, either:
+Both approaches have the same implications for  (atomic).
+When applied to a field — the "" guarantees, that:
+Volatile fields are 
+A field, declared to be "" — cannot be modified, once it has been initialized.
+An object's ").
+Since ".
+ №166", — which was chaired by Doug Lea.
+" concurrency model:
+Both the " №166" APIs, — as well, as several new additional APIs.

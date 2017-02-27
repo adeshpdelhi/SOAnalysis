@@ -1,0 +1,3 @@
+ in addition to proprietary tags that reference Java objects running on a special server set up to handle requests for pages of this sort.
+When a request is made for a JHTML page, e.g. "index.jhtml", the request for this page is forwarded from the  is queried to accumulate the specific data needed in the page.
+The system is derived from earlier forms of  system from the ATG page compilation system.

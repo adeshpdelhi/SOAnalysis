@@ -1,0 +1,12 @@
+ and environment.
+
+
+Kölling was born in Bremen, Germany. He earned a degree in "Informatik" from the .
+From 1995 to 1997 he worked at the Sydney University, followed by a position as Senior Lecturer at , UK, where he is a Professor of Computer Science.
+Kölling is the lead designer of . All are educational development environments aimed at teaching and learning of programming. BlueJ and Greenfoot are widely used in many schools and universities.
+Kölling co-wrote , and wrote "Introduction to Programming with Greenfoot" (2nd edition).
+At the 
+On 22 May 2005 Kölling made an entry to the  This feature had striking similarities to the way the object test bench functions within BlueJ.
+Kölling did not act on the discovery. However, on May 11, 2006  the idea. As the object test bench is essential to the way it functions, had Microsoft's patent been granted, it was likely that BlueJ would have had to have been discontinued.
+Kölling spoke to Microsoft, namely Jane Prey, and eventually the patent was dropped.
+Fernandez posted a response on his blog where he says "the patent application was a mistake and one that should not have happened. To fix this, Microsoft will be removing the patent application in question. Our sincere apologies to Michael Kölling and the BlueJ community."

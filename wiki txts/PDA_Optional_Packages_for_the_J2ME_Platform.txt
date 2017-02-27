@@ -1,0 +1,1 @@
+				, a set of lower level programming interfaces. It has 2 main components. Not all devices that claim to implement JSR 75 will implement both components.

@@ -1,0 +1,12 @@
+				 (CLDC 1.1).
+
+
+CLDC is designed for devices that have limited processing power, memory, and graphical capability. Devices typically have the following features:
+Compared to the .
+Other examples of limitations depend on the version being used, as some features were re-introduced with version 1.1 of CLDC.
+A profile is a set of APIs that support devices with different capabilities and resources within the CLDC framework to provide a complete Java application environment. There are specific profiles for devices ranging from vending machines to set-top boxes, with the mobile phone profile 
+The 
+The  put forward this specification to the JCP.
+The .
+The 
+The  devices. The specification defines two independent packages that represent important features found on many PDAs and other mobile devices. These packages are:

@@ -1,0 +1,19 @@
+ files.
+It can be used in Java-enabled applications, including , to generate dynamic content. It reads its instructions from an XML or .jasper file.
+ open source stack initiative.
+
+
+JasperReports is an open source reporting library that can be embedded into any Java application. Features include:
+For users with more sophisticated report management requirements, reports designed for JasperReports can be easily imported into the  - the interactive report server..,.
+Teodor Danciu began work on JasperReports in June 2001, the 
+JasperReports Version 1.0 was released on July 21, 2005.
+The code was originally licensed under a copyleft .
+Jaspersoft was originally called Panscopic, and was founded by Al Campa, CEO, and Raj Bhargava, VP of Products in 2001. Panscopic raised $23M from Doll Capital, Discovery Ventures, Morgenthaler Ventures, and Partech. In 2004 Panscopic teamed up with Teodor Danciu, acquired the intellectual property of JasperReports, and changed the name of the company to Jaspersoft. Brian Gentile became CEO in 2007.
+Jaspersoft provides commercial software around the JasperReports product, and negotiate contracts with software developers that wish to embed the JasperReports engine into a closed source product.
+Jaspersoft's main related product is JasperReports Server, a Java EE , or a commercial license for enterprise deployments involving commercial databases and application servers.
+Jaspersoft is a gold partner with MySQL,
+On April 28, 2014, 
+JasperReports reports are defined in an XML file format, called JRXML, which can be hand-coded, generated, or designed using a tool. The file format is defined by a .
+A  file. iReport does the compilation on the fly, but the compilation can also get achieved at runtime using the JasperCompileManager class.
+Many prominent Java 
+JasperReports has been the focus of several academic papers on code refactoring

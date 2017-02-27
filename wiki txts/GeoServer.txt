@@ -1,0 +1,9 @@
+In  specifications.
+
+
+GeoServer aims to operate as a node within a free and open , GeoServer aims to do the same for geospatial data.
+GeoServer reads a variety of data formats, including:
+Through standard protocols it produces  client for previewing data layers.
+GeoServer additionally supports efficient publishing of geospatial data to . Advanced features for Google Earth output include templates for customized pop-ups, time and height visualizations, and "super-overlays".
+GeoServer relies on  library.
+GeoServer uses 

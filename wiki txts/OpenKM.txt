@@ -1,0 +1,10 @@
+ technology.
+In 2005 two developers involved in open source technologies and expertise with some commercial document management solutions (Sharepoint, Documentum, Hummingbird, among others) like Excalibur search engine or Kofax OCR engine decided to start an open source project based on high level technologies to build a document management system that they decided to call OpenKM.
+At the project's outset, it received the help of Spanish government funds from the  At the end of 2006 the first OpenKM version was released.
+
+
+OpenKM uses the  (Version 2) license.
+OpenKM is a web-based document management application, so only a web browser is needed to use it. Currently only , so the browser support depends on the toolkit.
+OpenKM is developed using Java technology based on Java EE standards and the JBoss application server. Therefore, it can be installed and executed on various platforms (, etc.)
+The OpenKM architecture is based on the following technologies:
+Due to its architecture, OpenKM can work on any operating system — , etc.)

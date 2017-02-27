@@ -1,0 +1,5 @@
+The .
+JSTL was developed under the 
+JSTL provides an effective way to embed logic within a .
+There are a total of six JSTL tag library descriptors:
+In addition to JSTL, the JCP has the following JSRs to develop standard JSP tag libraries:

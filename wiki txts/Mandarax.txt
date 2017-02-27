@@ -1,0 +1,3 @@
+. It provides an infrastructure for defining, managing and querying rule bases.
+Mandarax has an expressive and simple 
+

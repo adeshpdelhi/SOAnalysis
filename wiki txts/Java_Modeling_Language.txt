@@ -1,0 +1,13 @@
+The .
+Various verification tools, such as a runtime assertion checker and the Extended Static Checker () aid development.
+
+
+JML is a behavioural interface specification language for Java modules. JML provides , with the goal of providing rigorous formal semantics while still being accessible to any Java programmer. Various tools are available that make use of JML's behavioral specifications. Because specifications can be written as annotations in Java program files, or stored in separate specification files, Java modules with JML specifications can be compiled unchanged with any Java compiler.
+JML specifications are added to Java code in the form of annotations in comments. Java comments are interpreted as JML annotations when they begin with an @ sign. That is, comments of the form
+or
+Basic JML syntax provides the following keywords
+Basic JML also provides the following expressions
+as well as standard  for logical and, or, and not. JML annotations also have access to Java objects, object methods and operators that are within the scope of the method being annotated and that have appropriate visibility. These are combined to provide formal specifications of the properties of classes, fields and methods. For example, an annotated example of a simple banking class may look like
+Full documentation of JML syntax is available .
+A variety of tools provide functionality based on JML annotations. The Iowa State JML tools provide an assertion checking  test code from JML annotations.
+Independent groups are working on tools that make use of JML annotations. These include:

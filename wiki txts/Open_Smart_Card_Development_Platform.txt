@@ -1,0 +1,4 @@
+The  Scripting, Profile and Messaging technology.
+The complete toolset is written in  (JCE) with the Bouncy Castle Crypto API.
+The toolsets and libraries of OpenSCDP are provided as Open Source under the  (GPL).
+OpenSCDP utilizes a set of Open Source tools including:

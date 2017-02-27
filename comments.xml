@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comments>
+	<row Id="myId" Body="my_Body" ViewCount="52"/>
+	<row Id="myId2" Body="my_Body2" ViewCount="552"/>
+	<row Id="myId3" Body="my_Body3" ViewCount="525"/>
+	<row Id="myId4" Body="my_Body4" ViewCount="527"/>
+
+</comments>

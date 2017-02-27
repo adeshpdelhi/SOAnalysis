@@ -1,0 +1,11 @@
+.
+J# worked with 
+
+
+Java and J# use the same general syntax but there are non-Java conventions in J# to support the .NET environment. For example, to use .NET "properties" with a standard -like annotation:
+…and change the corresponding private variable name to be different from the suffix of the getXxx/setXxx names.
+J# does not compile Java-language source code to Java bytecode (.class files), and does not support  (RMI).
+JavaWorld said: "J#'s interface to the .NET framework is solid, but not as seamless as C#. In particular, J# code cannot define new .NET attributes, events, value types, or delegates. J# can make use of these language constructs if they are defined in an assembly written in another language, but its inability to define new ones limits J#'s reach and interoperability compared to other .NET languages."
+In January 2007, Microsoft announced:
+A link to download Visual J# 2005 Express Edition is no longer available from Microsoft's website; however, the old link which was previously available was as of 2016 still valid.
+Visual J# is out of mainstream support but "Visual J# 2.0 Redistributable Second Edition released in 2007, with support continuing through to 2017 (5 years mainstream and 5 years extended support) 

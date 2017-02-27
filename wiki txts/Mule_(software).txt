@@ -1,0 +1,11 @@
+.
+The architecture is a scalable,
+
+
+Mule has an integration engine, but the community edition lacks the support for Advanced Management interfaces. MuleSoft offers an Enterprise Edition of Mule that provides a management console, a Service registry and higher availability.
+Cloudhub is Mulesoft's  platform for integration to connect apps, data and devices with integration connectors (like one to Twitter, etc.) platform as a service (iPaaS).
+
+
+WMQ or 
+The  occurs, then the model will allow for stateful backoff, meaning "no harm done", the user may then complete a transaction without losing too much work or canceling an entire transaction.
+Universal Message Object defines the parameters that the program will use for internal messaging communications and its components to set and get variables based upon the user's needs and the program's functionality.

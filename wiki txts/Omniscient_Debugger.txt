@@ -1,0 +1,16 @@
+A  (ISS), a technique that allows great power in its ability to halt when specific conditions are encountered, but which will typically be somewhat slower than executing the code directly on the appropriate (or the same) processor. Some debuggers offer two modes of operation, full or partial simulation, to limit this impact.
+A " (unless it also has online access to the original source code and can display the appropriate section of code from the assembly or compilation).
+
+
+Typically, debuggers offer a query processor, a symbol resolver, an expression interpreter, and a debug support interface at its top level. Some debuggers have the ability to modify program state while it is running. It may also be possible to continue execution at a different location in the program to bypass a crash or logical error.
+The same functionality which makes a debugger useful for eliminating bugs allows it to be used as a 
+Most mainstream debugging engines, such as , and visualization features.
+Some debuggers include a feature called "
+Some debuggers operate on a single specific language while others can handle multiple languages transparently. For example, if the main target program is written in  subroutines, the debugger may have to dynamically switch modes to accommodate the changes in language as they occur.
+Some debuggers also incorporate memory protection to avoid  environments where memory is dynamically allocated from memory 'pools' on a task by task basis.
+Most modern microprocessors have at least one of these features in their  to make debugging easier:
+Some of the most capable and popular debuggers implement only a simple command line interface (CLI)—often to maximize . Some GUI debugger front-ends are designed to be compatible with a variety of CLI-only debuggers, while others are targeted at one specific debugger.
+Some widely used debuggers are:
+Earlier  debuggers include:
+Earlier  debuggers include (in date of release order):
+Current mainframe debuggers:

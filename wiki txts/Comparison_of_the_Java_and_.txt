@@ -1,0 +1,35 @@
+
+
+The Mono project aims to avoid infringing on any patents or copyrights, and to the extent that they are successful, the project can be safely distributed and used under the 
+The Microsoft/Novell agreement was criticized by some in the ).
+In response to the Microsoft/Novell agreement, the 
+The .NET landscape started to change in 2013, when Microsoft decided to open source many of its core .NET technologies under 
+Although Java's 
+The release of Java version 6.0 on December 11, 2006, saw a renewed focus on the desktop market with an extensive set of new tools for closer integration with the desktop. At the 2007  libraries.
+An alternative to AWT and Swing is the . It attempts to achieve improved performance and visualization of Java desktop applications by relying on underlying native libraries where possible.
+On Windows, Microsoft's .NET is a popular desktop development providing both Windows Forms (a lightweight wrapper around the Win32 API), Windows Presentation Foundation, and Silverlight. With the integration of .NET into the Windows platform, .NET apps are first class citizens in the Windows environment with tighter OS integration and native look and feel compared to Java's Swing.
+Outside of Windows, Silverlight is portable to the Mac OS X desktop. Mono is also becoming more common in open source and free software systems due to its inclusion on many Linux desktop environments.
+This is probably the arena in which the two platforms are closest to being considered rivals. Java, through its , compete to create web-based dynamic content and applications.
+Both platforms are well used and supported in this market. Of the top 1,000 websites, approximately 24% use ASP.net and also 24% use Java, whereas of all the websites approximately 17% use ASP.net and 3% use Java.
+Some of Oracle's Java-related license agreements for Java EE define aspects of the Java platform as a trade secret, projects.
+Microsoft's implementation of 
+Google's popular  platform for mobile application is based on Java. Google adopted a customised virtual machine called Dalvik to optimise the execution of Java code for mobile devices.
+Oracle provides  for use on devices with limited processing power). Java software, including many games, is commonplace.
+While many feature phones include a JVM, they are not always heavily used by users (particularly in South Africa). Initially Java applications on most phones typically consisted of menuing systems, small games, or systems to download ringtones etc. However, more powerful phones are increasingly being sold with simple applications pre-loaded, such as translation dictionaries, world clock displays (darkness/light, timezones, etc.) and calculators. Some of these are written in Java, although how often phone owners actually use them is probably unknown.
+Microsoft currently ships the  framework for Android and iPhone development, respectively. Windows Phone 7 uses Silverlight for native apps, but Windows Phone 8 has C# and XAML as the main languages.
+Java has found a market in digital television, where it can be used to provide software that sits alongside programming, or extends the capabilities of a given  software to be transmitted to an appropriate TiVo device to complement programming or provide extra functionality (for example, personalized stock tickers on a business news program.)
+A variant of Java has been accepted as the official software tool for use on the next generation optical disc technology  interactive platform. This will mean that interactive content, such as menus, games, downloadables, etc. on all Blu-ray optical discs will be created under a variant of the Java platform.
+Rather than using Java, .
+The BD-J platform 
+However, the fact that the HD DVD format has been abandoned in favor of Blu-ray means that HDi is no longer supported on any 
+On Windows, Microsoft has promoted .NET as its flagship development platform
+.NET Framework 3.5 runtime is not pre-installed on versions of Windows prior to Vista SP1, and must be downloaded by the user, which has been criticized because of its large size (65 MB download for .NET 3.5).
+While neither .NET nor Mono are installed with Mac OS X out-of-the-box, the Mono project can be downloaded and installed separately, for free, for any Mac user who wants to build or run C# and .NET software. As of 13 May 2008, Mono's System.Windows.Forms 2.0 is API-complete (contains 100% of classes, methods etc. in Microsoft's System.Windows.Forms 2.0); also System.Windows.Forms 2.0 works natively on Mac OS X.
+C# and the CLI are included and used in a number of Linux- and BSD-based operating systems by way of including the free software Mono Project.
+As a result of inclusion of .NET or Mono runtimes in the distributions of Windows and Linux, non-GUI applications that use the programming interfaces that are common to both .NET and Mono can be developed in C# or any other .NET language and then deployed across many operating systems and processor architectures using a runtime environment that is available as a part of the operating system's installation. but each environment includes many components that have not been implemented in the other.
+Starting with XP SP1a, Windows does not ship with a Java runtime environment.
+Java comes pre-installed on all new Apple computers since Mac OS X 10.0. Because Apple maintains the Java runtime for Mac OS X, updates are usually one or two versions behind the versions available from Oracle for the other operating systems, and versions of Java are usually tied to the specific operating system version, so newer Java versions are usually unavailable for older versions of OS X.
+Java comes pre-installed with many commercial Unix flavors, including those from .
+The Operating System Distributor License for Java (DLJ) was a Sun initiative to ease distribution issues with operating systems based on Linux or OpenSolaris.
+If Java is not installed on a computer by default, it may be downloaded by the user as a Web plugin. The Web plugin process has been criticized because of the size of the Java plugin. Unlike other plugins, the Java download is a full runtime environment capable of running not just applets, but full applications and dynamic WebStart apps. Because of this, the perceived download footprint is larger than some web plugins. However, compared to Java, other popular browser plugins have larger sizes: Java 6  runtime is 54 MB, and the .NET Framework 3.5 runtime is 197 MB (it's a united package for x86, x64 and IA-64, each part has approximately 60 MB).
+At the  event in May 2007 Sun announced that the deployment issues with Java would be solved in two major updates during the lifespan of Java 6 (the changes will not be held over to Java 7.) These include:

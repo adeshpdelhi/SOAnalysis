@@ -1,0 +1,3 @@
+ header files and GlueGen configuration files, and emits C code. As JNI can be complex, Gluegen simplifies the process of binding Java to C native libraries.
+It was originally developed for  libraries.
+For JOGL, GlueGen is used to bind  platforms.

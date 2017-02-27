@@ -1,0 +1,30 @@
+ an object—the assignment operator duplicates the reference, not the object. The clone() method provides this missing functionality.
+
+
+Classes that want copying functionality must implement some method to do so. To a certain extent that function is provided by "".
+ provides a standard mechanism for duplicating objects.
+The .
+The default implementation of  method after they obtain the copy from the superclass.
+The syntax for calling  method):
+or commonly
+which provides the  object.
+One disadvantage with the design of the , since J2SE 5.0).
+Another disadvantage is that one often cannot access the  methods themselves, but it is inconvenient and bad abstraction to carry around the actual class type of an object.
+There are alternatives to  method.)
+Also the use of serialization and deserialization is another alternative to using clone.
+When writing a class using the  method using the following code:
+This is only necessary if a superclass implements a public  method.
+To provide a properly cloneable object of any type, the clone() method must be both declared correctly and implemented correctly according to the convention described in Object.clone().
+1) Every type that needs to be cloned must have a public clone() method in its own class or a publicly accessible clone() method in one of its parent classes.
+Example:
+To invoke clone() on varY1, which is of type Y, then Y or a parent of Y must declare a publicly accessible clone() method. Here, it is the parent class X that provides the public clone() method.
+2) Every class that implements clone() should call super.clone() to obtain the cloned object reference. If the class has any object references that must be cloned as well (when deep copying, for example), then the clone() method should perform any required modifications on the object before returning it. (Since Object.clone() returns an exact copy of the original object, any mutable fields such as collections and arrays would be shared between the original and the copy - which in most cases would neither be expected nor desired.)
+Example:
+Since class Z contains an object reference, its clone() method also clones that object reference in order to return a deep copy of the original.
+If every class in a hierarchy implements a clone() method, all of these functions will be called upon cloning, adding some overhead. Over many iterations, this overhead could become significant.
+With complex object graphs, deep copying can also become problematic when recursive references exist.
+It is not always appropriate to have multiple copies of the same object floating around. If the purpose of a specific clone() implementation is not fully understood by consumers, it may unintentionally break the "single object, multiple references" paradigm.
+Generally,  this is okay; just let the 'constructor' copy the reference and both the original and its clone will share the same object.
+But where the value is a mutable object it must be deep copied. One solution is to remove the  modifier from the field, giving up the benefits the modifier conferred.
+For this reason, some programmers suggest to make the objects in the hierarchy 
+Alternatively, one can return a completely new object from the current objects fields, which can be done first calling the constructor, and later assigning non final fields. Another alternative method is actually making the idea formal&#160;: creating a copy constructor that takes an instance. In fact that is what is recommended over clone by some people. 

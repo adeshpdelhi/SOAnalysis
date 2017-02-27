@@ -1,0 +1,14 @@
+ designed to improve performance.
+
+
+The Java Hot-Spot Performance Engine, first released April 27, 1999,
+Shortly after acquiring Animorphic, Sun decided to write a new 
+Initially available as an add-on for Java 1.2,
+Sun's , that yield higher performance. Both VMs compile only often-run methods, using a configurable invocation-count threshold to decide which methods to compile.
+Tiered compilation, an option introduced in Java 7, uses both the client and server compilers in tandem to provide faster startup time than the server compiler, but similar or better peak performance.
+The HotSpot Java virtual machine is written in  Hotspot provides:
+HotSpot supports many 
+On 13 November 2006, the HotSpot JVM and the JDK were licensed).
+As for the whole 
+Ports are also available by third parties for various other . Several different hardware architectures are supported, including x86, PowerPC, and SPARC (Solaris only).
+Porting HotSpot is difficult because the code, while primarily written in 

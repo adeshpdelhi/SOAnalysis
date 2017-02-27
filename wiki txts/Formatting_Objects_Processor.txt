@@ -1,0 +1,12 @@
+ project.
+FOP is  2.0.
+
+
+The latest version of Apache FOP is 2.1. This is the fifth stable release and implements a large subset of the XSL-FO Version 1.1 W3C Recommendation. In version 0.95, the code had undergone a substantial rewrite compared to 0.20.5 which was the previous stable version. As of release 0.91alpha, FOP became much more compliant to the XSL-FO Recommendation.
+Most important elements added in XSL-FO 1.1 (flow maps, table markers, indexes. etc.) are not available 
+In addition, older XSL-FO 1.0 features are still not fully supported including automatic table layout, floats and more.
+Apache FOP supports embedding a number of image formats in the XSL-FO (through the  element). These include:
+Apache FOP implements the  In versions prior to 2.0, external graphics objects were limited to being drawn inline or in a block with no wrapped text.
+Apache FOP supports the following output formats:
+In progress:
+

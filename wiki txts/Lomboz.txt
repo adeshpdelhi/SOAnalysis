@@ -1,0 +1,3 @@
+.
+In July 2006's this system was sufficiently convenient for the developer, familiar with all main concepts, features and methods of the Java EE platform. It is, however, not oriented to the student who would want to start developing Java EE applications without reading documentation. Lomboz is packaged, integrated and dependent on many other open source Eclipse packages for Java EE development.
+Lomboz provides:

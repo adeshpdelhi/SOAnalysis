@@ -1,0 +1,13 @@
+.
+
+
+The system is implemented in , a fully distributed database on a separate cluster and a third cluster with HSMs keeping the different CA keys.
+EJBCA supports many common PKI Architectures. An example architecture is illustrated below.
+
+EJBCA supports running unlimited number of CAs and levels of CAs in a single installation. Build a complete infrastructure, or several, within one instance of EJBCA.
+For certificate validation your have the choice of using X.509 ).
+You can use all common, and some uncommon algorithms in your PKI. .
+EJBCA support both X.509v3 certificates and Card Verifiable certificates (CVC BSI TR-03110). Certificates are compliant with all standards such as  9303, EAC 2.10 and ISO 18013 Amendment 2 eDL.
+Using the standard  API you can use most PKCS#11 compliant HSMs to protect the CAs, and OCSP Responders, private keys.
+EJBCA was designed with integration in mind. Most standard protocols are supported, , as well as web services. Using integration APIs it is possible to integrate EJBCA as a certificate factory, not exposing it's native user interfaces.
+You can build a PKI with capacity of issuing billions of certificates at a rate of several hundreds per second.

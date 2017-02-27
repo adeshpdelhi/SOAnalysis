@@ -1,0 +1,28 @@
+A 
+JAR files are 
+
+
+A JAR file allows Java runtimes to efficiently  an entire application, including its classes and their associated resources, in a single request. JAR file elements may be compressed, shortening download times.
+A JAR file may contain a manifest file, located at  entry can be used to specify other JAR files to load with the JAR.
+The contents of a JAR file may be extracted using any standard decompression software, or the ".
+Developers can  will only permit Java classes to be loaded into the same package if they are all signed by the same entities. This prevents malicious code from being inserted into an existing package, and so gaining access to package-scoped classes and data.
+The content of JAR files may be  more difficult.
+An executable Java program can be packaged in a JAR file, along with any libraries the program uses. Executable JAR files have the manifest specifying the  from a command line.
+Native launchers can be created on most platforms. For instance,  to wrap single JAR files into executables.
+A manifest file is a metadata file contained within a JAR..
+The manifest appears at the canonical location  There can be only one manifest file in an archive and it must be at that location.
+The content of the manifest file in a JAR file created with version 1.0 of the  is the following.
+The name is separated from its value by a colon. The default manifest shows that it conforms to version 1.0 of the manifest specification.
+The manifest can contain information about the other files that are packaged in the archive. Manifest contents depend on the intended use for the JAR file. The default manifest file makes no assumptions about what information it should record about other files, so its single line contains data only about itself.
+JAR files created only for the purpose of archiving do not use the  file.
+Most uses of JAR files go beyond simple archiving and compression and require special information in the manifest file.
+If an application is contained in a JAR file, the  method. This information is provided in the Main-Class header, which has the general form:
+In this example  executes at application launch.
+Optionally, a package within a JAR file can be sealed, which means that all classes defined in that package are archived in the same JAR file. A package might be sealed to ensure version consistency among the classes in the software or as a security measure.
+To seal a package, a Name entry needs to appear, followed by a Sealed header, such as:
+The Name header's value is the package's relative pathname. Note that it ends with a '/' to distinguish it from a filename. Any headers following a Name header, without any intervening blank lines, apply to the file or package specified in the Name header. In the above example, because the .
+Several manifest headers hold versioning information. One set of headers can be assigned to each package. The versioning headers appear directly beneath the Name header for the package. This example shows all the versioning headers:
+The 
+Note that Class-Path entries are delimited with spaces, not with the system path delimiter:
+The  license and is designed to be usable outside Ant.
+Several related file formats build on the JAR format:

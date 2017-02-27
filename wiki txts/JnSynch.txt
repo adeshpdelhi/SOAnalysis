@@ -1,0 +1,5 @@
+.
+jnSynch was inspired in  usage, memory footprint and network bandwidth usage.
+As in PGP (Pretty Good Privacy) toolset, jnSynch can be thought as a Pretty Good Incremental File Sychronization Solution.
+It recursively synchronizes a source 's "last change date" attribute, between source and target folders, when the attribute is different between source and target, the engine replaces the target file with a fresh copy from the source and updates its "last changed date" attribute to exactly that of the source file.
+It was first released to public on September 6, 2008. It is actively hosted in  and code.google.com. It was later scheduled for deletion in code.google.com, so that it is centralized hosted in Sourceforge.Net.

@@ -1,0 +1,6 @@
+				 (TCKs) is its focus on an implementation's quality instead of an implementation's specification compliance.
+The Java Device Test Suite is an extensible set of test packs, a shared management facility, and a distributed test execution harness that can be used to assess the quality of any device that implements a compatible combination of the Java ME technologies, including the following:
+(please look description of technologies on jcp.org)
+The Java Device Test Suite's tests can be divided into three main categories:
+Tests in test packs can be divided in several group by tested subsystems:
+The Java Device Test Suite has approximately 11,000 tests that can be extended with new tests written by Sun engineers or by others, including users of the test suite. Users can choose to run any combination of tests, according to the features supported by a device and available resources, and make use of framework features:

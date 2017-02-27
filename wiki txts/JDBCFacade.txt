@@ -1,0 +1,4 @@
+ easier to use and less error prone while encouraging a clean separation between persistence and domain logic.
+JDBCFacade supports  version 2.0 and later.
+Unlike many similar tools, JDBCFacade does not interfere with the normal usage of JDBC in any way. JDBCFacade uses the command and abstract factory patterns to provide a simplified database api that hides many of the details of connection and error handling from the user.
+JDBCFacade supports 4 types of commands:

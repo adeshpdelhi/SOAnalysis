@@ -1,0 +1,15 @@
+				
+The "doc comments" format, automatically generate Javadoc HTML. Many file editors assist the user in producing Javadoc source and use the Javadoc info as internal references for the programmer.
+Javadoc also provides an API for creating  can generate reports of what changed between two versions of an API.
+
+
+Javadoc was an early Java language  but it was much harder to keep this documentation in sync with the software itself.
+Javadoc has been used by Java since the first release, and is usually updated on every new release of the .
+A Javadoc comment is set off from code by standard multi-line comment tags .
+The basic structure of writing document comments is to embed them inside . The Javadoc is written next to the items without any separating newline. Note that any import statements must precede the class declaration. The class declaration usually contains:
+For methods there is (1) a short, concise, one line description to explain what the item does. This is followed by (2) a longer description that may span multiple paragraphs. The details can be explained in full here. This section, marked in brackets [], is optional. Lastly, there is (3) a tag section to list the accepted input arguments and return values of the method. Note that all of the Javadoc is treated as HTML so the multiple paragraph sections are separated by a "" paragraph break tag.
+Variables are documented similarly to methods with the exception that part (3) is omitted. Here the variable contains only the short description:
+Note that it is not recommended to define multiple variables in a single documentation comment. This is because Javadoc reads each variable and places them separately to the generated HTML page with the same documentation comment that is copied for all fields.
+Instead, it is recommended to write and document each variable separately:
+Some of the available Javadoc tags are listed in the table below:
+An example of Javadoc to document a method follows. Notice that spacing and number of characters in this example are as conventions state.

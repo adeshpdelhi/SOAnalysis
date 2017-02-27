@@ -1,0 +1,13 @@
+.
+MyEclipse is built upon the  into the development environment.
+MyEclipse has two primary versions (apart from the "Blue Edition tooling, and a number of other features to the basic Eclipse Java Developer profile. It competes with the Web Tools Project, which is a part of Eclipse itself, but MyEclipse is a separate project entirely and offers a different feature set.
+MyEclipse 2015 Continuous Integration Stream version 7 (November 13, 2014) is now available to developers who want the latest versions of MyEclipse built with regular updates.
+MyEclipse has also been made available via Secure Delivery Center, a technology that grew from its  and WebSphere development. Currently, MyEclipse Blue Edition is available for Windows and Linux, though Mac is unsupported.
+In July 2011, Genuitec released MyEclipse "Bling," which combines the MyEclipse Blue Edition and MyEclipse for Spring product lines into a unified offering.
+In January 2015, Genuitec launched the MyEclipse China site (www.myeclipsecn.com) to provide genuine MyEclipse software to large user base in China.
+
+
+The features included (except in the Standard edition) are:
+Some of the features included (except in the Spring or Bling editions) are:
+Some of the features included in all editions are:
+MyEclipse for Spring is developed jointly with Skyway Software.

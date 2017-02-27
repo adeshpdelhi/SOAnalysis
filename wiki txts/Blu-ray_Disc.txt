@@ -1,0 +1,81 @@
+. Besides the hardware specifications, Blu-ray is associated with a set of multimedia formats.
+High-definition video may be stored on Blu-ray discs with up to 2160p resolution (3840×2160 pixels), at up to 60 
+
+
+The information density of the  was founded by the nine initial members.
+The first consumer device arrived in stores on April 10, 2003: the Sony BDZ-S77, a $3,800 (US) BD-RE recorder that was made available only in Japan.
+In January 2005, 
+AACS LA, a consortium founded in 2004,
+The first BD-ROM players (Samsung BD-P1000) were shipped in mid-June 2006, though 
+The first mass-market Blu-ray Disc rewritable drive for the PC was the BWU-100A, released by 
+The 
+HD DVD had a head start in the high-definition video market, as Blu-ray Disc sales were slow to gain market share. The first Blu-ray Disc player was perceived as expensive and buggy, and there were few titles available.
+The appearance of the Sony —a hybrid disc containing Blu-ray on one side and HD DVD on the other, but it was never released.
+In a June 28, 2007, press release, Twentieth Century Fox cited Blu-ray Disc's adoption of the BD+ anticopying system as key to their decision to support the Blu-ray Disc format. companies—said they would no longer carry HD DVD.
+Following these new developments, on February 19, 2008, Toshiba announced it would end production of HD DVD devices,
+According to Media Research, high-definition software sales in the US were slower in the first two years than DVD software sales.
+Shortly after the "format war" ended, Blu-ray disc sales began to increase. A study by The 
+According to 
+Blu-ray faces competition from  that can be played on computers and mobile devices. Some are released on "flipper" discs with Blu-ray on one side and DVD on the other. Other strategies are to release movies with the special features only on Blu-ray Discs and none on DVDs.
+The 
+Although the Blu-ray Disc specification has been finalized, engineers continue to work on advancing the technology. By 2005, quad-layer (128&#160;GB) discs had been demonstrated on a drive with modified optics
+Also, behind closed doors at 
+In January 2007, 
+At CES 2009, Panasonic unveiled the DMP-B15, the first portable Blu-ray Disc player, and 
+On July 20, 2010, the research team of Sony and Japanese Tohoku University announced the joint development of a blue-violet laser,
+On January 7, 2013, Sony announced that it would release "Mastered in 4K" Blu-ray Disc titles which are sourced at 
+On August 5, 2015, The Blu-ray Disc Association (BDA) announced it will commence licensing the Ultra HD Blu-ray format starting August 24, 2015. The Ultra HD Blu-ray format will deliver high dynamic range content that significantly expands the range between the brightest and darkest elements, expanded color range, high frame rate (up to 60fps) and up to 3840x2160 resolution, object-based sound formats, and an optional "digital bridge" feature. New players will be required to play this format, which will be able to play both DVDs, traditional Blu-rays and the new format. New Ultra HD Blu-ray discs hold up to 66&#160;GB and 100&#160;GB of data on dual and triple layer discs respectively.
+While a DVD uses a 650&#160; use 780&#160;nm near-infrared lasers.
+The minimum "
+Since the Blu-ray Disc data layer is closer to the surface of the disc compared to the 
+The Blu-ray Disc specification requires the testing of resistance to scratches by  In contrast, DVD media are not required to be scratch-resistant, but since development of the technology, some companies, such as Verbatim, implemented hard-coating for more expensive lines of recordable DVDs.
+The table shows the speeds available. Even the lowest speed (1x) is sufficient to play and record real-time 1080p video; the higher speeds are relevant for general data storage and more sophisticated handling of video.
+The usable data rate of a Blu-ray Disc drive can be limited by the capacity of the drive's data interface. With a 
+Pre-recorded Blu-ray Disc titles usually ship in packages similar to but slightly smaller (18.5&#160;mm shorter and 2&#160;mm thinner: 135&#160;mm x 171.5&#160;mm x 13&#160;mm.
+The "Mini Blu-ray Disc" (also, "Mini-BD" and "Mini Blu-ray") is a compact 8&#160;cm (~3&#160;in)-diameter variant of the Blu-ray Disc that can store 7.8&#160;GB of data in its single layer configuration, or 15.6&#160;GB on a dual layer disc.
+"Blu-ray Disc recordable" refers to two 
+On September 18, 2007, ), Blu-ray recorders hit the market almost simultaneously with Blu-ray's debut.
+The BD9 format was proposed to the Blu-ray Disc Association by 
+Usage of BD9 for releasing content on "pressed" discs never caught on. With the end of the format war, manufacturers ramped production of Blu-ray Discs and lowered prices to compete with DVDs. On the other hand, the idea of using inexpensive DVD media became popular among individual users. A lower-capacity version of this format that uses single-layer 4.7&#160;GB DVDs has been unofficially called BD5. Both formats are being used by individuals for recording high definition content in Blu-ray format onto recordable DVD media.
+The BDXL format allows 100&#160;GB and 128&#160;GB write-once discs,
+The IH-BD (Intra-Hybrid Blu-ray) format includes a 25&#160;GB re-writable layer (BD-RE) and a 25&#160;GB write once layer (BD-ROM), designed to work with existing Blu-ray Discs.
+Blu-ray Disc specifies the use of 
+The Blu-ray Disc application for recording of 
+All BDMV application files are stored under a “BDMV” directory.
+Audio, video, and other streams are 
+Blu-ray Disc employs the MPEG transport stream recording method. That enables transport streams of digital broadcasts to be recorded as they are broadcast, without altering the format." effect).
+The BD-ROM specification mandates certain codec compatibilities for both hardware decoders (players) and movie software (content).
+Originally BD-ROMs stored video up to 1920×1080 pixel resolution at up to 60 (59.94)  per second. Currently with UHD BD-ROM videos can be stored at a maximum of 3840×2160 pixel resolution at up to 60 (59.94) frames per second, progressively scanned. While most current Blu-ray players and recorders can read and write 1920×1080 video at the full 59.94p and 50p progressive format, new players for the UHD specifications will be able to read at 3840×2160 video at either 59.94p and 50p formats.
+
+
+For video, all players are required to process  The choice of formats affects the producer's licensing/royalty costs as well as the title's maximum run time, due to differences in compression efficiency. Discs encoded in MPEG-2 video typically limit content producers to around two hours of high-definition content on a single-layer (25&#160;GB) BD-ROM. The more-advanced video formats (VC-1 and MPEG-4 AVC) typically achieve a video run time twice that of MPEG-2, with comparable quality.
+MPEG-2 was used by many studios (including  Today, Warner and other studios typically provide bonus content in the video format that matches the feature.
+For audio, BD-ROM players are required to implement  BD-ROM titles must use one of the mandatory schemes for the primary soundtrack. A secondary audiotrack, if present, may use any of the mandatory or optional codecs.
+For users recording 
+At the 2005  standard.
+The BD-ROM specification defines four Blu-ray Disc player profiles, including an audio-only player profile (BD-Audio) that does not require video decoding or . All of the video-based player profiles (BD-Video) are required to have a full implementation of BD-J.
+
+
+
+
+
+On November 2, 2007, the Grace Period Profile was superseded by Bonus View as the minimum profile for new BD-Video players released to the market.
+The biggest difference between Bonus View and BD-Live is that BD-Live requires the Blu-ray Disc player to have an Internet connection to access Internet-based content. BD-Live features have included Internet chats, scheduled chats with the director, Internet games, downloadable featurettes, downloadable quizzes, and downloadable movie trailers. In addition, Profile 2.0 also requires more local storage in order to handle this content.
+Profile 1.0 players are not eligible for Bonus View or BD-Live compliant upgrades and do not have the function or capability to access these upgrades, with the exception of the latest players and the 
+As with the implementation of 
+Movie studios have different region coding policies. Among major U.S. studios, 
+The Blu-ray Disc region coding scheme divides the world into three regions, labeled A, B, and C.
+In circumvention of region coding restrictions, stand-alone Blu-ray Disc players are sometimes modified by third parties to allow for playback of Blu-ray Discs (and DVDs) with .
+The Blu-ray Disc format employs several layers of 
+Blu-ray equipment is required to implement the High-bandwidth Digital Content Protection (
+The  this is only a temporary attack, and new keys must continually be discovered in order to decrypt the latest discs.
+
+If a playback device manufacturer finds that its devices have been hacked, it can potentially release BD+ code that detects and circumvents the vulnerability. These programs can then be included in all new content releases..
+The first titles using BD+ were released in October 2007. Since November 2007, versions of BD+ protection have been circumvented by various versions of the ).
+ A specially licensed piece of hardware is required to insert the ROM-Mark into the media during mastering. During replication, this ROM Mark is transferred together with the recorded data to the disc. In consequence, any copies of a disc made with a regular recorder will lack the ROM-Mark data and will be unreadable on standard players.
+The Blu-ray Disc Association recommends but does not require that Blu-ray Disc drives be capable of reading standard DVDs and CDs, for 
+High Fidelity Pure Audio (HFPA) is a marketing initiative, spearheaded by the , which had similar aims.
+AVCHD was originally developed as a high definition format for consumer 
+AVCREC uses a BDAV container to record high definition content on conventional DVDs..
+The Blu-ray Disc Association (BDA) created a task force made up of executives from the film industry and the consumer electronics and IT sectors to help define standards for putting  This means the MVC (3D) stream is backward compatible with H.264/AVC (2D) stream, allowing older 2D devices and software to decode stereoscopic video streams, ignoring additional information for the second view.
+Sony added Blu-ray 3D support to its 

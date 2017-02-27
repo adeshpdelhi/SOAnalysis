@@ -1,0 +1,10 @@
+.
+It is  (MPL).
+
+
+Echo originally started as a .
+In late 2005, NextApp formally announced the release of their new .
+During 2007, development on a third generation of the framework,  languages.
+Echo is often compared to frameworks such as  in JavaScript, and as such, Java code is compiled to JavaScript and fully executed on the client side. On the other hand, Echo has offered a dual-stack approach since version 3. Applications can be written in JavaScript (client-side) or Java (server-side) or in mixed forms.
+Comparable frameworks include .
+Echo2 has inspired various add-on projects including:

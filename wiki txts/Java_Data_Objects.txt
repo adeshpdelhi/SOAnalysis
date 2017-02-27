@@ -1,0 +1,9 @@
+ project. JDO 2.2 was released in October 2008. JDO 3.0 was released in April 2010.
+Object persistence is defined in the external .
+JDO enhanced classes are portable across different vendors' implementation. Once enhanced, a Java class can be used with any vendor's JDO product.
+JDO is integrated with .
+
+
+. There have been standards conflicts between the two standards bodies in terms of pre-eminence. JDO has several commercial implementations.
+In the end, persistence has been "broken out" of "EJB3 Core", and a new standard formed, the  (ORM) standard, while JDO is both an object-relational mapping standard and a transparent object persistence standard. JDO, from an API point of view, is agnostic to the technology of the underlying datastore, whereas JPA is targeted to RDBMS datastores (although there are several JPA providers that support access to non-relational datastores through the JPA API, such as DataNucleus and ObjectDB).
+Leading JDO commercial implementations and open source projects also offer a JPA API implementation as an alternative access to their underlying persistence engines, formerly exposed solely via JDO in the original products. There are many open source implementations of JDO.

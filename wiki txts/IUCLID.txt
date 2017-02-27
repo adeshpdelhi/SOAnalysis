@@ -1,0 +1,26 @@
+				 The latest version, version 6, was made available on 29 April 2016.
+
+
+1993: First version of IUCLID for the European Existing Substances Regulation 793/93/EEC.
+1999: IUCLID becomes the recommended tool for the OECD HPV Programme.
+2000: IUCLID is the software prescribed in the EU Biocides legislation to notify existing active substances (Art. 4 of Commission Regulation (EC) No 1896/2000).
+IUCLID 4 was used worldwide by about 500 organizations. These included chemical industry companies, , and third party service providers.
+In 2003, when it became clear that the REACH proposal would be adopted by the . Migration of data in the IUCLID 4 format was supported by IUCLID 5.1. IUCLID 5.1 became available on 13 June 2007.
+IUCLID is also mentioned in article 111 of the REACH of the REACH legislation as the format to be used for data collection and submission dossier preparation.
+The following IUCLID 5 major versions have been released:
+Data that can be stored and maintained with IUCLID encompass information about:
+) in which these data are stored for easy data sharing. IUCLID 5 will be the first application fully implementing this international reporting standard, which has been accepted by many national and international regulatory authorities.
+Numerous parties were involved in the creation and the review of the OECD Harmonized Templates, among them the  (CEFIC) and other bodies and authorities.
+IUCLID5 can be used to enter  is assigned within robust study summary as one field.
+Anyone can use a local IUCLID 5 installation to collect, store, maintain and exchange relevant data on chemical substances.
+In addition to dossier creation for REACH, IUCLID 5 data can be (re-)used for a large number of other purposes, due to the compatibility of IUCLID 5 data with the  jurisdictions. Legislations and programmes under which IUCLID 5 data are certainly accepted are:
+The IUCLID 5 data model also features  can therefore be quickly complemented with data about possible biocidal or pesticidal properties and be re-used for data reporting obligations under the EU Biocides regulation.
+The data are available and can be searched through the .
+IUCLID 5 is a  and can be deployed on both single workstation and distributed environments.
+IUCLID 5 offers the possibility to be deployed in:
+IUCLID 5 exports and imports files in the I5Z format. Files may be swapped between different IUCLID 5 installations and dossiers may be uploaded to  compression.
+IUCLID can be deployed on any current PC. For optimal performance,  should not be less than 1 GB.
+The first version of IUCLID was used from 1993 for the European Existing Substances Regulation 793/93/EEC. IUCLID has therefore been under development for over twenty years. IUCLID 5 and its underlying technologies originate from a period of development between 2003 and 2007 whilst IUCLID was being readied for its role in the implementation of REACH. So much has changed in the intervening years that it was decided to completely re-build IUCLID, as IUCLID 6.
+IUCLID 6 provides a new software architecture that allows the implementation of new end-user functionalities that could not be created by simply developing IUCLID 5 further. The revisions of the software architecture also enhance a number of non-functional requirements that were identified as potential weaknesses in IUCLID 5. Enhancements have been made in the following areas:
+Even though the software has been completely re-written, as requested by our users no large changes have been made in the way that the graphical user interface works, with most functions having been retained from IUCLID 5. Thus, moving from IUCLID 5 to IUCLID 6 should involve a minimal amount of retraining of users. The branding has been refreshed, and many of the visual cues in the interface of IUCLID 5 have been retained in a recognisable form.
+IUCLID 6 is made available on 24 June 2015 as a beta version so that large companies and other organisations can begin preparing their IT systems for the full release of IUCLID 6 due in 2016. However, individual users and SMEs can also download the beta version to get a preview of what is to come, and to become familiar with the user-interface. For the preparation of submissions under the EU regulations REACH, CLP and BPR, IUCLID 5 must still be used. When the full version of IUCLID 6 is released, users will be able to migrate all their data from IUCLID 5 to IUCLID 6 in one convenient step. More details are available on the IUCLID 6 website.

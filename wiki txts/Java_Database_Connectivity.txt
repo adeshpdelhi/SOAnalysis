@@ -1,0 +1,27 @@
+ (JVM) host environment.
+
+
+Sun Microsystems released JDBC as part of  (Java SE).
+The JDBC classes are contained in the .
+Starting with version 3.1, JDBC has been developed under the 
+JDBC 4.1, is specified by a maintenance release 1 of JSR 221
+The latest version, JDBC 4.2, is specified by a maintenance release 2 of JSR 221
+JDBC allows multiple implementations to exist and be used by the same application. The API provides a mechanism for dynamically loading the correct Java packages and registering them with the JDBC Driver Manager. The Driver Manager is used as a connection factory for creating JDBC connections.
+JDBC connections support creating and executing statements. These may be update statements such as SQL's CREATE, INSERT, UPDATE and DELETE, or they may be query statements such as SELECT. Additionally, stored procedures may be invoked through a JDBC connection. JDBC represents statements using one of the following classes:
+Update statements such as INSERT, UPDATE and DELETE return an update count that indicates how many  were affected in the database. These statements do not return any other information.
+Query statements return a JDBC row result set. The row result set is used to walk over the  in a row are retrieved either by name or by column number. There may be any number of rows in the result set. The row result set has metadata that describes the names of the columns and their types.
+There is an extension to the basic JDBC API in the .
+JDBC connections are often managed via a  rather than obtained directly from the driver.
+When a Java application needs a database connection, one of the  methods is used to create a JDBC connection. The URL used is dependent upon the particular database and JDBC driver. It will always begin with the "jdbc:" protocol, but the rest is up to the particular vendor.
+Starting from Java SE 7 you can use Java's  statement to make the above code cleaner:
+Once a connection is established, a statement can be created.
+Note that Connections, Statements, and ResultSets often tie up  should not be relied upon. The above try-with-resources construct is a code pattern that obviates this.
+Data is retrieved from the database using a database query mechanism. The example below shows creating a statement and executing a query.
+An example of a  and class from first example.
+If a database operation fails, JDBC raises an . There is typically very little one can do to recover from such an error, apart from logging it with as much detail as possible. It is recommended that the SQLException be translated into an application domain exception (an unchecked one) that eventually results in a transaction rollback and a notification to the user.
+An example of a :
+.
+For an example of a .
+JDBC drivers are client-side  (installed on the client machine, not on the server) that convert requests from Java programs to a protocol that the DBMS can understand.
+Commercial and free drivers provide connectivity to most relational-database servers. These drivers fall into one of the following types:
+Note also a type called an  support it). However, in the case of an internal JDBC driver, the JDBC client actually runs as part of the database being accessed, and so can access data directly rather than through network protocols.

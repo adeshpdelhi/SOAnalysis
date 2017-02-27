@@ -1,0 +1,10 @@
+In .
+
+
+
+The following  example illustrates the interpreter pattern. The grammar
+defines a language that contains  expressions like:
+This structural code demonstrates the Interpreter patterns, which using a defined grammar, provides the interpreter that processes parsed statements.
+Following the interpreter pattern there is a class for each grammar rule.
+While the interpreter pattern does not address parsing a parser is provided for completeness.
+Finally evaluating the expression "w x z - +" with w = 5, x = 10, and z = 42.

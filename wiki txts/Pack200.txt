@@ -1,0 +1,4 @@
+				 since 1.5.0, as well as the Pack200 compressed files.
+After Pack200, usually a  compression is applied. In HTTP compression, such content is specified by the Content-Encoding type "pack200-gzip". When stored as a file, the extension ".pack.gz" is used.
+Pack200 is optimized for compressing JAR archive files, specifically the .
+

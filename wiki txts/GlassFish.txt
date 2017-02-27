@@ -1,0 +1,24 @@
+.
+
+
+GlassFish is the , etc. This allows developers to create enterprise applications that are portable and scalable, and that integrate with legacy technologies. Optional components can also be installed for additional services.
+Built on a modular kernel powered by  abstracts the OSGi module system to provide components, which can also be viewed as services. Such services can be discovered and injected at runtime.
+GlassFish is based on  (NIO) for scalability and speed.
+Sun Microsystems launched the GlassFish project on 6 June 2005. On 4 May 2006, Project GlassFish released the first version that supports the Java EE 5 specification.
+On 8 May 2007 Project 
+On 17 September 2007 the GlassFish community released version 2 (a.k.a. Sun Java System Application Server 9.1) with full enterprise clustering capabilities, -interoperable Web Services.
+On 21 January 2009 Sun Microsystems and the community released version GlassFish 2.1 (a.k.a. Sun GlassFish Enterprise Server 2.1) which serves as the basis for the Sailfin SIP AppServer project (a.k.a. Sun Communication Application Server).
+On 10 December 2009 GlassFish v3 was released. Being the Java EE reference implementation, this was the first application server to completely implement 
+On 25 March 2010, soon after the acquisition of Sun Microsystems, Oracle issued a  and other Oracle technologies. The open source community remains otherwise unaffected.
+On 28 February 2011, Oracle Corporation released GlassFish v3.1. This version introduced support for ssh-based provisioning, centralized admin, clustering and load-balancing. It maintains its support for both the Web Profile and full Java EE 6 Platform specifications.
+On 28 July 2011, Oracle Corporation released GlassFish v3.1.1. This is fix release for GlassFish v3.1 with multiple component updates (Weld, Mojarra, Jersey, EclipseLink, ...), JDK 7 support, AIX support and more.
+On 29 February 2012, Oracle Corporation released GlassFish v3.1.2. This release includes bug fixes and new features including administration console enhancements, transaction recovery from a database and new thread pool properties.
+On 17 July 2012, Oracle Corporation released GlassFish v3.1.2.2. This is a "micro" release to address some exceptional issues in the product.
+On 12 June 2013, Oracle Corporation released GlassFish 4.0. This major release brings 
+On 9 September 2014, Oracle Corporation released GlassFish 4.1. This release includes many bug fixes (over a thousand) and the latest MR releases of CDI and WebSockets.
+On 7 October 2015, Oracle Corporation released GlassFish 4.1.1 This release includes many bug fixes and security fixes as well as updates to many underlying components.
+The commercially supported version of GlassFish is known as 
+On 4 November 2013, Oracle announced the future roadmap for Java EE and Glassfish Server, with a 4.1 open-source edition planned and continuing open-sources updates to GlassFish but with an end to commercial Oracle support..
+Open-source GlassFish is planned to continue at least through version 5, and the Java EE 8 Reference Implementation will be derived from GlassFish Server Open Source Edition 5. This replicates what has been done in past Java EE and GlassFish Server releases.
+Other CDDL-licensed, Java-based services:
+Other Java EE application servers:

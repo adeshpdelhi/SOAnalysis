@@ -1,0 +1,36 @@
+ features and non-relational structures like JSON and XML.
+Historically and unlike other database vendors, IBM produced a platform-specific DB2 product for each of its major operating systems. However, in the 1990s IBM changed track and produced a DB2 "common server" product, designed with a common code base to run on different platforms.
+
+
+). DB2 for VM / VSE
+
+In 1974 the IBM San Jose Research center developed a relational DBMS, 
+IBM bought Metaphor Computer Systems to utilize their GUI interface and encapsulating SQL platform that had already been in use since the mid 80's. In parallel with the development of SQL IBM also developed  (QBE), the first graphical query language.
+IBM's first commercial relational database product,  Later the QMF feature of DB2 produced real SQL and brought the same "QBE" look and feel to DB2.
+The name 
+When .
+For some years DB2, as a full-function DBMS, was exclusively available on  called Database Manager.
+IBM extended the functionality of Database Manager a number of times, including the addition of distributed database functionality by means of  (DDM).)
+Eventually IBM took the decision to completely rewrite the software. The new version of Database Manager was called DB2/2 and DB2/6000 respectively. Other versions of DB2, with different code bases, followed the same '/' naming convention and became DB2/400 (for the AS/400), DB2/VSE (for the DOS/VSE environment) and DB2/VM (for the VM operating system). IBM lawyers stopped this handy naming convention from being used and decided that all products needed to be called "product FOR platform" (for example, DB2 for OS/390). The next iteration of the mainframe and the server-based products were named DB2 Universal Database (or DB2 UDB).
+In the mid-1990s, IBM released a clustered DB2 implementation called DB2 Parallel Edition, which initially ran on AIX. This edition allowed scalability by providing a , in which a single large database is partitioned across multiple DB2 servers that communicate over a high-speed interconnect. This DB2 edition was eventually ported to all Linux, UNIX, and Windows (LUW) platforms and was renamed to DB2 Extended Enterprise Edition (EEE). IBM now refers to this product as the Database Partitioning Feature (DPF) and sells it as an add-on to their flagship DB2 Enterprise product.
+In mid 2006, IBM announced "Viper," which is the codename for DB2 9 on both  performance enhancements for z/OS, and continued convergence of the SQL vocabularies between z/OS and distributed platforms.
+In October 2007, IBM announced "Viper 2," which is the codename for DB2 9.5 on the , Simplified Management, Business Critical Reliability and Agile XML development.
+In June 2009, IBM announced "Cobra" (the codename for ). DB2 9.7 adds data compression for database indexes, temporary tables, and large objects. DB2 9.7 also supports native XML data in hash partitioning (database partitioning), range partitioning (table partitioning), and multi-dimensional clustering. These native XML features allows users to directly work with XML in data warehouse environments. DB2 9.7 also adds several features that make it easier for Oracle Database users to work with DB2. These include support for the most commonly used SQL syntax, PL/SQL syntax, scripting syntax, and data types from Oracle Database. DB2 9.7 also enhanced its concurrency model to exhibit behavior that is familiar to users of Oracle Database and Microsoft SQL Server.
+In October 2009, IBM introduced its second major release of the year when it announced  implementation of DB2 data sharing on the mainframe. DB2 pureScale provides a fault-tolerant architecture and shared-disk storage. A DB2 pureScale system can grow to 128 database servers, and provides continuous availability and automatic load balancing.
+In 2009, it was announced that DB2 can be an engine in . This allows users on the System i platform to natively access the DB2 under the IBM i operating system (formerly called OS/400), and for users on other platforms to access these files through the MySQL interface. On the System i and its predecessors the AS/400 and the System/38, DB2 is tightly integrated into the operating system, and comes as part of the operating system. It provides journaling, triggers and other features.
+In early 2012, IBM announced the next version of DB2, DB2 10.1 (code name Galileo) for Linux, UNIX, and Windows. DB2 10.1 contained a number of new data management capabilities including row and column access control which enables ‘fine-grained’ control of the database and multi-temperature data management that moves data to cost effective storage based on how"hot" or "cold" (how frequently the data is accessed) the data is. IBM also introduced ‘adaptive compression’ capability in DB2 10.1, a new approach to compressing data tables.
+In June 2013, IBM released DB2 10.5 (code name “Kepler”).
+On 12 April 2016, IBM announced DB2 LUW 11.1, and in June 2016 it was released.
+IBM offers seven editions: .
+DB2 Express-C is free of charge version of DB2 but limited to two CPU cores and 16GB of RAM and without Enterprise support and fixpacks. DB2 Express-C has no limit on number of users or on database size.
+, which allows customers to instead pay a one-time charge.
+DB2 also powers .
+DB2 10.5 for Linux, UNIX and Windows, contains all of the functionality and tools offered in the prior generation of DB2 and InfoSphere Warehouse on Linux, UNIX and Windows.
+IBM provides 2 cloud services for DB2 on its Bluemix platform:
+. DB2 has native implementation of XML data storage, where XML data is stored as XML (not as relational data or CLOB data) for faster access using XQuery.
+.
+
+An important feature of  within the SQLCA block.
+The  values are:
+Later versions of DB2 added functionality and complexity to the execution of SQL. Multiple errors or warnings could be returned by the execution of an SQL statement; it may, for example, have initiated a  and other SQL statements. Instead of the original SQLCA, error information should now be retrieved by successive executions of a GET DIAGNOSTICS statement.
+See  for a more comprehensive list of common SQLCODEs.

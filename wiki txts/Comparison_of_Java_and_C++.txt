@@ -1,0 +1,19 @@
+This is a .
+
+
+The differences between the programming languages C++ and Java can be traced to their , as they have different design goals.
+The different goals in the development of C++ and Java resulted in different principles and design trade-offs between the languages. The differences are as follows:
+A rich amount of third-party libraries exist for GUI and other functions like: .
+Both C++ and Java provide facilities for , respectively. Although they were created to solve similar kinds of problems, and have similar syntax, they are quite different.
+An example comparing .
+In addition to running a compiled Java program, computers running Java applications generally must also run the  (JVM), while compiled C++ programs can be run without external applications. Early versions of Java were significantly outperformed by statically compiled languages such as C++. This is because the program statements of these two closely related languages may compile to a few machine instructions with C++, while compiling into several byte codes involving several machine instructions each when interpreted by a JVM. For example:
+Since performance optimizing is a very complex issue, it is very difficult to quantify the performance difference between C++ and Java in general terms, and most benchmarks are unreliable and biased. Given the very different natures of the languages, definitive qualitative differences are also difficult to draw. In a nutshell, there are inherent inefficiencies and hard limits on optimizing in Java, given that it heavily relies on flexible high-level abstractions, however, the use of a powerful JIT compiler (as in modern JVM implementations) can mitigate some issues. In any case, if the inefficiencies of Java are too great, compiled C or C++ code can be called from Java via the JNI.
+Some inefficiencies that are inherent to the Java language include, mainly:
+However, there are a number of benefits to Java's design, some realized, some only theorized:
+Also, some performance problems occur in C++:
+The C++ language is defined by 
+The C++ language evolves via an open steering committee called the C++ Standards Committee. The committee is composed of the creator of C++ , and other prominent figures, including many representatives of industries and user-groups (i.e., the stake-holders). Being an open committee, anyone is free to join, participate, and contribute proposals for upcoming releases of the standard and technical specifications. The committee now aims to release a new standard every few years, although in the past strict review processes and discussions have meant longer delays between publication of new standards (1998, 2003, and 2011).
+The Java language is defined by the  a book which is published by Oracle.
+The Java language continuously evolves via a process called the —which is actively engaged into the enhancement of the language, by sending public requests - the Java Specification Requests - which must pass formal and public reviews before they get integrated into the language.
+The lack of a firm standard for Java and the somewhat more volatile nature of its specifications have been a constant source of criticism by stake-holders wanting more stability and conservatism in the addition of new language and library features. In contrast, the C++ committee also receives constant criticism, for the opposite reason, i.e., being too strict and conservative, and taking too long to release new versions.
+"C++" is not a trademark of any company or organization and is not owned by any individual.

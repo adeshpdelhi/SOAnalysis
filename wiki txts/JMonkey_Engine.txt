@@ -1,0 +1,10 @@
+ is fully supported.
+jMonkeyEngine is a community-centric .
+
+
+By itself, jMonkeyEngine is a collection of .
+ The "jMonkeyPlatform" and the "jMonkeyEngine 3 SDK" are exactly the same thing.
+jMonkeyEngine was built to fulfill the lack of full featured graphics engines written in Java. The project has a distinct two-part story, as the current core development team includes none of the original creators.
+Version 0.1 to 2.0 of jMonkeyEngine marks the time from when the project was first established in 2003, until the last 2.0 version was released in 2008. When the core developers at that time gradually discontinued work on the project throughout the end of 2007 and the beginning of 2008, the 2.0 version had not yet been made officially . Regardless, the codebase became adopted for commercial use and the community actively supported the 2.0 version more than any other.
+Since the departure of jME's core developers in late 2008 the codebase remained practically stagnant for several months. The community kept committing patches, but the project was not moving in any clear direction. Version 3.0 started as nothing more than an experiment. The first preview release of jME3 in early 2009 created a lot of buzz is now composed of eight committed individuals.
+Ardor3D began life September 23, 2008 as a fork from the jMonkeyEngine by Joshua Slack and Rikard Herlitz due to what they perceived as irreconcilable issues with naming, provenance, licensing, and community structure in that engine,

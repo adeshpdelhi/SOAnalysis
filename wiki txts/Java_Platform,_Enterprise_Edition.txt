@@ -1,0 +1,11 @@
+.
+The platform provides an  can be used to override annotations or to deviate from the platform defaults.
+Java EE is developed under the .
+
+
+The platform was known as .
+Java EE is defined by its .
+Java EE includes several  and management of the components it is deploying, in order to enable developers to concentrate more on the business logic of the components rather than on infrastructure and integration tasks.
+The Java EE APIs includes several technologies that extend the functionality of the base .
+In an attempt to limit the footprint of web containers, both in physical and in conceptual terms, the web profile was created, a subset of the Java EE specifications. The Java EE web profile comprises the following:
+Although by definition all Java EE implementations provide the same base level of technologies (namely, the Java EE spec and the associated APIs), they can differ considerably with respect to extra features (like , etc.), installed size, memory footprint, startup time, etc.

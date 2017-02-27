@@ -1,0 +1,15 @@
+ (DAG).
+Compared to other solutions, Java 3D is not only a  support.
+Java 3D and its documentation are available for download separately. They are not part of the  (JDK).
+
+
+ and volunteers have since been continuing its development.
+On January 29, 2008, it was announced that improvements to Java 3D would be put on hold to produce a 3D scene graph for  The JavaFX 3D graphics functionality has more or less come to supersede Java 3D.
+Since February 28, 2008, the entire Java 3D source code is released under the 
+Since February 10, 2012, Java 3D uses 
+Java 3D is not the only high-level API option to render 3D in Java. In part due to the pause in development during 2003 and 2004, several competing Java scene graph technologies emerged:
+
+
+
+In addition to those, many other C or C++ scene graph APIs offer Java support through .
+At a lower level, the  is another such binding.

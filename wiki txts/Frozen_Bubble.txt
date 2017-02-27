@@ -1,0 +1,6 @@
+
+The original , who in this game shoot the coloured frozen bubbles to form groups of the same colour. Such groups disappear and the object is to clear the whole screen in this way before a bubble passes a line at the bottom.
+Version 2.0 offers 
+The game is released under the .
+
+

@@ -1,0 +1,5 @@
+In the 
+A source of heap pollution in Java arises from the fact that type arguments and variables are not 
+Under certain conditions, it is possible that a variable of a parameterized type refers to an object that is not of that parameterized type. The variable will always refer to an object that is an instance of a class that implements the parameterized type.
+
+

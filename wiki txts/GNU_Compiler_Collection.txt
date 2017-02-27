@@ -1,0 +1,50 @@
+The , as both a tool and an example.
+Originally named the 
+Version 4.5 of the  and later.
+GCC has been  The compiler can target a wide variety of platforms.
+As well as being the official compiler of the .
+
+
+In an effort to bootstrap the 
+GCC was first released March 22, 1987, available by 
+As GCC was licensed under the GPL, programmers wanting to work in other directions—particularly those writing interfaces for languages other than C—were free to develop their own .
+In 1997, a group of developers formed Experimental/Enhanced GNU Compiler System (EGCS) to merge several experimental forks into a single project. EGCS development proved considerably more vigorous than GCC development, so much so that the FSF officially halted development on their GCC 2.x compiler, blessed EGCS as the official version of GCC and appointed the EGCS project as the GCC maintainers in April 1999. With the release of GCC 2.95 in July 1999 the two projects were once again united.
+GCC has since been maintained by a varied group of programmers from around the world under the direction of a steering committee.
+GCC has been 
+GCC's external interface follows  binary.
+Each of the language compilers is a separate program that reads source code and outputs  ("tree" for short).
+These are, if necessary, converted to the middle end's input representation, called  originally based on an algorithm of Jack Davidson and Chris Fraser.
+GCC was written primarily in 
+In May 2010, the GCC steering committee decided to allow use of a 
+In August 2012, the GCC steering committee announced that GCC now uses C++ as its implementation language. standard.
+Each  Currently all front ends use hand-written recursive-descent parsers.
+Until recently, the tree representation of the program was not fully independent of the processor being targeted.
+The meaning of a tree was somewhat different for different language front ends, and front ends could provide their own tree codes. This was simplified with the introduction of GENERIC and GIMPLE, two new forms of language-independent trees that were introduced with the advent of GCC 4.0. GENERIC is more complex, based on the GCC 3.x Java front end's intermediate representation. GIMPLE is a simplified GENERIC, in which various constructs are  front ends produce GENERIC directly in the front end. Other front ends instead have different intermediate representations after parsing and convert these to GENERIC.
+In either case, the so-called "gimplifier" then converts this more complex form into the simpler -based GIMPLE form that is the common language for a large number of powerful language- and architecture-independent global (function scope) optimizations.
+, is targeted by all the front ends of GCC.
+The middle stage of GCC does all of the code analysis and  constructs optimized by the middle end.
+In transforming the source code to GIMPLE,.
+Optimization can occur during any phase of compilation; however, the bulk of optimizations are performed after the syntax and  of the back end; thus a common, even though somewhat contradictory, name for this part of the compiler is the "middle end."
+The exact set of GCC optimizations varies from release to release as it develops, but includes the standard algorithms, such as  as RTL optimizations have a much more limited scope, and have less high-level information.
+Some of these optimizations performed at this level include 
+The behavior of GCC's back end is partly specified by  of the target architecture.
+The machine description file contains RTL patterns, along with operand constraints, and code snippets to output the final assembly. The constraints indicate that a particular RTL pattern might only apply (for example) to certain hardware registers, or (for example) allow immediate operand offsets of only a limited size ( 12, 16, 24, … bit offsets, etc.). During RTL generation, the constraints for the given target architecture are checked. In order to issue a given snippet of RTL, it must match one (or more) of the RTL patterns in the machine description file, and satisfy the constraints for that pattern; otherwise, it would be impossible to convert the final RTL into machine code.
+Towards the end of compilation, valid RTL is reduced to a , where real hardware registers are chosen to replace the initially assigned pseudo-registers. This is followed by a "reloading" phase; any pseudo-registers that were not assigned a real hardware register are 'spilled' to the stack, and RTL to perform this spilling is generated. Likewise, offsets that are too large to fit into an actual instruction must be broken up and replaced by RTL sequences that will obey the offset constraints.
+In the final phase, the machine code is built by calling a small snippet of code, associated with each pattern, to generate the real instructions from the target's , using the final registers, offsets, and addresses chosen during the reload phase. The assembly-generation snippet may be just a string, in which case a simple string substitution of the registers, offsets, and/or addresses into the string is performed. The assembly-generation snippet may also be a short block of C code, performing some additional work, but ultimately returning a string containing the valid assembly code.
+Some features of GCC include:
+The standard compiler releases since 4.6 include front ends for 
+The Fortran front end was 
+Third-party front ends exist for ).
+A few experimental branches exist to support additional languages, such as the GCC .
+GCC target processor families as of version 4.3 include:
+Lesser-known target processors supported in the standard release have included:
+Additional processors have been supported by GCC versions maintained separately from the FSF version:
+The  is often used.
+The current stable version of GCC is 6.3, which was released on December 21, 2016.
+As of version 4.8, GCC is implemented in C++.
+GCC 4.6 supports many new  on such targets.
+GCC uses many standard tools in its build, including .
+The trunk concentrates the major part of the development efforts, where new features are implemented and tested.
+By default GCC uses the GNU C library (
+The  The availability of this exception does not imply any general presumption that third-party software is unaffected by the copyleft requirements of the license of GCC.
+Several companies make a business out of supplying and supporting GCC ports to various platforms.

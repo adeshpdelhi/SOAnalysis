@@ -1,0 +1,3 @@
+ platform and native applications. It provides numerous high-performance classes and utilities useful to non real-time applications as well. Such as:
+Since version 6.0, Javolution  have been ported and are included with the core C++ distribution.
+All modules (Java and native) are built using  either as an OSGi bundle (preferred) or as a standalone library.

@@ -1,0 +1,10 @@
+
+Mid-2012 there were complaints that JDownloader's installer added  There were further complaints mid-2014.
+In June 2013, JDownloader's ability to download copyrighted and protected 
+In 2011, JDownloader was superseded by its successor, . While support for the original JDownloader still exists on forums, the official site only lists JDownloader 2.
+
+
+Contrary to the license, some source files are not publicly available. The developers stated that the license may change—the program will remain open source, but will get a license which allows closed-source parts.
+Specified features:
+The user-specified download links are split into packages to enable individual pausing and continuing of downloads. The program can be configured to unpack split  archives automatically after all parts have been downloaded.
+JDownloader supports "waiting time" and 

@@ -1,0 +1,10 @@
+), and execution of methods of Java classes. It also allows for simpler array manipulation.
+It is aimed to be used in  as expression language.
+OGNL was created by Luke Blanshard and Drew Davidson of .
+
+
+OGNL began as a way to map associations between front-end components and back-end objects using property names. As these associations gathered more features, Drew Davidson created Key-Value Coding language (KVCL). Luke Blanshard then reimplemented KVCL using ).
+OGNL uses Java  of the runtime application. This allows the program to change behavior based on the state of the object graph instead of relying on compile time settings. It also allows changes to the object graph.
+Due to its ability to create or change executable code, OGNL is capable of introducing critical security flaws to any framework that uses it. Multiple Apache Struts2 versions have been vulnerable OGNL security flaws. As of October 2013, the recommended secure version of Struts2 is 2.3.15.2, released on September 20, 2013. Users are urged to upgrade to the latest version.
+For example, Apache Struts versions 2.0.0 through 2.3.15 allow remote attackers to execute arbitrary OGNL expressions via a parameter prefixed with action:, redirect:, or redirectAction:. Exploit code for this vulnerability was released for the  on July 7, 2013.
+

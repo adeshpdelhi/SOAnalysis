@@ -1,0 +1,14 @@
+. It puts strong focus on enterprise-scale content modeling, storage and retrieval, and includes comprehensive JSF support for displaying and manipulating these contents in (web) applications. Including the runtime environment in existing Java EE applications is the one way to write flexive applications, but it is also possible to build new applications and package them into stand-alone Java EE applications.
+The aim of flexive is to speed up development by easing tedious and repetitive programming tasks and helping to keep the application flexible during the development-cycle and in production.
+Essential features provided by flexive for data-centric applications include:
+
+
+Development of flexive was originally started back in 1999 as a closed source project by UCS – unique computing solutions gmbh. Its aim was to provide a sophisticated J2EE framework to allow for the rapid development of web-based applications like CMS systems, while automatically ensuring high standards of security and flexibility (hence its name) in a way that was not available at the time. This eventually led to the release of flexive 2.0 in 2003, the last official release up to this point which has been since used in many successful commercial projects.
+In 2005 the decision was made to start a complete rewrite of flexive with state-of-the-art architecture, technologies and under an open source license.
+On February, 14th 2008 the so-called  license.
+April 22, 2008 was the scheduled release date for the  license.
+The first article about flexive was published on May 1, 2008 at O'Reillys 
+September 5, 2008 the final 3.0.0 version has been released. It contained besides numerous bugfixes an upgrade to the Yahoo! User Interface Library(YUI) for components and the backend application.
+November 20, 2008 - first bugfix release 3.0.1 has been made available that keeps binary compatibility with 3.0.0.
+February 3, 2009 - 3.0.2 bugfix version released.
+April 15, 2010 - 3.1 released. This represents a shift from a general Java EE persistency and web development framework towards a next generation enterprise grade content repository.

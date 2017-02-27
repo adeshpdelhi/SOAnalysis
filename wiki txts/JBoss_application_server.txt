@@ -1,0 +1,7 @@
+.
+WildFly is  (LGPL), version 2.1.
+On 20 November 2014, JBoss Application Server was renamed WildFly. The JBoss Community and other Red Hat JBoss products like 
+
+
+In 1999, 
+JBoss EAP itself is open source, but Red Hat charges to provide a support subscription for JBoss Enterprise Middleware. Before November 2010 JBoss was licensed as annual subscription in bundles of 4 and 32 CPU sockets. As of November 2010 the licensing changed and all cores on the system are now counted. The core bundles licensing is available for 16 and 64 cores.

@@ -1,0 +1,6 @@
+.
+The product line was previously sold in three levels of functionality: Together Developer, Together Designer, and Together Architect; however, since 2007, Together has been unified into a single product. Earlier versions of the Together products were completely proprietary self-contained applications, whereas since the 2006 version Together has been based on . The installation allows installing Together using an existing Eclipse installation.
+Together is implemented as a set of Eclipse , and logical to physical data model transformation and custom pattern support.
+Together currently uses the Eclipse 4.3.1 platform.
+ model transformations.
+

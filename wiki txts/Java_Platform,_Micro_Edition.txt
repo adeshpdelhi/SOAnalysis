@@ -1,0 +1,24 @@
+).
+Java ME was designed by  of the specification, but has tended not to provide free binary implementations of its Java ME runtime environment for mobile devices, rather relying on third parties to provide their own.
+As of 22 December 2006, the Java ME source code is licensed under the .
+As of 2008, all Java ME platforms are currently restricted to 
+Java ME devices implement a 
+There are more than 2.1 billion Java ME enabled mobile phones and PDAs.
+
+
+The  to operate. CLDC is basically used for classifying myriad devices into a fixed configuration.
+A configuration provides the most basic set of libraries and virtual-machine features that must be present in each implementation of a J2ME environment. When coupled with one or more profiles, the Connected Limited Device Configuration gives developers a solid Java platform for creating applications for consumer and embedded devices. The configuration is designed for devices with 160KB to 512KB total memory, which has a minimum of 160KB of ROM and 32KB of RAM available for the Java platform.
+Designed for mobile phones, the 
+ (Final release on 09 Dec, 2009) specified the 3rd generation Mobile Information Device Profile (MIDP3), expanding upon the functionality in all areas as well as improving interoperability across devices. A key design goal of MIDP3 is backward compatibility with MIDP2 content.
+The  (IMP) is a profile for embedded, "headless" devices such as vending machines, industrial embedded applications, security systems, and similar devices with either simple or no display and with some limited network connectivity.
+Originally introduced by , but again it doesn't include UI APIs, nor the game API.
+The , containing almost all the libraries that are not GUI related. It is richer than CLDC.
+The Foundation Profile is a Java ME Connected Device Configuration (CDC) profile. This profile is intended to be used by devices requiring a complete implementation of the Java virtual machine up to and including the entire Java Platform, Standard Edition API. Typical implementations will use some subset of that API set depending on the additional profiles supported. This specification was developed under the Java Community Process.
+The Personal Basis Profile extends the Foundation Profile to include lightweight GUI support in the form of an  is built upon.
+Sun provides a -based IDE will support them in a single IDE.
+In contrast to the numerous binary implementations of the Java Platform built by Sun for servers and workstations, Sun does not provide any binaries for the platforms of Java ME targets with the exception of an MIDP 1.0 JRE (JVM) for Palm OS. Third party implementations like JBlend and JBed are widely used by Windows Mobile vendors like HTC and Samsung.
+Operating systems targeting Java ME have been implemented by 
+ provides an open source (LGPL) implementation of an MIDP emulator. This is a Java Applet-based emulator and can be embedded in web pages.
+The open-source  aims to implement JavaME CDC/FP, but is not certified as such (certified implementations are required to charge royalties, which is impractical for an open-source project). Consequently, devices which use this implementation are not allowed to claim JavaME CDC compatibility.
+The linux-based Android operating system uses a proprietary version of Java that is similar, but not identical to Java Me.
+The ESR consortium is devoted to Standards for embedded Java. Especially cost effective Standards. Typical applications domains are industrial control, machine-to-machine, medical, e-metering, home automation, consumer, human-to-machine-interface, ...

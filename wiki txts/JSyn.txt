@@ -1,0 +1,3 @@
+.
+Although fundamentally a synthesis language (imitative of if not directly inspired by .
+A commercial (though inexpensive)  license allows JSyn to be incorporated into commercial applications.

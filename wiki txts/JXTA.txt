@@ -1,0 +1,18 @@
+.
+As JXTA is based upon a set of open XML protocols, it can be implemented in any modern computer language. Implementations are currently available for  native bindings and is not a complete re-implementation in its own right.
+JXTA peers create a virtual  in the Java binding, so that a peer can change its localization address while keeping a constant identification number.
+JXTA strongly resembles .
+
+
+JXTA defines two main categories of peers: . Each peer has a well defined role in the JXTA peer-to-peer model.
+Any peer in a JXTA network can be a rendezvous or relay as soon as they have the necessary credentials or network/storage/memory/CPU requirements.
+An Advertisement is an XML document which describes any resource in a P2P network (peers, groups, pipes, services, etc.). The communication in JXTA can be thought as the exchange of one or more advertisements through the network.
+Pipes are a virtual  used by JXTA to exchange messages and data. Pipes are asynchronous, unreliable, and unidirectional. There are basically three types of pipes:
+A peer group provides a scope for message propagation and a logical clustering of peers. In JXTA, every peer is a member of a default group, NetPeerGroup, but a given peer can be member of many sub-groups at the same time. A peer may play different roles in different groups; it may act as an edge peer in one group, but a rendezvous in another.
+Each group should have at least one rendezvous peer and it is not possible to send messages between two groups.
+The Rendezvous peers have an optimized routing mechanism which allows an efficient propagation of messages pushed by edge peers connected to them. This is achieved through the use of a loosely consistent network.
+Each Rendezvous peer maintains a Rendezvous Peer View (RPV), a list of known rendezvous peers ordered by the Peer ID. There is not any mechanism to enforce the consistency of all RPVs across the JXTA network, so a given RPV can have a temporary or permanent inconsistent view of the other rendezvous peers. As soon as there is a low , that is, a stable network where peers don't join or leave too frequently, the RPV list of each peer will converge as each rendezvous peer exchange a random subset of its RPV with other rendezvous peers from time to time.
+When an edge peer publishes an Advertisement, the index of this advertisement is pushed to the rendezvous through a system called Shared Resource Distributed Index (SRDI). After that, the rendezvous applies a  (DHT) function so that it can forward the index to another peer in the RPV list. For replication purposes, it will send this index to the neighbours of the chosen rendezvous peer in the RPV list.
+The lookup process requires the use of the same DHT function to discover the rendezvous peer which is in charge of storing that index. Once the rendezvous peer is reached it will forward the query to the edge peer which published the advertisement and this peer will get in touch with the peer which issues the query.
+If the DHT function cannot find a peer which is in charge of the advertisement then the query will be forwarded up and down the RPV list until a match is found, the query is aborted, or it reaches the limits of the RPV list. This process is called random walk.
+"In November 2010, Oracle officially announced its withdrawal from the JXTA projects".

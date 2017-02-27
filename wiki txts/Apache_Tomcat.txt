@@ -1,0 +1,22 @@
+ code can run.
+Tomcat is developed and maintained by an open community of developers under the auspices of the Apache Software Foundation, released under the .
+
+
+Tomcat 4.x was released with Catalina (a servlet container), Coyote (an HTTP connector) and Jasper (a ).
+Catalina is Tomcat's 
+Coyote is a Connector component for Tomcat that supports the HTTP 1.1 protocol as a web server. This allows Catalina, nominally a Java Servlet or JSP container, to also act as a plain web server that serves local files as HTTP documents.
+Coyote listens for incoming connections to the server on a specific 
+Jasper is Tomcat's JSP Engine. Jasper  to compile them into Java code as servlets (that can be handled by Catalina). At runtime, Jasper detects changes to JSP files and recompiles them.
+As of version 5, Tomcat uses Jasper 2, which is an implementation of the  2.0 specification. From Jasper to Jasper 2, important features were added:
+Three new components were added with the release of Tomcat 7:
+This component has been added to manage large applications. It is used for  that can be achieved through many techniques. Clustering support currently requires the JDK version 1.5 or later.
+A high-availability feature has been added to facilitate the scheduling of system upgrades (e.g. new releases, change requests) without affecting the live environment. This is done by dispatching live traffic requests to a temporary server on a different port while the main server is upgraded on the main port. It is very useful in handling user requests on high-traffic web applications.
+It has also added user- as well as system-based web applications enhancement to add support for deployment across the variety of environments. It also tries to manage sessions as well as applications across the network.
+Tomcat is building additional components. A number of additional components may be used with Apache Tomcat. These components may be built by users should they need them or they can be downloaded from one of the mirrors.
+Tomcat 7.x implements the Servlet 3.0 and JSP 2.2 specifications. and Unix for platform integration.
+Tomcat 8.x implements the Servlet 3.1 and JSP 2.4 Specifications. 
+Tomcat started off as a servlet  software build automation tool was developed as a side-effect of the creation of Tomcat as an open source project.
+Davidson had initially hoped that the project would become open sourced and, since many open source projects had 
+Apache software is built as part of a community process that involves both user and developer . The developer list is where discussion on building and testing the next release takes place, while the user list is where users can discuss their problems with the developers and other users.
+Some of the free Apache Tomcat resources and communities include  (which has instructional guides on installing, updating, configuring, monitoring, troubleshooting and securing various versions of Tomcat).
+

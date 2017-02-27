@@ -1,0 +1,16 @@
+
+Tapestry emphasizes simplicity, ease of use, and developer productivity. It adheres to the 
+
+
+A minimal, templated, Tapestry application needs only three files:
+Tapestry uses bytecode manipulation to transform page and component classes at runtime. This approach allows the page and component classes to be written as simple 
+Tapestry 5 versions up through 5.3 bundled the  JavaScript frameworks, along with a Tapestry-specific library, so as to support Ajax operations as first-class citizens. Third party modules are available to integrate jQuery instead of, or in addition to, Prototype/Scriptaculous.
+Starting with version 5.4, Tapestry includes a new JavaScript layer that removes built-in components' reliance on Prototype, allowing jQuery or another JavaScript framework to be plugged in.
+Version 5.4 also introduces support for JavaScript  using the RequireJS module loading system.
+The Tapestry project documentation cites four "principles" that govern all development decisions for Tapestry, starting with version 5 in 2008:
+Tapestry has been criticized as not being backward-compatible across major versions, especially noted in the transition from version 4 to version 5, where no clean migration path was available for existing applications. Project team members have acknowledged this as a major problem for Tapestry's users in the past, and backward compatibility was made a major design goal for Tapestry going forward. From early on in the development of version 5, backward compatibility was listed as one of Tapestry's four new "Core Principles", and two of the other three were intended to make the evolution of the framework possible without sacrificing backward compatibility. Project team members claim that all Tapestry releases since 5.0 have been highly backward compatible.
+Early criticisms of Tapestry 5 also mentioned documentation as a shortcoming. Project members now claim that this deficiency has been largely addressed with a thoroughly revised and updated User's Guide and other documentation.
+Since version 5.0, Tapestry has bundled the Prototype and Scriptaculous JavaScript libraries. According to Howard Lewis Ship, in the 2008-2009 timeframe these were reasonable choices. Since then, however, Prototype's popularity has declined, and jQuery's has risen dramatically. In response, the Tapestry community developed modules that allowed jQuery to be used in addition to, or instead of, Prototype. Meanwhile, the current version of Tapestry, 5.4, removes the dependency on Prototype entirely, replacing it with a compatibility layer into which either jQuery or Prototype (or potentially any other JavaScript framework) can be plugged.
+According to Howard Lewis Ship, Tapestry was initially conceived as an attempt to implement in Java some of the general concepts and approaches found in WebObjects, which was at that time written in 
+
+

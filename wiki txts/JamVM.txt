@@ -1,0 +1,6 @@
+ (VMs) while conforming to the Java virtual machine specification version 2 (blue book).
+JamVM can be configured to use the  (JNI) and the Reflection API. The compacting garbage collector can run either synchronously or asynchronously within its own thread.
+JamVM currently supports the .
+The OpenJDK compatible version of JamVM is supported by 
+In 2006, JamVM was used by Google's 
+

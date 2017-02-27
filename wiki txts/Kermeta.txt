@@ -1,0 +1,11 @@
+				 engineering.
+
+
+The  1).
+The Kermeta language borrows concepts from languages such .
+The name Kermeta is an abbreviation for "Kernel Metamodeling" and reflects the fact that the language is conceived as a core for (meta-)modeling. The  consonance of this name is an intentional reflection of the Triskell team's location in Brittany.
+Kermeta, and its execution platform under .
+Kermeta is a modeling and  standard. It is designed to write programs which are also models, to write transformations of models (programs that transform a model into another), to write constraints on these models, and to execute them 1). The goal of this model approach is to bring an additional level of abstraction on top of the "object" level and thus to see a given system like a set of concepts (and instances of concepts) that form an explicitly coherent whole, which one will call a model.
+Kermeta thus brings:
+The main characteristics of the Kermeta language are&#160;:
+The curious reader will find further information on the .

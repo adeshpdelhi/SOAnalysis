@@ -1,0 +1,9 @@
+
+
+
+The project was originated by  in 2007. The project was wholly handed to the community in 2008. Jive continued to host the project until 2016.
+Openfire is developed under a community model, as part of the Ignite Realtime project. The project lead is Dave Cridland.
+Most administration of the server is done through a web interface, which runs on the ports 9090 (HTTP) and 9091 (HTTPS) by default. Administrators can connect from anywhere and edit the server and configuration settings.
+Openfire supports the following features:
+Openfire has strong support for plugins and customized builds; there are numerous plugins available for immediate download and install via the admin console, and many installations have bespoke plugins.
+Openfire allows multiple server instances to work together in one clustered environment. There is an open-source clustering plugin based on open-source  technology.

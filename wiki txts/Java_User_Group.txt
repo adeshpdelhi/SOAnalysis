@@ -1,0 +1,7 @@
+A .
+Typically, members of a JUG support each other through:
+Like other technology , many JUGs cover costs by meeting in educational or community spaces (e.g. university lecture halls) and/or asking local companies to sponsor individual meetings.
+In 2001, the BeJUG (Belgium Java User Group) created Javapolis, a vendor-independent conference. Javapolis was renamed to  is one of the biggest independent conference for the Java community in Europe with 3500 attendees in 2011.
+In 2011, two Java User Groups were elected to the  Executive Committee, the first time that user groups have been directly represented at the highest levels of the Java ecosystem.
+In 2012, the ParisJUG (Paris Java User Group) created  France, a conference dedicated to the Java French-speaking community.
+In 2015, the MoroccoJUG (Morocco Java User Group) created  Morocco, a conference dedicated to all Java community.

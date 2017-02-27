@@ -1,0 +1,8 @@
+ environment.
+
+
+All changes to the database are stored in text files () and identified by a combination of an "id" and "author" tag as well as the name of the file itself. A list of all applied changes is stored in each database which is consulted on all database updates to determine what new changes need to be applied. As a result, there is no database version number but this approach allows it to work in environments with multiple developers and code branches.
+Automatically creates DatabaseChangeLog Table and DatabaseChangeLogLock Table when you first execute a changeLog File.
+
+Datical DB is used by DBAs, Release Managers, DevOps teams, Application Owners, Architects, and Developers involved in the Application Release process. It manages Database Schema changes together with application code in a programmatic fashion that eliminates errors and delays and enables rapid Agile releases. Datical DB builds upon the Liquibase Data Model Approach for managing data structure specific content across application versions as they advance from Development to Test to Production environments. Datical previews the impact of Schema changes in any environment before deployment thus mitigating risk and resulting in smoother and faster application changes.
+Liquibase developer, Nathan Voxland, is an executive at Datical.

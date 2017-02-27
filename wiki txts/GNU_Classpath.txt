@@ -1,0 +1,18 @@
+.
+GNU Classpath has been one of the high priority directions of the .
+GNU Classpath is a part of the  due to license incompatibilities, but later the two projects merged.
+
+
+GNU Classpath is licensed under the 
+GNU Classpath is used by many , VMkit) because every full-featured Java virtual machine must provide an implementation of the standard class libraries.
+Some other uses include:
+GNU Classpath development started in 1998 with five developers.
+After implementing the majority of the official Java 1.4 API, the work in the project became more bug oriented rather than API coverage oriented. On October 24, 2006, the implementation of the last missing 1.4 class, 
+The name GNU Classpath was originally suggested by .
+The maintainer takes care of the legal side of the project, prepares the regular project releases and does some quality management. The maintainer also grants the 
+GNU Classpath has no formal hierarchy. The work is done by the most technically capable, and there is no strict work division either. All code changes are first posted to the discussion list as patches where they can be opposed if needed. The project typically receives between five and eight patches per day.
+The GNU Classpath library 
+GNU Classpath contains classes from the official Java API namespace. Where calls to native code are necessary or highly desired, this is done from a small number of "VM" classes. The name of such a VM class matches the name of the class requiring native methods, plus the additional , indicating the necessity of the supporting native library. Such libraries are provided by the authors of a Java virtual machine, hence GNU Classpath can be connected to nearly any Java virtual machine if the sources of such virtual machine are available and can be modified.
+Before version 0.95, each GNU Classpath release consisted of two separate release tarballs; one that represented the state of the main 
+Since version 0.95, itself.
+GNU Classpath does not accept any code that has a non-free license, or that was automatically generated from code with a non-free license. The standard Java API contains numerous classes from the omg.org domain that are normally generated from the . The "use, but no modify" license of these files counts as non-free. For this reason, the mentioned classes in the GNU Classpath project were written from scratch, using only the official printed OMG specifications. Hence this part of GNU Classpath is as free as any other code in the project.

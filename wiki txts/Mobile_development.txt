@@ -1,0 +1,20 @@
+
+As part of the development process, mobile  (IDEs).
+Mobile UIs, or front-ends, rely on mobile back-ends to support access to enterprise systems. The mobile back-end facilitates data routing, security, authentication, authorization, working off-line, and service orchestration. This functionality is supported by a mix of  (SOA) infrastructure.
+
+
+The platform organizations needed to develop, deploy and manage mobile apps are made from many components and tools which allow a developer to write, test and deploy applications into the target platform environment.
+Front-end development tools are focused on the user interface and user experience (UI-UX) and provide the following abilities:
+Available tools are listed below.
+
+Since 2015, Apple allows to install the app in your own device without a developer paid membership.
+Back-end tools pick up where the front-end tools leave off, and provide a set of reusable services that are centrally managed and controlled and provide the following abilities:
+Available tools are listed below.
+
+With  (BYOD) becoming the norm within more enterprises, IT departments often need stop-gap, tactical solutions that layer atop existing apps, phones, and platform component. Features include
+Many system-level components are needed to have a functioning platform for developing mobile apps.
+Criteria for selecting a development platform usually contains the target mobile platforms, existing infrastructure and development skills. When targeting more than one platform with cross-platform development it is also important to consider the impact of the tool on the . Performance is another important criteria, as research on mobile applications indicates a strong correlation between application performance and user satisfaction. Along with performance and other criteria, the availability of the technology and the project's requirement may drive the development between native and cross-platform environments. To aid the choice between native and cross-platform environments, some guidelines and benchmarks have been published. Typically, cross-platform environments are reusable across multiple platforms, leveraging a native container while using HTML, CSS, and JavaScript for the user interface. In contrast, native environments are targeted at one platform for each of those environments. For example, Android development occurs in the Eclipse IDE using Android Developer Tools (ADT) plugins, Apple iOS development occurs using Xcode IDE with Objective-C and/or Swift, Windows and BlackBerry each have their own development environments.
+Mobile applications are first tested within the development environment using emulators and later subjected to .
+Tools include
+Many patent applications are pending for new mobile phone apps. Most of these are in the technological fields of business methods, database management, data transfer, and operator interface.
+On May 31, 2011, 

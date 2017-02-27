@@ -1,0 +1,53 @@
+
+Java SE was known as Java 2 Platform, Standard Edition or J2SE from version 1.2 until version 1.5. The "SE" is used to distinguish the base platform from the Enterprise Edition ( JSR 59 was the umbrella specification for J2SE 1.4 and JSR 176 specified J2SE 5.0 (Tiger). Java SE 6 (Mustang) was released under JSR 270.
+.
+.
+The  are the actual files downloaded and installed on a computer to run or develop Java programs, respectively.
+The  classes provided in JDK 6.
+The main classes and interfaces in  are:
+Classes in .
+The . It is an important package, central enough to the language for the language designers to give it a name that starts with "java.lang", but it is somewhat special-purpose and not used by a lot of developers. This package was added in J2SE 1.2.
+Java has an expressive system of references and allows for special behavior for garbage collection. A normal reference in Java is known as a "strong reference." The , and phantom references. Each type of reference is designed for a specific use.
+Each of these reference types extends the  method to clear the reference.
+The  is created it is optionally registered with a reference queue. The application polls the reference queue to get references that have changed reachability state.
+ that need access to either the public members of a target object (based on its runtime class) or the members declared by a given class. This package was added in JDK 1.1.
+Reflection is used to instantiate classes and invoke methods using their names, a concept that allows for dynamic programming. Classes, interfaces, methods,  that the JVM has about the program.
+There are basic techniques involved in reflection:
+Discovery typically starts with an object and calling the  object has several methods for discovering the contents of the class, for example:
+The  objects can be obtained using the symbolic name of the member. For example:
+ objects can be used to dynamically access the represented member of the class. For example:
+The  class that supports dynamic creation of proxy classes that implement specified interfaces.
+The implementation of a  result that contains the result returned to the code that called the proxy interface method.
+The .
+The stream classes follow the  by extending the base subclass to add features to the stream classes. Subclasses of the base stream classes are typically named for one of the following attributes:
+The stream subclasses are named using the naming .
+The following table shows the sources/destinations supported directly by the  package:
+Other standard library packages provide stream implementations for other destinations, such as the  class.
+Data type handling and processing or filtering of stream data is accomplished through stream .
+The . Both these classes have constructors that support specifying the character encoding to use. If no encoding is specified, the program uses the default encoding for the platform.
+The following table shows the other processes and filters that the  class.
+The  method.
+The  objects that represent directories can be used to get a list of all the contained files and directories.
+The  sockets and datagram sockets.
+In J2SE 1.4, the package  package also provides support for fine-grained locking of files.
+The  (including modular arithmetic operations) and provides multiprecision prime number generators used for cryptographic key generation. The main classes of the package are:
+The  requests, as well as other common transactions.
+The  package implements parsing routines for strings and supports various human-readable languages and locale-specific parsing.
+ considerations.
+Created to support .
+Included in the . The architecture provides mechanisms for manipulating properties of components and firing events when those properties change.
+The APIs in .
+The  contains the largest number of enums (7 in all) in JDK 6.
+The .
+Support for security, including the message digest algorithm, is included in the  package.
+An implementation of the  package.
+The  package provides the support for the remote communication between applications, using the RMI over IIOP protocol. This protocol combines RMI and CORBA features.
+
+ GUI support.
+This package contains the largest number of classes (133 in all) in JDK 6. This package, along with  between function and appearance. One inconsistency is that (as of J2SE 1.3) fonts are drawn by the underlying native system, and not by Java, limiting text portability. Workarounds, such as using bitmap fonts, do exist. In general, "layouts" are used and keep elements within an aesthetically consistent GUI across platforms.
+The  package provides the error tolerant HTML parser that is used for writing various web browsers and web bots.
+The  package contains the largest number of Annotation Types (30 in all) in JDK 6. It defines annotations for customizing Java program elements to XML Schema mapping.
+The , this package is for calling remote methods of objects on other virtual machines (usually via network).
+This package contains the largest number of  classes (45 in all) in JDK 6. From all communication possibilities CORBA is portable between various languages; however, with this comes more complexity.
+The  package contains the largest number of interfaces (39 in all) in JDK 6. It provides a mechanism to register ORB hooks through which ORB services intercept the normal flow of execution of the ORB.
+Several critical security vulnerabilities have been reported, the most recent in January 2013.

@@ -1,0 +1,25 @@
+.
+To deploy and run JavaServer Pages, a compatible web server with a , is required.
+
+
+Architecturally, JSP may be viewed as a high-level 
+JSP can be used independently or as the view component of a server-side 
+JSP allows Java code and certain pre-defined actions to be interleaved with static web markup content, such as HTML, with the resulting page being compiled and executed on the server to deliver a document. The compiled pages, as well as any dependent Java libraries, contain Java bytecode rather than  to provide an abstract, platform-neutral environment.
+JSPs are usually used to deliver HTML and XML documents, but through the use of OutputStream, they can deliver other types of data as well.
+The  creates JSP implicit objects like request, response, session, application, config, page, pageContext, out and exception. JSP Engine creates these objects during translation phase.
+JSP pages use several delimiters for 
+Java code is not required to be complete or self-contained within a single scriptlet block. It can straddle markup content, provided that the page as a whole is syntactically correct. For example, any Java  blocks opened in one scriptlet must be correctly closed in a later scriptlet for the page to successfully compile.
+Content which falls inside a split block of Java code (spanning multiple scriptlets) is subject to that code. Content inside an  condition evaluates to true. Likewise, content inside a loop construct may appear multiple times in the output, depending upon how many times the loop body runs.
+The following would be a valid  in a JSP page:
+The output displayed in the user's web browser would be:
+
+
+
+
+
+Version 2.0 of the JSP specification added support for the Expression Language (EL), used to access data and functions in Java objects. In JSP 2.1, it was folded into the 
+An example of EL Syntax:
+The JSP syntax add additional tags, called JSP actions, to invoke built-in functionality.
+A 
+Some JSP containers support configuring how often the container checks JSP 
+In 2000, Jason Hunter, author of "Java Servlet Programming", criticized JSP for either tempting or requiring the programmer to mix Java code and HTML markup, although he acknowledged it would "wean people off" of Microsoft's 

@@ -1,0 +1,13 @@
+The .
+It was already possible to run dynamic languages on top of the JVM, but the goal is to ease new dynamic language implementations and increase their performance. This project was the 
+
+
+Prior to Java 7, the :
+ proposes to:
+Following the success of the 
+Since then, the 
+Since then, the project has been integrated in the .
+Dynamic invocation is built on the fact that, even if Java is a strongly  level.
+However, dynamic languages implementations need to be able to use  change.
+This not only uses a lot of memory, but also fills a memory area called 
+JSR 292 proposes to:

@@ -1,0 +1,11 @@
+, calendaring, and instant messaging.
+Despite being known as the Java Desktop System, it is not actually written in . The name reflected Sun's promotion of the product as an outlet for corporate users to deploy software written for the Java platform.
+
+
+Sun first bundled a preview release of GNOME 1.4 on a separate CD for Solaris 8.
+JDS version 2 included:
+JDS Release 2 was available for Solaris and for the -based Linux distribution.
+JDS Release 3 was released in 2005. It was included with Solaris 10 — upon installation of Solaris, one has the choice of using either the  or JDS. It was based on GNOME 2.6 and available only for the Solaris 10 platform.
+OpenSolaris received its own version of the Java Desktop System. OpenSolaris Desktop was tied to the OpenSolaris operating system, and did not have its own release schedule.
+OpenSolaris Desktop 01 (released October 28, 2005) was based on GNOME 2.10 and OpenSolaris Desktop 02 (released December 23, 2005) was based on GNOME 2.12. The last version was released with the release of OpenSolaris 2009.6, and was based on Gnome 2.24.
+With the end of the OpenSolaris project, JDS Release 3 is now the last release of the project on a currently supported operating system - Solaris 10. Newer Solaris based operating systems have abandoned the Java Desktop System. Solaris 11 and projects based upon the OpenSolaris codebase such as 

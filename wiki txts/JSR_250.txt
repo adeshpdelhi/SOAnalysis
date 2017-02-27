@@ -1,0 +1,6 @@
+				 style of programming. It would be especially valuable to have consistency within the Java EE component JSRs, but it is also valuable to allow consistency between Java EE and Java SE.
+
+
+ makes more components of its framework configurable via annotations, the importance of JSR 250 is likely to increase in the future.
+JSR 250 depends on  and therefore also on Java SE 5.0
+All non-Java EE JSR 250 annotations were added to the .

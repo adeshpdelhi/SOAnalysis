@@ -1,0 +1,4 @@
+
+
+In 
+It also enables you to dynamically register types of arbitrary data and actions associated with particular kinds of data. Additionally, it enables a program to dynamically provide or retrieve JavaBeans that implement actions associated with some kind of data.

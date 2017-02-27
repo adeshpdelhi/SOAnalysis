@@ -1,0 +1,9 @@
+				.
+JAXB is particularly useful when the specification is complex and changing. In such a case, regularly changing the  definitions to keep them synchronised with the Java definitions can be time consuming and error-prone.
+JAXB is a part of the .
+JAXB 1.0 was developed under the .
+
+
+The tool ". Marshallers and Unmarshallers are created through an instance of JAXBContext.
+In addition, JAXB includes a "", creating an XML Schema from a set of annotated classes.
+The table below lists the mappings of 

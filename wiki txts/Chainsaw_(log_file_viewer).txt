@@ -1,0 +1,4 @@
+, receive events from remote locations, read events from a DB, or work with JDK 1.4 logging events.
+
+
+The project is licensed under Apache License, V 2.0. Dependencies may not follow the same licensing.

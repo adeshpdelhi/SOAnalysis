@@ -1,0 +1,3 @@
+ components. Due to OOP paradigm AJAX.OOP library can be easily extended with additional functionality or used as core for other projects.
+AJAX.OOP is a fast and scalable JavaScript library for creating JavaScript/AJAX components in an object-oriented way.
+Main feature - strong  paradigm implementation.AJAX.OOP engine allows the programmer to:

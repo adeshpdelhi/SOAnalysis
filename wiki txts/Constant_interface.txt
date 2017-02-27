@@ -1,0 +1,11 @@
+				.
+Use of this pattern has a few other downsides:
+Note that the Java libraries use constant interface pattern themselves, proving that it may be a reasonable choice in some situations.
+
+
+Before the line marked with an asterisk is added, running Class1 prints 1. After adding the line, Class1 prints 2. Both versions compile without warnings or errors.
+Many of the pitfalls of the anti-pattern can be avoided by converting the constants interface to a proper class with no instances:
+This still leaves the original intent of the pattern mostly un-addressed (i.e., there is no syntax for accessing the constants unqualified). However, since  to achieve the same goal:
+The constants can also be imported en masse by adding a  statement. This achieves the same goals as using an interface, allowing the constants to be referenced without the namespace.
+To varying degrees, the issues listed above have now been addressed:
+Note however, the changes do nothing to improve the  of the Constants class nor prevent the accidental silent modification of a constant's value, so static imports should not be considered to be a panacea.

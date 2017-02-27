@@ -1,0 +1,4 @@
+				.
+DoJa is based on the  (JSR), hence it's often called a "proprietary" Java ME profile.
+DoJa allows i-mode to offer more dynamic and interactive content than conventional HTML-based i-mode content. Java for i-mode consists of support for a version of CLDC and a version of the DoJa profile. CLDC support can be 1.0 or 1.1 depending on the handset. The DoJa profile was originally created for the local Japanese market with version 1.0 and version 2.0 more or less corresponding to MIDP 1.0 and MIDP 2.0. For the market outside Japan a new API has been created, which is referred to as the Overseas Edition. Currently .) The DoJa Profile provides for use with i-mode extension library (Java for i-mode profiles), including user interfaces and HTTP communications.
+"Star" is the successor to DoJa, rather than being part of it, with access to modern hardware and services such as the accelerometer.

@@ -1,0 +1,2 @@
+
+JMule is under an active development mostly using open source software. The main 

@@ -1,0 +1,14 @@
+				.
+
+
+An instance of a normal or top-level class can exist on its own. By contrast, an instance of an inner class cannot be instantiated without being bound to a top-level class.
+Let us take the abstract notion of a s in a more general form that could be part of a vehicle. Instead, it represents them as specific to this one. We can model this notion using inner classes as follows:
+We have the top-level class  is in some way coupled to its outer class. The wheel rather is a composition unit of a car. The wheel for a particular car is unique to the car, but for generalization, the wheel is an aggregation unit to the car.
+Inner classes provide us with a mechanism to accurately model this connection. We say that our  being the inner class.
+Inner classes therefore allow for the object orientation of certain parts of the program that would otherwise not be encapsulated into a class.
+Larger segments of code within a class might be better modeled or refactored as a separate top-level class, rather than an inner class. This would make the code more general in its application and therefore more re-usable but potentially might be premature generalization. This may prove more effective, if code has many inner classes with the shared functionality.
+In  class:
+Inner class&#160;–  The following categories are called 
+Local inner classes are often used in Java to define callbacks for GUI code. Components can then share an object that implements an event handling interface or extends an abstract adapter class, containing the code to be executed when a given event is triggered.
+Anonymous inner classes are also used where the event handling code is only used by one component and therefore does not need a named reference.
+This avoids a large monolithic 

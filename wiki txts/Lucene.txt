@@ -1,0 +1,14 @@
+.
+Lucene has been ported to other programming languages including 
+
+
+ family of open-source Java products in September 2001 and became its own top-level Apache project in February 2005.
+Lucene formerly included a number of sub-projects, such as Lucene.NET, . These three are now independent top-level projects.
+In March 2010, the  search server joined as a Lucene sub-project, merging the developer communities.
+Version 4.0 was released on October 12, 2012.
+The latest version of Lucene is 6.3.0 which was released on November 8, 2016.
+While suitable for any application that requires full text  and local, single-site searching.
+Lucene has also been used to implement recommendation systems. recommendations, as long as documents to be recommended contain in-text citations.
+At the core of Lucene's logical architecture is the idea of a 
+Lucene itself is just an indexing and search library and does not contain  functionality. However, several projects extend Lucene's capability:
+For a list of companies that use Lucene (rather than extend), see Lucene's "Powered By" page.

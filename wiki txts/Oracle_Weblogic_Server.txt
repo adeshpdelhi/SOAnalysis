@@ -1,0 +1,9 @@
+ in 2008.
+
+
+Oracle WebLogic Server forms part of  also includes:
+WebLogic Server includes  and supports the following native integration capabilities:
+Oracle WebLogic Server Process Edition also includes  and Data Mapping functionality. WebLogic supports security policies managed by security administrators. The Oracle WebLogic Server Security Model includes:
+As of 2010, Oracle Corporation regards the following products as "core components" of Oracle WebLogic Server:
+The table below lists major standards supported by WebLogic Server product version.
+WebLogic Server 10.3 (10.3.4 /PS3 onwards) supports some Java EE 6 libraries. More information here: 

@@ -1,0 +1,33 @@
+In  for a JSF application.
+Although both 
+Facelets draws on some of the ideas from  framework with respect to support templating as well as composition.
+Facelets was originally created by Jacob Hookom in 2005
+
+
+In Facelets, templates tags from a tag library can be entered in two forms: directly as a qualified xml element or indirectly via the  attribute.
+The following example shows the direct usage of qualified tags:
+Using the  attribute, the same code can also be expressed as the example given below:
+The above code can be viewed in a browser, and edited with conventional 
+Facelets provides a facility for templating.. Template clients themselves can again be used as a template for other template clients and as such a hierarchy of templates can be created.
+The following shows an example of a simple master template:
+
+The above code contains a default HTML 'frame' and a single placeholder called . A template client can use this template as follows:
+
+The above code makes use of the template  replaced by 'This is a template client page that uses the master template.'.
+In addition to templating, Facelets provides support for re-use by letting the user include content that resides in a different file. Including such content can be done in 3 different ways:
+The simplest way to include the content of another Facelet is referencing it by name using the  This causes the content in the referenced file to be directly included in the calling Facelet by the Facelets compiler. Besides re-using content at multiple locations, this can be used to break down a large Facelet into smaller parts.
+The following shows an example:
+
+
+Facelets supports  Such a custom tag can be associated with a Facelet in taglib file. Occurrences of that tag will then be replaced with the content of the associated Facelet.
+The following shows an example of this:
+
+The code above uses the tag  to mark the point in the Facelet where content is to be inserted. Such a tag has to be declared in a Taglib file where it can be associated with a Facelet as follows:
+
+The following shows an example of what the actual content Facelet could look like:
+
+Besides including content directly, Facelets provides the composite component mechanism that makes content available as a first-class JSF component. The tag name becomes the file name without the .xhtml suffix.
+The following shows an example of this:
+
+The above Facelet is automatically available as a component in namespace 'http://java.sun.com/jsf/composite/my' and tag name 'spacer'
+To customize included content, Facelets allows parameters to be used. Via those parameters objects can be passed into the included content, where they can be used as variables. For the  while for custom tags there is no such requirement and values provided for arbitrary attributes are made available as variables with the same name as said attribute.

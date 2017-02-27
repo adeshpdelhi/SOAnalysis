@@ -1,0 +1,17 @@
+The  as JSR 135.
+
+
+The Multimedia Java API is based around four main types of classes in the .
+Java ME programmers wishing to use JSR 135 would first make use of the static methods of the . In most cases, URIs are used. Common URI protocols used include:
+The MIME type is optional, and is inferred from the data passed in if not supplied.
+The  interface, which will receive various events related to the clip (starting, stopping, media finishing, etc.)
+.
+(Typically, the  itself, but this is not guaranteed to be the case.)
+The set of controls implemented by a  package by the JSR:
+(Others may be defined in JSR 234 ().
+A subset of JSR 135 is defined in JSR 118 ( 2.0).
+Regardless of the protocol or media type involved, the  moves through the same discrete states during its lifecycle. These states are listed in table below
+As with most Java ME specifications, implementations differ despite the best efforts of the specification authors to ensure consistency. Two obvious areas for differences are in the controls supported, and in the acceptable URI types in the first place. More obscure areas are whether  sound effects on top.
+Another source of extreme variance is in performance. For example, if an . Depending on the implementation, these may do some of the work of getting the clip into a playable state, thus making it quicker to actually play the clip when it is needed. Some implementations are sophisticated enough to actually stream a clip on request whilst it is being played.
+ contains a very complete implementation of JSR 135, but even this is highly dependent on the underlying multimedia capabilities of the device, and some device manufacturers may choose not to expose the more obscure parts of Java ME such as recording.
+Implementation consistency is ensured by forcing all implementations to pass the Java  (TCK). This ensures that each supported URI schema, MIME type and Control is tested, but does not test every permutation of these optional parts.

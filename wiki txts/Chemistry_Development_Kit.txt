@@ -1,0 +1,7 @@
+The  (LGPL) 2.0.
+
+
+The CDK was created by  Due to an unsteady rate of contributions, the newsletter was put on hold.
+Later, unit testing, code quality checking, and 
+The CDK is a library, instead of a user program. However, it has been integrated into various environments to make its functions available. CDK is currently used in several applications, including the programming language 
+In 2008, bits of GPL-licensed code were removed from the library. While those code bits were independent from the main CDK library, and no copylefting was involved, to reduce confusions among users, the ChemoJava project was instantiated.

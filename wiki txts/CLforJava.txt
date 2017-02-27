@@ -1,0 +1,2 @@
+				, and can also use Lisp types and code from within Java programs.
+The CLforJava project is a long-term effort by undergraduate and graduate students to create a completely new implementation of the Common Lisp computer language. A key feature differentiating it from other Lisp/Java implementations is its ability to “intertwine” with the Java language. The goal of the project is to build an entirely new  written in CLforJava itself.

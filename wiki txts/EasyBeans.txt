@@ -1,0 +1,4 @@
+.
+EasyBeans is integrated in the  Java EE 5 certified application server.
+EasyBeans main goal is to ease the development of  plugins, etc.).
+It aims to provide an  (MDB) are available on EasyBeans.

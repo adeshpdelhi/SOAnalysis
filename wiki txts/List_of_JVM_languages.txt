@@ -1,0 +1,5 @@
+				 during execution as regular Java programs to improve performance.
+The .
+
+
+Apart from the  itself, the most common or well-known JVM languages are:

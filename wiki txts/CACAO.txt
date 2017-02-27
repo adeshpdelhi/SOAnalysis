@@ -1,0 +1,5 @@
+. It compiles the class binaries while running (no interpreter), resulting in faster execution. It is an academic project, originally developed by students doing practical training or diploma theses on specific topics.
+The first version of CACAO was released at 1997 as a faster replacement for .
+CACAO gained traction after becoming a .
+CACAO supports  architectures.
+With 1.6.0 release large parts of the C code were rewritten in C++. The migration was completed with the 1.6.1 release in June 2013.

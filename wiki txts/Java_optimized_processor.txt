@@ -1,0 +1,4 @@
+				 (JVM) in hardware.
+JOP is .
+The intention of JOP is to provide a small hardware JVM for embedded real-time systems. The main feature is the predictability of the execution time of Java bytecodes. JOP is implemented over an .
+

@@ -1,0 +1,19 @@
+.
+JSF 2 uses  (JSP) as its default templating system.
+
+
+In 2001, the original Java Specification Request (JSR) for the technology that ultimately became JavaServer Faces proposed developing a package with the name 
+Based on a component-driven ), and restored upon next creation of that view. Either the client or the server side can save objects and states.
+JSF is often used together with  were originally developed for HTML only, and Ajax had to be added via JavaScript. This has changed, however:
+Because JSF supports multiple output formats, Ajax-enabled components can easily be added to enrich JSF-based user interfaces. The JSF 2.0 specification provides built in support for Ajax by standardizing the Ajax request lifecycle, and providing simple development interfaces to Ajax events, allowing any event triggered by the client to go through proper validation, conversion, and finally method invocation, before returning the result to the browser via an XML DOM update.
+JSF 2 includes support for  is disabled in the browser.
+The following companies and projects offer Ajax-based JSF frameworks or component libraries:
+ Facelets allows easy component/tag creation using XML markup instead of Java code, the chief complaint against JSF 1.x.
+The new JSF developments also provide wide accessibility to  such as @ManagedBean, @ManagedProperty and @FacesComponent which removes the need for faces-config.xml in all cases except framework extension. Navigation has been simplified, removing the need for faces-config.xml navigation cases. Page transitions can be invoked simply by passing the name of the desired View/Facelet.
+Addition of Partial State Saving and DOM updates are part of the built in standardized  support.
+The latest JSF release has built-in support for handling resources like images, CSS and Javascript, allowing artifacts to be included with component libraries, separated into JAR files, or simply co-located into a consistent place within the web-application. Includes logical naming and versioning of resources.
+JSF 2.0 also includes a number of other changes like adding support for events, separate development, staging, and production modes, similar to RAILS_ENV in Ruby on Rails, and significantly expanding the standard set of components.
+In their January 2014 "Technology Radar" publication, 
+We continue to see teams run into trouble using JSF -- JavaServer Faces -- and are recommending you avoid this technology. Teams seem to choose JSF because it is a JEE standard without really evaluating whether the programming model suits them. We think JSF is flawed because it tries to abstract away HTML, CSS and HTTP, exactly the reverse of what modern web frameworks do. JSF, like ASP.NET webforms, attempts to create statefulness on top of the stateless protocol HTTP and ends up causing a whole host of problems involving shared server-side state. We are aware of the improvements in JSF 2.0, but think the model is fundamentally broken. We recommend teams use simple frameworks and embrace and understand web technologies including HTTP, HTML and CSS.
+In February 2014, Cagatay Civici (PrimeFaces Lead) wrote an informative post entitled: . In the post, the previous criticisms are refuted, explaining that improvements in JSF over the years offer many features that embrace modern web development, providing the option to write your own JavaScript, HTML, and CSS. Also regarding state, Cagatay wrote:
+JSF is a stateful framework by nature and state makes web applications easy to develop with. With improved state management techniques introduced in JSF 2.0+ (e.g. stateless mode, partial state saving), JSF can scale as well.

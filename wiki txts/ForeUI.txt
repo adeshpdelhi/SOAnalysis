@@ -1,0 +1,3 @@
+.
+ForeUI works on Windows, Mac OS X, Linux, and Solaris platforms.
+ForeUI has been nominated for the 

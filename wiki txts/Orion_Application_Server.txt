@@ -1,0 +1,4 @@
+				 version 1.3.
+
+IronFlare became an official Java EE licensee to ensure correct implementation of the Java EE specification by Orion.
+Orion is the only product of IronFlare, hence Orion has been marketed more than the company itself.

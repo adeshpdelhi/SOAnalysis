@@ -1,0 +1,40 @@
+A number of criticisms have been leveled at the 
+
+
+When 
+Because generics were implemented using 
+By design, Java encourages programmers to think of a programming solution in terms of nouns (classes) interacting with each other, and to think of verbs (methods) as operations that can be performed on or by that noun.
+In many other  introduced some functional programming features.
+In 2008 the 
+Java lacks native 
+Java has been criticized for not supporting the capability of implementing user-defined operators.
+  
+    
+      
+        
+      
+    
+    
+  
+ is employed for string concatenation. However, this form of overloading is a built-in feature of the language, and users are in no way capable of defining their own operators.
+Java lacks compound value types, such as . If Java further supported generic primitive types, primitive keys and values could be stored in the array directly, removing the second indirection.
+Java has been criticized for not supporting arrays of more than 2, Section 10.4, states that:
+Arrays must be indexed by int values... An attempt to access an array component with a long index value results in a compile-time error.
+Supporting large arrays would also require changes to the JVM.
+There is no efficient way to initialize arrays in Java. When declaring an array, the JVM compiles it to bytecodes with instructions that set its elements one by one at runtime. Because Java methods cannot be bigger than 64KB, arrays of even modest sizes with values assigned directly in the code will throw the message "Error: code too large" on compilation.
+The fact that arrays and primitives are somewhat special and need to be treated differently from (other) objects has been criticized, because it requires writing many variants when creating general libraries.
+ to, say, only access thread-global variables in a controlled fashion, the language and compiler make no attempt to enforce that controlled access. I.e. the programmer may mistakenly allow uncontrolled access to thread-global variables, and the compiler will not detect it.
+Although Java's 
+In the early days of Java (before the 
+
+.
+Game designer and programmer 
+The Java platform provides a security architecture, such as accessing the local filesystem, running arbitrary commands, or accessing communication networks.
+In 2010, there was a significant increase in the prevalence of malicious software targeting security flaws in the sandboxing mechanism in multiple commonly used Java implementations, including Oracle's. These flaws allow untrusted code to bypass the sandbox restrictions, exposing the user to malicious attacks. Targeted security flaws that have already been fixed by security updates from the JVM maintainers have been exploited in computers without the security updates.
+Critics have suggested that updated versions of Java are not used because there is a lack of awareness by many users that Java is installed, there is a lack of awareness of many users of how to update Java, and (on corporate computers) many companies restrict software installation and are slow to deploy updates.
+
+With Java versions prior to 7, it was normal for the installer to not detect or remove prior Java installations. It was quite common on a Windows computer to see multiple installations of Java 6 on the same computer, varying only by update revision. Multiple Javas are permitted and can be accessed by programs that look for specific versions.
+This has the effect that new Java installations only provide new language features and bug fixes, but they do not correct security vulnerabilities, because malicious programs can look for the older prior Java releases and use them rather than the newest versions.
+Java 7 updated prior versions of itself, but did not look for the presence of Java 6 and earlier.
+As of 2014, other common 3rd party tools such as Adobe Flash and Adobe Reader that have also been the subject of security vulnerability scrutiny have moved to an automatic self-update model on Windows that does not require any user intervention. This assures that security issues are promptly resolved without requiring additional effort by the system users or administrators.
+As of 2015, Java 8 still requires that the computer user manually apply Java updates themselves. These updates can only be applied by those with administrator privileges. The Windows Java updater frequently triggers a disruptive random User Account Control elevation prompt; however, choosing Yes or No for elevation will still yield the same "Java needs to be updated" message.

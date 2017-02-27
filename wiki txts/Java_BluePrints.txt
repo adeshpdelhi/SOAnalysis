@@ -1,0 +1,8 @@
+				 and all the latest components of the Java EE platform.
+
+
+Java BluePrints began as J2EE BluePrints and was started by Connie Weiss, Jeff Jackson, Jim Inscore, Nick Kassem, and Rick Saletta. The original engineers included Inderjeet Singh, Greg Murray, Sean Brydon, Vijay Ramachandran, Elisabeth White, and Nick Kassem. Nick Kassem is the author of the original book. The idea of Java Pet Store came from Connie Weiss and Greg Murray who were both animal lovers. After the first year, Nick Kassem left the team and Inderjeet Singh became lead architect. The Java BluePrints team was led by Larry Freeman from J2EE 1.2 in 2000 up until Java EE 5 in 2006.
+Throughout its existence, Java BluePrints has offered all of its content for free and has been focused on promoting developer success. Java Pet Store became the symbol for J2EE's ascendency; , and others have implemented their own versions of the Pet Store application as a way to demonstrate best practices for their given technology.
+With the arrival of J2EE 1.4 technology,  became a standard part of the Java EE specification. Java BluePrints came out with a second application: the Java Adventure Builder reference application. This application never became as popular as Java Pet Store but then again, it never became as controversial.
+There have been three Java BluePrints books, and the Core Java EE design patterns which are hosted on the Java BluePrints site have become the standard lingua for Java EE application development..
+The latest Java BluePrints offering is the Java BluePrints Solutions Catalog.). Articles are smaller and more focused and include sample code that shows how a solution is implemented. Its focus is on the J2EE 1.4 SDK.

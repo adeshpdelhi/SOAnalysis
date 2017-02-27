@@ -1,0 +1,18 @@
+
+Work on Jitsi (then SIP Communicator) started in 2003 in the context of a student project by Emil Ivov at the 
+Originally the project was mostly used as an experimentation tool because of its support for .
+Jitsi has received support from various institutions such as the 
+In 2009, Emil Ivov founded the BlueJimp company which has employed some of Jitsi's main contributors related to the project.
+In 2011, after successfully adding support for audio/video communication over XMPP’s 
+On November 4, 2014, "Jitsi + 
+On February 1, 2015, Hristo Terezov, Ingo Bauersachs and the rest of the team released available on the project web site.
+
+
+Jitsi supports multiple 
+The following protocols are currently supported by Jitsi:
+Jitsi is mostly written in .
+The project uses the  for modularity.
+Among others Jitsi uses the 
+As Jitsi can handle 
+The Jitsi community has also completed an 
+Audio systems supported are  (Windows Audio Session API).

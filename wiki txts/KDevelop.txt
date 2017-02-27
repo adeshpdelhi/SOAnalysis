@@ -1,0 +1,26 @@
+ binaries.
+The last stable release of the previous major version, 3.5.5, which was based on the .
+A new stable version, KDevelop 5.0 was released on 23 August 2016. It is based on , as well as improved debugger integration.
+
+
+KDevelop 1.x and 2.x were developed over a period of four years from the initial KDevelop codebase. in February 2004. The development of KDevelop 3.x stopped in 2008.
+KDevelop 4.x has been under development since August 2005. It is a complete rewrite with a better core and a more object-oriented programming model.
+KDevelop 4.7 will mark the final feature release of KDevelop for KDE 4. Further development will continue using KDE Frameworks 5.
+This release is made up of hundreds of commits, and marks a huge step forward:
+
+A lot of effort was spent on keeping the porting bugs to a minimum. Porting to KF5 and Qt 5 also cut down the dependencies, bringing KDevelop closer to a proper .
+
+KDevelop always prided itself for its state of the art  language support.
+Now, after close to two years of work, finally a solution is found to this dilemma: A  language support.
+
+With KDevelop 5, it was decided to officially include support for QML and JavaScript code and QMake projects. This functionality has been worked on for years in the playground and now, these can finally be incorporated and developers will start to officially support them. Many thanks to the . The new KDevelop plugin for QMake, is quite simplistic but already very useful for many projects.
+
+Together with  support.
+If the user does not wish to compile KDevelop 5.x, it can be downloaded as a  is installed though.
+KDevelop uses an embedded .
+KDevelop 4 is a completely .
+KDevelop has supported a variety of  if they are used) and scripting projects which don't need one.
+. KDevelop also offers a developer framework which helps to write new parsers for other programming languages.
+An integrated .
+ allows quick navigation between files.
+Currently, around 50 to 100 plugins exist for this  code.

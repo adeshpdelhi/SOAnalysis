@@ -1,0 +1,8 @@
+The .
+
+
+The JAX-WS 2.2 specification  operations are bound to Java methods when a SOAP message invokes a WSDL operation. This Java-to-WSDL mapping determines which Java method gets invoked and how that SOAP message is mapped to the method’s parameters.
+This mapping also determines how the method’s return value gets mapped to the SOAP response.
+JAX-WS uses  5 which leans more towards document style Web Services.
+This API provides the core of .
+JAX-WS also is one of the foundations of .

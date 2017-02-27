@@ -1,0 +1,8 @@
+ (GPL) 2.
+Areca Backup includes a backup engine, as well as a .
+The application includes the following features:
+Areca also provides all tools needed to handle your archives:
+ Areca can handle multiple storage modes:
+ Areca can handle the following types of backups:
+Areca uses the file's size and last modification time to detect modified files. If one of these attributes is modified (whatever its value is), the file is flagged as modified. This allows a fast detection of modified files.
+Areca is downloadable pre-packaged for  has been installed (version 1.4.2 or later). It has been translated to: Chinese (Simplified), Chinese (Traditional), Czech, Danish, Dutch, English, French, German, Hungarian, Italian, Japanese, Russian, Spanish, Swedish.

@@ -1,0 +1,36 @@
+ and Eclipse PDT for PHP, among others.
+The initial 
+Released under the terms of the .
+
+
+Eclipse was inspired by the 
+Eclipse 3.0 (released on 21 June 2004) selected the 
+The 
+The  Some projects require dual licensing, for which the Eclipse Distribution License (EDL) is available, although use of this license must be applied for and is considered on a case-by-case basis.
+Eclipse was originally released under the 
+According to Lee Nackman, 
+Different versions of Eclipse have been named after different science-related names. The versions named after .
+Since 2006 the Foundation has coordinated an annual  Each release includes the Eclipse Platform as well as a number of other Eclipse projects.
+As of 2008 each Simultaneous Release has occurred on the 4th Wednesday of June.
+
+Eclipse uses plug-ins to provide all the functionality within and on top of the runtime system. Its runtime system is based on 
+In addition to allowing the Eclipse Platform to be extended using other  provided by third-party plug-ins.
+With the exception of a small run-time kernel, everything in Eclipse is a plug-in. This means that every plug-in developed integrates with Eclipse in exactly the same way as other plug-ins; in this respect, all features are "created equal"., for Sequence and other UML diagrams, a plug-in for DB Explorer, and many others.
+The Eclipse SDK includes the Eclipse Java development tools (JDT), offering an IDE with a built-in  over a flat filespace allowing external file modifications as long as the corresponding workspace "resource" is refreshed afterwards.
+Eclipse implements the 
+Language packs being developed by the "Babel project" provide translations into over a dozen 
+Eclipse provides the  (RCP) for developing general purpose applications. The following components constitute the rich client platform:
+Examples of rich client applications based on Eclipse are:
+Eclipse supports development for  and many other servers and is often capable of installing the required server (for development) directly from the IDE. It supports remote debugging, allowing the user to watch variables and step through the code of an application that is running on the attached server.
+The Eclipse Web Tools Platform (WTP) project is an extension of the Eclipse platform with tools for developing Web and Java EE applications. It includes source and graphical editors for a variety of languages, wizards and built-in applications to simplify development, and tools and APIs to support deploying, running, and testing apps.
+The Modeling project contains all the official projects of the Eclipse Foundation focusing on model-based development technologies. They are all compatible with the Eclipse Modeling Framework created by IBM. Those projects are separated in several categories: Model Transformation, Model Development Tools, Concrete Syntax Development, Abstract Syntax Development, Technology and Research, and Amalgam.
+Model Transformation projects uses , etc.).
+Model Development Tools projects are implementations of modeling standard used in the industry like  and their toolkit. Among those projects can be found implementations of the following standards:
+The Concrete Syntax Development project contains the Graphical Modeling Framework, an Eclipse-based framework dedicated to the graphical representation of 
+The Abstract Syntax Development project hosts the Eclipse Modeling Framework, core of most of the modeling project of the Eclipse Foundation and the framework available for , EMF query or EMF validation.
+Technology and Research projects are prototypes of Modeling project, this project is used to host all the modeling projects of the Eclipse Foundation during their incubation phase.
+Amalgam provides the packaging and integration between all the available modeling tools for the Eclipse package dedicated to modeling tools.
+Eclipse supports a rich selection of extensions, adding support for 
+A number of alternative distributions exist in the Eclipse project.
+The PHP (PHP hypertext Preprocessor) Development Tools project provides a PHP Development Tools framework for the Eclipse platform. The project encompasses all development components, including code-completion, develop PHP and facilitate extensibility. It leverages the existing Eclipse Web Tools Platform (WTP) and Dynamic Languages Toolkit (DLTK).
+Android Development Tools (ADT) is a discontinued Google-provided plugin for the Eclipse IDE that is designed to provide an integrated environment in which to build Android applications. ADT extends the capabilities of Eclipse to let developers set up new Android projects, create an application UI, add packages based on the Android Framework API, debug their applications using the Android SDK tools, and export signed (or unsigned) .apk files in order to distribute their applications. It is freely available to download. It was the official IDE for Android but was replaced by 

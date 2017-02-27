@@ -1,0 +1,6 @@
+, Switzerland.
+
+
+The original design for JGraph was to make it an architectural extension of JTree.
+The initial public release of JGraph was in May 2002. After the JGraph 5.x branch the project took the version numbering from 
+

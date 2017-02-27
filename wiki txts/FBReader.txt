@@ -1,0 +1,10 @@
+
+It was originally written for the  was released on April 13, 2008.
+Supported formats include 
+
+
+Nikolay Pultsin wrote the first FBReader; the tool was released for the 
+The original FBReader was written in C++; however, in 2007
+For easy  used.
+FBReader supports the following file formats:
+.

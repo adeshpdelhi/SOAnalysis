@@ -1,0 +1,5 @@
+ code into XML documents.
+It was developed by the ).
+The Java code is compiled with the first call. These directives are replaced by the generated content so that the resulting, augmented XML document can be subject to further processing with .
+XSP pages are transformed into Cocoon producers, typically as Java classes, though any scripting language for which a Java-based processor exists could also be used.
+Directives can be either XSP built-in processing tags or user-defined library tags. XSP built-in tags are used to embed procedural logic, substitute expressions and dynamically build XML nodes. User-defined library tags act as templates that dictate how program code is generated from information encoded in each dynamic tag.

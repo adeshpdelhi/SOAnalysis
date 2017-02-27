@@ -1,0 +1,8 @@
+.
+Up until version 2.0, java-gnome was written by a project team, This new version is a complete re-write of java-gnome and was originally written for creating business tools to the company's clients, but eventually grew into a full replacement Java language binding for GNOME.
+Unlike most other GTK+ bindings, there is no version available for .
+Java-gnome is 
+
+
+To compile a java-gnome class it's necessary to add the gtk-4.1.jar jar in the classpath. The jar is available on  package, which can be found in the official repositories (the jar is installed under the /usr/share/java path).
+

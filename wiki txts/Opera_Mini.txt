@@ -1,0 +1,54 @@
+
+Opera Mini was derived from the , it was officially launched worldwide on 24 January 2006.
+Opera Software claims that Opera Mini requests  data plans. The pre-processing increases compatibility with web pages not designed for mobile phones. However, interactive sites which depend upon the device processing JavaScript do not work properly.
+In July 2012, it was reported that Opera Mini had 168.8 million users as of March 2012 In February 2013, Opera reported 300 million unique Opera Mini active users and 150 billion page views served during that month. This represented an increase of 25 million users from September 2012.
+
+
+Opera Mini was derived from the  and only available to TV 2 customers.
+A 
+On 3 May 2006, Opera Mini 2.0 was released. It included new features such as the ability to download files, new custom 
+On 1 November 2006, Opera Mini 3 beta introduced secure browsing, 
+On 7 November 2007, Opera Mini 4 was released. According to Johan Schön, technical lead of Opera Mini development, the entire code was rewritten.
+Prior to Opera Mini 4, the browser was offered in two editions: Opera Mini Advanced for high-memory 
+Originally, .
+A version for the 
+On 16 August 2009, Opera Software released Opera Mini 5.0 beta, which included tabbed browsing, a password manager, improved touch screen support, and a new interface, with a visual Speed Dial similar to the one introduced by Opera Software in their desktop browser.
+The browser's use of compression and encrypted proxy-based technology to reduce traffic and speed page display has the side effect of allowing it to circumvent several approaches to 
+2009–10: A press release announcing that Indonesia's Smart Telecom had chosen Opera Mini for their devices said that Opera Mini was the world's most popular mobile browser, and that Russia and Indonesia were the largest users.
+An 
+Most Opera Mini versions use only the Mini server-based compression method, with maximal compression but some issues with interactive applications. Non-Mini versions of Opera for phones and computers originally operated in uncompressed mode; from v10 a selectable server-based Turbo mode (called "off-road" in some versions) was added, similar to Mini mode, but bypassing compression for interactive functionality, at the expense of less extreme data compression. Opera Mini 8 for iPhone, released in 2014, can operate in Mini, Turbo, and uncompressed modes, effectively combining the functionality of the Mobile and Mini versions. Turbo and Mini modes reduce the amount of data transferred, which reduces cost on some phone contracts and increases speed on the slower connections typical of mobile phone networks; with a high-speed connection uncompressed mode, without delays due to diverting through the Opera server, compressing by the server, and expansion by the device, may work faster.
+On 3 September 2014, Opera started taking registrations for the  This marked Opera's return to Microsoft's mobile platform since the demise of Windows Mobile.
+The functionality of Opera Mini mode is somewhat different from that of a conventional Web browser, with the amount of data which has to be transferred much reduced, but with some loss to functionality. Most versions of Opera Mini only work in this mode; however, the Opera Mini 8 
+Unlike straightforward 
+By default, Opera Mini opens one connection to the proxy servers, which it keeps open and re-uses as required. This improves transfer speed and enables the servers to quickly synchronize changes to bookmarks stored in 
+The 
+For devices with screens 128 
+Web developers can turn on SSR on the desktop edition of Opera to see how their websites will be displayed on mobile editions of Opera.
+In SSR mode images are scaled down to no more than 70% of the screen size in either direction.
+Opera Mini can send content in bitmap image form if a font required is not available on the device, which is useful for  and a few other non-Latin character sets are supported.
+When browsing the Web in Opera Mini mode, 
+According to the documentation for Opera Mini 4, before the page is sent to the mobile device, its 
+When one of these events is triggered, sends a request to the proxy server to process the event. The proxy server then executes the JavaScript and returns the revised page to the mobile device.
+
+Opera has published Web content authoring guidelines to assist authors.
+Opera Mini 8 for iOS can run in Turbo and uncompressed modes, in addition to Mini mode. In Turbo mode, the amount of data transferred is still much reduced by compression, but, unlike Mini mode, JavaScript is not intercepted by the server and works properly.
+Scrolling is carried out by using the device's arrow keys, its number keys, or a 
+The display may be toggled between portrait and landscape mode by keystrokes, or will switch automatically on phones with orientation sensors. The default orientation can be changed.
+The image quality may be set to "Low", "Medium", or "High".
+Opera Mini supports only one font,
+Opera Mini has a search bar capable of using several pre-configured search engines;.
+Opera Mini supports 
+Since the launch of  store.
+Opera Mini, since 3.0 Advanced, 
+This reduces security, and is relevant to applications such as Internet banking.
+As of version 4, Opera Mini uses the same 
+Opera Mini supports .
+For 
+Opera Mini 3 Basic using the default, "medium" font size
+Opera Mini 3 Basic using the "large" font size
+Bookmarks, Speed Dials, and search engines could be backed-up to My Opera until it closed on 3 March 2014,
+Opera Mini relies on data centers processing the Web page before sending it back to the phone in a compressed binary form.
+The overall share of the Opera family in the  It is also the most popular browser in several countries in Africa.
+Several mobile network companies pre-install Opera Mini on their mobile phones, including .
+The following devices came pre-installed with Opera Mini as of August 2007
+While not officially supported on 

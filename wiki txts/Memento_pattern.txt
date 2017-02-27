@@ -1,0 +1,9 @@
+				 via rollback).
+The memento pattern is implemented with three objects: the  (one which the caretaker cannot, or should not, change). When using this pattern, care should be taken if the originator may change other objects or resources - the memento pattern operates on a single object.
+Classic examples of the memento pattern include the seed of a .
+The following  program illustrates the "undo" usage of the memento pattern.
+The output is:
+This example uses a String as the state, which is an  in Java. In real-life scenarios the state will almost always be an object, in which case a copy of the state must be done.
+It must be said that the implementation shown has a drawback: it declares an internal class. It would be better if this memento strategy could apply to more than one originator.
+There are mainly three other ways to achieve Memento:
+The memento pattern allows one to capture the internal state of an object without violating encapsulation such that later one can undo/revert the changes if required. Here one can see that the  the changes made in the object.

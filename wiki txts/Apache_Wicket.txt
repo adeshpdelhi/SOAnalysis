@@ -1,0 +1,10 @@
+
+
+
+Traditional  in the controller difficult.
+In contrast, Wicket is closely patterned after  requests against links and forms in the same way that Swing components react to mouse and keystroke events. Wicket is categorized as a component-based framework.
+Wicket uses plain , which can then be reused whole in that page, other pages, or even other panels.
+Each component is backed by its own model, which represents the state of the component. The framework does not have knowledge of how components interact with their models, which are treated as  as models.
+In Wicket, all server side state is automatically managed. You should never directly use an HttpSession object or similar wrapper to store state. Instead, state is associated with components. Each server-side page component holds a nested hierarchy of stateful components, where each component’s model is, in the end, a POJO (Plain Old Java Object)
+Wicket is all about simplicity. There are no configuration files to learn in Wicket. Wicket is a simple class library with a consistent approach to component structure.
+A  Wicket application, with four files:

@@ -1,0 +1,67 @@
+				 programming language in 1974.
+
+
+Internal iterators are  etc., implementing the traversal across a container, applying the given function to every element in turn.
+An external iterator may be thought of as a type of  There must also be a way to create an iterator so it points to some first element as well as some way to determine when the iterator has exhausted all of the elements in the container. Depending on the language and intended use, iterators may also provide additional operations or exhibit different behaviors.
+The primary purpose of an iterator is to allow a user to process every element of a container while isolating the user from the internal structure of the container. This allows the container to store elements in any manner it wishes while allowing the user to treat it as if it were a simple sequence or list. An iterator class is usually designed in tight coordination with the corresponding container class. Usually, the container provides the methods for creating iterators.
+Note that a , however, only provides the traversal functionality and not the element access functionality.
+One way of implementing iterators is to use a restricted form of  statement follows:
+Some object-oriented languages such as 
+Implicit iterators are often manifested by a "" statement (or equivalent), such as in the following Python example:
+In Python, an iterable is an object which can be converted to an iterator, which is then iterated through during the for loop; this is done implicitly.
+Or other times they may be created by the collection object itself, as in this Ruby example:
+This iteration style is sometimes called "internal iteration" because its code fully executes within the context of the iterable object (that controls all aspects of iteration), and the programmer only provides the operation to execute at each step (using an ).
+Languages that support  or similar constructs may also make use of implicit iterators during the construction of the result list, as in Python:
+Sometimes the implicit hidden nature is only partial. The . These functions still require explicit iterator objects as their initial input, but the subsequent iteration does not expose an iterator object to the user.
+Iterators are a useful abstraction of .
+In procedural languages it is common to use the subscript operator and a 
+The ability of a container to be modified while iterating through its elements has become necessary in modern  programming, where the interrelationships between objects and the effects of operations may not be obvious. By using an iterator one is isolated from these sorts of consequences. This assertion must however be taken with a grain of salt, because more often than not, for efficiency reasons, the iterator implementation is so tightly bound to the container that it does preclude modification of the underlying container without invalidating itself.
+For containers that may move around their data in memory, the only way to not invalidate the iterator is, for the container, to somehow keep track of all the currently alive iterators and update them on the fly. Since the number of iterators at a given time may be arbitrarily large in comparison to the size of the tied container, updating them all will drastically impair the complexity guarantee on the container's operations.
+An alternative way to keep the number of updates bound relatively to the container size would be to use a kind of handle mechanism, that is a collection of indirect pointers to the container's elements that must be updated with the container, and let the iterators point to these handles instead of directly to the data elements. But this approach will negatively impact the iterator performance, since it must effectuate a double pointer following to access the actual data element. This is usually not desirable, because many algorithms using the iterators invoke the iterators data access operation more often than the advance method. It is therefore especially important to have iterators with very efficient data access.
+All in all, this is always a trade-off between security (iterators remain always valid) and efficiency. Most of the time, the added security is not worth the efficiency price to pay for it. Using an alternative container (for example a singly linked list instead of a vector) would be a better choice (globally more efficient) if the stability of the iterators is needed.
+Iterators can be categorised according to their functionality. Here is a (non-exhaustive) list of iterator categories:
+Different languages or libraries used with these languages define iterator types. Some of them are
+Iterators in the  is required to begin iterating.
+Enumerators are typically obtained by calling the .
+The following shows a simple use of iterators in C# 2.0:
+C# 2.0 also supports " statement to produce a sequence of elements instead of returning an object instance, will be transformed by the compiler into a new class implementing the appropriate interface.
+The  are used to advance the iterator to the next element.
+Iterators are usually used in pairs, where one is used for the actual iteration and the second serves to mark the end of the collection. The iterators are created by the corresponding container class using standard methods such as  is a special value that does not reference any element. When an iterator is advanced beyond the last element it is by definition equal to the special end iterator value.
+The following example shows a typical use of an iterator.
+There are many varieties of iterators each with slightly different behavior, including: forward, reverse, and bidirectional iterators; random-access iterators; input and output iterators; and const iterators (that protect the container or its elements from modification). However, not every type of container supports every type of iterator. It is possible for users to create their own iterator types by deriving subclasses from the standard  class template.
+Iterator safety is defined separately for the different types of standard containers, in some cases the iterator is very permissive in allowing the container to change while iterating.
+Implicit iteration is also partially supported by C++ through the use of standard function templates, such as .
+When used they must be initialized with existing iterators, usually .
+The same can be achieved using 
+A limitation is that this technique does not allow the body of the for-each loop to be declared inline, requiring a  and using lambda to implicitly generate function objects with familiar infix operator syntax. However, because Boost is implemented at the library level, rather than intrinsically in the language, certain operations have to be done via workarounds.
+The current standard of C++,  syntax, allowing the function template body to be declared inline.
+Here is an example of for-each iteration using a lambda function:
+Introduced in the 
+The  test method is used. The following example shows a simple use of iterators:
+To show that  can be called repeatedly, we use it to insert commas between the elements but not after the last element.
+Note that this approach does not properly separate the advance operation from the actual data access. If the data element must be used more than once for each advance, it needs to be stored in a temporary variable. When an advance is needed without data access (i.e. to skip a given data element), the access is nonetheless performed, though the returned value is ignored in this case.
+For collection types that support it, the  has previously returned false).
+Additionally, for  with a similar API but that allows forward and backward iteration, provides its current index in the list and allows setting of the list element at its position.
+The  loop, the preceding example can be rewritten as
+Some containers also use the older (since 1.0)  methods but has no methods to modify the container.
+In , iterators have a rich set of methods similar to collections, and can be used directly in for loops. Indeed, both iterators and collections inherit from a common base trait - scala.collection.TraversableOnce. However, because of the rich set of methods available in the Scala collections library, such as map, collect, filter etc., it is often not necessary to deal with iterators directly when programming in Scala.
+Java iterators and collections can be automatically converted into Scala iterators and collections, respectively, simply by adding the single line
+to the file. The JavaConversions object provides implicit conversions to do this. Implicit conversions are a feature of Scala: methods that, when visible in the current scope, automatically insert calls to themselves into relevant expressions at the appropriate place to make them typecheck when they otherwise wouldn't.
+-loop construct. For example,
+traverses an array of integers using the  keyword.
+In the case of internal iteration where the user can supply an operation to the iterator to perform over every element of a collection, many built-in operators and MATLAB functions are overloaded to execute over every element of an array and return a corresponding output array implicitly. Furthermore, the  arrays respectively. For example,
+defines a primary function .
+Alternatively, it may be desirable to abstract the mechanisms of the array storage container from the user by defining a custom object-oriented MATLAB implementation of the Iterator Pattern. Such an implementation supporting external iteration is demonstrated in MATLAB Central File Exchange item -loop.
+
+The simplest implementation is by wrapping an array, this can be useful for .
+All methods of the example class are used during the execution of a complete foreach loop (). The iterator’s methods are executed in the following order:
+The next example illustrates a PHP class that implements the  interface as well).
+Iterators in  types support iteration, as well as many classes that are part of the standard library. The following example shows typical implicit iteration over a sequence:
+Python dictionaries (a form of  method of a dictionary can be iterated over where it yields corresponding key,value pairs as a tuple:
+Iterators however can be used and defined explicitly. For any iterable sequence type or class, the built-in function  exception will be raised when no more elements are left. The following example shows an equivalent iteration over a sequence using explicit iterators:
+Any user-defined class can support standard iteration (either implicit or explicit) by defining an  method that returns the next iterator object to use.
+Python's .
+Ruby implements iterators quite differently; all iterations are done by means of passing callback closures to container methods - this way Ruby not only implements basic iteration but also several patterns of iteration like function mapping, filters and reducing. Ruby also supports an alternative syntax for the basic iterating method , the following three examples are equivalent:
+…and…
+or even shorter
+Ruby can also iterate over fixed lists by using Enumerators and either calling their #next method or doing a for each on them, as above.

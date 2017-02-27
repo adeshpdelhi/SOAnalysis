@@ -1,0 +1,12 @@
+ as its playback engine. aTunes supports MP3, Ogg Vorbis, FLAC and other formats. aTunes allows users to edit tags, organize music and rip audio CDs easily.
+
+
+According to its wiki,
+The library is organized by multiple columns such as title, artist, album and genre which can be sorted or hidden. The navigator could be displayed as a hierarchy tree, folders, or covers.
+aTunes can read the following formats:  playlists can be opened and saved.
+aTunes uses a tag editor window to edit MP3, OGG, FLAC, WMA, MP4, ra, rm tags. It is able to show pictures included in 2 tags.
+Users are able to view various statistics about their music playing habits such as songs most played and songs never played. These data are displayed as graphs and pie charts.
+Music can be .
+aTunes has a tool to look up artists on different websites such as 
+In addition to the standard view with all controls, and features, there is a multi-window view allowing each element (navigator, playlist, context information) to be shown in a separate window which can be located and arranged individually. A full-screen mode is available and the player could also be sent to the notification area. aTunes colors can be changed by switching themes.
+aTunes is available in Arabic, Simplified Chinese, Traditional Chinese, Czech, Dutch, English, French, Galician, German, Greek, Hungarian, Italian, Japanese, Norwegian, Polish, Portuguese, Brazilian Portuguese, Russian, Slovak, Spanish, Swedish, Turkish and Ukrainian.

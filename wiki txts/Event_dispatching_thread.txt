@@ -1,0 +1,21 @@
+				.
+The events are primarily update events that cause user interface .
+
+
+A software application normally consists of multiple threads and a single .
+That is, likewise in other GUI frameworks, the Event Dispatching Thread spends its life pumping messages: it maintains a message queue of actions to be performed over GUI. These requests are submitted to the queue by system and any application thread. EDT consumes them one after another and responds by updating the GUI components. The messages may be well-known actions or involve callbacks, the references to user-methods that must be executed by means of EDT.
+The important requirement imposed on all messages is that they must be executed quickly for the GUI to stay responsive. Otherwise, the message loop is blocked and GUI freezing is experienced.
+There are various solutions for submitting code to the EDT and performing lengthy tasks without blocking the loop.
+GUI components support the lists of callbacks, called Listeners, which are typically populated when the components are created. EDT executes the listeners when user excitates the components somehow (button is clicked, mouse is moved, item is selected, focus is lost, component resized and so on.)
+For short tasks that must access/modify GUI periodically or at specific time,  is used. It can be considered as invisible GUI component, whose listeners are register to fire at specific time(s).
+Equivalents
+Other application threads can pass some code to be executed in the event dispatching thread by means of  object. Two methods of these classes allow:
+from the event dispatching thread.
+The method  can be called to determine if the current thread is the event dispatching thread.
+The code supplied by means of the  to the EDT must be as quick as possible to prevent freezing. They are normally intended to deliver the result of a lengthy computation to the GUI (user).
+Both execution of a task in another thread and presenting the results in the EDT can be combined by means of , is an implementation of the worker design pattern, and as of Java 6 is part of standard Swing distribution. SwingWorker is normally invoked from EDT-executed event Listener to perform a lengthy task in order not to block the EDT.
+If you use . Then you can write it more simple like this.
+SwingWorker is normally created for a lengthy tasks by EDT while handling callback (Listener) events. Spawning a worker thread, EDT proceeds handling current message without waiting the worker to complete. 
+Often, your EDT handles a GUI component action, which demands the user to make a choice by means of another dialog, like JFileChooser, which pops up, stays responsive while user picks its option and action proceeds with selected file only after "OK" button is pressed. You see, this takes time (user responds in matter of seconds) and you need a responsive GUI (the messages are still pumped in EDT) during all this time while EDT is blocking (it does not handle newer, e.g. JFileChooser, messages in the queue before the dialog is closed and current component action is finished). The vicious cycle is broken through EDT entering a new message loop, which dispatches the messages as per normal until "modal dialog is over" arrives and normal message processing resumes from the blocked position in the component action.
+The open source  project emulates the Swing message loop pumping to provide the "synchronous" execution mechanism for arbitrary user tasks, which proceeds only after the worker completes the task.
+Since Java 1.7, Java provides ().

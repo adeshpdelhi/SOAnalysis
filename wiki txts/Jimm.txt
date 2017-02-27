@@ -1,0 +1,4 @@
+ specification.
+Jimm is licensed under the terms of the .
+Creator of Jimm is Manuel Linsmayer. In 2003 he released a client  (ICQ v8).
+In 2004  banned the use of the name "Mobicq" because it contains a part belonging to company trademark "ICQ". At that time, client was able to display status, display information about user, play sounds and display messages in the chat. It was decided to rename Mobicq to Jimm. The name "Jimm" means "Java Instant Mobile Messenger".

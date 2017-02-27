@@ -1,0 +1,12 @@
+ drawing surface.
+The  article for an explanation of the JNI techniques employed by the AWT Native Interface.
+The AWT Native Interface was added to the  1.3 ("Kestrel") version.
+
+
+A complete walkthrough example of this technology is available on Wikibooks (see link below).
+See the  "repaints" the screen.
+Create the  for more complete explanations.)
+Type this in a file named "NativeSideCanvas.cpp" and compile into a library. See  code and other operating systems see links below.)
+One should run the file as usual. One should then see a window with, for example, a rectangle drawn in it. (See  for complete instructions.)
+Note: One can notice that the AWT Native Interface requires the "jawt.dll" (or "jawt.so") to run with the application, so the easiest way to do that is copying the "jawt.dll" (should be in the .../jre/bin 
+One can paint as if it is a native application. In ) which can be retrieved with this line: dsi_win = (JAWT_Win32DrawingSurfaceInfo*)dsi-&gt;platformInfo;

@@ -1,0 +1,6 @@
+				.
+OptimalJ was first released in 2001 development suite.
+OptimalJ is available in two editions:
+OptimalJ was generally regarded as a technically superior but relatively expensive development environment. Compuware found it difficult to gain market share amongst the  development community with the Optimal suite of products.
+Due to internal restructurings, Compuware decided in 2008 to discontinue OptimalJ.
+

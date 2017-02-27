@@ -1,0 +1,9 @@
+The 
+The primary goal of the project is to provide a way for Java developers to get access to resources that are otherwise unavailable or poorly implemented on the existing Java platform. The main philosophy is to expose underlying technology as a thin wrapper, thus creating an .
+LWJGL is available under a 
+On 13 November 2014 version 3 was announced, which was released in alpha version on 27 April 2015 and is a complete rewrite of LWJGL.
+
+
+The library accesses native 
+While utility classes are written in pure 
+Since version 3.1 LWJGL is fully split into around 20 modules that can be downloaded and used separately. To make this process easier, the project provides an online build configurator, which allows users to download custom combinations of modules and automatically generates 

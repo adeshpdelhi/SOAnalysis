@@ -1,0 +1,7 @@
+				 applications with the newest technologies for Java.
+Oracle replaced JWSDP with  license.
+
+
+These are the components and  available in the JWSDP 1.6:
+Starting with JWSDP 1.6, the JAX-RPC and JAX-WS implementations support the  standard for the binary encoding of the XML infoset. Earlier versions of JWSDP also included
+There are many other Java implementations of Web Services or XML processors. Some of them support the Java standards, some support other standards or non-standard features. Related technologies include:

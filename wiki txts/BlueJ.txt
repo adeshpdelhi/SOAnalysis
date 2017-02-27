@@ -1,0 +1,8 @@
+. It runs with the help of JDK (Java Development Kit). Java is a programming language and a platform which works on BlueJ.
+BlueJ was developed to support the learning and teaching of ) are represented visually and in its interaction design in the interface.
+
+
+The development of BlueJ was started in 2000 by  system. BlueJ is an IDE. Blue was an integrated system with its own programming language and environment. BlueJ implements the Blue environment design for the Java programming language.
+BlueJ is currently being maintained by a team at the , Canterbury, England – where Kölling now lectures.
+In March 2009, the BlueJ project became .
+

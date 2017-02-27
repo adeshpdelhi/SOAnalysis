@@ -1,0 +1,14 @@
+				 Each processing object contains logic that defines the types of command objects that it can handle; the rest are passed to the next processing object in the chain. A mechanism also exists for adding new processing objects to the end of this chain.
+In a variation of the standard chain-of-responsibility model, some handlers may act as  might work in this manner.
+This pattern promotes the idea of .
+
+
+Below is an example of this pattern in Java. In this example we have different roles, each having a fixed purchasing limit and a successor. Every time a user in a role receives a purchase request that exceeds his or her limit, the request is passed to his or her successor.
+The PurchasePower abstract class with the abstract method processRequest.
+Four implementations of the abstract class above: Manager, Director, Vice President, President
+The following code defines the PurchaseRequest class that keeps the request data in this example.
+In the following usage example, the successors are set as follows: Manager -&gt; Director -&gt; Vice President -&gt; President
+This C# examples uses the logger application to select different sources based on the log level;
+Output
+The ) are responder objects.
+Typically, when a view receives an event which it can't handle, it dispatches it to its superview until it reaches the view controller or window object. If the window can't handle the event, the event is dispatched to the application object, which is the last object in the chain. For example:

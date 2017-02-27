@@ -1,0 +1,11 @@
+				, which can lead to issues such as classpath and class loading problems.
+The Java Module System was initially being developed under the  as JSR 277 and was scheduled to be released with Java 7.
+JSR 277 later was put on hold and Project Jigsaw This JSR was superseded by JSR 376 (Java Platform Module System).
+Project Jigsaw was originally intended for 
+
+
+The Java Module System implemented for Java 9 will include the following 
+Modules are a new way of grouping code and data. Contrary to 
+For example, the following module declaration declares that the module :
+Contrary to the Jar file format, the module will describe these dependencies in a module declaration which will be placed in a file named 
+The Java Module System does not intend to support all the functionalities that the 

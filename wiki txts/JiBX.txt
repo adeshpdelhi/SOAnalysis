@@ -1,0 +1,3 @@
+
+JiBX differs from other Java-XML transformation tools such as 
+Like traditional Java-XML tools, the JiBX framework can produce a set of Java classes but unlike most other XML binding tools for Java, JiBX does not require this step. It can generate byte code enhancements for existing classes from an XML-Java binding declaration.

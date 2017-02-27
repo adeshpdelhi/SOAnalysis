@@ -1,0 +1,15 @@
+The .
+The original implementation depends on  version was later developed.
+Usage of the term  implementation.
+The basic idea of Java RMI, the distributed garbage-collection (DGC) protocol, and much of the architecture underlying the original Sun implementation, come from the 'network objects' feature of .
+
+
+The programmers of the original RMI API generalized the code somewhat to support different implementations, such as a " was added to CORBA in order to be compatible with the RMI interface. Still, the RMI-IIOP and JRMP implementations do not have fully identical interfaces.
+RMI functionality comes in the package . Version 5.0 of Java and beyond no longer require this step.
+
+The following classes implement a simple client-server program using RMI that displays a message.
+ — listens to RMI requests and implements the interface which is used by the client to invoke remote methods.
+ — defines the interface that is used by the client and implemented by the server.
+
+Before running this example, we need to make a 'stub' file for the interface we used. For this task we have the RMI compiler - 'rmic'
+Note that since version 5.0 of J2SE support for dynamically generated stub files has been added, and rmic is only provided for backwards compatibility with earlier runtimes, or for programs that don't provide an explicit port number (or zero) when exporting remote objects, which is required for generated stubs to be possible, as described in the Javadoc for UnicastRemoteObject. See the comment in the constructor above.

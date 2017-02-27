@@ -1,0 +1,17 @@
+
+ speed.
+The successor of Dalvik is 
+
+
+Unlike  (API), compiled to Java bytecode, and converted to Dalvik instructions as necessary.
+A tool called 
+The Dalvik executables may be modified again when installed onto a mobile device. In order to gain further , and empty class objects may be short-circuited, for example.
+Being optimized for low memory requirements, Dalvik has some specific characteristics that differentiate it from other standard VMs:
+According to Google, the design of Dalvik permits a device to run multiple instances of the VM efficiently.
+
+The relative merits of 
+Generally, stack-based machines must use .
+Tests performed on 
+Furthermore, as of March 2014
+Dalvik is published under the terms of the 
+On August 12, 2010, 

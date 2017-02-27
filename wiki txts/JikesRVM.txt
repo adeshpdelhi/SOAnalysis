@@ -1,0 +1,13 @@
+.
+
+
+Being  loader is responsible for loading the boot image at runtime.
+VM Magic is where the compiler generates different code for a class than the bytecodes within that class should perform. VM Magic classes allow direct access to memory and are key to the Memory Management Toolkits performance. The VM Magic classes reside in the  package and have been reused in other Java projects.
+The Memory Management Toolkit (MMTk) is a collection of precise garbage collectors that have been used within Jikes RVM and other projects such as the , but the main dependence is on VM Magic.
+Either 's class library.
+Jikes RVM uses a fast baseline compiler to quickly generate code for a particular architecture. Adaptive compilation then recompiles code with an optimizing compiler with features such as on-stack replacement (OSR). The adaptive compilation system uses a cost-benefit analysis model.
+Jikes RVM's runtime has many innovative features including mechanisms for fast locking, a collaborative scheduling mechanism and support for fast exception gathering and dispatch.
+The  architectures are supported by Jikes RVM.
+Since it is a research project, the emphasis of Jikes RVM is on researching new technologies, as is apparent from the scientific publications it has spawned -- over 220 papers as of 2015.
+Jikes RVM has also participated in the  2007, 2008, 2010, 2011 and 2012.
+

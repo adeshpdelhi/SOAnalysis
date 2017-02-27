@@ -1,0 +1,14 @@
+				.
+
+
+"Define an interface for creating an object, but let subclasses decide which class to instantiate. The Factory method lets a class defer instantiation it uses to subclasses." ()
+Creating an object often requires complex processes not appropriate to include within a composing object. The object's creation may lead to a significant duplication of code, may require information not accessible to the composing object, may not provide a sufficient level of abstraction, or may otherwise not be part of the composing object's  of product that will be created.
+The factory method pattern relies on inheritance, as object creation is delegated to subclasses that implement the factory method to create objects.
+Room is the base class for a final product ( and makes the final product more flexible in the event of change.
+A maze game may be played in two modes, one with regular rooms that are only connected with adjacent rooms, and one with magic rooms that allow players to be transported at random (this ). The MazeGame uses Rooms but it puts the responsibility of creating Rooms to its subclasses which create the concrete classes. The regular game mode could use this template method:
+In the above snippet, the  method:
+Another example in PHP follows, this time using interface implementations as opposed to subclassing (however the same can be achieved through subclassing). It is important to note that the factory method can also be defined as public and called directly by the client code (in contrast with the Java example above).
+Factory pattern deals with the instantiation of objects without exposing the instantiation logic. In other words, a Factory is actually a creator of objects which have a common interface.
+In the above code you can see the creation of one interface called IPerson and two implementations called Villager and CityPerson. Based on the type passed into the Factory object, we are returning the original concrete object as the interface IPerson.
+A factory method is just an addition to Factory class. It creates the object of the class through interfaces but on the other hand, it also lets the subclass decide which class is instantiated.
+You can see we have used GetObject in concreteFactory. As a result, you can easily call DoSomething() from it to get the IProduct. You might also write your custom logic after getting the object in the concrete Factory Method. The GetObject is made abstract in the Factory interface.

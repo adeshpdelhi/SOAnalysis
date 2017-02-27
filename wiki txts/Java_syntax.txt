@@ -1,0 +1,115 @@
+The  is the set of rules defining how a Java program is written and interpreted.
+The syntax is mostly derived from  types are omitted to simplify the language and to avoid possible programming mistakes.
+The Java syntax has been gradually extended in the course of the eight major  (called lambda expressions in Java).
+
+
+An .
+An identifier can contain:
+An identifier cannot:
+Integer literals are of .
+ are identifiers associated with values. They are declared by writing the variable's type and name, and are optionally initialized in the same statement by assigning a value.
+Multiple variables of the same type can be declared and initialized in one statement using comma as a delimiter.
+The separators  signify a code block and a new scope. Class members and the body of a method are examples of what can live inside these braces in various contexts.
+Inside of method bodies, you can use braces to create new scopes, as follows:
+Java has three kinds of comments: .
+Traditional comments, also known as block comments, start with , they may span across multiple lines. This type of comment was derived from C and C++.
+End-of-line comments start with  and extend to the end of the current line. This comment type is also present in C++ and in modern C.
+Documentation comments in the source files are processed by the  and follows conventions defined by the Javadoc tool. Technically, these comments are a special kind of traditional comment and they are not specifically defined in the language specification.
+Java applications consist of collections of classes. Classes exist in packages but can also be nested inside other classes.
+Every Java application must have an entry point. This is true of both graphical interface applications and console applications. The entry point is the .
+Packages are a part of a class name and they are used to group and/or distinguish named entities from other ones. Another purpose of packages is to govern code access together with access modifiers. For example, .
+A package is declared at the start of the file with the  declaration:
+Classes with the  extension and put into nested folders corresponding to the package name. The above class myapplication.mylibrary.MyClass will have the following path: "myapplication/mylibrary/MyClass.java".
+A type import declaration allows a named type to be referred to by a simple name rather than the full name that includes the package. Import declarations can be . Import declarations must be placed at the top of a code file after the package declaration.
+Import-on-demand declarations are mentioned in the code. A "type import" imports all the types of the package. A "static import" imports members of the package.
+This type of declaration has been available since  declarations allow access to static members defined in another class, interface, annotation, or enum; without specifying the class name:
+Import-on-demand declarations allow to import all the fields of the type:
+Enum constants may also be used with static import. For example, this enum is in the package called :
+It is possible to use static import declarations in another class to retrieve the enum constants:
+Operators in Java are similar to those in .
+ in Java are similar to those in C and use the same syntax:
+ block, in which case it becomes an if-then-else statement:
+Like C, else-if construction does not involve any special keywords, it is formed as a sequence of separate if-then-else statements:
+Also, note that the  operator can be used in place of simple if statement, for example
+ statements.
+Possible values are listed using  label may be present to declare that the code following it will be executed if none of the case labels correspond to the expression.
+Code for each label ends with the  keyword. It is possible to omit it causing the execution to proceed to the next label, however, a warning will usually be reported during compilation.
+Iteration statements are statements that are repeatedly executed when a given condition is evaluated as true. Since , Java has four forms of such statements.
+In the  loop, the test is done before each iteration.
+In the  loop, the test is done after each iteration. Consequently, the code is always executed at least once.
+ loops in Java include an initializer, a condition and a counter expression. It is possible to include several expressions of the same kind using comma as delimiter (except in the condition). However, unlike C, the comma is just a delimiter and not an operator.
+Like C, all three expressions are optional. The following loop is infinite:
+, this kind of loop does not involve a special keyword, but instead uses a different notation style.
+Labels are given points in code used by  keyword cannot be used to jump to specific points in the code.
+The  statement. Execution continues in the statement after the terminated statement, if any.
+It is possible to break out of the outer loop using labels:
+The , skipping the statements in the body of the loop if the characters are spaces:
+Labels can be specified in  statements:
+The  statement to return some value.
+ block.
+Exceptions are managed within  blocks.
+The statements within the  blocks, in which case the first block with an exception variable whose type matches the type of the thrown exception is executed.
+Java SE 7 also introduced multi-catch clauses besides uni-catch clauses. This type of catch clauses allows Java to handle different types of exceptions in a single block provided they are not subclasses of each other.
+If no  block being found, a textual description of the exception is written to the standard output stream.
+The statements within the  statement was reached. Such blocks are useful for providing clean-up code that is guaranteed to always be executed.
+The  block.
+ statements.
+The  statement.
+Java has built-in tools for  statement is included in Java language.
+To make a code block synchronized, it is preceded by the  lock, executes the block, then releases the lock. No threads may enter this block until the lock is released. Any non-null reference type may be used as the lock.
+ when the statement is executed, an exception is thrown. This statement can include a colon followed by another expression, which will act as the exception's detail message.
+Primitive types in Java include integer types, floating-point numbers, 
+ values.
+This language feature was introduced in  is the reverse operation of converting a value of a reference type (previously boxed) into a value of a corresponding primitive type. Neither operation requires an explicit conversion.
+Example:
+Reference types include class types, interface types, and array types. When the constructor is called, an object is created on the heap and a reference is assigned to the variable. When a variable of an object gets out of scope, the reference is broken and when there are no references left, the object gets marked as garbage. The garbage collector then collects and destroys it some time afterwards.
+A reference variable is  when it does not reference any object.
+Arrays in Java are created at runtime, just like class instances. Array length is defined at creation and cannot be changed.
+In Java, multi-dimensional arrays are represented as arrays of arrays. Technically, they are represented by arrays of references to other arrays.
+Due to the nature of the multi-dimensional arrays, sub-arrays can vary in length, so multi-dimensional arrays are not bound to be rectangular unlike C:
+.
+Non-static members of a class define the types of the instance variables and methods, which are related to the objects created from that class. To create these objects, the class must be instantiated by using the  operator and calling the class constructor.
+Members of both instances and static classes are accessed with the  operator.
+
+Instance members can be accessed through the name of a variable.
+
+Static members are accessed by using the name of the class or any other type. This does not require the creation of a class instance. Static members are declared using the  modifier.
+Modifiers are keywords used to modify declarations of types and type members. Most notably there is a sub-group containing the access modifiers.
+The  can be reached from anywhere. If a class or its member does not have any modifiers, default access is assumed.
+The following table shows whether code within a class has access to the class or method depending on the accessing class location and the modifier for the accessed class or class member:
+A  is a special method called when an object is initialized. Its purpose is to initialize the members of the object. The main differences between constructors and ordinary methods are that constructors are called only when an instance of the class is created and never return anything. Constructors are declared as common methods, but they are named after the class and no return type is specified:
+Initializers are blocks of code that are executed when a class or an instance of a class is created. There are two kinds of initializers, .
+Static initializers initialize static fields when the class is created. They are declared using the  keyword:
+A class is created only once. Therefore, static initializers are not called more than once. On the contrary, instance initializers are automatically called before the call to a constructor every time an instance of the class is created. Unlike constructors instance initializers cannot take any arguments and generally they cannot throw any  (except in several special cases). Instance initializers are declared in a block without any keywords:
+Since Java has a garbage collection mechanism, there are no  method called prior to garbage collection, which can be overridden to implement finalization.
+All the statements in Java must reside within methods. Methods are similar to functions except they belong to classes. A method has a return value, a name and usually some parameters initialized when it is called with some arguments. Similar to C++, methods returning nothing have return type declared as . Unlike in C++, methods in Java are not allowed to have default argument values and methods are usually overloaded instead.
+A method is called using  notation on an object, or in the case of a static method, also on the name of a class.
+The  keyword indicates that a method throws an exception. All checked exceptions must be listed in a comma-separated list.
+This language feature was introduced in . The last argument of the method may be declared as a variable arity parameter, in which case the method becomes a variable arity method (as opposed to fixed arity methods) or simply varargs method. This allows one to pass a variable number of values, of the declared type, to the method as parameters - including no parameters. These values will be available inside the method as an array.
+Fields, or class variables, can be declared inside the class body to store data.
+Fields can be initialized directly when declared.
+Classes in Java can only  keyword.
+If a class does not specify its superclass, it implicitly inherits from  class.
+Unlike C++, all non- and can be overridden by the inheriting classes.
+An  is a class that is incomplete, or to be considered incomplete. Normal classes may have abstract methods, that is, methods that are declared but not yet implemented, only if they are abstract classes. A class C has abstract methods if any of the following is true:
+Output:
+This language feature was introduced in . Technically enumerations are a kind of class containing enum constants in its body. Each enum constant defines an instance of the enum type. Enumeration classes cannot be instantiated anywhere except in the enumeration class itself.
+Enum constants are allowed to have constructors, which are called when the class is loaded:
+Enumerations can have class bodies, in which case they are treated like anonymous classes extending the enum class:
+Interfaces are data structures that contain member definitions and not actual implementation. They are useful to define a contract between members in different types that have different implementations. Every interface is implicitly abstract. The only modifier allowed to use with interfaces apart from access modifiers is , which has the same effect as for classes.
+An interface is implemented by a class using the  keyword in a comma-separated list. Class implementing an interface must override all its methods, otherwise it must be declared as abstract.
+Interfaces can inherit from other interfaces just like classes. Unlike classes it is allowed to inherit from multiple interfaces. However, it is possible that several interfaces have a field with the same name, in which case it becomes a single ambiguous member, which cannot be accessed.
+Annotations in Java are a way to embed .
+Java has a set of predefined annotation types, but it is allowed to define new ones. An annotation type declaration is a special type of an interface declaration. They are declared in the same way as the interfaces, except the  and cannot be extended from anything else.
+Annotations may have the same declarations in the body as the common interfaces, in addition they are allowed to include enums and annotations. The main difference is that abstract method declarations must not have any parameters or throw any exceptions. Also they may have a default value, which is declared using the  keyword after the method name:
+Annotations may be used in any kind of declaration, whether it is package, class (including enums), interface (including annotations), field, method, parameter, constructor, or local variable. Also they can be used with enum constants. Annotations are declared using the  sign preceding annotation type name, after which element-value pairs are written inside brackets. All elements with no default value must be assigned a value.
+Besides the generic form, there are two other forms to declare an annotation, which are shorthands.  is a short form, it is used when no values are assigned to elements:
+The other short form is called . It is used with annotations types containing only one element or in the case when multiple elements are present, but only one elements lacks a default value. In single element annotation form the element name is omitted and only value is written instead:
+
+Classes can be parameterized by adding a type variable inside angle brackets () following the class name. It makes possible the use of this type variable in class members instead of actual types. There can be more than one type variable, in which case they are declared in a comma-separated list.
+It is possible to limit a type variable to a subtype of some specific class or declare an interface that must be implemented by the type. In this case the type variable is appended by the  sign used as the delimiter.
+When a variable of a parameterized type is declared or an instance is created, its type is written exactly in the same format as in the class header, except the actual type is written in the place of the type variable declaration.
+Since Java SE 7, it is possible to use a diamond () in place of type arguments, in which case the latter will be inferred. The following code in Java SE 7 is equivalent to the code in the previous example:
+When declaring a variable for a parameterized type, it is possible to use wildcards instead of explicit type names. Wildcards are expressed by writing  keyword correspondingly followed by the class name.
+Usage of generics may be limited to some particular methods, this concept applies to constructors as well. To declare a parameterized method, type variables are written before the return type of the method in the same format as for the generic classes. In the case of constructor, type variables are declared before the constructor name.
+Interfaces can be parameterized in the similar manner as the classes.

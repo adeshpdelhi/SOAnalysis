@@ -1,0 +1,12 @@
+. Fantom takes a "middle of the road" approach to its type system, blending together aspects of both static and dynamic typing.
+
+
+Fantom's type system is simple by design. All variables are statically typed, as they are in  capabilities.
+Fantom is open source under the 
+In Fantom, the unit of deployment is called a 
+The Fantom build system can package a set of Pods into a .
+Fantom ships with a standard .
+Here is the classic  written in Fantom:
+Notice that "Void" is capitalized. This is because Void is a class, not a primitive type in Fantom.
+The original name of the Fantom programming language was Fan, named after the 
+Fantom has other useful features:

@@ -1,0 +1,5 @@
+.
+
+
+Ioke was designed for expressiveness, above all else including performance. It was designed to be its own most important tool, and is an example of language-oriented programming, and encourages the creation of 
+Ioke was first announced on November 6, 2008. Ioke's code contains documentation and unit tests.

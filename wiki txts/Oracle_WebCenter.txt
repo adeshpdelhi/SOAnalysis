@@ -1,0 +1,19 @@
+				. There are three main products that make up the WebCenter portfolio and they can be purchased together as a suite or individually:
+Each of these products are in separate but connected markets. WebCenter Content competes in the  market. WebCenter Sites competes in the Web Experience Management market and WebCenter Portal competes in the self-service portal and content delivery market space. Different combinations of these products are frequently used together, so Oracle has bundled them together within the same WebCenter product family.
+Oracle WebCenter contains a set of components for building rich web applications,  as well as the portal products acquired from BEA.
+
+
+The product costs $70000 per CPU for the WebCenter Services, and $125,000 per CPU for WebCenter Suite. will work.
+There are three major products in the WebCenter product stack.
+The base  IDE, providing access to these resources.
+ components such as content, collaboration, and communication services - the full list is provided below. WebCenter Services includes Oracle ADF user interface components (called Taskflows) that can be embedded directly into ADF applications. In addition, APIs can be utilized to create custom UIs and to integrate some of these services into non-ADF applications.
+Finally,  is a closed source application built on WebCenter Framework and Services that offers a prebuilt project collaboration solution. It can be compared with solutions like Microsoft Sharepoint and Atlassian Confluence. There are limited mechanisms to extend this application.
+Note that there is a product called , which is an umbrella of products. Products can be included in the suite regardless of whether they are built on the ADF based WebCenter Framework.
+WebCenter comprises furthermore several editions, among others WebCenter Suite Plus, WebCenter Portal, WebCenter Content, WebCenter Sites, WebCenter Sites Satellite Server (a distributed caching mechanism which stores and assembles "pagelets," or elements of output),
+
+ - Provides features for both social networking and personal productivity.
+ - Focuses on the requirements of an individual, rather than a group.
+WebCenter Framework supports the following standards:
+On 22 February 2012 Oracle released WebCenter 11g Release 1 Patch Set 5. It includes many bug fixes in addition to several new enhancements. This patch set is mainly targeted at releasing customer bug fixes.
+In January 2011 Oracle released WebCenter 11g Release 1 Patch Set 3. As the converged portal platform, this is a major new release with many features integrated from previously acquired portal products, including a greatly improved and flexible portal framework, improved GUI, personalization server, brand new navigation model, support for hierarchical pages and spaces, JSR 286, improved performance, and more.
+WebCenter Framework and Services lacks support for these notable technologies&#160;:

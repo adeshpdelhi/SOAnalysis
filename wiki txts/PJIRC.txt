@@ -1,0 +1,7 @@
+
+Philippe Detournay, the initial and main contributor, has stopped working on the project since 2005.
+
+
+Unlike many other 
+PJIRC can be embedded on a website as a general purpose IRC client, or with optional customization to connect to a particular server and channel, with certain specified commands permitted to users.
+Language support uses external language files, and includes Albanian, Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, English, Spanish, Estonian, French, Galician, German, Greek, Hungarian, Italian, Korean, Norwegian, Polish, Portuguese, Romanian, Russian, Serbian, Swedish, Turkish, and Ukrainian.

@@ -1,0 +1,13 @@
+In  and pass them to the flyweight objects temporarily when they are used.
+A classic example usage of the flyweight pattern is the data structures for graphical representation of characters in a  to a flyweight glyph object shared by every instance of the same character in the document; only the position of each character (in the document and/or the page) would need to be stored internally.
+Another example is .
+In other contexts the idea of sharing identical data structures is called .
+
+
+According to the textbook 
+To enable safe sharing, between clients and threads, Flyweight objects must be . Flyweight objects are by definition value objects. The identity of the object instance is of no consequence therefore two Flyweight instances of the same value are considered equal.
+Example in C# (note Equals and GetHashCode overrides as well as == and&#160;!= operator overloads):
+Special consideration must be made in scenarios where Flyweight objects are created on multiple threads. If the list of values is finite and known in advance the Flyweights can be instantiated ahead of time and retrieved from a container on multiple threads with no contention. If Flyweights are instantiated on multiple threads there are two options:
+Flyweight allows you to share bulky data that are common to each object. In other words, if you think that same data is repeating for every object, you can use this pattern to point to the single object and hence can easily save space. Here the FlyweightPointer creates a static member Company, which is used for every object of MyObject.
+By default, instances of 
+Output

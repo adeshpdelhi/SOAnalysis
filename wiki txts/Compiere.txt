@@ -1,0 +1,14 @@
+ and through a Partner Network, a collection of trained and authorized business partners.
+Compiere was founded in 1999 by  reaching one million downloads and 100 partners in 2006.
+In 2006, Compiere, Inc. raised venture capital from New Enterprise Associates
+Like many commercial ventures built around open source projects, there was a degree of contention between company management (who sought to monetize the investments in R&amp;D, Services and Support) and voices from the community (who desired that Compiere source code and business processes remained free and open as Adempiere at that moment and iDempiere some years later). On June 16, 2010, Consona acquired Compiere, Inc. Terms of the deal were not disclosed .
+The application and  version 2; this comprises the Community Edition. Also available for a fee is a Professional Edition with more features, a commercial license, documentation and support contracts.
+
+
+Compiere encompasses ERP functionality, but in order to avoid the duplication of information and the need for synchronization, it's organized in a different way. Compiere modules are: .
+Compiere is a  contains definitions of a data entity (type, validation, etc.), how it is displayed (label on screens and reports, help, display sequence and position relative to other fields), and the display rules. It also contains security and access rules.
+Compiere has been developed with 
+Compiere has been criticized for not being a pure open source product because of its dependence on  extensions, without porting.
+Taking advantage of the .
+Compiere also works with the open source alternative to Oracle database, . User documentation is still offered on a fee-based accessibility.
+

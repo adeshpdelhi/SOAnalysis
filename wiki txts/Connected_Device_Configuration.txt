@@ -1,0 +1,9 @@
+				 (CDC 1.1.2).
+
+
+Devices that support CDC typically include a 32-
+A profile is a set of APIs that support devices with different capabilities and resources within the CDC framework to provide a complete Java application environment. Three profiles are available, which build on each other incrementally and allow application developers to choose the appropriate programming model for a particular device.
+This is the most basic of the CDC family of profiles. ).
+The  specification.
+The  programming model for application development.
+CDC supports a number of optional packages that allow developers to access specific pieces of extra functionality within the restricted resource constraints of a Java ME device.

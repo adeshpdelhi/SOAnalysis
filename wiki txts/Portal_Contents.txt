@@ -1,0 +1,23 @@
+
+
+There are two ways to look things up in Wikipedia: by searching or by browsing.
+Overview articles summarize in prose a broad topic like .
+Outline pages have trees of article links in an . They show how important subtopics relate to each other, and can be useful as a more condensed, non-prose alternative to overview articles.
+Various third-party classification systems have been mapped to Wikipedia articles, which can be accessed from these pages:
+Vital articles are lists of subjects for which Wikipedia should have corresponding high-quality articles. They serve as  to track the status of Wikipedia's most important articles.
+Wikipedia has several types of pages which provide content in a non-prose form, for reference purposes.
+List pages enumerate items of a particular type, such as the ). There are several ways to find lists:
+Timelines list events chronologically, sometimes including links to articles with more detail. There are several ways to find timelines:
+Of particular interest may be:
+Glossaries are lists of terms with definitions. Wikipedia includes hundreds of alphabetical glossaries; they can be found two ways:
+Bibliographies list sources on a given topic, for verification or further reading outside Wikipedia:
+Discographies catalog the sound recordings of individual artists or groups.
+Portals include featured articles, images, news, categories, excerpts of key articles, links to related portals, and to-do lists for editors. There are two ways to find portals:
+ are collections of Wikipedia articles that can be viewed, downloaded, or printed into a book. They provide a roadmap for a course of study in a particular subject.
+Growing collections of Wikipedia articles are starting to become available as spoken word recordings as well.
+Wikipedia's  is a classified index system. It is automatically generated from category tags at the bottoms of articles and most other pages. Nearly all of the articles available so far on the website can be found through these subject indexes.
+If you are simply looking to browse articles by topic, there are three top-level pages to choose from:
+For biographies, see .
+ lists every category alphabetically.
+Wikipedia's alphabetical article indexes
+. Presented by type:

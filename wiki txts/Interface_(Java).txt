@@ -1,0 +1,21 @@
+				
+Interfaces cannot be , or be bound to an object that implements the interface.
+One benefit of using interfaces is that they simulate  of classes is not allowed. However, an interface may inherit multiple interfaces and a class may implement multiple interfaces.
+
+
+Interfaces are used to encode similarities which the classes of various types share, but do not necessarily constitute a class relationship. For instance, a  interface.
+Another use of interfaces is being able to use an . Thus, without knowing the specific type, it knows that objects of that type can somehow be sorted.
+For example:
+Interfaces are defined with the following syntax (compare to ):
+Example: public interface Interface1 extends Interface2;
+The body of the interface contains .
+Thus, a simple interface may be
+The member type declarations in an interface are implicitly static, final and public, but otherwise they can be any type of class or interface.
+The syntax for implementing an interface uses this formula:
+ may implement an interface. For example,
+If a class implements an interface and does not implement all its methods, it must be marked as .
+Classes can implement multiple interfaces
+Interfaces are commonly used in the Java language for  Java does not allow the passing of methods (procedures) as arguments. Therefore, the practice is to define an interface and use it as the argument and use the method signature knowing that the signature will be later implemented.
+Interfaces can extend several other interfaces, using the same formula as described below. For example,
+is legal and defines a subinterface. Note how it allows multiple inheritance, unlike classes. Note also that  it will implement both methods simultaneously.
+Some common  interfaces are:

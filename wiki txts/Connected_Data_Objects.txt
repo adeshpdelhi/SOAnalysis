@@ -1,0 +1,4 @@
+ (EMF).
+With CDO, programmers can easily enhance existing EMF models in such a way that they can be stored and subsequently maintained in a central model repository. While  are imaginable as well.
+
+

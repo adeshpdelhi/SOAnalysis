@@ -1,0 +1,15 @@
+A  of different elements on a "canvas". The particles can interact with other particles in various ways, and may be affected by gravity, in some games. Many complex effects may be achieved. Many versions of the Falling Sand Game have been written since its introduction in 2005.
+
+
+The original game first appeared as a web-based  (Japan) in 2005. Since then, many variations of the game have appeared, most notably Burning Sand and wxSand, which introduced user-created element sets, known as mods.
+Falling sand games are generally browser-based, using Flash or Java, but mobile Android and iOS variants also exist.
+Examples include:
+Although the various sand games have differences, they share many similar characteristics:
+wxSand, The Sandbox, and The Powder Toy are the only downloadable game with a . ReactionLab 2 has versions for Android and iOS.
+All games have adjustable pen sizes. Some allow the user to select different pen shapes. The pen is generally controlled using the mouse (Etch-a-sketch Sand is an exception).
+Many falling sand games include multiple elements that are heavier or lighter than each other and can interact. For example, BHOL is a virtual black hole in The Powder Toy. By applying positive gravity, it attracts other elements and consumes them. Another example would be lava in The Sandbox, which, after cooling, becomes stone.
+Downloadable games also have the ability to save "sandboxes", or images that can be uploaded to  is not due to its poor compression.
+More commonly found in stand-alone downloadable games,  that control the various types of particles, their physical properties and interaction rules.
+Most sand games use very simple physics: particles either fall, rise, or are fixed, and may drift from side to side. The  and The Powder Toy are two of the few games with more realistic physics, including wind and pressure. The Powder Toy also includes heat and ambiental heat, newtonian gravity, and water equalisation. The Sandbox includes dynamic lighting, weather, temperature with room temperature support and multi particle elements.
+Some Falling Sand games have elements that are meant to represent humans, or to create a likeness to them.
+The Sandbox has dozens of elements that are made of more than one particle. It even has controllable vehicles and  controlled characters.

@@ -1,0 +1,9 @@
+
+BitTyrant is a result of research projects at  conference.
+As a strategic client, it has demonstrated an average increase in download speed by 70% over a standard BitTorrent client. Non-BitTyrant 
+
+
+Like , BitTyrant also supports the use of plugins. Plugins from Azureus such as 3D View and Safepeer can be used.
+Initial release date: January 2, 2007
+Version 1.1 - released January 8, 2007
+Version 1.1.1 - released September 7, 2007

@@ -1,0 +1,16 @@
+. In doing so, relational features such as queries and indexes are supported, without the overhead of SQL.
+
+
+Carbonado was originally developed for internal use by 
+Relational entities are known as  of the entity.
+Carbonado Storables are not pure .
+The actual implementation of the Storable is generated at runtime by Carbonado itself. The standard object methods of toString, equals and hashCode are also generated. This greatly simplifies the process of defining new entities, since no  needs to be written.
+The process of loading a Storable by key starts by calling a factory method to create an uninitialized instance:
+Next, the key properties are set and load is called:
+A  is a gateway to the underlying database. A few core implementations are available, which include:
+In addition, composite Repositories exist which support simple replication and logging.
+All Repositories are created using a  interface.
+Carbonado queries are defined by a simple filter expression and an order-by specification. Compared to SQL, the filter closely resembles a "where" clause. Filters can include joined properties and they may also include sub filters. This simple example queries for entities with a given message:
+ scope. Multiple persist operations are automatically grouped together, and commit must be called to complete the transaction.
+This design approach shows how Carbonado is not like an O/R mapping framework. Such frameworks typically hide the concept of transactions entirely, often by using sessions which track changes. In Carbonado, all actions are direct.
+

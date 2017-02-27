@@ -1,0 +1,15 @@
+ is required.
+
+
+The JNA library uses a small native library called  code.
+JNA is built and tested on . It is also possible to tweak and recompile the native build configurations to make it work on most other platforms that run Java.
+The following table shows an overview of types mapping between Java and native code and supported by the JNA library.
+ The meaning of TCHAR changes between char and wchar_t according to some preprocessor definitions. LPCTSTR follows.
+Native libraries have no standardized memory byte alignment flavor. JNA defaults to an OS platform specific setting, that can be overridden by a library specific custom alignment. If the alignment details are not given in the documentation of the native library, the correct alignment must be determined by trial and error during implementation of the Java wrapper.
+The following program loads the local  function.
+ platforms.
+The following program loads the  function.
+ standards platforms.
+The program below loads the  functions.
+ platforms.
+Java Native Access is known to be used in:

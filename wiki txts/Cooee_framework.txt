@@ -1,0 +1,6 @@
+The  Cooee draws its strength by providing developers with a familiar API based on Java Swing whilst also completely abstracting the developer from having any knowledge of the Javascript. This has the benefit of allowing java developers to focus on code.
+
+
+The Cooee project was started by an Australian Open Source group, "Karora" in early 2007. The Karora group branched the source code of the already established framework "Echo 2" with the goal of furthering the development and providing additional avenues for developer support. The project came about at a time when there was growing concern as to the future of the Echo Framework, and the potential lack of ongoing development.
+As of September 2009, the development for Cooee (and other Karora projects) seems to have ended, the last news post on the website  is dated 28 May 2008. Most of the website (bug tracker, forum and Cooee downloads) do not work any longer.
+Mid 2007 saw Karora quickly building other technologies around their Cooee framework. This saw the emergence of the "Moomba" and "Orana" projects, both heavily based on the Eclipse RCP API and Eclipse JFace API respectively. Both projects use Cooee as their UI framework.

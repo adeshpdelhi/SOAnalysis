@@ -1,0 +1,7 @@
+The , the current version of M3G is 1.1, but version 2.0 is in development as JSR 297.
+
+
+M3G was designed to meet the specific needs of mobile devices, which are constricted in terms of memory, and processing power, and which often lack an  or to take advantage of the hardware present on the device.
+M3G provides two ways for developers to draw 3D graphics: . A camera, and set of lights are also associated with the scene, but is not necessarily part of it. In immediate mode it is possible to display single objects, as well as entire scenes (or worlds, with a camera, lights, and background as parts of the scene).
+Retained mode always uses a , and also specifies the camera, lights, and background. Higher-level information about each object &amp;mdash; such as its geometric structure, position, and appearance &amp;mdash; is retained from frame to frame.
+The M3G standard also specifies a file format for 3D model data, including animation data. This allows developers to create content on PCs that can be loaded by M3G on mobile devices.

@@ -1,0 +1,9 @@
+ in the form of modular co-operating services.
+Originally developed by 
+
+
+Sun introduced Jini in July 1998. In November 1998, Sun announced that there were some firms supporting Jini.
+The Jini team at '.
+Jini provides the infrastructure for the Service-object-oriented architecture (SOOA).
+Locating services is done through a lookup service. Services try to contact a lookup service (LUS), either by , which requires the client to know the location of the remote service in advance.
+Jini uses a lookup service to broker communication between the client and service. This appears to be a centralized model (though the communication between client and service can be seen as decentralized) that does not scale well to very large systems. However, the lookup service can be horizontally scaled by running multiple instances that listen to the same multicast

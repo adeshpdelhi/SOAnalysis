@@ -1,0 +1,7 @@
+ AppFuse was originally created by Matt Raible, who wanted to eliminate the "ramp up" time in building new web applications.
+AppFuse provides a project skeleton, similar to the one that's created by an  and JDK 1.4+.
+Unlike other "new project" wizards, the AppFuse wizard creates a number of additional classes and files that implement features, but also serve as examples for the developer. The project is pre-configured to talk to a database, to deploy in an appserver, and to allow logging in.
+When AppFuse was first developed, it only supported Struts and Hibernate. In version 2.x, it supports Hibernate, .
+Features integrated into AppFuse includes the following:
+This out-of-the-box functionality is one of the main features in AppFuse that separates it from the other " pages from database tables or existing model objects.
+AppFuse has also been included in 

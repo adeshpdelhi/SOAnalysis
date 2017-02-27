@@ -1,0 +1,83 @@
+				.
+
+
+Aujac (Associació d'Usuaris de Java de Catalunya) born with the initial proposal to bring near the new information technologies to the people. An effort made through one of the most active Java Users Groups in Europe.
+AUJAC starts to forge as an idea during the celebration of a Java course and after the initial creation of the JUG of Sabadell by Jordi Pujol Ulied, founder and president of the Aujac, in April of year 2000.
+The interest was very high and soon summoned a first meeting for establishing the statutes and the first Board of Directors.
+The meetings occurs often and with an important collective effort that it is it could make patent in the several encounters that they were made in the current headquarters of the entity, in Sabadell.
+The members founding of AUJAC was:
+At the end of year 2000, was constituted and recognized by the Generalitat de Catalunya, and being inscribed in the "Registre General d'Entitats Jurídiques" with number of inscription: 23889 / B
+On the other hand the AUJAC was recognized by  as official JUG of Catalonia.
+And in year 2003 the AUJAC becomes the most important 16é JUG of the world: Top25 JUG Program.
+According to the num article. 2 of its statutes:
+The purposes of the association:
+Along its existence, the Aujac is it composed of several boards of directors.
+The members who compose the Board of Directors, as they marked the statutes, were chosen every two years in the General Assembly of Members, and the former members can be presented to the charge without any harm again. During the first biennium of existence of the AUJAC (2000-2002) the Board of Directors has been composed by the following persons:
+In the 2002 elections, the Board of Directors for the period 2002-2004 was:
+In the periode 2004-2006, the board of directors comes off composed in the following way:
+The main activities of the Aujac it is they centered in three main axes: formation, broadcast and collaboration projects.
+In the program of formation it is intended to:
+Facilitate the technology access to all the persons concerned to the Java technologies. Establish a shared plan of formation in all the Catalan area, which they are governed by the same criterion of evaluation and formation, with a unitary program of courses.
+The plan had a remarkable success, and the Barcelona Football club, "Fundación Once" and the University Autonòma of Barcelona (UAB) was one of their customers.
+The plan of formation also allowed the creation of a Java Master Course at the "Fundació Indústries de la Informació", entity promoted by Mr. Antoni Farrés .
+Otherwise, it is also they imparted several courses in the EUIS, Escola Universitària d'Informàtica de Sabadell, ascribed to the UAB.
+With respect to the diffusion of the Java technology, Aujac organized the "Sun Tech Day" in Sabadell 2004, and three editions of the "Jornades Java Catalanes", and became the first non-enterprise group to organize an event of this kind in Spain, copied afterwards by JavaHispano, which made two editions of a similar event, after having attended the first as a viewer.
+As explained in the definition of the "Jornades Java Catalanes" these were:
+Aujac was pioneer in the Spanish state, the year 2003, in being the first non-profit organization that achieved to gather in a same event about Java, the university world, the enterprise sector and the general society, acting as link of union among them.
+This joint position of initiative and leadership between Aujac and all the Catalan universities, makes the present model have been adopted by other similar entities all over the Spanish state when carrying out similar events certifying the success of the same ones.
+The first "Jornades Java Catalanes" was celebrated at the ETSE, "Escola Técnica Superior d'Enginyeria" from the "Universitat Autonòma de Barcelona", on 25 February 2003.
+The sponsors of this event were:
+and the collaborator companies&#160;:
+We can find press releases in Vilaweb:
+The second "Jornades Java Catalanes" was celebrated at the Universitat Internacional de Catalunya, the 15th and 16 April in 2004.
+The sponsors of this event were:
+The participant companies were::
+And the collaborator companies were:
+They receive support from:
+Some press notes can be consulted to several newspapers like&#160;:
+The second "Jornades Java Catalanes" was celebrated at the "Sala de Congressos del Parc d’Innovació La Salle", located at the University Campus of the given university, in 14th and 15 April in 2005.
+The sponsors of this event were:
+The participant companies were::
+They receive support from:
+You can see several press notes on a different sources:
+- Press note at COEIC:
+- Press note at LaFarga.cat
+Belong of the collaboration among the EUIS and AUJAC, a Sun Tech Day was organized by them.
+Angela Caicedo, Technology Evangelist of , was the speaker of the presentation of the Java2 Standard Edition 5.0 (Tiger).
+That explained the new features and the technical aspects of this last version of the Java platform.
+Also it made demonstrations of how to develop applications helping for us of the new possibilities.
+The session took place on the 20th of December 2004 from 17.30 to 20.00 hours. The assistants received original CDs of Sun and a T-shirt, and raffled books and other gifts.
+Almost 100 persons attended the act.
+During the act, AUJAC gives a commemorative diploma of gratitude to Mr. Reginald Hutcherson (boss of the Java Technology Evangelist).
+You can you find references of this event in the web page of the EUIS:
+The Aujac promotes several collaboration projects with entities from all over the territory. Basicament spread on two main axes: those activities that offered a series of services to the community, and of another the impulse of the technology in educational areas.
+It is necessary to highlight that in the area of the teaching, the Aujac signs with the UAB University, several agreements of collaboration among those that highlight the teaching courses as well as the direction of career projects under the direction of Jordi Pujol Ulied, president of Aujac.
+It is necessary to highlight that was signed two final university projects:
+Aujac gives every April, the Honour Member to a personality or Catalan entity.
+With this distinction they want to recognize those personalities or entities that with their disposition, implication, dedication and effort, have contributed to the growth and development of the technology society in our country.
+
+In 2001, Mr. was elected as Honour Member of Aujac.
+Political icon of the democratic movement in the seventies in Sabadell, was the first democratic mayor of the quoted population, and one of the big social instigators of the post Franco's regime.
+Instigator on the other hand, of projects of the technology society, like the creation of the "Fundació Indústries de la Informació", with headquarters in Sabadell, or instigator of the projects of electronic administrations in Catalonia.
+It is necessary to highlight that the open speech of the Aujac social presentation was offered by him in the headquarters of the ancient F2I, "Fundació Indústries de la Informació", in Sabadell, that today is the Chamber of Commerce of Sabadell.
+
+Joan Daví i Ferrer, became Member of Honor Aujac the year 2002.
+Joan Daví i Ferrer, from Terrassa, director of projects in "Caixa Terrassa", led in the bank world an opening towards the non-proprietary systems that it led to conceiving unedited bank architectures until then it, and who broke outlines, and especially with the traditional systems established in the financial environments.
+Nowadays, its designs in computer architectures devoted to the bank services are a referent.
+For all of this reasons, Aujac considered to distinguish it with the Honour member.
+
+Dr. Jordi Roig de Zarate, professor of the IT Department of the UAB University. It was Director of the EUIS in Sabadell, during period 2000-2002.
+Constant fighter towards the own difficulties has always known how to win the battle of the adversities, demonstrating that many times, there are not barriers that can be through with effort, dedication and constancy.
+Their spirit of improvement, together with its professional profile, they act as him a person who has known how to transmit its pupils the illusion about the new technologies.
+Him for this qualities and many others, that Dr. Jordi Roig de Zarate was called "Honour Member" in year 2003.
+
+The Mr. Eduard Elias (right), dean of the "Col.legi Official d'Enginyeria en Informàtica de Catalunya", was elected "2004 Honour Member". Promoter and instigator of the Catalan Association of Engineers in Computer Science (ACEI), he was some of the craftsmen of the creation of the Official School of Engineering in Computer Science of Catalonia.
+This Honour Member recognizes years of dedication of the technology association and the effort to attain a regularization of the profession.
+His forces and dedication has allowed the creation of the "Col.legi Official d'Enginyeria en Informàtica de Catalunya ". Arrange of this, Aujac want to give him this honour member, in 16 of April 2004, in the UNICA University.
+
+, receives on 15 April 2005, during the closing ceremony of "III Jornades Java Catalanes", the "2005 Honour Member".
+With this distinction it is wants to recognize the effort and dedication carried out, for this entity, that have demonstrated its contribution to the growth and development of information society in zones where the youngsters live in situations of exclusion, and where the new technologies could not be another barrier.
+It is from this project, and other important project like Xarxa-Òmnia, RavalNet and a long list of projects that they have acted how authentic dynamic social agents and of bridges of cohesion there where bags of social exclusion could be produced.
+According to the agreements taken in the last General Assembly of Members, on Tuesday, 24 October 2006 at 20:00 hours, was approved by over ot the two third parts of the votes, the dissolution of the association.
+The reasons that brought to the dissolution were mainly two, as they were explained at the meeting:
+This close a cycle where AUJAC was the most important non-enterprise entity that promotes the diffusion of Java.

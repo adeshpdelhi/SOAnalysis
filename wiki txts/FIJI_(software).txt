@@ -1,0 +1,19 @@
+.
+Fiji's main purpose is to provide a distribution of ImageJ with many bundled . Fiji features an integrated updating system and aims to provide users with a coherent menu structure, extensive documentation in the form of detailed algorithm descriptions and tutorials, and the ability to avoid the need to install multiple components from different sources.
+Fiji is also targeted at developers, through the use of a  Java development.
+
+
+Many 
+Further, some plugins require specific versions of ImageJ, specific versions of third-party libraries, or additional Java components such as the Java compiler or .
+One of Fiji's principal aims is to make the installation of ImageJ, Java, 
+While Fiji was originally intended for neuro-scientists (and continues to be so
+Fiji is most popular in the  and other advanced image processing algorithms.
+The Fiji component TrakEM2 was successfully used and enhanced to analyze 
+Fiji was prominently featured in Nature Methods review 
+Fiji is fully Open Source; its sources live in a  repository (see the homepage for details).
+Fiji was .
+The scripting framework, which supports  code. To this end, as one of the aforementioned Google Summer of Code projects, a script editor was added with syntax highlighting and in-place code execution.
+The scripting framework is included in the Fiji releases, so that advanced users can use such scripts in their common workflow.
+The development benefits from occasional , where life scientists with computational background meet and improve their respective plugins of interest.
+The script editor in Fiji supports rapid prototyping of scripts and ImageJ plugins, making Fiji a powerful tool to develop new image processing algorithms and explore new image processing techniques with ImageJ.
+Fiji runs on Windows, Linux and Mac OSX, Intel 32-bit or 64-bit, with limited support for MacOSX/PPC.

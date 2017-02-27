@@ -1,0 +1,15 @@
+The 
+JTS implements the geometry model and API defined in the .
+JTS defines a standards-compliant geometry system for building spatial applications; examples include viewers, spatial query processors, and tools for performing data validation, cleaning and integration. In addition to the Java library, the foundations of JTS and selected functions are maintained in a C++ port, for use in C-style linking on all major operating systems, in the form of the GEOS software library.
+JTS, and the GEOS port, are published under the  (LGPL).
+
+
+JTS provides the following functionality:
+Geometry classes support modelling points, linestrings, polygons, and collections. Geometries are linear, in the sense that boundaries are implicitly defined by linear interpolation between vertices. Geometries are embedded in the 2-dimensional Euclidean plane. Geometry vertices may also carry a Z value.
+User-defined precision models are supported for geometry coordinates. Computation is performed using algorithms which provide  under all precision models.
+GEOS is the C/C++ port of a subset of JTS and selected functions. ).
+, which in turn is a widely supported inner-engine in GIS, GEOS becomes a core geometry implementation in even more applications:
+Funding for the initial work on JTS was obtained in the Fall 2000 from 
+JTS is developed under the Java JDK 1.4 platform. It is 100% pure Java. It will run on all more recent JDKs as well.
+A JTS subset has been ported to  library.
+JTS has been ported to the  as the Net Topology Suite.

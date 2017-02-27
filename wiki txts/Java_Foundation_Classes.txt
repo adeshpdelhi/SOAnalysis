@@ -1,0 +1,8 @@
+				.
+
+
+AWT existed before JFC.  in the AWT relied on those capabilities of the native widgets, requiring the developer to also be aware of the differences between host platforms.
+An alternative graphics library called the .
+At the same time, another graphics library, called .
+On April 2, 1997,  of the widgets. This allowed Swing programs to maintain a platform-independent code base, but mimic the look of a native application. The release of JFC made IFC obsolete, and dropped interest for Microsoft's AFC.
+Using the Java programming language, Java Foundation Classes (JFC) are pre-written code in the form of class libraries (coded routines) that give the programmer a comprehensive set of graphical user interface (GUI) routines to use. The Java Foundation Classes are comparable to the Microsoft Foundation Class (MFC) library. JFC is an extension of the original Java Abstract Windowing Toolkit (AWT). Using JFC and Swing, an additional set of program components, a programmer can write programs that are independent of the windowing system within a particular operating system.

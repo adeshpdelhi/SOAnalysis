@@ -1,0 +1,11 @@
+				.
+
+
+In May 2010 the largest deployments DVB-MHP are in Italy ( and Australia.
+MHP service was also offered in  The main reasons for its lack of success in Finland were: 1) 50% of the Finnish households use the terrestrial network, where broadcasting of MHP applications can be really expensive, 2) TV broadcasters never told TV viewers about the MHP services—because the digitalization of the TV networks got extremely negative publicity in Finnish media, the broadcasters didn't want to upset their customers further if they had bought new expensive STBs which weren't capable of playing MHP apps, and 3) there were only a few MHP set-top boxes in the market—because Finland is such a small market, big manufacturers weren't interested in developing new MHP boxes just for Finland. MHP-capable STBs are no longer available in Finland.
+The U.S. cable industry has specified its own middleware system referred as 
+The MHP specifies an extensive application execution environment for digital interactive TV, independent of the underlying, vendor-specific, hardware and software. This execution environment is based on the use of a 's typical resources and facilities. The interoperable MHP applications are running on top of these APIs. A so-called Navigator-application, which is part of the terminal software, allows the user the access to all MHP applications and other DVB services (like TV and radio). Sometimes Navigator can be also a Java program itself but that is not a requirement.
+The MHP is just a part of a family of specifications, which all base on the  (GEM)-Standard, which was defined to allow the worldwide adoption of MHP.
+MHP applications come in two flavours. The first type are .
+The second, and by far the most popular flavour is 
+The MHP  support.

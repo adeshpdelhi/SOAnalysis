@@ -1,0 +1,3 @@
+ and extends it. Cactus implements an in-container strategy, meaning that tests are executed inside the container.
+The Jakarta Cactus project was retired on August 5, 2011.
+The Jakarta Cactus project announced the new 1.8.1 version 

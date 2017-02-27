@@ -1,0 +1,18 @@
+.
+JavaFX targets the .
+
+
+JavaFX Script used to be called  in September 2005.
+Its name was changed to JavaFX Script, and it became  2007.
+All the code, documentation and demos are shared in the 
+On September 10, 2010 Oracle announced at 
+On September 27, 2010 Stephen Chin announced 
+More recently, the original  is now in the process of being resurrected and enhanced.
+JavaFX Script is a compiled, , using an expression language syntax (all code blocks potentially yield values.)
+Through its standard  components.
+Although F3 began life as an interpreted language, prior to the first preview release (Q3 2008) JavaFX Script had shifted focus to being predominantly compiled. Interpreted JavaFX Script is still possible, via the  installed.
+ directly.
+Here is a simple  for JavaFX Script&#160;:
+It shows the following window/frame&#160;:
+
+This program can also be written in this way:

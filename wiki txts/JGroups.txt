@@ -1,0 +1,7 @@
+ language.
+JGroups adds a "grouping" layer over a transport protocol, internally keeping a list of participants. This list is used to:
+JGroups is a toolkit for reliable multicast communication. It can be used to create groups of processes whose members can send messages to each other. JGroups enables developers to create reliable multipoint (multicast) applications where reliability is a deployment issue. JGroups also relieves the application developer from implementing this logic themselves. This saves significant development time and allows for the application to be deployed in different environments without having to change code.
+
+
+The most powerful feature of JGroups is its flexible protocol stack, which allows developers to adapt it to exactly match their application requirements and network characteristics. The benefit of this is that you only pay for what you use. By mixing and matching protocols, various differing application requirements can be satisfied. JGroups comes with a number of protocols (but anyone can write their own), for example
+Building blocks are classes layered over JGroups channels, which provide higher-level abstractions such as

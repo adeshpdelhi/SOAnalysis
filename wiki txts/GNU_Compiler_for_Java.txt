@@ -1,0 +1,13 @@
+The 
+GCJ could compile Java 
+
+
+The GCJ runtime-libraries original source is from 
+In 2007, a lot of work was done to implement support for Java's two graphical  The GNU CLASSPATH was never completed to even Java 1.2 status and now appears to have been abandoned completely.
+As of 2015, there were no new developments announced from GCJ
+The compilation function in GCJ should have a faster start-up time than the equivalent bytecode launched in a JVM when compiling Java code into machine code.
+The .
+CNI closely resembles the .
+The authors of CNI claim for various advantages over JNI:
+CNI depends on Java classes appearing as C++ classes. For example, given a Java class,
+one can use the class thus:

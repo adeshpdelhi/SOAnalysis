@@ -1,0 +1,3 @@
+) and is left unmodified.
+The library contains:
+The library includes a user guide and API documentation, with examples on using the library to perform basic analysis of Quranic text.

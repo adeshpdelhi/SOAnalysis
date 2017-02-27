@@ -1,0 +1,13 @@
+				 (GEM).
+BD-J allows bonus content on Blu-ray Disc titles to be far more sophisticated than bonus content provided by standard 
+Sony's . The PlayStation 3 added Blu-ray Profile 1.1 support with a firmware upgrade and was used to showcase BD-Live at CES 2008 in January.
+
+
+Content authors have a variety of development strategies available, including the use of traditional  class files.
+A set of freely available tools that allow Java developers to produce complete disc images incorporating BD-J is available from the HD Cookbook Project.
+Because of the many different standards and components involved, creating unified documentation on BD-J has proven to be a challenge.
+The BD-J environment is designed to run .
+Even a simple example such as FirstBDJApp.
+A developer might choose to use not  packages and instead use:
+A working example of a program using some features from each of the class trees would be the BdjGunBunny Xlet (a very simple version of .
+and the same for the other non- packages. Likewise, when trying to play a video, one might call the Blu-ray and DAVIC utility rather than using generic JMF:

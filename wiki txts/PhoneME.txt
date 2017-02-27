@@ -1,0 +1,6 @@
+				.
+The phoneME library includes implementations of :
+
+
+phoneME provide complete or partial implementations for the following :
+Supported platforms are Linux/.

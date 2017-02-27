@@ -1,0 +1,12 @@
+
+
+
+Inspired by Minjie Shen, the entire language is designed with  operator.
+In E, all values are  by the E runtime. Arriving messages are placed into the vat's event queue; the vat's event loop processes the incoming messages one by one in order of arrival.
+E has two ways of sending messages: the  cannot happen. In distributed systems, the promise mechanism also minimizes delays caused by network latency.
+E's syntax is most similar to . Here is an extremely simple E program:
+Here is a recursive function for computing the factorial of a number, written in E. Functions are defined using the  keyword.
+In the first line,  above, the function would not be able to return a value. Being able to see up front that information escapes out of the function is helpful for security auditing.
+Since E is intended to support secure co-operation, the canonical example for E programs is the mint, a simple electronic money system in just a few lines of E. The following code defines a function that makes mints, where each mint has its own currency. Each mint can make purses that hold its currency, and any holder of two purses of the same currency can securely transfer money between the purses. By quick examination of the source code, an E programmer can easily verify that only mints may change the amount of money in circulation, that money can only be created and not destroyed, that mints can only create money of their own currency, and that only the holder of a purse can change its balance.
+Objects in E are defined with the ).
+The mint example makes use of a built-in mechanism called a 

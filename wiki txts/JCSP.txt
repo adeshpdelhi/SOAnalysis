@@ -1,0 +1,15 @@
+
+Although  is a mathematical system, JCSP does not require in-depth mathematical skill, allowing instead that programmers can achieve well-behaved software just by following simple rules.
+
+
+There are four ways in which multi-threaded programs can fail untestably:
+Generally, it is not possible to prove the absence of these four hazards merely by rigorous testing. Although rigorous testing is necessary, it is not sufficient. Instead it is necessary to have a design that can demonstrate these four hazards don't exist. CSP allows this to be done using mathematics and JCSP allows it to be done pragmatically in Java programs.
+The benefit of the basis in mathematics is that stronger guarantees of correct behaviour can be produced than would be possible with conventional  development. Fortunately, JCSP does not force its users to adopt a mathematical approach themselves, but allows them to benefit from the mathematics that underpins the library.
+Note that the CSP term  in CSP is a lightweight unit of execution that interacts with the outside world via events and is an active component that encapsulates the data structures on which it operates.
+Because the encapsulation of data is per-thread (per  keyword, and at the same time guaranteeing freedom from race conditions. JCSP provides for clear principles for designing the inter-thread communication in a way that is provably free from deadlock.
+There is a clear similarity between some classes in the standard Java API ( class to allow selection between inputs; this capability is absent from the standard Java API. Alternation is one of the core concepts that CSP uses to model events in the real world.
+ As such, it epitomises the dependability of JCSP from its mathematical basis.
+Because  sockets can be constructed to behave as blocking channels in the CSP sense, it is possible to distribute JCSP processes across multiple computers. This is achieved using the JCSP Net extension that provides channels with CSP semantics using TCP. Because CSP is compositional, it does not matter in behaviour terms whether processes are co-located or distributed. The only difference is in the relative performance. So it is possible, for example, to develop an application on a single server then compare multi-processor version of the same application with the aim of optimising the performance.
+ NXJ virtual machine that executes Java source code.
+JCSP is essentially a pure-Java API (although a research alternative exists that uses the  applications as well as Java ones.
+JCSP can therefore provide an alternative to Scala's . JCSP uses synchronised communication and actors use buffered (asynchronous) communication, each of which have their advantages in certain circumstances. JCSP allows its channels to be buffered so can easily emulate the actor model; the converse is not true.

@@ -1,0 +1,8 @@
+Jouko Pynnönen
+-messages, Credit card or Phone call.
+
+
+Kiekko.tk started in the beginning of 2004 as a simple java-applet, which didn't have a registration feature and only 10 players were able to play the game at the same time. Graphics were primitive; players were  (also known as a "smiley version"), the puck was square, and the hockey rink's entries pretty rough. The game has been developed due to its amount of active players. Next a list of the most important features:
+Every player takes control of one player in the rink. The player is controlled by a mouse. Goalies can't be controlled, as they are computer controlled. To practice, players can join training rooms where players are allowed to leave the rink whenever they see fit. Players can also join a team and play team matches. Players are able to spectate these matches as well as training matches. By clicking and holding the left mouse button, the puck can be passed or shot. By clicking the right mouse button, an automatic pass is sent to a team mate closest to the cursor the moment the right mouse button is released. To increase the competition of the game, members have organised leagues.
+There are four rankings in Kiekko.tk. Novice, Amateur, Pro, and Elite. Members are given these rankings based on the amount of hours played. Members who have played under 4 hours are novices. The other rankings go as follows:
+Moderators are assigned to ensure that members behave and play the game in a decent manner. Members failing to comply with the Kiekko regulations can be muted by them. Regular members are able to report members using the following command: /report *nickname* *reason of report*

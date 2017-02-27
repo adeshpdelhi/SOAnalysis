@@ -1,0 +1,22 @@
+In  There are several fundamentally different kinds of polymorphism:
+The interaction between parametric polymorphism and subtyping leads to the concepts of .
+
+
+Ad hoc polymorphism and parametric polymorphism were originally described in  in 1967.
+ functions seem to work generically over various types when looking at the invocations, but are considered to be two entirely distinct functions by the compiler for all intents and purposes:
+In  languages the situation can be more complex as the correct function that needs to be invoked might only be determinable at run time.
+Implicit type conversion has also been defined as a form of polymorphism, referred to as "coercion polymorphism".
+.
+The concept of parametric polymorphism applies to both  like the generalized type from which such specializations are made.
+Parametric polymorphism is ubiquitous in functional programming, where it is often simply referred to as "polymorphism". The following example in  shows a parametrized list data type and two parametrically polymorphic functions on them:
+Parametric polymorphism is also available in several object-oriented languages. For instance,  in Java:
+.
+Some languages employ the idea of . Subtype polymorphism is usually resolved dynamically (see below).
+In the following example we make cats and dogs subtypes of animals. The procedure  accepts an animal, but will also work correctly, if a subtype is passed to it:
+In another example, if , and usually contains many more types.
+—a table of functions that implement the polymorphic part of the class interface—and each object contains a pointer to the "vtable" of its class, which is then consulted whenever a polymorphic method is called. This mechanism is an example of:
+The same goes for most other popular object systems. Some, however, such as  arguments.
+A related concept is 
+Polymorphism can be distinguished by when the implementation is selected: statically (at compile time) or dynamically (at run time, typically via a .
+Static polymorphism executes faster, because there is no dynamic dispatch overhead, but requires additional compiler support. Further, static polymorphism allows greater static analysis by compilers (notably for optimization), source code analysis tools, and human readers (programmers). Dynamic polymorphism is more flexible but slower—for example, dynamic polymorphism allows duck typing, and a dynamically linked library may operate on objects without knowing their full type.
+Static polymorphism typically occurs in ad hoc polymorphism and parametric polymorphism, whereas dynamic polymorphism is usual for subtype polymorphism. However, it is possible to achieve static polymorphism with subtyping through more sophisticated use of .

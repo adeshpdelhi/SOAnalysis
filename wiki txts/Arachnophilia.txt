@@ -1,0 +1,8 @@
+.
+Arachnophilia is  (LGPL).
+
+
+Once written as a , release 1.5 or later.
+The program was licensed as 
+The program can import and convert to  development.
+Other features include:

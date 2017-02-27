@@ -1,0 +1,8 @@
+				.
+IMP is part of the .
+
+
+The core APIs are defined by the underlying Configuration .
+Contains the Java 2 Platform, Micro Edition specific classes used for I/O operations.
+Provides a form of persistent storage for Java 2 Platform, Micro Edition.
+Contains the base classes for Java 2 Platform, Micro Edition applications.

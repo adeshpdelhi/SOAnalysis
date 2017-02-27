@@ -1,0 +1,11 @@
+ which describe how to deploy the modules.
+ can be used to build EAR files.
+
+
+An EAR file is a standard  which contains one or more deployment descriptors.
+Developers can embed various artifacts within an EAR file for deployment by application servers:
+Most application servers load classes from a deployed EAR file as an isolated tree of Java , isolating the application from other applications, but sharing classes between deployed modules. For example, a deployed WAR file would be able to create instances of classes defined in a JAR file that was also included in the containing EAR file, but not necessarily those in JAR files in other EAR files. One key reason for this behavior is to allow complete separation between applications which use static singletons (e.g. Log4J), which would otherwise confuse the configuration between separate applications. This also enables different versions of applications and libraries to be deployed side-by-side.
+The  design reduces communications overhead between running applications, as class data can be shared by reference or simple copies. It also allows developers to avoid having to understand the problems that a tree of classloaders can create. However, it prevents different versions of dependent libraries from being deployed in separate applications. JBoss 4.0.2 switched to a hierarchical classloader, but in version 4.0.3 it reverted to a Unified Classloader for backwards compatibility reasons. There is now a configuration option to change this behavior. JBoss 5.x, 6.x and 7.x no longer use Unified Classloading.
+The . It contains the following XML entities:
+Each  which identifies the web module by its URL.
+Next to the Java EE deployment descriptor there can be zero or more . These are used to configure implementation-specific Java EE parameters.

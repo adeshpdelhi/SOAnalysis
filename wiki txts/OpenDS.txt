@@ -1,0 +1,23 @@
+, access control, and many extensions.
+OpenDJ began as a 
+
+
+The work on OpenDS started as an internal Sun project around February 2005. OpenDS was initially developed primarily by Neil A. Wilson. Wilson was joined by a small team of engineers from Sun's Directory Server team. The code was open-sourced in June 2006.
+Sun increased the number of developers working on OpenDS technology after open-sourcing the code. Developers outside Sun also joined the new open-source project. Community members like Boni.org, Penrose, and JBoss began to use OpenDS in their projects. In early 2008 the OpenDS project had over 20 regular contributors.
+In April 2007, the project owners modified the project governance. The text "This Project Lead, who is appointed by Sun Microsystems, is responsible for managing the entire project" was replaced by "This Project Lead, who is appointed and removed by a majority vote of the Project Owners, is responsible for managing the entire project".
+In September 2007, the project owners were laid off from Sun Microsystems.
+Late in 2007, questions arose as to whether the project was governed as an open source project. One of the project owners complained publicly that Sun Microsystems had required project owners to accept governance changes to the project in order to keep their benefits.
+OpenDJ began after the acquisition of Sun Microsystems by Oracle. At that time, Oracle announced that Sun OpenDS Standard Edition was not seen as a strategic product, although the investment on the OpenDS source code would continue. Sun had supported commercial versions of Sun OpenDS Standard Edition since version 1.0 in 2008.
+Mid-September 2010, Ludovic Poitou, then OpenDS community leader and co-project owner, left Oracle for 
+In October 2010, Oracle provided an OpenDS 2.2.1 update to the community with several fixes.
+In December 2010, ForgeRock released OpenDJ 2.4.0 including fixes and support for new features like Collective Attributes, Microsoft Active Directory Permissive Modification Control, and multiple objectclass inheritance.
+In late January 2011 Matthew Swift, previously "responsible for the core server" of the OpenDS project joined ForgeRock to work on OpenDJ as product architect. with the tools and SDK modules appearing first.
+In 2011, a few months after the acquisition of , based on OpenDS.
+ForgeRock posted an OpenDJ roadmap through release 4, targeted for 2015.
+OpenDJ 2.4, released December 2010, provided improvements corresponding to many of those defined, but not yet scheduled for OpenDS 2.4
+OpenDJ 2.6, released June 2013, provided a REST to LDAP interface allowing easy and secure access to the data, also eased integration with other services, provided native packages for Linux, and the LDAP client SDK.
+The latest release of OpenDJ is 3.0.0.
+OpenDJ 3.0 is expected to include directory proxy services, but the support for LDAP Transactions that was originally planned was dropped due to the incompatibility with the loose consistency model of LDAP.
+OpenDJ 3.1 and 3.2 are slated to include enhanced directory proxy services.
+OpenDJ 4.0 is expected to introduce virtual directory services, and a web-based management console.
+OpenDJ provides no patches. These are only available in the commercial version (Subscription) of the Directory Server.

@@ -1,0 +1,12 @@
+). Web applications are computer code which run atop application servers and are written in the language(s) the application server supports and call the runtime libraries and components the application server offers.
+Many application servers exist. The choice impacts the cost, performance, reliability, scalability, and maintainability of a web application.
+Proprietary application servers provide system services in a well-defined but proprietary manner. The application developers develop programs according to the specification of the application server. Dependence on a particular vendor is the drawback of this approach.
+An opposite but analogous case is the  platform. Java EE application servers provide system services in a well-defined, open, industry standard. The application developers develop programs according to the Java EE specification and not according to the application server. A Java EE application developed according to Java EE standard can be deployed in any Java EE application server making it vendor independent.
+This article compares the features and functionality of application servers, grouped by the hosting environment that is offered by that particular application server.
+
+
+(formerly )
+(formerly )
+(formerly JBoss AS)
+(formerly )
+Microsoft positions their middle-tier applications and services infrastructure in the  technologies in the role of an application server:

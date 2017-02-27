@@ -1,0 +1,9 @@
+The following is a list of notable  projects.
+Although some of the listed projects play a vital role for the Eclipse  the Eclipse project ecosystem covers a significantly larger scope than the Eclipse IDE.
+
+
+These projects are maintained by the Eclipse community and hosted by the Eclipse Foundation.
+The following sub-projects are located under the  sub-project:
+Projects requiring an older version of the Eclipse platform:
+The following sub-projects are located under the  sub-project:
+The following sub-projects are located under the  sub-project:

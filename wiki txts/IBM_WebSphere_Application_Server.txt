@@ -1,0 +1,33 @@
+. The first version was launched in 1998.
+
+
+WAS is built using  the open standard specification line.
+It works with a number of . It uses port 9060 for connection as the default administration port and port 9080 as the default website publication port. In case you install more WebSphere instances these values will be changed.
+(development only)
+IBM has shipped several versions and editions of WebSphere Application Server.
+In the first beta versions, WebSphere had been called Servlet Express.
+Although the versioning scheme x.1 and x.5 would usually indicate a 
+WebSphere Application Server V8.5.5 includes significant enhancements to the Liberty profile including support for Java SE 8, full Java EE 7 compliance since V8.5.5.6, and WebSphere's . Beyond this the WAS z/OS edition adds Liberty features to enable z/OS platform capabilities.
+WebSphere Application Server V8.5 offers the same  features.
+The  edition.
+ offering: application editioning, server health management, dynamic clustering and intelligent routing.
+
+This version was released on September 9, 2008. It is a  5 compliant application server.
+Following are the flagship features introduced by WebSphere Application Server Version 7:
+Flexible Management facilitates administration of a large number of WebSphere Application Server base edition and Network Deployment topologies that might be geographically distributed.
+Business-Level Application is used for managing application artifacts independent of packaging or programming models.
+The Property Based Configuration feature simplifies the experience of automating administration: an administrator can update the WebSphere Application Server Version 7 configuration using a simple property file.
+Between the general availability of WebSphere Application Server V7 and WebSphere Application Server V8 (in 2011), a number of additional capabilities were made available for V7 in the form of  which are optionally added to a V7 install. Feature Pack content has the same quality and support as main release content - the purpose of a feature pack is to deliver new innovation before the next major release. The following feature packs were provided for WebSphere Application Server V7:
+This version was released on June 30, 2006. On September 11, 2012, IBM extended the end of service for V6.1 by a full year, to September 30, 2013, and announced new version-to-version migration incentives and assistance. 1.4 compliant application server and includes the following function:
+Support for the EJB 3.0 technology and support for some webservices standards were provided by the EJB feature pack and the webservices feature packs, respectively. These function in these feature packs has been folded into the main product in version 7. Functions in the webservices feature pack include:
+With Version 6, some of the functionality previously found in WebSphere Business Integration Server Foundation (WBISF) moved into the new . Other function moved into the other editions (Express and above).
+This version was released on 16 Jan 2004. It is a J2EE 1.4 compliant application server.
+The version released on 19 November 2002. This was a J2EE 1.3 certified application server. It was a major rewrite of the V3/V4 codebase and was the first time WebSphere Application Server was coded from a common codebase. Now WAS across all deployment platforms, from  (JMS) server.
+This was a J2EE 1.2 certified application server. It inherited the database-based configuration model from V3.x for all but the single-server edition, which already used an XML datastore.
+WebSphere 3.5 is the first widely used version of WebSphere.
+IBM adds  support. Comes in two editions: Standard Edition (SE) and Advanced Edition (AE).
+Initial release in June, 1998. Was primarily a  engine.
+The WebSphere Application Server security model is based on the services provided in the operating system and the  security model. WebSphere Application Server provides implementations of user authentication and authorization mechanisms providing support for various user registries:
+The authentication mechanisms supported by WebSphere are:
+Other Java EE application servers:
+

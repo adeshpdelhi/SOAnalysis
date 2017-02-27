@@ -1,0 +1,10 @@
+				
+
+
+The Community edition (formerly known as Take 
+JUDE/Professional is the product version of JUDE with all the features of JUDE/Community plus enhancements. It has features such as input-output and diagram creation guidance. It is suitable for business use, large-sized models, and document creation. A 20-day free trial is available by obtaining an Evaluation License.
+JUDE/Professional began to support the part of diagrams' expressions of UML2.0 from version 3.0.
+JUDE/Professional supports also  from version 3.2.
+JUDE development was started by Kenji Hiranabe, CEO of Change Vision, Inc., in 1996; around the time that UML, Java, and some design patterns began appearing. He sensed that a radical UML tool for Object-Oriented Development was going to be in demand in the future and this idea spurred him to start creating JUDE. He gathered volunteer engineers in Eiwa System Management Inc., for whom he was working at the time and they developed it in their free time as a non-money making venture; JUDE was originally named JOMT.
+JUDE was provided as a free software in 1999. Five years later JUDE started selling in the Japanese market. This decision came about because some UML modeling tools existed overseas but they were a bit high priced; and the company would get feedback from Japanese users and could evolve more if JUDE was released on the market.
+The number of JUDE users was 120,000 as of October 30, 2006. In September 2009, JUDE was renamed to Astah after receiving concerns from German users who pointed out the product name was similar to the German word 

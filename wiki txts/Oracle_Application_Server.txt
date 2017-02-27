@@ -1,0 +1,14 @@
+The  1.4 specifications.
+Oracle Application Server became the first platform designed for 
+The current, relying instead on metadata repositories provided in previous releases.
+Following Oracle's acquisition of 
+
+
+Oracle Corporation marketed its first 
+Oracle Corporation subdivides some of its products into varying "editions" — apparently to facilitate marketing and license-tracking.
+Available Oracle AS editions include:-
+.
+OC4J includes the following servers:
+Oracle Application Server can utilize an "Oracle AS Infrastructure Database" — an 
+OPMN - the Oracle Process Management and Notification server - monitors components of the Oracle Application Server.
+The 

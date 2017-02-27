@@ -1,0 +1,11 @@
+
+Builds can be started by various means, including scheduling via a -like mechanism, building when other builds have completed, and by requesting a specific build URL.
+Hudson became a popular alternative to 
+When Oracle bought Sun, it declared its intention to trademark the Hudson name, and development began on a commercial version. It was decided by the majority of the development community, including Kawaguchi, to continue the project under the name  in early 2011. Oracle maintained that Hudson was continuing development and that Jenkins was a fork; the Jenkins developers considered Hudson to be the fork.
+Interest in Hudson collapsed thereafter. Eventually Oracle donated the remaining Hudson project assets to the 
+
+
+Hudson is extensible through a plugin architecture, and many plugins have been made publicly available which extend it far beyond purely being a build tool for Java projects. Plugins are available for integrating Hudson with most version control systems and bug databases. Many build tools are supported via their respective plugins. Plugins can also change the way Hudson looks or add new functionality.
+Builds can generate test reports in various formats ( is supported out of the box, others via plugins) and Hudson can display the reports and generate trends and render them in the GUI.
+In November 2010, an issue arose in the Hudson community with respect to the infrastructure used, which grew to encompass questions over Oracle's stewardship and perceived control of the project.
+On May 3, 2011, the 

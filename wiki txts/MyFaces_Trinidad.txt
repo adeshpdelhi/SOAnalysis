@@ -1,0 +1,3 @@
+Apache  framework including a large, enterprise quality component library, supporting critical features such as accessibility (e.g. Section 508), right-to-left languages, etc. It also includes a set of framework features, including&#160;:
+Trinidad is a subproject of 
+

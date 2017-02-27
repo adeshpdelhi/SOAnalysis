@@ -1,0 +1,12 @@
+
+
+ makes it possible to compare a couple of directories and synchronize their content. It can be used to create incremental backups. The synchronization can be set up to mirror a directory into another one unidirectionally, or to synchronize the content of two directories bidirectionally. Before synchronization, the user can run an analysis on the source and destination. DirSync Pro detects any kind of changes to any file/directory in the source (e.g. file/directory modification, move, deletion, renaming) and can synchronize the destination accordingly.
+
+
+
+When synchronizing bi-directionally,  offers these options to solve the bi-directional synchronization conflict:
+When synchronizing mono-directionally in a custom mode,  offers these options to solve the mono-directional synchronization conflicts:
+DirSync Pro lets the user configure unlimited number of filters to include or exclude files and directories. The user can set up a combination of unlimited number of filters of the following types:
+DirSync Pro has a schedule engine with many options to schedule synchronization tasks, e.g. every minute, hourly, daily, weekly, and monthly. DirSync Pro has many logging facilities to create detailed logs per job, per jobset, or globally.
+DirSync Pro preserves (synchronizes) DOS file attributes, POSIX file permissions and ownerships and supports symbolic links.
+(Additional info to table: Supports sym-links, many filter options, can detect changes to file/folder attributes, permissions and ownerships, can preserve those meta data in the destination, option to deep scan file contents, 'real-time sync' to watch a folder and sync automatically)

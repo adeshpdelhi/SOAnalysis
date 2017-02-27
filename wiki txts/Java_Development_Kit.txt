@@ -1,0 +1,11 @@
+The 
+
+
+The JDK has as its primary components a collection of programming tools, including:
+Experimental tools may not be available in future versions of the JDK.
+The JDK also comes with a complete  libraries.
+Copies of the JDK also include a wide selection of example programs demonstrating the use of almost all portions of the .
+The JDK forms an extended subset of a software development kit (SDK). It includes "tools for developing, debugging, and monitoring Java applications".
+In addition to the most widely used JDK discussed in this article, there are other JDKs commonly available for a variety of platforms, some of which started from the Sun JDK source and some that did not. All adhere to the basic Java specifications, but often differ in explicitly unspecified areas, such as garbage collection, compilation strategies, and optimization techniques. They include:
+In development or in maintenance mode:
+Not being maintained or discontinued:

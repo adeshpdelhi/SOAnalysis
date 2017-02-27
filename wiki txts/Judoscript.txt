@@ -1,0 +1,9 @@
+
+
+
+Judoscript was one of the first general purpose scripting languages designed specifically for use with the Java platform.
+James Jianbo Huang originated Judoscript initially as a collection of several separate packages, libraries and  that he originated for use with the Java platform in J2EE Enterprise applications.
+Huang designed Judoscript to provide a globally simple and intuitive scripting framework capable of leveraging the full suite of Java packages and third-party extensions to Java. The foundation of this design strategy was to provide an infrastructure: 1) with all the flexibility of a command shell; 2) with full interoperability and access to all facilities of Java; and 3) a simplified syntax that was intuitive to developers who are not necessarily Java programmers.
+Because of the design principles of Judoscript, Huang has stated that it is generally not suitable for Enterprise-scale application development, and is not intended to replace traditional Java syntax. For example, unlike the  without any changes.
+The advantage gained by this trade-off is that Judoscript allows for specialized constructs that are designed specifically for use with a given problem-domain. This obviates the need for "bottom up" programming that is designed from scratch using basic data structures and custom-made algorithms. Admittedly, such "bottom-up" programming is already obviated in large part by the extensive availability of standard and third-party libraries within the Java platform itself. The problem, according to Huang, is that these libraries often assume a higher level of experience with Java programming than is feasible or practical given the development requirements of most scripting applications.
+ a simple HTML scraping routine written as a loop:

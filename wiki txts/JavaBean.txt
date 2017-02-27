@@ -1,0 +1,8 @@
+In .
+
+
+The JavaBeans functionality is provided by a set of classes and interfaces in the  package.
+In order to function as a JavaBean , an object class must obey certain conventions about method naming, construction, and behaviour. These conventions make it possible to have tools that can use, reuse, replace, and connect Java Beans.
+The required conventions are as follows:
+:
+;

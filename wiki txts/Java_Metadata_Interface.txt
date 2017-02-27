@@ -1,0 +1,8 @@
+Given that .
+
+
+The JMI specification was developed under the ).
+JMI is based on the  (or UML).
+It supports the exchange of metadata through  (or XML). The MOF/XMI specifications are used for the exchange of UML models.
+Essentially, JMI can be used to write tools in Java for manipulating UML models, which can be used in  1.3 and above through:
+

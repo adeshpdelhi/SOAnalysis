@@ -1,0 +1,19 @@
+				.
+JSR 003
+Adopted early on by the .
+
+
+JMX uses a three-level architecture:
+Applications can be generic consoles (such as ) or domain-specific (monitoring) applications. External applications can interact with the MBeans through the use of JMX connectors and protocol adapters. Connectors serve to connect an agent with a remote JMX-enabled management application. This form of communication involves a connector in the JMX agent and a connector client in the management application.
+Protocol adapters provide a management view of the JMX agent through a given protocol. Management applications that connect to a protocol adapter are usually specific to the given protocol.
+
+A . Managed Beans are particularly used in the Java Management Extensions technology - but with Java EE 6 the specification provides for a more detailed meaning of a managed bean.
+The MBean represents a resource running in the , such as an application or a Java EE technical service (transactional monitor, JDBC driver, etc.). They can be used for collecting statistics on concerns like performance, resources usage, or problems (pull); for getting and setting application configurations or properties (push/pull); and notifying events like faults or state changes (push).
+Java EE 6 provides that a managed bean is a bean that is implemented by a Java class, which is called its bean class. A top-level Java class is a managed bean if it is defined to be a managed bean by any other Java EE technology specification (for example, the  technology specification), or if it meets all of the following conditions:
+No special declaration, such as an annotation, is required to define a managed bean.
+An MBean can notify the MBeanServer of its internal changes (for the attributes) by implementing the 
+There are two basic types of MBean:
+Additional types are  are dynamic MBeans that can be configured during runtime. A generic MBean class is also provided for dynamically configuring the resources during program runtime.
+An MXBean (, etc.
+An MLet (
+JMX is supported at various levels by different vendors:

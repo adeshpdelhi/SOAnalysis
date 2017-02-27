@@ -1,0 +1,6 @@
+.
+PackJacket takes care of the  for faster and simpler generation of installers.
+PackJacket is released under the terms of the .
+
+
+

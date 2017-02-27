@@ -1,0 +1,10 @@
+.
+
+
+OLAT has many features typical for e-learning platforms:
+As the strategic LMS of the  Vista.
+OLAT is a mature LMS, used to support universities with thousands of users, e.g. University of Zurich with approx. 50,000, Bildungsportal Sachsen (under the name of OPAL) with approx. 40,000, University of Hamburg with approx. 30,000 and, as of the summer semester 2011, 
+By the end of 2011 the  release was published in February 2012 with the number 8.0.
+OLAT runs without modification on .
+The requirements for OLAT are basically:
+The project was initiated in 1999 but later rebuilt using Java and released as open source in 2004.

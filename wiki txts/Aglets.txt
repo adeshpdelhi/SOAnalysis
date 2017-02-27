@@ -1,0 +1,4 @@
+ platform and library for building mobile agents based applications. An aglet is a Java agent which can autonomously and spontaneously move from one host to another carrying a piece of code with it. It can be programmed to execute at a remote host and show different behaviours at different hosts. Java based security implementations take care of authorised access to local resources at the remote hosts.
+Aglets was originally developed by  based logging system and a few bug-fixes of the older versions.
+Aglets is completely written in Java, thus allowing a high portability of both the agents and the platform. Aglets includes both a complete Java mobile agent platform, with a stand-alone server called Tahiti, and a library that allows developers to build mobile agents and to embed the Aglets technology in their applications.
+No new releases of Aglets have been made since 2001, although an updated users manual was released in 2004. The future of the project is unclear.

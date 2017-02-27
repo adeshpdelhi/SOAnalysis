@@ -1,0 +1,12 @@
+ programming language and offers a public API for further integration in other products.
+
+
+in Version 11.0 i-net Crystal-Clear was renamed to i-net Clear Reports. At this time it also gained .NET integration as a major feature.
+i-net Crystal-Clear was primarily designed to read 
+In 2002 the first version of i-net DesignerXML, the report designer, was written using Java Swing. The editing concept is slightly different from some other designers, using a band-oriented report template format, meaning that reports are designed based on rows of data.
+The development efforts has changed in more recent years to a full reporting platform approach, rather than the developer-only, framework-based one.
+True to its roots, i-net Crystal-Clear still has the ability to read and execute Crystal Reports report templates up until the latest versions of Crystal Reports.
+Unlike Crystal Reports, however, the i-net Crystal-Clear report file format has always been an open format. Until version 9.0 it was an XML format. Since version 9, the report file format is in a .
+Being a Java application, i-net Clear Reports has the ability to run on a variety of platforms and environments. There is virtually no restriction concerning data sources that can be used, as long as there is a  driver available for accessing the data. For non-JDBC data sources, there are how-to's to write simple mini-drivers. With the new .NET API it got even more flexible and allows integration into .NET based applications.
+i-net Clear Reports comes as a standalone server as well as a ).
+Features can be added using the public  which can be added to reports. User defined functions (UDF) extend the formula features of the embedded formula calculation routines.

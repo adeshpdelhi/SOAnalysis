@@ -1,0 +1,6 @@
+.
+DocFetcher's indexing and searching facilities are based on , a widely used open source search engine.
+
+
+DocFetcher is available as a portable version that allows the user to bundle DocFetcher and his or her personal files in order to create a portable and searchable index of files. Portable means the user may for instance carry around this repository on a USB drive, or a synchronize it over multiple computers via a .
+By default, DocFetcher treats pairs of HTML files (e.g. a file named foo.html and a folder named foo_files) as a single document. The purpose of this is to improve the quality of the search results by hiding files inside the HTML folders, which users are usually not interested in and which can therefore be considered "noise".

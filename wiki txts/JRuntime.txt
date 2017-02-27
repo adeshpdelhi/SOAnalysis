@@ -1,0 +1,4 @@
+ compiler API.
+This library enables compiling, executing and modifying Java-code dynamically while the program is working.
+
+

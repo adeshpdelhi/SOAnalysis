@@ -1,0 +1,9 @@
+
+
+
+In 1994, a team of Java developers started writing WebRunner, which was a clone of the internet browser 
+WebRunner's first public demonstration was given by  in 1995. Renamed HotJava, it was officially announced in May the same year at the SunWorld conference.
+The parser code was reused by the standard Java libraries.
+HotJava had somewhat limited functionality compared to other browsers of its time.
+More critically, HotJava suffered from the inherent performance limitations of 
+

@@ -1,0 +1,10 @@
+ typically running from Monday to Thursday. Technical sessions on a variety of topics are held during the day. In the evening, Birds of a Feather (BOF) sessions are held. BOF sessions allow people to focus on a particular aspect of Java technology.
+Access to the technical sessions, keynote presentations, exhibits and BOF sessions requires a conference pass, which usually costs between $1795 to $1995 USD.
+In 1999, the conference played host to an event called the  using the infrared port to communicate with other Palm users and register the device on the Internet.
+During the 2008 conference, 67 
+After the 2010 acquisition of Sun by . Rather than being located in Moscone Center, the conference is now hosted at hotels on nearby Mason Street. In some years, one block of Mason was closed and covered with a tent, which formed part of the conference venue.
+Each conference highlights a hardware device, typically made available to attendees before it is sold to the general public, or at a steep discount:
+From 2007 to 2009, an associated one-day event, , was held, for the broader free and open-source developer community.
+In 2009, CommunityOne expanded to New York City (CommunityOne East, March 18–19) and to Oslo, Norway (CommunityOne North, April 15). The third annual CommunityOne in San Francisco took place from June 1–3, 2009, at Moscone Center.
+Tracks included:
+CommunityOne was discontinued after the .

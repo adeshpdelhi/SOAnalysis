@@ -1,0 +1,5 @@
+In computing,  It is a module runtime that allows developers to implement an application as a set of "bundles" using the common services infrastructure.
+Equinox began as a project to replace the original Eclipse plug-in runtime in version 3.0 of Eclipse (c. 2004). The open source project was seeded with code donated by  for the OSGi framework specification.
+
+
+

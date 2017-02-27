@@ -1,0 +1,7 @@
+ and event driven.
+
+
+It was originally designed and implemented by Ivan Penev back in 2005 as a network layer capable to handle around 10,000 socket connections. Then it gradually included the most common functionality a programmer may need - socket communication, simple database access, reading external resources as files, URLs, etc.
+Its main focus is to hide behind simple wrappers existing Java functionality and to provide general  mechanism. In short it supports:
+Multicast:
+Database:

@@ -1,0 +1,3 @@
+The  (GEF). The project aims to provide these components, in addition to exemplary tools for select domain models which illustrate its capabilities.
+GMF was first released as part of the  release in June 2006.
+

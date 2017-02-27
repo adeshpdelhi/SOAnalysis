@@ -1,0 +1,11 @@
+
+
+
+JavaOS was originally announced in 1996 by Sun's JavaSoft subsidiary as a compact OS designed to run "in anything from net computers to pagers".
+It boots independently, supports a password protected login, own device drivers, has its own window system and API and can execute several Java applets at the same time. Java Soft has granted licenses to more than 25 manufacturers, including Oracle Corp, Acer Inc., Xerox, Toshiba Corp and Nokia. IBM and Sun announced the cooperation for JavaOS for Business at the end of March 1998.
+In 1999, Sun and IBM announced the end of the JavaOS project., leaving the choice of specific OS and Java environment to the implementer.
+The system is based on a hardware architecture native . The Java virtual machine runs on top of the microkernel.
+Platforms that the kernel runs on include:
+All  are written in Java and executed by the virtual machine.
+A graphics and windowing system implementing the  is also written in Java.
+JavaOS was designed to run on .

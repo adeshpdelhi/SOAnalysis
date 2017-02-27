@@ -1,0 +1,10 @@
+ projects.
+
+
+java.net was announced by 
+In January 2010, Oracle announced that it will migrate java.net portal to 
+In June 2016, Oracle announced that "the Java.net and Kenai.com forges will be going dark on April 28, 2017."
+The  It is part of java.net.
+The project aims at creating an online encyclopedia covering all aspects of the 
+The prominent differences between ).
+

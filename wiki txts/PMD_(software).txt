@@ -1,0 +1,9 @@
+. It uses rule-sets to define when a piece of source is erroneous. PMD includes a set of built-in rules and supports the ability to write custom rules. Typically, issues reported by PMD are not true errors, but rather inefficient code, i.e. the application could still function properly even if they were not corrected.
+While PMD does not officially stand for anything, it has several unofficial names, the most appropriate probably being .
+
+
+PMD is able to detect flaws or possible flaws in source code, like:
+PMD is released under a BSDish license while parts of it are under 
+The  code.
+PMD has .
+

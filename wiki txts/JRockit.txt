@@ -1,0 +1,12 @@
+ as part of acquisition of BEA Systems in 2008.
+The JRockit code base and the ) 8.
+JRockit was made free and publicly available in May 2011.
+Many  (processing speed) of the JVM.
+
+
+Following the finalization of the acquisition of 
+In May 2011, Oracle announced that JRockit has become free, confirming that they plan to port JRockit features on 
+Oracle claims
+JRockit 5.0 R26 bundled a set of tools called JRockit Mission Control. The tools include:
+From release R27.3 the tools suite also includes a latency analyzer that graphically visualizes when threads stall due to synchronization, file/network I/O, memory allocation and garbage collection pauses.
+

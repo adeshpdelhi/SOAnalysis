@@ -1,0 +1,12 @@
+
+
+The software is licensed under the 
+
+
+The ADempiere project was created in September 2006. Disagreement between the open-source developer community that formed around the  This activity provides a measure of both the size of its developer community and also its impact on the open source ERP software market.
+The project name comes from an Italian word, which is means "satisfy" but with additional context of "Complete , Reaching , practice, Perform Tasks , or Releasing, also , give honor, respect", here which it was considered most appropriate to what the project aims to achieve.
+The goal of the Adempiere project is the creation of a community-developed and supported open source business solution..
+The following business areas are addressed by the Adempiere application:
+All community members are entitled to their say in the project discussion forums. For practical purposes, the project is governed by a council of contributors. A leader is nominated from this council to act as overall project manager. The role of the Adempiere Council is to:
+Adempiere is developed with  port of the database is currently underway.
+Adempiere inherited the 

@@ -1,0 +1,38 @@
+.
+The title is originated from standards it comply with:
+A Java Card JCOP has a .
+
+
+Mask 0&#160;: 1998 (spring)
+Mask 1&#160;: 1998
+Mask 2 and 3&#160;: 1999
+Mask 4&#160;: 1999
+Mask 5&#160;: 2000
+Visa breakthrough program
+JCOP v2
+JCOP v2.2
+JCOP v2.2.1 – JCOP v2.3.1
+JCOP v2.3.2
+JCOP v2.4
+JCOP v2.4.1
+JCOP v2.4.2
+Smartcard controller SmartMX2, P61, flash based persistent memory
+JCOP 3.0
+JCOP 3.1
+SMX2, P60, EEPROM based persistent memory
+JCOP 3.x (not released as of Dec 26, 2014)
+JCOP is an operating system for a security sensitive embedded system environment, smartcard or secure element controllers in particular. The functional architecture can be partitioned into three parts:
+NXP offers also MIFARE emulations for Classic and DESFIRE on the same chip as additional (native) operating systems. While JCOP is based on open standards, MIFARE technology is NXP specific. Java Card applets running in JCOP can then be used to manage the MIFARE memory through Java Card API. MIFARE Plus and MIFARE Ultralight are not (yet) supported.
+GP is a high-level standard with many options. As of JCOP 3, support for GP 2.2.1 was added, in particular to support mobile use cases JCOP 3 is fully Secure Element configuration compliant.
+GP 2.2.1 card specification, core
+Amendment A - Confidential Card Content Management (C3M)
+Amendment C - Contactless Services
+Amendment D - Secure Channel Protocol 03 (AES)
+Amendment E - Security Upgrade
+UICC configuration
+Secure Element configuration
+From the optional packages JCOP 3 does not support the javacardx.famework. From the crypto and signature classes, some algorithms are not supported, i.e. MD5 and EC F2M. The key lengths (amongst others) supported are AES-128, DES, 2DES3, 3DES3, EC up to 521 bit, RSA up to 2048 bit.
+JCOP 3 supports ISO-7816, ISO-14443 type A and B (through SWP - NFC controller) and SWP/HCI. USB low speed was supported only on JCOP v2.3.1.
+JCOP 3 supports various extensions, i.e. MIFARE DESFIRE management support for . It is important to know that usage of extensions used in applets (not part of Java Card and GlobalPlatform specifications) makes this applications not portable to other Java Card and GlobalPlatform compliant operating systems.
+JCOP Tools were initially developed by IBM. The first module was a command line tool called JCOP Shell or JCShell. The development tools is a plugin to  platforms.
+JCShell is a Java program, command line tool which also supports scripting. The JCShell scripting language is sophisticated to create test and verification scripts. JCShell has a plugin structure where existing base plugin (similar to Eclipse plugins) which supports the most basic on-card APDU commands such as raw send is extended with GlobalPlatform and crypto functionality. All the plugins are extendable by own functionality (in ). There is a standalone JCShell version without the need to install Eclipse and an Eclipse-based version embedded in form of a View in the Debug perspective of JCOP Tools plugin.

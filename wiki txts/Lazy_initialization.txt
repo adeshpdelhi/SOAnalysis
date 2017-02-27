@@ -1,0 +1,32 @@
+				, or some other expensive process until the first time it is needed.
+This is typically accomplished by augmenting a variable's accessor method (or property definition) to check for a previously-created instance. If none exists a new instance is created, placed into the variable, and this new object is returned to the caller in a just-in-time fashion. In this manner object creation is deferred until first use which can, in some circumstances (e.g., sporadic object access), increase system responsiveness and speed startup by bypassing large-scale object pre-allocation. (Note that this may have attendant counter-effects on overall performance, however, as the impact of object instantiation is then amortized across the startup/warm-up phase of the system.)
+In .
+See  this pattern carries hidden dangers, as does any programming habit that relies on shared state.
+
+
+In a . This combines three ideas:
+The following is an example of a class with Lazy initialization implemented in :
+Basic Usage:
+In C, lazy evaluation would normally be implemented inside a single function, or a single source file, using static variables.
+In a function:
+Using a single source file instead allows the state to be shared between multiple functions, while still hiding it from non-related functions.
+fruit.h:
+fruit.c:
+main.c:
+In .NET 4.0 Microsoft has included a 
+Here is a dummy example in .
+The .
+A fairly straightforward 'fill-in-the-blanks' example of a Lazy Initialization design pattern, except that this uses an enumeration for the type
+Here is an example in .
+Here is an example in .
+
+Here is an example in .
+
+Here is an example of lazy initialization in  5:
+Here is an example in .
+Here is an example in .
+Here is an example in  to return the value of a variable using lazy initialization.
+The 'non-lazy' alternative is to use an initialization method that is run when the object is created and then use a simpler accessor method to fetch the value.
+Note that lazy initialization can also be used in non-.
+
+Output:

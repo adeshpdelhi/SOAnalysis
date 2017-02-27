@@ -1,0 +1,12 @@
+
+Apache Derby is developed as an 
+
+
+The core of the technology, Derby's database engine, is a full-functioned relational embedded database-engine, supporting  syntax.
+The Derby network server increases the reach of the Derby database engine by providing traditional client server functionality. The network server allows clients to connect over TCP/IP using the standard .
+An embedded database can be configured to act as a hybrid server/embedded RDBMS; to also accept TCP/IP connections from other clients in addition to clients in the same JVM.
+Apache Derby originated at Cloudscape Inc, an  technology. The first release of the database engine, then called JBMS, was in 1997. Subsequently the product was renamed Cloudscape and releases were made about every six months.
+In 1999  acquired the database assets of Informix Software, including Cloudscape. The database engine was re-branded to IBM Cloudscape and releases continued, mainly focusing on embedded use with IBM's Java products and middleware.
+In August 2004 IBM contributed the code to the  branded as Java DB.
+In March 2007 IBM announced that they would withdraw marketing and support for the Cloudscape product, but would continue to contribute to the Apache Derby project.
+The Java DB database is Oracle's supported distribution of Apache Derby.

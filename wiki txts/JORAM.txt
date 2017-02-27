@@ -1,0 +1,4 @@
+ API 1.1 (JMS 1.1). JORAM is available for download since May 2000.
+JORAM provides advanced features like clustering and high-availability, C/C++ Xoram API and ).
+JORAM is the default JMS provider in  distributed ESB (JBI) and in OW2 SCA infrastructure FraSCAti.
+Enterprise support for JORAM is available from ScalAgent D.T..

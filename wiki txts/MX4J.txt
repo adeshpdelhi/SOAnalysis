@@ -1,0 +1,3 @@
+ has been issued to address connectivity to a remote JMX agent. MX4J implements both JSR 3 and JSR 160.
+The MX4J project goals can be simplified as:
+Due to its simplicity, MX4J is widely adopted in open source projects like  and many others.

@@ -1,0 +1,22 @@
+In  documents. It has three basic parsing interfaces:
+In addition to the parsing interfaces, the API provides an  interface to provide data and structural transformations on an XML document.
+JAXP was developed under the  as JSR 5 (JAXP 1.0), JSR 63 (JAXP 1.1 and 1.2), and JSR 206 (JAXP 1.3).
+JAXP version 1.4.4 was released on September 3, 2010. JAXP 1.3 was  on February 12, 2008.
+
+
+Perhaps the easiest part of JAXP to understand, the DOM interface parses an entire XML document and constructs a complete in-memory representation of the document using the classes modeling the concepts found in the .
+The DOM parser is called a  interface. Among the many different types of tree nodes, each representing the type of data found in an XML document, the most important include:
+Refer to the  for a complete list of node types.
+The .
+The  interface that are called when the SAX parser encounters the corresponding elements in the XML document. The most important methods in this interface are:
+Clients provide a subclass of the  that overrides these methods and processes the data. This may involve storing the data into a database or writing it out to a stream.
+During parsing, the parser may need to access external documents. It is possible to store a local cache for frequently used documents using an .
+This was introduced with Java 1.3 in May 2000.
+ was designed as a median between the DOM and SAX interface. In its metaphor, the programmatic entry point is a cursor that represents a point within the document. The application moves the cursor forward - 'pulling' the information from the parser as it needs. This is different from an event based API - such as SAX - which 'pushes' data to the application - requiring the application to maintain state between events as necessary to keep track of location within the document.
+The  allowing applications to invoke an XSLT transformation. This interface was originally called TrAX (Transformation API for XML), and was developed by an informal collaboration between the developers of a number of Java XSLT processors.
+Main features of the interface are
+Two abstract interfaces Source and Result are defined to represent the input and output of the transformation. This is a somewhat unconventional use of Java interfaces, since there is no expectation that a processor will accept any class that implements the interface - each processor can choose which kinds of Source or Result it is prepared to handle. In practice all JAXP processors support the three standard kinds of ) and possibly other implementations of their own.
+The most primitive but complete example of XSLT transformation launching may look like this:
+It applies the following hardcoded XSLT transformation:
+To the following hardcoded XML document:
+The result of execution will be

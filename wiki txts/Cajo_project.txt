@@ -1,0 +1,18 @@
+The .
+
+
+The Cajo Project has been issued by the IANA port number 1198 and UDP Multicast address 224.0.23.162.
+The source code is free under the .
+Using the Cajo Project, ordinary unmodified Java objects, can be remote using a single line of code:
+These can then be used by remote machines either statically, or dynamically.
+. For example:
+The remote object implements this interface, and possibly others, then remotes the object as shown previously.
+ The user of a remote object can create a reference to this object, which actually implements the shared interface, as follows:
+A remote machine may now invoke methods on the remote object, with the exact Java syntax and semantics, as if it were local.
+ A machine dynamically uses a remote object reference as follows:
+Object object = Remote.getItem("//someHost:1198/someName");
+String someMethod = "someMethod";
+Object someArgs = new Object[...] { someArgs, ... };
+This snippet invokes a method on a remote object, providing the arguments, 
+The cajo framework can allow a machine to remote its object reference using  address of the host machine.
+The Cajo Project is also used to remote graphical user interfaces. objects.

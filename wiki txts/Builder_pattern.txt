@@ -1,0 +1,10 @@
+				. The telescoping constructor anti-pattern occurs when the increase of object constructor parameter combination leads to an exponential list of constructors. Instead of using numerous constructors, the builder pattern uses another object, a builder, that receives each initialization parameter step by step and then returns the resulting constructed object at once.
+The builder pattern has another benefit. It can be used for objects that contain flat data (
+Builder often builds a 
+
+
+The intent of the Builder design pattern is to separate the construction of a complex object from its representation. By doing so the same construction process can create different representations. 
+We have a  each car option step by step and then construct the final car with the right options:
+Of course one could dispense with Builder and just do this:
+So this indicates that the Builder pattern is more than just a means to limit constructor proliferation. It removes what could be a complex building process from being the responsibility of the user of the object that is built. It also allows for inserting new implementations of how an object is built without disturbing the client code.
+The Director assembles a car instance in the example above, delegating the construction to a separate builder object.

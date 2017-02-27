@@ -1,0 +1,18 @@
+ since its initial public release in 2001.
+
+
+All valid Java programs are also valid AspectJ programs, but AspectJ lets programmers define special constructs called . Aspects can contain several entities unavailable to standard classes. These are:
+AspectJ also supports limited forms of pointcut-based static checking and aspect reuse (by inheritance). See the  for a more detailed description of the language.
+AspectJ can be implemented in many ways, including . In all cases, the AspectJ program becomes a valid Java program that runs in a Java VM. Classes affected by aspects are binary-compatible with unaffected classes (to remain compatible with classes compiled with the unaffected originals). Supporting multiple implementations allows the language to grow as technology changes, and being Java-compatible ensures platform availability.
+Key to its success has been engineering and language decisions that make the language usable and programs deployable. The original Xerox AspectJ implementation used source weaving, which required access to source code. When Xerox contributed the code to Eclipse, AspectJ was reimplemented using the Eclipse Java compiler and a bytecode weaver based on .
+The Eclipse project supports both command-line and  foundered when Xerox put them into open source, but support for Oracle's JDeveloper did appear. IDE support has been key to Java programmers using AspectJ and understanding crosscutting concerns.
+BEA has offered limited VM support for aspect-oriented extensions, but for extensions supported in all Java VM's would require agreement through Sun's Java Community Process (see also the java.lang.instrument package available since Java SE 5 — which is a common ground for JVM load-time instrumentation).
+Academic interest in the semantics and implementation of ; it supports extensions for changing the syntax and semantics of the language and forms the basis for many AOP experiments that the AspectJ team can no longer support, given its broad user base.
+Many programmers discover AspectJ as an enabling technology for other projects, most notably  as its principal code generation output.
+ (current compiler engineer).
+The .
+AspectWerkz is a dynamic, lightweight and high-performance . It has been merged with the AspectJ project, which supports AspectWerkz functionality since AspectJ 5.
+ engineered the AspectWerkz project, and later contributed to the AspectJ project when it merged in the AspectWerkz annotation style and load-time weaving support.
+Unlike AspectJ prior to version 5, AspectWerkz did not add any new language constructs to Java, but instead supported declaration of aspects within  or a simple XML definition file.
+AspectWerkz provides an API to use the very same aspects for proxies, hence providing a transparent experience, allowing a smooth transition for users familiar with proxies.
+AspectWerkz is -style license allows the use of AspectWerkz 2.0 in both commercial and open source projects.

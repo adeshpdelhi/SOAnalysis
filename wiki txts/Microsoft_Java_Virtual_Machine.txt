@@ -1,0 +1,12 @@
+The  strategy. In 2001, Microsoft settled the lawsuit with Sun and discontinued its Java implementation.
+
+
+The Microsoft JVM won the 
+Microsoft's proprietary extensions to Java were used as evidence in the  antitrust civil actions.
+A Memorandum of the United States in Support of Motion for Preliminary Injunction in the case of United States of America vs. Microsoft claimed that Microsoft wanted to kill Java in the marketplace.
+In short, Microsoft feared and sought to impede the development of network effects that cross-platform technology like 
+In October 1997, 
+In January 2001, Sun and Microsoft settled the suit. Microsoft paid Sun $20 million and the two agreed to a plan for Microsoft to phase out products that included the older version of Microsoft Java that allegedly infringed on Sun's Java copyrights and trademarks.
+The Microsoft Java Virtual Machine was discontinued in 2003 in response to the Sun Microsystems lawsuit. Microsoft continued to offer support until December 31, 2007.
+The initial release of , or to download a copy of the Microsoft Java virtual machine.
+Service Pack 1 (SP1) for Windows XP was released on September 9, 2002. It contained post-RTM security fixes and hot-fixes, compatibility updates, optional 

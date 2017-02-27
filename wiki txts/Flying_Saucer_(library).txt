@@ -1,0 +1,9 @@
+ content.
+It is intended for embedding web-based user interfaces into Java applications, but cannot be used as a general purpose .
+Thanks to its capability to save rendered XHTML to PDF (using ), it is often used as a server side library to generate PDF documents. It has extended support for print-related things like pagination and page headers and footers.
+
+
+Flying Saucer was started in 2004 by . It is still an open-source project unrelated to Sun.
+.
+Flying saucer has very good 
+

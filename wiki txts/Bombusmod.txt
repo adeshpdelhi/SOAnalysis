@@ -1,0 +1,6 @@
+.
+There are also early preview snapshots of the separate project called  runtime.
+
+
+Official website provides ready-to-install  repository.
+Due to opensource nature, Bombus has custom modifications (or  improvements.

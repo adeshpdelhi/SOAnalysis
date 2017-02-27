@@ -1,0 +1,16 @@
+
+
+
+According to the official website:
+The name leJOS was conceived by José Solórzano, based on the acronym for Java Operating System (JOS), the name of another operating system for the RCX, , and the Spanish word "lejos."
+leJOS was originally conceived as  project, which he later forked into what is known today as leJOS. Many contributors joined the project and provided important enhancements. Among them, Brian Bagnall, Jürgen Stuber and Paul Andrews, who later took over the project as José essentially retired from it.
+As of August 20, 2006, the original leJOS for the RCX has been discontinued with the 3.0 release. Soon afterwards, iCommand, a library to control the NXT from a 
+In 2008, versions 0.5, 0.6 and 0.7 were released. In addition to numerous improvements to the core classes, the  plugin was released along with a new version of the tutorial. In 2009, there were 2 more major releases: 0.8 and 0.85. In May 2011 0.9 was released. Broadly speaking, the releases have concentrated on improvements to navigation algorithms, as well as support for numerous 3rd party sensors and the Eclipse plug-in.
+In 2013, development began on a port to the  brick. In 2014, the 0.5 and 0.6 alpha versions were released. In 2015, beta versions 0.9 and 0.9.1 were released.
+Since November 2014 leJOS is used in a slightly adapted version also in the open-source project Open Roberta.
+leJOS NXJ provides support for access to the robot's  for these products.
+By taking advantage of the .
+Here is a simple leJOS program:
+Since the first alpha release of leJOS NXJ in 2007, the project has had a consistently active following.
+The core development team has been a relatively small group. Contributions are accepted from other members of the community. Several of the interfaces to third party sensors and actuators have been contributed by members outside the core team. The platform has been used in university robotics courses, undergraduate research projects and as a platform for robotics research.
+As leJOS NXJ is a Java project, it builds on the wealth of functionality inherent in the Java platform. There are leJOS NXJ plugins for the two leading Java . Robotics developers can take advantage of the standard functionality of an IDE (code completion, refactoring and testing frameworks) as well as point-and-click implementation of NXJ functions: compiling, linking and uploading. A wealth of java open source projects (such as Apache Math) are likewise available to the NXJ robotics developer.

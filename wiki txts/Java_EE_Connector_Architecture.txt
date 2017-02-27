@@ -1,0 +1,7 @@
+ as JSR 16 (JCA 1.0), JSR 112 (JCA 1.5) and JSR 322 (JCA 1.6).
+
+
+ Version 6 requires application servers to support JCA version 1.6.
+The Java EE Connector Architecture defines a standard for connecting a compliant application server to an EIS. It defines a standard set of system-level contracts between the Java EE application server and a resource adapter. The system contracts defined by Version 1.0 of the Java EE Connector Architecture are described by the specification as follows:
+JCA Version 1.5 adds system contracts to the specification as follows:
+JCA adapters can be built to integrate with various Enterprise Information System such as ' (JDB). The Siebel adaptor provides data access via the JDB API. Great Plains Systems provides an interface called eConnect to integrate with other platforms. SAP provides an interface for Java called SAP Java Connector (SAP JCo).

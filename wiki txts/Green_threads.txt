@@ -1,0 +1,17 @@
+In 
+
+
+Green threads refers to the name of the Java thread library. The Green Team is the name of the team at Sun Microsystems that designed the Java thread library.
+On a  Green threads can be started much faster on some VMs. On uniprocessor computers, however, the most efficient model has not yet been clearly determined.
+Benchmarks on computers running the (long outdated) 
+When a green thread executes a blocking system call, not only is that thread blocked, but all of the threads within the process are blocked.
+There are also mechanisms which allow use of native threads and reduce the overhead of thread activation and synchronization:
+In 
+An exception to this is the  to an absolute minimum and to support the migration of its isolates.
+Kilim produced by the Java compiler (Quasar also supports Kotlin and Clojure).
+There are some other  that implement equivalents of green threads instead of native threads. Examples:
+The 
+In the case of GHC Haskell, a context switch occurs at the first allocation after a configurable timeout. GHC threads are also potentially run on one or more OS threads during their lifetime (there is a many-to-many relationship between GHC threads and OS threads), allowing for parallelism on 
+Occam is unusual in this list because its original implementation was tied to the , and hence no virtual machine was necessary. Later ports to other processors have introduced a virtual machine modeled on the design of the Transputer, an effective choice because of the low overheads involved.
+Most Smalltalk virtual machines do not count evaluation steps; however, the VM can still preempt the executing thread on external signals (such as expiring timers, or I/O becoming available). Usually :
+Other implementations, e.g. QKS Smalltalk, are always time-sharing. Unlike most green thread implementations, QKS Smalltalk also has support for preventing .

@@ -1,0 +1,87 @@
+In  in various programming languages varies considerably.
+Comments are sometimes processed in various ways to generate documentation external to the source code itself by .
+The flexibility provided by comments allows for a wide degree of variability, but formal conventions for their use are commonly part of  guides.
+
+
+Comments are generally formatted as either 
+Block comments 
+Line comments either start with a comment delimiter and continue until the end of the line, or in some cases, start at a specific column (character line offset) in the source code, and continue until the end of the line.
+Some programming languages employ both block and line comments with different comment delimiters. For example, 
+How best to make use of comments is subject to dispute; different commentators have offered varied and sometimes opposing viewpoints.
+Comments can be used as a form of  to outline intention prior to writing the actual code. In this case it should explain the logic behind the code rather than the code itself.
+If this type of comment is left in, it simplifies the review process by allowing a direct comparison of the code with the intended results. A common logical fallacy is that code that is easy to understand does what it's  to do.
+Comments can be used to summarize code or to explain the programmer's intent. According to this school of thought, restating the code in plain English is considered superfluous; the need to re-explain code may be a sign that it is too complex and should be rewritten, or that the naming is bad.
+Comments may also be used to explain why a block of code does not seem to fit conventions or best practices. This is especially true of projects involving very little development time, or in bug fixing. For example:
+Sometimes source code contains a novel or noteworthy solution to a specific problem. In such cases, comments may contain an explanation of the methodology. Such explanations may include diagrams and formal mathematical proofs. This may constitute explanation of the code, rather than a clarification of its intent; but others tasked with maintaining the code base may find such explanation crucial. This might especially be true in the case of highly specialized problem domains; or rarely used optimizations, constructs or function-calls.
+For example, a programmer may add a comment to explain why an , as the former is, in theory, slower than the latter. This could be written as follows:
+, although such practice is uncommon and typically relegated to external resource files.
+The following code fragment is a simple ASCII diagram depicting the process flow for a 
+Although this identical diagram could easily have been included as a comment, the example illustrates one instance where a programmer may opt not to use comments as a way of including resources in source code.
+
+Comments in a computer program often store metadata about a program file.
+In particular, many  put submission guidelines in comments to help people who read the source code of that program to send any improvements they make back to the maintainer.
+Other metadata includes: the name of the creator of the original version of the program file and the date when the first version was created, the name of the current maintainer of the program, the names of other people who have edited the program file so far, the URL of documentation about how to use the program, the name of the  for this program file, etc.
+When an algorithm in some section of the program is based on a description in a book or other reference, comments can be used to give the page number and title of the book or  or other reference.
+A common developer practice is to , meaning to add comment syntax causing that block of code to become a comment, so that it will not be executed in the final program. This may be done to exclude certain pieces of code from the final program, or (more commonly) it can be used to find the source of an error. By systematically commenting out and running parts of the program, the source of an error can be determined, allowing it to be corrected.
+An example of commenting out code for exclusion purposes is below:
+The above code fragment suggests that the programmer opted to disable the debugging option for some reason.
+Many  allow quick adding or removing such comments with single menu options or key combinations. The programmer has only to mark the part of text they want to (un)comment and choose the appropriate option.
+
+Examples of documentation generators include the programs 
+
+Occasionally syntax elements that were originally intended to be comments are re-purposed to convey additional information to a program, such as "
+Sometimes comments in source code are used as a way to relieve stress by commenting about development tools, competitors, employers, working conditions, or the quality of the code itself.
+There are various normative views and long-standing opinions regarding the proper use of comments in source code.
+Technical commentators have documented varying viewpoints on whether and when comments are appropriate in source code.
+In between these views is the assertion that comments are neither beneficial nor harmful by themselves, and what matters is that they are correct and kept in sync with the source code, and omitted if they are superfluous, excessive, difficult to maintain or otherwise unhelpful.
+Comments are sometimes used to document contracts in the  approach to programming.
+Depending on the intended audience of the code and other considerations, the level of detail and description may vary considerably.
+For example, the following Java comment would be suitable in an introductory text designed to teach beginning programming:
+This level of detail, however, would not be appropriate in the context of production code, or other situations involving experienced developers. Such rudimentary descriptions are inconsistent with the guideline: "Good comments ... clarify intent."
+There are many stylistic alternatives available when considering how comments should appear in source code. For larger projects involving a team of developers, comment styles are either agreed upon before a project starts, or evolve as a matter of convention or need as a project grows. Usually programmers prefer styles that are consistent, non-obstructive, easy to modify, and difficult to break.
+The following code fragments in C demonstrate just a tiny example of how comments can vary stylistically, while still conveying the same basic information:
+Factors such as personal preference, flexibility of programming tools, and other considerations tend to influence the stylistic variants used in source code. For example, Variation Two might be disfavored among programmers who do not have  that can automate the alignment and visual appearance of text in comments.
+Software consultant and technology commentator Allen Holub
+In this form, all the text from the ASCII characters // to the end of the line is ignored.
+Different styles can be chosen for different areas of code, from individual lines to paragraphs, routines, files, and programs. If the syntax supports both line comments and block comments, one method is to use line comments only for minor comments (declarations, blocks and edits) and to use block comments to describe higher-level abstractions (functions, classes, files and modules).
+Sometimes projects try to enforce rules like "one comment every ten lines". These kinds of rules can be counterproductive when too rigorous, but may provide a useful standard of measurement and consistency if the project participants deem it necessary.
+Programmers may use informal 
+Such tags differ widely, but might include:
+Typographic conventions to specify comments vary widely. Further, individual programming languages sometimes provide unique variants. For a detailed review, please consult the  article.
+The  programming language uses '--' to indicate a comment up to the end of the line.
+For example:
+This section of  code shows the two styles of comments used in that language.
+This ) keyword is used to add comments that describe what the program does.
+Any text on a line after an ' (apostrophe) character is also treated as a comment in .
+An example in Visual Basic .NET:
+This . The comment explains key terms and concepts, and includes a short signature by the programmer who authored the code.
+Since C99, it has also been possible to use the // syntax from C++, indicating a single-line comment.
+, but instead of two dashes, it uses three. These comments are caught by the ColdFusion engine and not printed to the browser.
+This  code fragment demonstrates how comments are used in that language, with the comments themselves describing the basic formatting rules.
+This  code fragment demonstrates how comments are used in that language, with the comments themselves describing the basic formatting rules.
+Single line comments in Haskell start with '--' (two hyphens), and multiple line comments start with '{-' and end with '-}'.
+Haskell also provides a ". In this all lines starting with &gt; are interpreted as code, everything else is considered a comment. One additional requirement is that you always leave a blank line before and after the code block:
+This  standards. The comment is designed to be read by the Javadoc processor.
+ uses // to proceed comments and /* */ for multi-line comments.
+In 's programming language, the '%' character indicates a single-line comment. Multi line comments are also available via&#160;%{ and&#160;%} brackets and can be nested, e.g.
+ uses nestable comments, which is useful when commenting a code block.
+In Niklaus Wirth's ), comments are opened with '(*' and completed with '*)'.
+for example:
+Line comments in , begin with a hash (#) symbol.
+Instead of a regular block commenting construct, Perl uses 
+Comments in  is a style adapted from Javadoc and is a common standard for documenting PHP code.
+Comments in 
+Comments in  use the hash (#) character, as in the two examples in this code:
+Specific block comments don't exist in Python, but a bare :
+Comments in .
+Single line commenting: (line starts with hash "#")
+Multi-line commenting: (comments goes between keywords "begin" and "end")
+Comments in SQL are in single-line-only form, when using two dashes:
+The syntax for  One format supported by this syntax is identical to the "block comment" style used in the syntax for C++ and Java.
+Single-line comments begin with two forward-slashes (//):
+Multiline comments start with a forward-slash followed by an asterisk (/*) and end with an asterisk followed by a forward-slash (*/):
+Multiline comments in Swift can be nested inside other multiline comments. You write nested comments by starting a multiline comment block and then starting a second multiline comment within the first block. The second block is then closed, followed by the first block:
+Comments in  (or HTML) are introduced with
+and can spread over several lines until the terminator,
+For example,
+In 

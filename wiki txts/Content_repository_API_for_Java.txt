@@ -1,0 +1,8 @@
+				.
+
+
+A JCR is a type of  in a standard way.
+The data in a JCR consists of a tree of nodes with associated properties. Data is stored in the properties, which may hold simple values such as numbers and strings or binary data of arbitrary length. Nodes may optionally have one or more types associated with them which dictate the kinds of properties, number and type of child nodes, and certain behavioral characteristics of the nodes. Nodes may point to other nodes via a special reference type property. In this way nodes in a JCR offer both . Additional node types include the referenceable node type which allows the user to reference said node through use of a universally unique identifier. Another popular type is the versionable type. This makes the repository track a document's history and store copies of each version of the document.
+A JCR can export portions of its tree to XML in two standard formats and can import hierarchies directly from XML. JSR 283 compliant implementations must support a standardized form of  search engine to give full text searches of data in the repository.
+Both JSRs are led by  and JSR.
+PHP adaptions have been started by  a cross-language content repository.

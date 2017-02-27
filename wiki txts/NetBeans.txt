@@ -1,0 +1,44 @@
+
+The NetBeans IDE is primarily intended for development in Java, but also supports other languages, in particular 
+NetBeans is .
+The NetBeans Team actively support the product and seek feature suggestions from the wider community. Every release is preceded by a time for Community testing and feedback
+
+
+
+NetBeans began in 1996 as Xelfi (word play on .
+Under Oracle, NetBeans competed with 
+NetBeans IDE 6.0 introduced support for developing IDE modules and rich client applications based on the NetBeans platform, a Java Swing  4 support, and many editor enhancements. NetBeans 6 is available in official repositories of major Linux distributions.
+NetBeans IDE 6.5, released in November 2008, extended the existing  modeling. The NetBeans IDE Bundle for C/C++ supports C/C++ and FORTRAN development.
+NetBeans IDE 6.8 is the first IDE to provide complete support of Java EE 6 and the  additionally benefit from instant messaging and issue tracking integration and navigation right in the IDE, support for web application development with PHP 5.3 and the Symfony framework, and improved code completion, layouts, hints and navigation in JavaFX projects.
+NetBeans IDE 6.9, released in June 2010, added support for , and easier code navigation (such as "Is Overridden/Implemented" annotations), formatting, hints, and refactoring across several languages.
+NetBeans IDE 7.0 was released in April 2011. On August 1, 2011, the NetBeans Team released NetBeans IDE 7.0.1, which has full support for the official release of the 
+NetBeans IDE 7.3 was released in February 2013 which added support for HTML5 and web technologies.
+NetBeans IDE 7.4 was released on October 15, 2013.
+NetBeans IDE 8.0 was released on March 18, 2014.
+NetBeans IDE 8.1 was released on November 4, 2015.
+NetBeans IDE 8.2 was released on October 3, 2016.
+NetBeans has a roadmap document for release plans.
+The NetBeans Platform is a  desktop applications. The NetBeans IDE bundle for Java SE contains what is needed to start developing NetBeans plugins and NetBeans Platform based applications; no additional SDK is required.
+Applications can install modules dynamically. Any application can include the Update Center module to allow users of the application to download  upgrades and new features directly into the running application. Reinstalling an upgrade or a new release does not force users to download the entire application again.
+The platform offers reusable services common to desktop applications, allowing developers to focus on the logic specific to their application. Among the features of the platform are:
+A showcase of applications developed on top of NetBeans Platform is available at 
+).
+ are all based on the NetBeans IDE.
+
+In an October 2016 interview with Gabriela Motroc, Oracle Vice President Bill Pataky stated that Oracle has a number of products that depend on NetBeans.
+These modules are part of the NetBeans IDE.
+The  and optimize speed. Formerly downloaded separately, it is integrated into the core IDE since version 6.0.
+The  is based on a Sun Laboratories research project that was named JFluid. That research uncovered specific techniques that can be used to lower the overhead of profiling a Java application. One of those techniques is dynamic bytecode instrumentation, which is particularly useful for profiling large Java applications. Using dynamic bytecode instrumentation and additional algorithms, the NetBeans Profiler is able to obtain runtime information on applications that are too large or complex for other profilers. NetBeans also support Profiling Points that let you profile precise points of execution and measure execution time.
+Formerly known as 
+The GUI builder has built-in support for JSR 295 (Beans Binding technology), but the support for JSR 296 () was removed in 7.1.
+The NetBeans JavaScript editor provides extended support for 
+JavaScript editor features comprise  checks.
+CSS editor features comprise  for styles names, quick navigation through the navigator panel, displaying the CSS rule declaration in a List View and file structure in a Tree View, sorting the outline view by name, type or declaration order (List &amp; Tree), creating rule declarations (Tree only), refactoring a part of a rule name (Tree only).
+The NetBeans 7.4 and later uses the new [Nashorn] JavaScript engine developed by Oracle.
+Users can choose to download NetBeans IDE bundles tailored to specific development needs. Users can also download and install all other features at a later date directly through the NetBeans IDE.
+The . Some of its features with javaEE includes
+NetBeans supports  since version 6.5. The bundle for PHP includes:
+ also releases a version of NetBeans that includes all of the features of the above bundles. This bundle includes:
+Official Ruby support was removed with the release of 7.0
+NetBeans IDE is translated into the following languages:
+Community translations of the IDE are also available in the following languages:

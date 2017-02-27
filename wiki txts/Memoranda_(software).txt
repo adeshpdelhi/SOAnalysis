@@ -1,0 +1,12 @@
+ and cross-platform personal projects and diaries manager.
+It provides a set of tools to help a user to organize their daily work:
+The Notes, Tasks and Resources are combined into the  page provides an overview of today's tasks from all active projects.
+
+
+The user interface consists of five main views (Agenda, Notes, Tasks, Events and Resources) switched as screen tabs. Navigation on items is performed with the Calendar widget and the projects list which are always available on the screen (as the expandable panels).
+On  icon is supported to keep the application running without the main window.
+The software is internationalized. So far, there are localizations for 14 languages. The specific localization is selected automatically depending on a user system locale.
+The user interface is implemented with Java  library.
+A simple -based format of a "packed project" is used.
+Notes content can be exported as  files.
+

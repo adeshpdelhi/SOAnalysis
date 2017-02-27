@@ -1,0 +1,22 @@
+.
+In May 2016, it was reported that ImageMagick had a vulnerability through which an attacker can execute arbitrary code on servers that use the application to edit user-uploaded images.
+
+
+ImageMagick was created in 1987 by John Cristy when working at 
+The software mainly consists of a number of  libraries for many programming languages.
+Execute the following on Linux or UNIX to launch the GUI:
+Otherwise, images may be edited directly by various command-line parameters without launching a GUI at all. The program uses .
+For a full list of supported formats, execute, on Linux or UNIX:
+A number of programs, such as , for converting images.
+ImageMagick has a fully integrated  as well as many others: G2F (Ada), MagickCore (C), MagickWand (C), ChMagick (Ch), ImageMagickObject (COM+), Magick++ (C++), JMagick (Java), L-Magick (Lisp), NMagick (Neko/Haxe), MagickNet (.NET), PascalMagick (Pascal), MagickWand for PHP (PHP), IMagick (PHP), PythonMagick (Python), RMagick (Ruby), or TclMagick (Tcl/TK).
+One of the basic and thoroughly-implemented features of ImageMagick is its ability to efficiently and accurately convert images between different file formats (it uses the command  to achieve this).
+The number of colors in an image can be reduced to an arbitrary number and this is done by intelligently weighing the most prominent color values present among the pixels of the image. Note that many other image handling applications do not support a color palette of an arbitrary number of colors. If, for example, one reduces an image to 13 colors via ImageMagick, some applications will open it but some will regard it as corrupted.
+A related capability is the  artistic effect, which also reduces the number of colors represented in an image. The difference between this and standard color quantization is that while in standard quantization the final palette is selected based upon a weighting of the prominence of existing colors in the image, posterization creates a palette of colors smoothly distributed across the spectrum represented in the image. Whereas with standard color quantization all of the final color values are ones that were in the original image, the color values in a posterized image may not have been present in the original image but are in between the original color values.
+A fine control is provided for the  dithering.
+In 2008, support for  4:3 images into 16:9 images without distorting the image.
+ImageMagick includes a variety of filters and features intended to create artistic effects:
+ImageMagick can use 
+The Q8 version supports up-to 8 bits-per-pixel component (8-bit grayscale, 24- or 32-bit RGB color). The Q16 version supports up-to 16 bits-per-pixel component (16-bit grayscale, up-to 48- or 64-bit RGB color).
+Below are some other features of ImageMagick:
+ImageMagick is 
+

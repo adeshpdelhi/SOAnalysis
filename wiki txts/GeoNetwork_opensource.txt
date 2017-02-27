@@ -1,0 +1,8 @@
+The  (FOSS) cataloging application for spatially referenced resources. It is a catalog of location-oriented information.
+
+
+It is a standardized and decentralized spatial information management environment designed to enable access to geo-referenced databases, 
+ data to perform preliminary geographical analysis and make reliable forecasts.
+The software has been deployed to various organizations, the first being FAO GeoNetwork and WFP VAM-SIE-GeoNetwork, both at their headquarters in  and the Global Change Information and Research Centre (GCIRC) of China are working on GeoNetwork opensource implementations as their spatial information management capacity.
+It is used for several risk information systems, in particular in the Gambia.
+Several related tools are packaged with GeoNetwork, including . GeoServer stores geographical data, while GeoNetwork catalogs collections of such data.

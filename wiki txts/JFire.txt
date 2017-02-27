@@ -1,0 +1,18 @@
+ system.
+The system has been written entirely in  can easily be extended and it requires only a relatively low effort to customize it for specific sectors or companies.
+Since November 2009, there is a  allows for the editing and rendering of reports, statistics and similar documents (e.g. invoices).
+Even though the main goal of the project is to serve as a robust and flexible  usage in small and medium-sized enterprises.
+Because JFire uses JDO as .
+Even though Java EE, JDO and Eclipse RCP provide many advantages, they have the disadvantage that they require a longer training period than older technologies (e.g. direct SQL).
+JFire was published in January 2006 under the conditions of the  (LGPL). Therefore, it is Free Software and everyone can redistribute it, modify it and use it free of charge.
+The project has been shut down. The developer, Nightlabs, went into liquidation on 1 January 2015.
+
+
+
+The history of JFire starts in 2003, when the company NightLabs decided to develop a new  (rather than multiple separate programs), they started to search for a suitable framework. After some research and evaluations, they decided to launch such an ERP framework project based on new technologies like JDO and Eclipse RCP, which make it easy for other projects to build upon.
+When first released in January 2006, it quickly gained attention in the Eclipse community: The German Eclipse Magazine published an article in May 2006,
+In late 2009, Jfire had been absorbed by the company VIENNA Advantage. 
+JFire consists of two parts - the server and different types of clients. So far, the most comprehensive client is a rich client. Additionally, there exists a  used in Yak, an access control system). Because JFire enables different companies/organizations to cooperate directly, a server acts as client to other servers, as well. Each organization has its own JDO datastore, which guarantees a very high degree of protection of privacy. Between organizations, only data essentially required by the business partner are exchanged.
+Following the framework idea, JFire is built very modular: In the client, it consists of  plug-ins based on the Eclipse Rich Client Platform (RCP) and in the server, JFire is composed of Java EE EAR modules. Due to its modularity, JFire is used as base for non-ERP applications, too, which employ a smaller number of modules (e.g. only the user, access rights and organization management).
+The Base-Module is responsible for Authentication, User- and Rightsmanagement and builds the core for transactions between different organisations and servers. On top of it comes the Trade-Module which includes Accounting, Store-Management, Reporting and forms the base for a general distribution sales network.
+The Trade-Module offers many interfaces for easy integration of external systems like third-party payment- or delivery-systems. Additionally it provides extension possibilities to build your own Business Application on top of JFire.

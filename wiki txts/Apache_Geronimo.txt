@@ -1,0 +1,11 @@
+.
+Geronimo 3, the current version, is compatible with the . This allows developers to create enterprise applications that are portable and scalable, and that integrate with legacy technologies. The older Geronimo 2 is compatible with Java EE 5.
+, Chariot Solutions, Simula Labs, and Virtuas.
+Activity on Apache Geronimo has now largely ceased. Previous prolific Geronimo committers like David Jencks and others who are at IBM are now working on the 
+
+
+
+Like an enterprise .
+A majority of the Geronimo services are added and configured through GBeans to become a part of the overall application server. A  projects.
+Here a list of the open source components that are included in the Geronimo project.
+Other Java EE application servers:

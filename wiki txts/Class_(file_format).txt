@@ -1,0 +1,27 @@
+A . If a source file has more than one class, each class is compiled into a separate class file.
+JVMs are available for many .
+
+
+On 11 December 2006, the class file format was modified under 
+There are 10 basic sections to the Java Class File structure:
+Class files are identified by the following 4 
+"We used to go to lunch at a place called St Michael's Alley. According to local legend, in the deep dark past, the  for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI.
+Because the class file contains variable-sized items and does not also contain embedded file offsets (or pointers), it is typically parsed sequentially, from the first byte toward the end. At the lowest level the file format is described in terms of a few fundamental data types:
+Some of these fundamental types are then re-interpreted as higher-level values (such as strings or floating-point numbers), depending on context. There is no enforcement of word alignment, and so no padding bytes are ever used. The overall layout of the class file is as shown in the following table.
+Java SE 9 = 53 (0x35 hex),
+Java SE 8 = 52 (0x34 hex),
+Java SE 7 = 51 (0x33 hex),
+Java SE 6.0 = 50 (0x32 hex),
+Java SE 5.0 = 49 (0x31 hex),
+JDK 1.4 = 48 (0x30 hex),
+JDK 1.3 = 47 (0x2F hex),
+JDK 1.2 = 46 (0x2E hex),
+JDK 1.1 = 45 (0x2D hex).
+For details of earlier version numbers see footnote 1 at 
+Since  doesn't support multiple variable length arrays within a struct, the code below won't compile and only serves as a demonstration.
+The constant pool table is where most of the literal constant values are stored. This includes values such as numbers of all sorts, strings, identifier names, references to classes and methods, and type descriptors. All indexes, or references, to specific constants in the constant pool table are given by 16-bit (type u2) numbers, where index value 1 refers to the first constant in the table (index value 0 is invalid).
+Due to historic choices made during the file format development, the number of constants in the constant pool table is not actually the same as the constant pool count which precedes the table. First, the table is indexed starting at 1 (rather than 0), but the count should actually be interpreted as the maximum index plus one. Additionally, two types of constants (longs and doubles) take up two consecutive slots in the table, although the second such slot is a phantom index that is never directly used.
+The type of each item (constant) in the constant pool is identified by an initial byte . The number of bytes following this tag and their interpretation are then dependent upon the tag value. The valid constant types and their tag values are:
+There are only two integral constant types, integer and long. Other integral types appearing in the high-level language, such as boolean, byte, and short must be represented as an integer constant.
+Class names in Java, when fully qualified, are traditionally dot-separated, such as "java.lang.Object". However within the low-level Class reference constants, an internal form appears which uses slashes instead, such as "java/lang/Object".
+The Unicode strings, despite the moniker "UTF-8 string", are not actually encoded according to the Unicode standard, although it is similar. There are two differences (see .

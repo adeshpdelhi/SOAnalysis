@@ -1,0 +1,8 @@
+ ), Xinox Software has asserted that JCreator is faster than competing Java-based Java IDEs.
+JCreator has three editions:
+JCreator is only available on the Windows operating system. However, both the LE and Pro versions of JCreator run adequately on 
+The feature set of the Pro version is comparable to that of other language aware IDEs with respect to project management and editing features, but lacks advanced features, such as automated , that are included with other free IDEs. Unlike the dominant Java IDEs today, JCreator also lacks the level of extensibility through third-party plugins that is common in popular Java IDEs.
+
+
+()
+Some of the features missing from the freeware edition (Version 3) include:

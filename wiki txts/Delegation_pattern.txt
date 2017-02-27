@@ -1,0 +1,9 @@
+				.
+In the example below (using the  call to its internal Rectangle object (its delegate).
+Some languages have special support for delegation built in.
+In delegation, an  object, not the original object.
+
+
+In the Introduction to Gamma et al. 1994, Grady Booch defined delegation as:
+
+Note that this article uses "sending object/receiving object" for the two objects, rather than "receiving object/delegate", emphasizing which objects send and receive the delegation call, not the original call.

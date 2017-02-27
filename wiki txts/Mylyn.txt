@@ -1,0 +1,5 @@
+.
+Mylyn is an 
+It focuses on improving productivity by reducing searching, scrolling, and navigation. By making task context explicit, Mylyn is also meant to facilitate multitasking, planning, reusing past efforts, and sharing expertise.
+The project name comes from 
+

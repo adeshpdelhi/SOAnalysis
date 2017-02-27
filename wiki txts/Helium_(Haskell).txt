@@ -1,0 +1,4 @@
+, primarily by Arjan van IJzendoorn, Daan Leijen, Bastiaan Heeren and Rijk-Jan van Haaften.
+Certain language features of Haskell have not been included to create more specific error messages. For this reason, it (currently) lacks , rendering it incompatible with many Haskell programs.
+It also includes Hint, an .
+

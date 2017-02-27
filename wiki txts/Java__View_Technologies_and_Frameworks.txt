@@ -1,0 +1,6 @@
+				, view-layer frameworks often overlap to varying degrees with web frameworks that provide other functionality for Java web applications.
+Java view-layer frameworks often claim to support some or all of the  design pattern.
+
+
+The Servlet API is the foundation of almost all Java Web View technologies. Servlet provides the basic mechanism for writing Java  for web applications. Servlets can respond to HTTP requests, create cookies and maintain sessions.
+

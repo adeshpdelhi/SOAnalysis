@@ -1,0 +1,18 @@
+In 
+Some ; thus, the use of object type is of little interest.
+
+
+Boxing, otherwise known as wrapping, is the process of placing a primitive type within an object so that the primitive can be used as a reference object. For example, in Java, a  class only lists references to dynamic objects — it cannot list primitive types, which are value types.
+To circumvent this,  reference.
+The boxed object is always a copy of the value object, and is usually .
+There is a direct equivalence between an unboxed primitive type and a reference to an immutable, boxed object type. In fact, it is possible to substitute all the primitive types in a program with boxed object types. Whereas assignment from one primitive to another will copy its value, assignment from one reference to a boxed object to another will copy the reference value to refer to the same object as the first reference. However, this will not cause any problems, because the objects are immutable, so there is semantically no real difference between two references to the same object or to different objects (unless you look at physical equality). For all operations other than assignment, such as arithmetic, comparison, and logical operators, one can unbox the boxed type, perform the operation, and re-box the result as needed. Thus, it is possible to not store primitive types at all.
+Autoboxing is the term for getting a reference type out of a value type just through  (either implicit or explicit). The compiler automatically supplies the extra source code that creates the object.
+For example, in versions of Java prior to J2SE 5.0, the following code did not compile:
+Compilers prior to 5.0 would not accept the last line.  method.
+Another example: J2SE 5.0 allows the programmer to treat a collection (such as a .
+Unboxing refers to getting the value that is associated to a given object, just through type conversion (either implicit or explicit). The compiler automatically supplies the extra source code that retrieves the value out of that object, either by invoking some method on that object, or by other means.
+For example, in versions of Java prior to J2SE 5.0, the following code did not compile:
+C# doesn't support automatic unboxing in the same meaning as Java, since it doesn't have a separate set of 'primitive types' and 'object types'. All types that have both primitive and object version in Java, are automatically implemented by the C# compiler as either primitive (value) types or object (reference) types.
+In both languages, automatic boxing does not downcast automatically, i.e. the following code won't compile:
+C#:
+Java:

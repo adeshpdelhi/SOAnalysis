@@ -1,0 +1,5 @@
+ as JSR 102, though that effort has since been abandoned.
+Suppose the file "foo.xml" contains this XML document:
+One can parse the XML file into a tree of Java objects with JDOM, like so:
+In case you don't want to create the document object from any file or any input stream, you can create the document object against the element.
+As a converse, one can construct a tree of elements, then generate an XML file from it, as in the following example:

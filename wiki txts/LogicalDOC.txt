@@ -1,0 +1,16 @@
+ that is designed to handle and share documents within an organization.
+LogicalDOC is a content repository, with  technology.
+
+
+In 2006 two developers with experience in commercial  After one year, Logical Objects decided to branch the old project and to start a completely new product called LogicalDOC.
+In mid-2008, the first release of LogicalDOC was made available at SourceForge. in order to continue the numeration from the old project.
+In the 2010 LogicalDOC won the  in category: best open source applications.
+In the 2015 Logical Objects changed its business name to LogicalDOC, the same name of the product.
+In the 2016 LogicalDOC won the  in category: Best Document Management System.
+LogicalDOC source code is distributed under GNU LGPLv3.
+LogicalDOC is a web-based document management application, so a web browser is needed to use it. Current web browsers that have been tested for compatibility with Logical Doc include: .
+LogicalDOC is developed using Java technology based on )
+The LogicalDOC architecture is based on the following technologies:
+Due to its lightweight architecture, LogicalDOC can work on a wide set of devices and can be used to implement Cloud/SaaS document management.
+Data can be stored in a RDBMS (, etc.)
+A  system manages personal documents or business documentation, making it easier to find a previous document version. It enables searching by content, using document content indexing. LogicalDOC has currently been localized in 15 languages. LogicalDOC can be set up to support distinct full-text indexes for each supported language in order to apply specific indexing algorithms tailored to a particular language or variant.

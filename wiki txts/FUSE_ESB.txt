@@ -1,0 +1,4 @@
+
+In June 2012,  Following the acquisition, Fuse ESB was rebranded as JBoss Fuse, and became available for download at the JBoss developer website or the Red Hat customer portal.
+JBoss Fuse supports 
+ has a free Apache 2.0 Licensed upstream community for the JBoss Fuse product from Red Hat.

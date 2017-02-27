@@ -1,0 +1,7 @@
+
+.
+A web server waits for client . When these requests arrive, the server does what is needed to serve the requests by providing the necessary content.
+Adding a servlet container alters this behavior. Now the web server needs also to:
+The adapter needs to know what requests it is going to serve, usually based on some pattern in the request URL, and to where to direct these requests.
+Things are more complex when the user wants to set a configuration that uses , or when they want multiple developers to work on the same web server but on different servlet container JVMs.
+

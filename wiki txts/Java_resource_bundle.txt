@@ -1,0 +1,7 @@
+A resource bundle is a  It is a way of internationalising a Java application by making the code locale-independent.
+
+
+Extracting locale-sensitive objects such as strings from the code (as opposed to  process of a software product.
+Some  to create new resource bundles or to modify existing ones.
+JavaPM files have been translated, JavaPM inserts the translations into the Java project, creating new .properties files or updating existing ones as necessary. It is not available anymore.
+The  documentation pages for each language.

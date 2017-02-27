@@ -1,0 +1,28 @@
+
+
+
+The OpenJDK project produces a number of components: most importantly the ).
+The web-browser plugin and 
+In September 2016, an Oracle employee detailed plans to add 
+OpenJDK was initially based only on the 
+There are several separate OpenJDK projects:
+In order to bundle OpenJDK in 
+On November 5, 2007, Red Hat signed both the Sun Contributor Agreement and the OpenJDK Community , the application server, technologies in a Linux environment. IcedTea provided free software alternatives for the few remaining proprietary sections in the OpenJDK project.
+In May 2008, the 
+In June 2008, Red Hat announced that the packaged binaries for OpenJDK on 
+Since August 2008, OpenJDK 7 is usable on 
+On 
+
+Sun released the Java 
+Following their promise to release a  components with alternative implementations and to make the class library completely free.
+When initially released in May 2007, 4% of the OpenJDK class library remained proprietary.
+This was made possible, over the course of the first year, by the work of 
+On November 5, 2007, 
+Also on November 2007, the 
+On December 2007, Sun moved the 
+OpenJDK has comparatively strict procedures of accepting code contributions: every proposed contribution must be reviewed by another OpenJDK committer and the contributor must have signed the Sun/Oracle Contributor Agreement.(SCA/OCA
+On 25 September 2013, Microsoft and  and Azul Systems repositories.
+On October 11, 2010, 
+On November 12, 2010, 
+On January 11, 2011, the Mac OS X Port Project was created on OpenJDK, and 
+In July 2011, 

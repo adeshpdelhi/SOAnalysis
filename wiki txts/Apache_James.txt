@@ -1,0 +1,12 @@
+ which now requires Java 1.5 or later.
+The James project manages the Apache Mailet  Many sets of mailets and matchers can be combined to produce sophisticated and complex functional behaviour.
+The Apache James project also produces pure Java libraries for implementing Sender Policy Framework (SPF), the  mail filtering language, and parsing MIME content streams, independent of Sun's JavaMail API.
+
+
+James was originally formed under the  as Jakarta-James.
+.
+James is distributed to within the Phoenix container,.
+Recent developments include a version which runs in the  application framework.
+Version 2.3.0 was released in October 2006.
+Version 2.3.1 was released in April 2007.
+Version 2.3.2 was released in August 2009.

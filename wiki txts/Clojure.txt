@@ -1,0 +1,27 @@
+
+Clojure encourages 
+Clojure is used in industry by firms such as 
+The latest stable version of Clojure is 1.8,
+
+
+Rich Hickey is the creator of the Clojure language.
+Hickey spent about 2½ years working on Clojure before releasing it publicly, much of that time working exclusively on Clojure with no outside funding. At the end of this time, Hickey sent an email announcing the language to some friends in the Common Lisp community.
+The development process is community-driven
+Rich Hickey developed Clojure because he wanted a modern 
+Clojure's approach to 
+Clojure runs on the 
+Like most other Lisps, Clojure's syntax is built on 
+As a Lisp dialect, Clojure supports .
+Clojure has support for 
+Recently Clojure introduced reader conditionals by allowing the embedding of Clojure and ClojureScript code in the same namespace.
+The primary platform of Clojure is the JVM,
+Clojure has also been used for creative computing, including visual art, music, games, and poetry.
+Variant implementations of the Clojure language have been developed for platforms other than the above:
+:
+Defining a function:
+GUI "Hello world" by calling the Java Swing library:
+Using  for that word):
+A  function that it uses internally):
+An anonymous subclass of  that doesn't write to anything, and a macro using it to silence all prints within it:
+10 threads manipulating one shared data structure, which consists of 100 vectors each one containing 10 (initially sequential) unique numbers. Each thread then repeatedly selects two random positions in two random vectors and swaps them. All changes to the vectors occur in transactions by making use of Clojure's  system.
+Output of prior example:

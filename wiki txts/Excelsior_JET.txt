@@ -1,0 +1,7 @@
+, and a toolkit to aid deployment of the optimized applications.
+
+
+Excelsior JET has passed the  and compatible hardware. (The OS X version is 64-bit only.)
+The Enterprise Edition supports the 
+-based platforms.
+Version 11.3 added support for Linux/ARM targets and Java SE Compact Profiles.

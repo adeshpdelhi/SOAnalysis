@@ -1,0 +1,73 @@
+ facilities than either of them.
+The original and -Web (browser plugin for applets).
+The latest version is Java 8, which is the only version currently supported for free by Oracle, although earlier versions are supported both by Oracle and other companies on a commercial basis.
+
+
+
+, respectively.
+In 1997, Sun Microsystems approached the  status. Sun generated revenue from Java through the selling of licenses for specialized products such as the Java Enterprise System.
+On November 13, 2006, Sun released much of its Java virtual machine (JVM) as 
+Sun's vice-president Rich Green said that Sun's ideal role with regard to Java was as an "evangelist".
+There were five primary goals in the creation of the Java language:
+As of 2015, only Java 8 is officially supported. Major release versions of Java, along with their release dates:
+
+One design goal of Java is portability, which means that programs written for the Java platform must run similarly on any combination of hardware and operating system with adequate runtime support. This is achieved by compiling the Java language code to an intermediate representation called .
+Standard libraries provide a generic way to access host-specific features such as graphics, .
+The use of universal bytecode makes porting simple. However, the overhead of interpreting bytecode into machine instructions makes interpreted programs almost always run more slowly than native 
+.
+The Oracle implementation is packaged into two different distributions: The Java Runtime Environment (JRE) which contains the parts of the Java SE platform required to run Java programs and is intended for end users, and the .
+ is another notable Java SE implementation that is licensed under the GNU GPL. The implementation started when Sun began releasing the Java source code under the GPL. As of Java SE 7, OpenJDK is the official Java reference implementation.
+The goal of Java is to make all implementations of Java compatible. Historically, Sun's trademark license for usage of the Java brand insists that all implementations be "compatible". This resulted in a legal dispute with .
+Platform-independent Java is essential to , and an even more rigorous validation is required to certify an implementation. This environment enables portable server-side applications.
+Programs written in Java have a reputation for being slower and requiring more memory than those written in C++. and other multi-core collections, and it was improved further Java 1.6.
+Some platforms offer direct hardware support for Java; there are microcontrollers that can run Java in hardware instead of a software Java virtual machine, and  option (while its support is mostly dropped in current implementations of ARM).
+Java uses an 
+One of the ideas behind Java's automatic memory management model is that programmers can be spared the burden of having to perform manual memory management. In some languages, memory for the creation of objects is implicitly allocated on the , those where the memory is still referenced but never used.
+Garbage collection may happen at any time. Ideally, it will occur when a program is idle. It is guaranteed to be triggered if there is insufficient free memory on the heap to allocate a new object; this can cause a program to stall momentarily. Explicit memory management is not possible in Java.
+Java does not support C/C++ style , where object addresses and unsigned integers (usually long integers) can be used interchangeably. This allows the garbage collector to relocate referenced objects and ensures type safety and security.
+As in C++ and some other object-oriented languages, variables of Java's ). This was a conscious decision by Java's designers for performance reasons.
+Java contains multiple types of garbage collectors. By default,
+The syntax of Java is largely influenced by , and characters, which are not objects for performance reasons. Java reuses some popular aspects of C++ (such as printf() method).
+Unlike C++, Java does not support 
+Java uses comments similar to those of C++. There are three different styles of comments: a single line style marked with two slashes (. The Javadoc style of commenting allows the user to run the Javadoc executable to create documentation for the program.
+
+The traditional 
+Source files must be named after the public class they contain, appending the suffix . When the source file contains multiple classes, make one class "public" and name the source file with that public class name.
+A , and an integer.
+The .
+The keyword , which is associated only with the class and not with any specific instance of that class. Only static methods can be invoked without a reference to an object. Static methods cannot access any class members that are not also static. Methods that are not designated static are instance methods, and require a specific instance of a class to operate.
+The keyword  indicates that the main method does not return any value to the caller. If a Java program is to exit with an error code, it must call System.exit() explicitly.
+The method name " methods, which means that the VM needs to be explicitly told which class to launch from.
+The main method must accept an  objects), but it allows an alternative syntax for creating and passing the array.
+The Java launcher launches Java by loading a given class (specified on the command line or as an attribute in a .
+Printing is part of a Java standard library: The  which also appends a new line to the passed string.
+The string "Hello World!" is automatically converted to a String object by the compiler.
+Java applets are programs that are embedded in other applications, typically in a Web page displayed in a web browser.
+The ).
+The .
+The ) from the upper-left corner in the applet's display.
+An applet is placed in an  tag is preferred where supported.
+The host application, typically a Web browser, instantiates the  whenever the display needs the applet to draw itself.
+. A servlet can almost be thought of as an applet that runs on the server side—without a face.
+The  packages in the compilation. Packages make Java well suited for large scale applications.
+The  to forward requests to the servlet and control the servlet's lifecycle.
+The  if a problem prevents it from responding to the request.
+The  method is called to close the print writer, which causes the data that has been written to the stream to be returned to the client.
+JavaServer Pages (JSP) are , a Java application in its own right, the first time it is accessed. After that, the generated servlet creates the response.
+ drawing routines of the underlying platforms.
+This example Swing application creates a single window with "Hello, world!" inside:
+The first  package.
+The .
+The  superclass is called to size the window and lay out its contents.
+The  remains active until all of the Swing top-level windows have been disposed.
+In 2004, .
+Criticisms directed at Java include the implementation of generics,
+The Java programming language requires the presence of a software platform in order for compiled programs to be executed. Oracle supplies the .
+The Java language is a key pillar in .
+Android does not provide the full Java SE standard library, although the Android SDK does include an independent implementation of a large subset of it. It supports Java 6 and some Java 7 features, offering an implementation compatible with the standard library ().
+The use of Java-related technology in Android led to a legal dispute between Oracle and Google. On May 7, 2012, a San Francisco jury found that if APIs could be copyrighted, then Google had infringed Oracle's copyrights by the use of Java in Android devices.
+The  The class library contains features such as:
+Javadoc is a comprehensive documentation system, created by 
+Sun has defined and supports four editions of Java targeting different application environments and segmented many of its  so that they belong to one of the platforms. The platforms are:
+The 
+Sun also provided an edition called  that has been superseded by later, standards-based Java ME configuration-profile pairings.

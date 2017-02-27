@@ -1,0 +1,9 @@
+
+Open Language Tools are intended for people who are involved in translation of software and documentation into different natural languages (.
+Open Language Tools consist of the  (at least 1.4.2) is installed.
+
+
+This is an application designed to convert different source file formats to an  file in the same directory as the source file. What basically happens is that the filter:
+This is an application which is made for translating the contents of  file in the past. The source and target segments are shown in order to give the translator the full context and they are directly editable.
+Initially, the translator creates a Project into which either an  or from other translators).
+There is a back-conversion tool integrated into the editor which converts the ) file, which can be later used to update the central translation database.

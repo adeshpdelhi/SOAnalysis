@@ -1,0 +1,6 @@
+In computer programming, a .
+
+
+In  of objects are usually nullary.
+In , a constructor is one of many tags that wrap data. If a constructor does not take any data arguments, it is nullary.
+

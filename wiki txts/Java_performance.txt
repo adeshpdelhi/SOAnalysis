@@ -1,0 +1,59 @@
+In , as do C and C++ programs. Performance was a matter of concern because much business software has been written in Java after the language quickly became popular in the late 1990s and early 2000s.
+Since late 1990s, the execution speed of Java programs improved significantly via introduction of , can also offer significant performance improvements.
+The  directives.
+
+
+Many optimizations have improved the performance of the JVM over time. However, although Java was often the first  to implement them successfully, they have often been used in other similar platforms as well.
+Early JVMs always interpreted 
+Adaptive optimizing is a method in computer science that performs  of parts of a program based on the current execution profile. With a simple implementation, an adaptive optimizer may simply make a trade-off between just-in-time compiling and interpreting instructions. At another level, adaptive optimizing may exploit local data conditions to optimize away branches and use inline expansion.
+A 
+The 1.0 and 1.1 
+Compressed Oops allow Java 5.0+ to address up to 32 GB of heap with 32-bit references. Java does not support access to individual bytes, only objects which are 8-byte aligned by default. Because of this, the lowest 3 bits of a heap reference will always be 0. By lowering the resolution of 32-bit references to 8 byte blocks, the addressable space can be increased to 32 GB. This significantly reduces memory use compared to using 64-bit references as Java uses references much more than some languages like C++. Java 8 supports larger alignments such as 16-byte alignment to support up to 64 GB with 32-bit references.
+Before executing a  programs, for example.
+A method named 
+In practice this method works by capturing knowledge that the Java compiler has of class flow and annotating the compiled method bytecodes with a synopsis of the class flow information. This does not make 
+Java is able to manage  with multiple processors or cores. Also, a multithreaded application can remain responsive to input, even while performing long running tasks.
+However, programs that use multithreading need to take extra care of ).
+As the Java library does not know which methods will be used by more than one thread, the standard library always locks  when needed in a multithreaded environment.
+Before Java 6, the virtual machine always  operations to ensure that it would not be modified by other threads (vector is synchronized), but because it is strictly local to the method this is needless:
+Starting with Java 6, code blocks and objects are locked only when needed, so in the above case, the virtual machine would not lock the Vector object at all.
+Since version 6u23, Java includes support for escape analysis.
+Before  allocator and did not have this problem.
+An optimization of register allocation was introduced in Sun's JDK 6;
+Class data sharing (called CDS by Sun) is a mechanism which reduces the startup time for Java applications, and also reduces 
+The corresponding improvement in start-up time is more obvious for small programs.
+Apart from the improvements listed here, each release of Java introduced many performance improvements in the JVM and Java  (API).
+JDK 1.1.6: First 
+J2SE 1.2: Use of a .
+J2SE 1.3: .
+J2SE 1.4: See , for a Sun overview of performance improvements between 1.3 and 1.4 versions.
+Java SE 5.0: 
+Java SE 6:
+Other improvements:
+See also 'Sun overview of performance improvements between Java 5 and Java 6'.
+Several performance improvements have been released for Java 7: Future performance improvements are planned for an update of Java 6 or Java 7:
+Objectively comparing the , the availability of precise information about the runtime environment and others.
+Java is often 
+Benchmarks often measure performance for small numerically intensive programs. In some rare real-life programs, Java out-performs C. One example is the benchmark of  While it's not specified how the data was measured (for example if the original Quake II executable compiled in 1997 was used, which may be considered bad as current C compilers may achieve better optimizations for Quake), it notes how the same Java source code can have a huge speed boost just by updating the VM, something impossible to achieve with a 100% static approach.
+For other programs, the C++ counterpart can, and usually does, run significantly faster than the Java equivalent. A benchmark performed by Google in 2011 showed a factor 10 between C++ and Java.
+Some optimizations that are possible in Java and similar languages may not be possible in certain circumstances in C++:
+The JVM is also able to perform processor specific optimizations or 
+Results for  between Java and C++ highly depend on which operations are compared. For example, when comparing with Java 5.0:
+The scalability and performance of Java applications on multi-core systems is limited by the object allocation rate. This effect is sometimes called an "allocation wall".
+Automatic memory management in Java allows for efficient use of lockless and immutable data structures that are extremely hard or sometimes impossible to implement without some kind of a garbage collection. Java offers a number of such high-level structures in its standard library in the java.util.concurrent package, while many languages historically used for high performance systems like C or C++ are still lacking them.
+Java startup time is often much slower than many languages, including ) must be loaded before being used.
+When compared against similar popular runtimes, for small programs running on a Windows machine, the startup time appears to be similar to 
+It seems that much of the startup time is due to input-output (IO) bound operations rather than JVM initialization or class loading (the 
+Albeit a small improvement, it is more visible in small programs that perform a simple operation and then exit, because the Java platform data loading can represent many times the load of the actual program's operation.
+Starting with Java SE 6 Update 10, the Sun JRE comes with a Quick Starter that preloads class data at OS startup to get data from the  rather than from the disk.
+ approaches the problem from the other side. Its Startup Optimizer reduces the amount of data that must be read from the disk on application startup, and makes the reads more sequential.
+In November 2004, 
+Java memory use is much higher than C++'s memory use because:
+In most cases a C++ application will consume less memory than an equivalent Java application due to the large overhead of Java's virtual machine, class loading and automatic memory resizing. For programs in which memory is a critical factor for choosing between languages and runtime environments, a cost/benefit analysis is needed.
+Performance of trigonometric functions is bad compared to C, because Java has strict specifications for the results of mathematical operations, which may not correspond to the underlying hardware implementation.
+The 
+
+In most cases Java suffers greatly from its need to copy image data from one place in memory to another before rendering it to the screen. C++ can usually avoid this large overhead by accessing memory directly. The developers of Java have attempted to overcome this limitation with certain so-called "unsafe" direct memory access classes. However, those attempts fall far short of what C++ natively offers. For example, two major Java OpenGL implementations suffer tremendously from this data duplication problem which is difficult, if not impossible, to avoid with Java.
+Some people believe that Java performance for 
+However, high performance computing applications written in Java have won benchmark competitions. In 2008,
+Programs in Java start slower than those in other compiled languages. to be fair to contestants using Java.

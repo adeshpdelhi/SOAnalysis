@@ -1,0 +1,9 @@
+.
+
+
+From 1997 to 2005 it was called Ambassador Suite and was developed and owned by GlobalSight Corp. that according to 
+The Steering committee formed by representatives of the main companies currently involved in the project are listed here.
+In December 2008 there were four Language Service Providers involved in the project: Afghan Translation Service, Applied Language Solutions, Lloyd International Translations and VistaTEC.
+According to the Translator and Reviewer Training Guide the software has the following features:
+In 2011, Globalme Language &amp; Technology released an open source plugin which connects the back end of a Drupal or Wordpress website to GlobalSight. Publishers can send their content directly to GlobalSight using this CMS plugin.
+ In 2014 Globalme and Welocalize published an open source Drupal plugin to provide integration capabilities with the Drupal TMGMT translation management plugin.

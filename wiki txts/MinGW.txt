@@ -1,0 +1,24 @@
+ applications.
+It includes a , and miscellaneous utilities.
+MinGW does not rely on 
+MinGW can be run either on the native Microsoft Windows platform, cross-hosted on .
+An alternative called .
+
+
+MinGW was originally called mingw32 (
+MinGW was selected as Project of the Month at 
+In the last quarter of 2013 a new project was started, MSYS2 together with 32-bit and 64-bit MinGW packages. This project was created to keep track with newer advances of the Cygwin project and the fact that the original MSYS was not able to keep up with Cygwin. MSYS2 is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It uses Arch Linux's Pacman as the package manager.
+Most languages supported by GCC are supported on the MinGW port as well. These include C, C++, Objective-C, Objective-C++, Fortran and Ada. The GCC runtime libraries are used (libstdc++ for C++, libgfortran for Fortran, etc.).
+MinGW links by default to the Windows OS component library  has resolved these issues, and provides fully POSIX compliant printf functionality.
+The MinGW project maintains and distributes a number of different core components and supplementary packages, including various ports of the 
+MinGW supports dynamic libraries named according to the  naming convention common on Unix and Unix-like systems.
+In addition, a component of MinGW known as 
+
+The implementation of Windows system headers and static import libraries are released under a . Binary downloads of both the complete MSYS package and individual MinGW GNU utilities are available from the MinGW site.
+MinGW was forked from version 1.3.3 of , will usually compile as easily in MinGW as they would in Cygwin.
+Windows programs written with Cygwin run on top of a , since MinGW-based programs are compiled with direct calls to Windows APIs.
+The combination of MinGW and MSYS provides a small, self-contained environment that can be loaded onto removable media without leaving entries in the 
+It is also possible to  Windows applications with MinGW-GCC under POSIX systems. This means that developers do not need a Windows installation with MSYS to compile software that will run on Windows with or without Cygwin.
+In 2005, 
+MinGW-w64 provides a more complete Win32 API implementation, including:
+Additionally, the MinGW-w64 project maintains winpthreads, a .

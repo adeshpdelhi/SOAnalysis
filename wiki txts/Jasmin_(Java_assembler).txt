@@ -1,0 +1,9 @@
+ a Java programming language compiler.
+Jasmin as an assembler takes ASCII descriptions of JVM Classes, written in a simple assembler-like syntax using the Java Virtual Machine instruction set. It converts them into binary JVM Class files, suitable for loading by a Java runtime system.
+
+
+The traditional HelloWorld starter in Jasmin:
+Jon Meyer and Troy Downing wrote Jasmin for their published book "Java Virtual Machine".
+At the time of writing there were no known freely available assembler for the Java Virtual Machine instruction set. The only known compilers at the time required input in Java syntax source code, and explicitly using a JVM instruction was impossible. Therefore, the authors set out to create an assembler suitable for manipulating and producing a class file to be executed on the Virtual machine.
+Jasmin remains the oldest and the original Java assembler known for JVM.
+Jasmin is currently located under a SourceForge Open Source project.

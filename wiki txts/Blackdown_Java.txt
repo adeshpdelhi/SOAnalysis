@@ -1,0 +1,7 @@
+				 predating Sun's official Linux port.
+Blackdown Java supported Linux on  The Java software itself still exists on many mirrors.
+At its close, Blackdown supported J2SE versions 1.4.2 on i386 and AMD64, 1.4.1 on SPARC, and 1.3.1 on PowerPC.
+In 1999 Sun Microsystems and  The incident revealed that there were long standing problems between Sun and Blackdown.
+Despite widespread confusion, Blackdown was neither , whereas at the time, Sun Java's binary redistribution policy did not. Since Java 5, the Operating System Distributor License for Java (DLJ) met many Linux distributions' requirements, lessening the demand for the older Blackdown JVM.
+The Blackdown team pioneered Sun's involvement with external, volunteer efforts. Steve Byrne, who was working at Sun at the time, worked with Sun legal to establish an agreement to license the Java test suite for a few Blackdown participants at no cost, and this was used to certify the Blackdown Java implementation as being 100% Java compatible.
+The Blackdown team received recognition at the JavaOne conference in 1998 for the work that the team had been doing.

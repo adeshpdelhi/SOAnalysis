@@ -1,0 +1,5 @@
+The 
+Like any RCP application, Bioclipse uses a plugin architecture that inherits basic functionality and visual interfaces from Eclipse, such as help system,  to provide additional functionality.
+The first stable release of Bioclipse includes a 
+Bioclipse is developed as a collaboration between the Proteochemometric Group, Dept. of Pharmaceutical Biosciences, 
+The Bioclipse Scripting Language (BSL) is a scripting environment, currently based on .org. Bioclipse defines a number of core data types that managers support, allowing information to be used between these managers.

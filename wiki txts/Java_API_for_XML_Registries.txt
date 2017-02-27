@@ -1,0 +1,2 @@
+ as JSR 93.
+JAXR provides a uniform and standard Java API for accessing different kinds of XML-based metadata registry. Current implementations of JAXR support  from the underlying registry mechanism. When writing a JAXR based client to browse or populate a registry, the code does not have to change if the registry changes, for instance from UDDI to ebXML.

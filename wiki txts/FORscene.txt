@@ -1,0 +1,54 @@
+ and publishing for broadcast, web and mobile.
+Designed by Forbidden Technologies plc to allow  features.
+Forscene won the .
+
+
+
+Forscene's functionality makes it suitable for multiple uses in the  workflow.
+For editors and producers wanting to produce broadcast-quality output, Forscene provides an environment for the early stages of post-production to happen remotely and cheaply ( Forscene then outputs instructions in standard formats which can be applied to the high-quality master-footage for detailed and high-quality editing prior to broadcast.
+Other users want to prepare footage for publishing to lower-quality media - the small screens of  formats.
+The platform was reported in July 2012 as being used by 
+The video platform is broadly referred to as Forscene. It is offered as two distinct web based services, built on a common core of code: Forscene for professional and semi-professional use and  for consumers. Both exploit the web for delivery.
+: compression machines can be bought or rented. The charge for upload to the Internet covers the storage cost.
+ which is charged by usage. Typical productions will agree a fixed price in advance which depends on expected usage.
+: there is a charge for each video published for web, mobile or podcasting based on the length of the material in minutes.
+: watching a published video is free for the viewer (with respect to FORscene) but the publisher is charged for bandwidth each time a web video is viewed or a mobile video downloaded (and the event captured so activity against published videos may be monitored).
+The Forscene system is made up of various components, discussed here.
+Forscene has its own  to allow local variations in the type of data to be encoded efficiently.
+Osprey supports loss-free video compression. FORscene users can see broadcast quality video during editing (as well as proxy quality as has been the case with Forscene's other codecs) and broadcasters can use the video output from Forscene directly for transmission.
+The Forscene video codec is called  Internet connections. By varying the frame rate, it can provide consistent picture quality even on slow connections.
+Like its predecessor  system), the Blackbird codec allows real time compression and playback of video. This is important for handling the quantity of video in modern productions, as well as the reviewing, logging, editing and publishing features of Forscene.
+The Forscene audio codec is called . Datarate and quality can be varied depending on the use: 10&#160;kbit/s for modem web video and mobile playback, 30&#160;kbit/s for audio only modem playback or broadband playback with video, and 80&#160;kbit/s per channel for editing.
+Forscene videos are served from the  the videos. As Java does not allow access to a computer's hardware, and so cannot control tape machines or video cameras directly, the compress/upload programs run as native applications. Four options are provided for this purpose:
+Logging, editing and reviewing of uploaded material can start as soon as the upload process starts.
+Files containing video, audio and still may also be uploaded using a web browser from a wired or mobile device. Uploads can run concurrently and many formats are supported (e.g. AVI, MOV, ASF, 3GP).
+The Java interface works with the default configuration on most machines, though allocating more memory to the  improves performance. It enables the following functionality:
+Each standard user account has its own password-protected web page containing the FORscene applet. Once logged on, the users have access to their own videos, library videos, and any functionality their account supports.
+Video is not stored on the local computer's hard disc, so when the user closes their web browser, their video is not accessible to subsequent users of the same computer.
+The Forscene web interface operates through Internet standards such as . If web browsing works, then Forscene almost always will too.
+The account management interface separates accounts and users. Many individuals may use the same Forscene account and each user is assigned a role (manager, commenter, reviewer, logger, editor, storyboard). The interface provides single sign-on authentication of users and central point of access to core admin / operational features on the web:
+Native  as the Java interface.
+The server infrastructure on the Forscene backbone network (referred to as the ) dedicated to Forbidden's customers are distributed over numerous locations and handle around 10,000 hours of new video content each week. These act as one system, increasing both effective capacity and redundancy. As the Java front end does most of the work during editing, and the upload software does the compression work, the server is lightly loaded and can support many users at the same time. Sites may also attach a server to their own LAN (FORscene Server) to multiply the numbers of users on their existing internet connections.
+Each client site may elect to install a single physical Forscene server per location to scale up operations and improve overall performance (e.g. the time taken to retrieve video for review). Features include:
+The product exploits high speed lan access whilst preserving the principal of access from anywhere.
+Videos which have been edited within Forscene can be conformed automatically at anything up to 1080p - full High Definition (HD). After editing Forscene uploads the full HD quality frames used in the finished programme into the Cloud. The special effects, colour correction and titles are combined at full resolution on a Forscene Cloud Server for download to a broadcaster, ready for transmission. Material can be reviewed and edited from anywhere on the web, not just one local source.
+Each web video which is published is packaged with the Java player. The video size can be chosen by the publisher from a range of sizes from 160x120 to 384x288. The frame rate depends on the available bandwidth and speed of the playback machine, with full frame rate available for fast machines and connections.
+Forbidden Technologies supplies its Blackbird decoder in the form of a Java player. This can be locked to a particular server, making it hard to pirate videos published in Forscene.
+Forscene can publish  The publisher chooses whether videos published from Forscene for mobile appear in the standard Formobile menu or are available to only selected people. Forscene can automatically notify people by text message that a video has just been published.
+The mobile player can be sent from handset to handset for free via 
+Videos edited in Forscene can be published directly as .
+Each frame of professionally shot video is tagged with a  system.
+A number of export formats are supported in addition to those mentioned above:
+Final programmes can be made, even in , and sent in broadcast quality efficiently to the broadcaster for transmission without using any third party editing systems. However FORscene supports integration with third party systems, both in broadcast and elsewhere.
+Forscene supports . For example, creation of rough cuts in Forscene can then be reliably conformed on Avid, even when they include clips which the Avid would not normally be able to ingest because of time code breaks and gaps.
+) standards.
+FORscene is a development from an editing system made by  in Europe in 1990.
+
+Forscene was the first post-production system to offer access entirely within a web browser for the broadcast industry and other professional use.
+Forscene was launched in 
+Other online tools (e.g. Jumpcut) were developed primarily with consumers in mind. Forscene's user-base includes professional broadcasters, charities, Universities,.
+
+
+
+
+

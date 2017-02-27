@@ -1,0 +1,8 @@
+).
+
+
+ interface also exists, but it's not updated with the newest features), resulting in reasonable playability even on low-end platforms.
+Currently, , though play-by-email is possible through the exchange of saved games.
+A sister project  gives MegaMek a campaign structure with a chat interface, hangars, accounts, repairs, and numerous other settings which can be defined by each server administrator as she or he wishes. There are numerous MekWars servers which offer campaigns in the different eras of BattleTech.
+In June 2003, 
+Until July 2016 Megamek was downloaded over 

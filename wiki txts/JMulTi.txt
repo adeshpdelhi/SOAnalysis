@@ -1,0 +1,2 @@
+.
+The motivation for its designed was to provide the means by which some time-series econometric procedures that were difficult or unavailable in other packages could be undertaken. Such procedures include Impulse Response Analysis with bootstrapped confidence intervals for 

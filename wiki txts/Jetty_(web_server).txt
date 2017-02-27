@@ -1,0 +1,8 @@
+
+.
+
+
+Developed as an independent open source project, in 2009 Jetty moved to 
+Originally developed in the 
+Jetty was originally called IssueTracker (its original application) and then MBServler (Mort Bay Servlet server). Neither of these were much liked, so Jetty was finally picked.
+Jetty was started in 1995 and was hosted by MortBay, creating version 1.x and 2.x, until 2000. From 2000 to 2005, Jetty was hosted by sourceforge.net where version 3.x, 4.x, and 5.x were produced. In 2005, the entire Jetty project moved to codehaus.org..

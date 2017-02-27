@@ -1,0 +1,19 @@
+
+Historically, the initial goal of the IcedTea project was to make the 
+
+
+This project was created following Sun's release under open source licenses of its .
+Due to these missing components, it was not possible to build OpenJDK only with 
+Following the announcement, the IcedTea project was started and was formally announced on June 7, 2007,
+On November 5, 2007, Red Hat signed both the Sun Contributor Agreement and the OpenJDK Community 
+Since then, a number of patches from IcedTea have made their way into OpenJDK.
+On June 2008, it was announced that IcedTea6 (as the packaged version of  where possible; the current state of each IcedTea patch is maintained on the IcedTea wiki.
+The IcedTea project started with two aims:
+IcedTea also provides a more familiar build system by providing a wrapper around the OpenJDK makefiles using the  and for work on ports to other platforms.
+IcedTea provides a  in contrast to the remainder of OpenJDK.
+From June 2007, IcedTea was able to build itself and pass a significant portion of  still remains unstable and unofficial.
+IcedTea has become popular among package maintainers for the following Linux distributions. Currently (as of April 2012):
+.
+IcedTea 1.x and 2.x can compile OpenJDK using  For now, building IcedTea 3.x requires using IcedTea 2.x or 3.x, or an OpenJDK 7 or 8 build from another source.
+Cross-architecture ports of 
+The IcedTea project has also developed a 

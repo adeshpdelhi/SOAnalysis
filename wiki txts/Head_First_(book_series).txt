@@ -1,0 +1,10 @@
+, nonstandard design and layout, and an engaging, conversational style to immerse the reader in a given topic.
+Originally, the series covered  in 2003.
+
+
+The main idea of the series is to effectively stimulate the brain by: 
+By using  the series' authors and editors try to employ varied methods to present information and accelerate the learning process.
+The offerings in the Head First series are quickly expanding. The books are also delving into subjects that are not directly related to IT, such as Math ( because of their novel approach to their subject matters.
+The official web site for the Head First series has forums for each book as well as code downloads and sample chapters. They include:
+O'Reilly established Head First Labs, where books of the series are presented and the main idea behind the series is explained. The Labs also hosts 
+The books in the series have received three nominations for Product Excellence 's yearly top 10 list for computer books from 2003 to 2005.

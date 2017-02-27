@@ -1,0 +1,16 @@
+The , containing the functions common to modern operating systems.
+JCL serves three purposes within the Java Platform:
+
+
+JCL is almost entirely written in Java, except for the parts that need direct access to the .
+Almost all of JCL is stored in a single  uses the bootstrap class loader to find the JCL.
+The upcoming 
+Any Java implementation must pass the Java  tests for compliance, which includes JCL tests.
+JCL Features are accessed through .
+Before the release of OpenJDK, the .
+Following their promise to release a fully buildable  Sun's goal was to replace the parts that remain proprietary and closed source with alternative implementations and make the Class Library completely free and open source.
+Until December 2010, the remaining encumbered part of the JDK was made available by 
+Since the first May 2007 release, Sun, with the help of the community, released as open source or replaced with open source alternatives almost all the encumbered code:
+Beginning in December 2010, all the so-called 
+).
+).

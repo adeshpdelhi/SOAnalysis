@@ -1,0 +1,72 @@
+ pages.
+Writing in the  performed by the JVM.
+On November 13, 2006, Sun Microsystems made the bulk of its implementation of Java available under the 
+The latest version is Java 8, the only supported (with e.g. security updates) version as of 2016. Oracle (and others) has announced that using older versions (than Java 8) of their JVM implementation presents serious risks due to unresolved security issues.
+
+
+The Java platform is a suite of programs that facilitate developing and running programs written in the :
+The Java platform consists of several programs, each of which provides a portion of its overall capabilities. For example, the Java compiler, which converts Java source code into Java bytecode (an intermediate language for the JVM), is provided as part of the , converts intermediate bytecode into native machine code on the fly. The Java platform also includes an extensive set of libraries.
+The essential components in the platform are the Java language compiler, the libraries, and the runtime environment in which Java intermediate bytecode executes according to the rules laid out in the virtual machine specification.
+The heart of the Java platform is the concept of a "virtual machine" that executes , or JVM. The JIT compiler translates the Java bytecode into native processor instructions at run-time and caches the native code in memory during execution.
+The use of bytecode as an intermediate language permits Java programs to run on any platform that has a virtual machine available. The use of a JIT compiler means that Java applications, after a short delay during loading and once they have "warmed up" by being all or mostly JIT-compiled, tend to run about as fast as native programs. instead of an interpreter.
+Although Java programs are  or platform independent, the code of the Java Virtual Machines (JVM) that execute these programs is not. Every supported operating platform has its own JVM.
+In most modern  library paints the user interface and handles the events itself, eliminating many subtle differences between how different platforms handle components.
+The Java class libraries serve three purposes within the Java platform. First, like other standard code libraries, the Java libraries provide the programmer a well-known set of functions to perform common tasks, such as maintaining lists of items or performing complex string parsing. Second, the class libraries provide an abstract interface to tasks that would normally depend heavily on the hardware and operating system. Tasks such as network access and file access are often heavily intertwined with the distinctive implementations of each platform. The  libraries implement an abstraction layer in native OS code, then provide a standard interface for the Java applications to perform those tasks. Finally, when some underlying platform does not support all of the features a Java application expects, the class libraries work to gracefully handle the absent components, either by emulation to provide a substitute, or at least by providing a consistent way to check for the presence of a specific feature.
+The word "Java", alone, usually refers to Java programming language that was designed for use with the Java platform. Programming languages are typically outside of the scope of the phrase "platform", although the Java programming language was listed as a core part of the Java platform before Java 7. The language and runtime were therefore commonly considered a single unit. However, an effort was made with the Java 7 specification to more clearly treat the Java language and the Java virtual machine as separate entities, so that they are no longer considered a single unit.
+Third parties have produced many  that target the JVM. Some of these are for existing languages, while others are for extensions to the Java language. These include:
+The success of Java and its , appearing since 2002, which incorporates many of the successful aspects of Java. .NET in its complete form (Microsoft's implementation) is currently only fully available on Windows platforms, whereas Java is fully available on many platforms. .NET was built from the ground-up to support multiple programming languages, while the Java platform was initially built to support only the Java language, although many other languages have been made for JVM since.
+.NET includes a Java-like language called 
+The  (JRE), and many other important development tools.
+The Java platform and language began as an internal project at  started.
+The Stealth Project was soon renamed to the 
+The team originally considered using C++, but rejected it for several reasons. Because they were developing an . Finally, they wanted a platform that would port easily to all types of devices.
+
+By the summer of 1992, the team could demonstrate portions of the new platform, including the Green  for a set-top box also failed to materialize. Unable to generate interest within the television industry, the company was rolled back into Sun.
+In June and July 1994 – after three days of brainstorming with  in 1995.
+In 1994, Sun renamed the Oak language as 
+The Java language has undergone several changes since the release of JDK (
+Sun released .
+ for the first time.
+ (JPDA).
+.
+
+ (JPDA) &amp; JVM Tool Interface for better monitoring and troubleshooting.
+
+In June 2016, after last public update of Java 7,
+The current
+JDK 9 Early Access requires Windows 7 SP1, Windows Server 2012, Ubuntu 16.04 LTS or higher (or other supported OS, such as OS X or Solaris).
+In addition to language changes, significant changes have been made to the Java class library over the years, which has grown from a few hundred classes in JDK 1.0 to over three thousand in J2SE 5.0. Entire new APIs, such as .
+According to Oracle, the Java Runtime Environment is found on over 850 million PCs..
+Some Java applications are in fairly widespread desktop use, including the .
+Oracle plans to first deprecate the separately installable Java browser plugin from the Java Runtime Environment in JDK 9 then remove it completely from a future release, forcing web developers to use an alternative technology.
+Java ME has become popular in mobile devices, where it competes with .
+The diversity of mobile phone manufacturers has led to a need for new unified standards so programs can run on phones from different suppliers – . The first standard was MIDP 1, which assumed a small screen size, no access to audio, and a 32kB program limit. The more recent MIDP 2 allows access to audio, and up to 64kB for the program size. With handset designs improving more rapidly than the standards, some manufacturers relax some limitations in the standards, for example, maximum program size.
+Google's  up to Android 4.4.4) instead of the Java VM.
+The Java platform has become a mainstay of enterprise IT development since the introduction of the Enterprise Edition in 1998, in two different ways:
+Enterprise use of Java has also long been the main driver of open source interest in the platform. This interest has inspired open source communities to produce a large amount of software, including simple function libraries, development frameworks (e.g. the ).
+Duke is Java's 
+When Sun announced that 
+The source code for Sun's implementations of Java (i.e. the de facto reference implementation) has been available for some time, but until recently
+While several third-party projects (e.g. 
+
+Sun released the Java HotSpot virtual machine and compiler as free software under the 
+Sun released the ).
+Sun's goal was to replace the parts that remain proprietary and closed-source with alternative implementations and make the class library completely free and open source. In the meantime, a third party project called  implementation, so IcedTea's companion project, IcedTea-Web, is needed to fill this gap.
+In June 2008, it was announced that 
+Because OpenJDK is under the GPL, it is possible to redistribute a custom version of the JRE directly with software applications, rather than requiring the enduser (or their sysadmin) to download and install the correct version of the proprietary Oracle JRE onto each of their systems themselves.
+In most cases, Java support is unnecessary in Web browsers, and security experts recommend that it not be run in a browser unless absolutely necessary. It was suggested that, if Java is required by a few Web sites, users should have a separate browser installation specifically for those sites.
+When 
+Java lacks native 
+While Java's floating point arithmetic is largely based on 
+In the early days of Java (before the 
+
+ can either be interpreted at run time by a virtual machine, or it can be compiled at load time or runtime into native code which runs directly on the computer's hardware. Interpretation is slower than native execution, and compilation at load time or runtime has an initial performance penalty for the compilation. Modern performant JVM implementations all use the compilation approach, so after the initial startup time the performance is equivalent to native code.
+The Java platform provides a security architecture, such as accessing the local filesystem, running arbitrary commands, or accessing communication networks.
+In recent years, researchers have discovered numerous security flaws in some widely used Java implementations, including Oracle's, which allow untrusted code to bypass the sandboxing mechanism, exposing users to malicious attacks. These flaws affect only Java applications which execute arbitrary untrusted bytecode, such as web browser plug-ins that run Java applets downloaded from public websites. Applications where the user trusts, and has full control over, all code that is being executed are unaffected.
+On August 31, 2012, Java 6 and 7 on Microsoft Windows, Mac OS X, and Linux were found to have a serious security flaw that allowed a 
+On January 10, 2013, three computer specialists spoke out against Java, telling 
+On January 14, 2013, security experts said that the update still failed to protect PCs from attack.
+Responding to recent Java security and vulnerability issues, security blogger 
+The Java runtime environment has a history of bundling sponsored software to be installed by default during installation and during the updates which roll out every month or so. This includes the " These offers can be blocked through a setting in the Java Control Panel, although this is not obvious.
+Java is yet to release an automatic updater that does not require user intervention and administrative rights
+

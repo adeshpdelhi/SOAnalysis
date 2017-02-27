@@ -1,0 +1,7 @@
+ application, it is available on any platform supported by Java.
+
+
+ArgoUML was originally developed at 
+In 2003, ArgoUML won the Software Development Magazine's annual Readers' Choice Award in the “Design and Analysis Tools” category.
+ArgoUML development has suffered from lack of manpower. For example, 
+According to the official feature list, ArgoUML is capable of the following:

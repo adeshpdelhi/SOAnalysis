@@ -1,0 +1,2 @@
+. It also has an extensible storage mechanism that can be used for Integration and adaptation.
+The Apache Jakarta PMC has announced the retirement of the Jakarta Slide subproject at 2007-11-03. An alternative implementation that is actively maintained is the WebDAV component of the  project that provides Java-based content repository software.

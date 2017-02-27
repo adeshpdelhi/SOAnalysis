@@ -1,0 +1,37 @@
+In 
+Linear search runs in at worst 
+
+
+Linear search sequentially checks each element of the list until it finds an element that matches the target value. If the algorithm reaches the end of the list, the search terminates unsuccessfully.
+Given a list 
+The basic algorithm above makes two comparisons per iteration: one to check if 
+If the list is ordered such that 
+For a list with  comparisons are needed.
+If the value being sought occurs  times in the list, and all orderings of the list are equally likely, the expected number of comparisons is
+For example, if the value being sought occurs once in the list, and all orderings of the list are equally likely, the expected number of comparisons is 
+  
+    
+      
+        
+          
+            
+              
+              
+              
+            
+            
+          
+        
+      
+    
+    
+  
+ - 1 comparisons are needed, and the expected number of comparisons is
+(for example, for  = 2 this is 1, corresponding to a single if-then-else construct).
+Either way, ).
+The performance of linear search improves if the desired value is more likely to be near the beginning of the list than to its end. Therefore, if some values are much more likely to be searched than others, it is desirable to place them at the beginning of the list.
+In particular, when the list items are arranged in order of decreasing probability, and these probabilities are 
+Linear search is usually very simple to implement, and is practical when the list has only a few elements, or when performing a single search in an unordered list.
+When many values have to be searched in the same list, it often pays to pre-process the list in order to use a faster method. For example, one may  from it. Should the content of the list change frequently, repeated re-organization may be more trouble than it is worth.
+As a result, even though in theory other search algorithms may be faster than linear search (for instance 
+

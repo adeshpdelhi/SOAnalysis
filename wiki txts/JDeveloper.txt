@@ -1,0 +1,33 @@
+. JDeveloper covers the full development lifecycle from design through coding, debugging, optimization and profiling to deploying.
+With JDeveloper, Oracle has aimed to simplify application development by focusing on providing a visual and declarative approach to application development in addition to building an advanced coding-environment. Oracle JDeveloper integrates with the  that further simplifies application development.
+The core IDE exposes an , which Oracle Corporation promotes specifically to PL/SQL- and database-developers.
+
+
+Prior to JDeveloper 11g, JDeveloper came in three editions: Java Edition, J2EE Edition, and Studio Edition. Each one offered more features on top of the others, and all of them came for free. JDeveloper 11g only has two editions: Studio Edition and Java Edition. In JDeveloper 11g, J2EE Edition features are rolled into the Studio Edition.
+A high-level list of features includes:
+Java Edition
+J2EE Edition
+Studio Edition
+In 1998, the first version of JDeveloper was based on a licensing of the . JDeveloper went through a complete rewrite to use Java for its 9i (2001) version.
+The 10g version (9.0.5) showcased the first release of the revamped .
+In 2005 Oracle Corporation released JDeveloper as free software.
+In 2006, still under the 10g tag, and after significant delays,  released version 10.1.3 - the latest major 10g release.
+In October 2006, Oracle released version 10.1.3.1 that added support for the final  design time.
+In January 2007, Oracle released version 10.1.3.2 incorporating  capabilities such as creating and consuming portlets, portlet/JSF bridge, and content-repository data control.
+In January 2007 Oracle had more than 150 people working in various roles on the product, including (in no particular order): developers, development managers, 
+In May 2007 Oracle released a  release of version 11g.
+In October 2008 the production version of Oracle JDeveloper 11, code-named BOXER, became available.
+In July 2009 JDeveloper 11
+In June 2011 JDeveloper 11
+In September 2011 JDeveloper 11
+In May 2012 JDeveloper 11
+In September 2012 JDeveloper 11
+In May 2013 JDeveloper 11
+In July 2013 JDeveloper 12
+In June 2014 JDeveloper 12
+In October 2015 JDeveloper 12
+In June 2016 JDeveloper 12
+The JDeveloper code editor offers a rich set of coding features including visual and non-visual utilities that provide different views of the code. The software provides dialogs that guide the use of Java EE components.
+For example, JDeveloper provides a visual . The visual editor allows developers to modify the layout and properties of components visually: the tool re-generates the code. Any changes in the code will be immediately reflected in the visual view. JDeveloper provides a similar feature for generating JSF and Struts page flows.
+Declarative features enable programmers to generate EJBs or  based on tables in relational databases. JDeveloper automates the creation of Java EE artifacts. For example, with a click on a visual artifact one can turn a Java class into a web service. JDeveloper generates the associated WSDL (Web Services Descriptive Language) document and related JAX-RPC components.
+JDeveloper is .

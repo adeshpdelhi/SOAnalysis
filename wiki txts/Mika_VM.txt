@@ -1,0 +1,4 @@
+The 
+The Mika VM was created by one of the original .
+Like Wonka, Mika is intended for use in embedded devices. The VM and class libraries are therefore purposely limited to the packages required by the  has also been made), and supported architectures include x86, arm, mips, and powerpc, including non-MMU variants where applicable. In principle it should be possible to build Mika for any 32-bit CPU for which a GNU toolchain is available.
+Mika development takes place on the .

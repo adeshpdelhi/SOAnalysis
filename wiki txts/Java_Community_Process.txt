@@ -1,0 +1,11 @@
+				
+The JCP involves the use of  specification.
+A JSR describes the JCP itself. As of 2009, JSR 215 describes the current version (2.7) of the JCP.
+
+
+There are hundreds of JSRs. Some of the more visible JSRs include:
+The JCP's executive board has been characterized ***** as a "
+
+
+
+

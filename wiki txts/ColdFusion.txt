@@ -1,0 +1,71 @@
+Adobe .
+
+
+One of the distinguishing features of ColdFusion is its associated scripting language, .
+Originally a product of  Inc in 2005.
+ColdFusion is most often used for data-driven 
+ColdFusion can also handle asynchronous events such as  via its gateway interface, available in ColdFusion MX 7 Enterprise Edition.
+ColdFusion provides a number of additional features out of the box. The main things are:
+Other implementations of CFML offer similar or enhanced functionality, such as running in a  environment or image manipulation.
+The engine was written in C and featured, among other things, a built-in scripting language (CFScript), plugin modules written in Java, and a syntax very similar to HTML. The equivalent to an HTML element, a ColdFusion tag begins with the letters "CF" followed by a name that is indicative of what the tag is interpreted to, in HTML. E.g. &lt;cfoutput&gt; to begin the output of variables or other content.
+In addition to CFScript and plugins (as described), CFStudio provided a design platform with a .
+All versions of ColdFusion prior to 6.0 were written using Microsoft  starting with version 3.1.
+The . Earlier versions were not as robust as the versions available from version 4.0 forward.
+With the release of ColdFusion MX 6.0, the engine had been re-written in  and supported its own runtime environment, which was easily replaced through its configuration options with the runtime environment from Sun. Version 6.1 included the ability to code and debug Shockwave Flash.
+Version 3.1 brought about a port to the  operating system. Cold Fusion studio gained a live page preview and HTML syntax checker.
+"Cold Fusion" moniker renamed simply as "ColdFusion" - possibly to distinguish it from  theory.
+Version 4.5 brought the ability to natively invoke Java objects, execute system commands, and talk directly to a Java EE server.
+First release from  acquisition. The last to be legacy coded for a specific platform.
+On January 16, 2001, Allaire announced a pending merger with Macromedia. Macromedia continued its development and released the product under the name ColdFusion 5.0. It retained the name "ColdFusion" through the remainder of version 5 releases.
+Prior to 2000, Edwin Smith, an Allaire architect on JRun and later the Flash Player, initiated a project codenamed "Neo".. This made portability easier and provided a layer of security on the server, because it ran inside a Java Runtime Environment.
+In June 2002 Macromedia released the version 6.0 product under a slightly different name, ColdFusion MX, allowing the product to be associated with both the Macromedia brand and its original branding. ColdFusion MX was completely rebuilt from the ground up and was based on the  using Flash Remoting.
+With the release of ColdFusion MX, the CFML language API was released with an  interface.
+With the release of ColdFusion 7.0 on February 7, 2005, the naming convention was amended, rendering the product name "Macromedia ColdFusion MX 7" (the codename for CFMX7 was "Blackstone"). CFMX 7 added Flash-based and . These provide interaction with non-HTTP request services such as IM Services, SMS, Directory Watchers, and an asynchronous execution. XML support was boosted in this version to include native schema checking.
+ColdFusion MX 7.0.1 (codename "Merrimack") added support for , improvements to Flash forms, RTF support for CFReport, the new CFCPRoxy feature for Java/CFC integration, and more. ColdFusion MX 7.0.2 (codenamed "Mystic") included advanced features for working with Adobe Flex 2 as well as more improvements for the CF Report Builder.
+On July 30, 2007,  originally expected. The ColdFusion development team consisted of developers based in Newton/Boston, Massachusetts and offshore in Bangalore, India.
+Some of the new features are the CFPDFFORM tag, which enables integration with .
+Other additions to ColdFusion 8 are built-in  compliant CFSCRIPT.
+For development of ColdFusion applications, several tools are available: primarily  and others. "Tag updaters" are available for these applications to update their support for the new ColdFusion 8 features.
+ColdFusion 9 (Codenamed: ) was released on October 5, 2009. New features for CF9 include:
+ColdFusion 10 (Codenamed: Zeus) was released on May 15, 2012. New or improved features available in all editions (Standard, Enterprise, and Developer) include (but are not limited to):
+Additional new or improved features in ColdFusion Enterprise or Developer editions include (but are not limited to):
+The lists above were obtained from the Adobe web site pages describing "new features", as listed first in the links in the following list.
+For additional information on new features, see:
+CF10 was originally referred to by the codename Zeus, after first being confirmed as coming by Adobe at 
+The first public beta of ColdFusion 10 was released via Adobe Labs on 17 February 2012.
+ColdFusion 11 (Codenamed: Splendor) was released on April 29, 2014.
+ColdFusion 11 has actually removed many features previously identified in earlier releases as "deprecated" or no longer supported. Usually you could continue to use a certain tag or function. This is no longer the case. For example, changes to the CFLOG tag that were deprecated will cause an error condition in CF11 and not in CF10.
+Adobe ColdFusion (2016 release), Codenamed: Raijin was released on February 16, 2016.
+ColdFusion 13 (Codenamed: Aether. Aether is the Greek god of upper atmosphere.
+On August 13, 2012 Adobe announced, via their  for ColdFusion including the code names, "Splendor", "Thunder" and "Dazzle", for the next two release versions. Adobe announced new features for ColdFusion including (but not limited to); Mobile - Streamlined Mobile Application Development, Revamped and new PDF functionalities, Enabling Enterprise to easily integrate with Social Media Streams, Enterprise mobility, Support for responsive multi screen content, Digital Marketing – Web, Mobile &amp; Social Analytics and Customizable Enterprise Video Portal. Adobe also announced in the same Roadmap upcoming cloud enhancements. The Roadmap projects ColdFusion development out to the year 2021.
+ColdFusion Server includes a subset of its  1.5 technology. Its stated purpose is to allow for rich forms in HTML pages using CFML to generate Flash movies. These Flash forms can be used to implement rich internet applications, but with limited efficiency due to the ActionScript restrictions in place on Flash forms by Macromedia.
+Flash forms also provide additional widgets for data input, such as date pickers and data grids.
+In previous versions of ColdFusion, some form validation and additional widgets were available using a combination of Java applets and JavaScript. This option persists for those who do not wish to use Flash, however not all features are supported.
+An example:
+ColdFusion also includes some .
+ColdFusion can generate .
+ColdFusion was originally not an  to differentiate them from ColdFusion templates (.cfm).
+Component methods may be made available as web services with no additional coding and configuration. All that is required is for a method's access to be declared 'remote'. ColdFusion automatically generates a  at the URL for the component in this manner: http://path/to/components/Component.cfc?wsdl. Aside from SOAP, the services are offered in Flash Remoting binary format.
+Methods which are declared remote may also be invoked via an HTTP GET or POST request. Consider the GET request as shown.
+This will invoke the component's search function, passing "your query" and "strict" as arguments.
+This type of invocation is well-suited for  for consumption on the client.
+The ColdFusion server will automatically generate documentation for a component if you navigate to its URL and insert the appropriate code within the component's declarations. This is an application of component introspection, available to developers of ColdFusion components. Access to a component's documentation requires a password. A developer can view the documentation for all components known to the ColdFusion server by navigating to the ColdFusion URL. This interface resembles the  HTML documentation for Java classes.
+ColdFusion provides several ways to implement custom .
+The traditional and most common way is using CFML. A standard CFML page can be interpreted as a tag, with the tag name corresponding to the file name prefixed with "cf_". For example, the file IMAP.cfm can be used as the tag "cf_imap". Attributes used within the tag are available in the ATTRIBUTES scope of the tag implementation page. CFML pages are accessible in the same directory as the calling page, via a special directory in the ColdFusion web application, or via a CFIMPORT tag in the calling page. The latter method does not necessarily require the "cf_" prefix for the tag name.
+A second way is the development of CFX tags using Java or C++. CFX tags are prefixed with "cfx_", for example "cfx_imap". Tags are added to the ColdFusion runtime environment using the ColdFusion administrator, where JAR or DLL files are registered as custom tags.
+Finally, ColdFusion supports JSP tag libraries from the JSP 2.0 language specification. JSP tags are included in CFML pages using the CFIMPORT tag.
+Currently, alternative server platforms generally support ColdFusion 8 functionality, with minor changes or feature enhancements.
+The standard ColdFusion installation allows the deployment of ColdFusion as a .
+Because ColdFusion is a Java EE application, ColdFusion code can be mixed with Java classes to create a variety of applications and use existing Java libraries. ColdFusion has access to all underlying Java classes, supports JSP custom tag libraries, and can access JSP functions after retrieving the JSP page context ().
+Prior to ColdFusion 7.0.1, ColdFusion components could only be used by Java or .NET by declaring them as web services. However, beginning in ColdFusion MX 7.0.1, ColdFusion components can now be used directly within Java classes using the CFCProxy class.
+Recently, there has been much interest in Java development using alternate languages such as . ColdFusion was one of the first scripting platforms to allow this style of Java development.
+ColdFusion 8 natively supports  within the CFML syntax. ColdFusion developers can simply call any .NET assembly without needing to recompile or alter the assemblies in any way. Data types are automatically translated between ColdFusion and .NET (example: .NET DataTable → ColdFusion Query).
+A unique feature for a Java EE vendor, ColdFusion 8 offers the ability to access .NET Assemblies remotely through proxy (without the use of ). This allows ColdFusion users to leverage .NET without having to be installed on a Windows operating system.
+The . When ColdFusion templates are saved to disk, they are traditionally given the extension .cfm or .cfml. The .cfc extension is used for ColdFusion Components. The original extension was DBM or DBML, which stood for Database Markup Language. When talking about ColdFusion, most users use the acronym CF and this is used for numerous ColdFusion resources such as user groups (CFUGs) and sites.
+CFMX is the common abbreviation for ColdFusion versions 6 and 7 (a.k.a. ColdFusion MX).
+ColdFusion originated as proprietary technology based on Web technology industry standards. However, it is becoming a less closed technology through the availability of competing products. Such alternative products include (in alphabetical order):
+The argument can be made that ColdFusion is even less platform-bound than raw Java EE or .NET, simply because ColdFusion will run on top of a .NET app server (New Atlanta), or on top of any servlet container or Java EE application server (, etc.). In theory, a ColdFusion application could be moved unchanged from a Java EE application server to a .NET application server.
+In March 2013, a known issue affecting ColdFusion 8, 9 and 10 left the 
+In April 2013, a ColdFusion vulnerability was blamed by 
+In May 2013, Adobe identified another critical vulnerability, reportedly already being exploited in the wild, which targets all recent versions of ColdFusion on any servers where the web-based administrator and API have not been locked down. The vulnerability allows unauthorized users to upload malicious scripts and potentially gain full control over the server.
+In April 2015 there was reported a Cross-site scripting (XSS) vulnerability in Adobe ColdFusion 10 before Update 16, and in ColdFusion 11 before Update 5, that allows remote attackers to inject arbitrary web script or HTML;

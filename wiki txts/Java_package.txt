@@ -1,0 +1,22 @@
+				, allowing classes to be downloaded faster as groups rather than individually.
+In general, a package can contain the following kinds of : classes, interfaces, enumerations, and annotation types. A package allows a developer to group classes (and interfaces) together. These classes will all be related in some way – they might all have to do with a specific application or perform a specific set of tasks. Programmers also typically use packages to organize classes belonging to the same category or providing similar functionality.
+
+
+In a Java source file, the package that this file's class or classes belong to is specified with the . This keyword is usually the first keyword in the source file. At most one package declaration can appear in a source file.
+To use a package's classes inside a Java source file, it is convenient to import the classes from the package with an  declaration. The following declaration
+imports all classes from the  package, while the next declaration
+imports only the  class can be referenced using its simple class name:
+Classes can also be used directly without an import declaration by using the fully qualified name of the class. For example,
+does not require a preceding import declaration.
+Note that if you do not use a package declaration, your class ends up in an unnamed package. Classes in an unnamed package cannot be imported by classes in any other package.
+The official Java Tutorial advises against this:
+Public members and classes are visible everywhere and private members are visible only in the same class. Classes within a package can access classes and members declared with 
+JAR files are created with the jar command-line utility. The command
+compresses all .class files into the JAR file . The 'c' option on the command line tells the jar command to "create new archive." The ' f ' option tells it to create a file. The file's name comes next before the contents of the JAR file.
+Packages are usually defined using a , pronounced "dot"). Although packages lower in the naming hierarchy are often referred to as "subpackages" of the corresponding packages higher in the hierarchy, there is almost no semantic relationship between packages. The Java Language Specification establishes package naming conventions to avoid the possibility of two published packages having the same name. The naming conventions describe how to create unique package names, so that packages that are widely distributed will have unique namespaces. This allows packages to be separately, easily and automatically installed and catalogued.
+In general, a package name begins with the top level domain name of the organization and then the organization's domain and then any subdomains, listed in reverse order. The organization can then choose a specific name for its package. Subsequent components of the package name vary according to an organization's own internal naming conventions.
+For example, if an organization in Canada called MySoft creates a package to deal with fractions, naming the package , then the classes in these two packages are defined in a unique and separate namespace.
+Complete conventions for disambiguating package names and rules for naming packages when the Internet domain name cannot be directly used as a package name are described in section 7.7 of the Java Language Specification.
+The java.lang package is available without the use of an import statement.
+In , "modules", a kind of collection of packages, are planned as part of Project Jigsaw; these were earlier called "superpackages" and originally planned for Java 7.
+Modules will describe their dependencies in a module declaration which will be placed in a file named 

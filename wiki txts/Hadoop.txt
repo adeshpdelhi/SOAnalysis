@@ -1,0 +1,51 @@
+
+The core of Apache Hadoop consists of a storage part, known as Hadoop Distributed File System (HDFS), and a processing part which is a 
+The base Apache Hadoop framework is composed of the following modules:
+The term 
+Apache Hadoop's MapReduce and HDFS components were inspired by 
+The Hadoop framework itself is mostly written in the  Other projects in the Hadoop ecosystem expose richer user interfaces.
+
+
+The genesis of Hadoop came from the Google File System paper The initial code that was factored out of Nutch consisted of 5k lines of code for NDFS and 6k lines of code for MapReduce.
+The first committer added to the Hadoop project was Owen O’Malley in March 2006. to the Apache Hadoop project.
+Hadoop consists of the  files and scripts needed to start Hadoop.
+For effective scheduling of work, every Hadoop-compatible file system should provide location awareness: the name of the rack (more precisely, of the network switch) where a worker node is. Hadoop applications can use this information to execute code on the node where the data is, and, failing that, on the same rack/switch to reduce backbone traffic. HDFS uses this method when replicating data for data redundancy across multiple racks. This approach reduces the impact of a rack power outage or switch failure; if one of these hardware failures occurs, the data will remain available.
+A small Hadoop cluster includes a single master and multiple worker nodes. The master node consists of a Job Tracker, Task Tracker, NameNode, and DataNode. A slave or 
+Hadoop requires 
+In a larger cluster, HDFS nodes are managed through a dedicated NameNode server to host the file system index, and a secondary NameNode that can generate snapshots of the namenode's memory structures, thereby preventing file-system corruption and loss of data. Similarly, a standalone JobTracker server can manage job scheduling across nodes. When Hadoop MapReduce is used with an alternate file system, the NameNode, secondary NameNode, and DataNode architecture of HDFS are replaced by the file-system-specific equivalents.
+The Hadoop distributed file system (HDFS) is a distributed, scalable, and portable  (RPC) to communicate between each other.
+HDFS stores large files (typically in the range of gigabytes to terabytes
+HDFS added the high-availability capabilities, as announced for release 2.0 in May 2012,.
+The HDFS file system includes a so-called 
+HDFS was designed for mostly immutable files and may not be suitable for systems requiring concurrent write-operations.
+HDFS can be  systems.
+File access can be achieved through the native Java 
+HDFS is designed for portability across various hardware platforms and compatibility with a variety of underlying operating systems. The HDFS design introduces portability limitations that result in some performance bottlenecks, since the Java implementation can't use features that are exclusive to the platform on which HDFS is running. There are currently several monitoring platforms to track HDFS performance, including HortonWorks, Cloudera, and Datadog.
+Hadoop works directly with any distributed file system that can be mounted by the underlying operating system simply by using a  URL; however, this comes at a price, the loss of locality. To reduce network traffic, Hadoop needs to know which servers are closest to the data; this is information that Hadoop-specific file system bridges can provide.
+In May 2011, the list of supported file systems bundled with Apache Hadoop were:
+A number of third-party file system bridges have also been written, none of which are currently in Hadoop distributions. However, some commercial distributions of Hadoop ship with an alternative filesystem as the default&#160;–  specifically IBM and MapR.
+Above the file systems comes the  and can be viewed from a web browser.
+Known limitations of this approach are:-
+By default Hadoop uses 
+The fair scheduler was developed by 
+By default, jobs that are uncategorized go into a default pool. Pools have to specify the minimum number of map slots, reduce slots, and a limit on the number of running jobs.
+The capacity scheduler was developed by 
+There is no  once a job is running.
+The HDFS file system is not restricted to MapReduce jobs. It can be used for other applications, many of which are under development at Apache. The list includes the 
+As of October 2009 included:-
+On February 19, 2008, 
+In 2010, 
+As of 2013
+Hadoop can be deployed in a traditional onsite datacenter as well as in 
+Azure HDInsight It is also possible to run Cloudera or Hortonworks Hadoop clusters on Azure Virtual Machines.
+It is possible to run Hadoop on 
+There is support for the S3 object store in the Apache Hadoop releases, though this is below what one expects from a traditional POSIX filesystem. Specifically, operations such as rename() and delete() on directories are not atomic, and can take time proportional to the number of entries and the amount of data in them.
+Elastic MapReduce (EMR)
+Support for using Spot Instances
+CenturyLink Cloud
+There are multiple ways to run the Hadoop ecosystem on 
+Google also offers connectors for using other Google Cloud Platform products with Hadoop, such as a .
+A number of companies offer commercial implementations or support for Hadoop.
+The Apache Software Foundation has stated that only software officially released by the Apache Hadoop Project can be called 
+Some papers influenced the birth and growth of Hadoop and big data processing. Here is a partial list:
+

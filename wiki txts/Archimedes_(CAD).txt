@@ -1,0 +1,8 @@
+.
+
+
+Archimedes uses its own 
+Archimedes is written in  and a Java Virtual machine on version 1.5.0 or later.
+The Archimedes Project started as a collaboration between a group of programmers and architecture students at the , in 2005. The project is currently being worked on as free and open source software. There is a team of students from the University working on it as collaborators under the coordination of Hugo (project leader) but everyone is free to contribute with plugins and/or patches.
+.
+A migration to the  in versions 0.5x has greatly improved the user interface model and stability, but some of the functionality from the last pre-RCP version is still being transferred. Version 0.58.0 moved this process a step closer by adding trimming, leader, svg and pdf exporting.

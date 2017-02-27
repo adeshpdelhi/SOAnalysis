@@ -1,0 +1,13 @@
+In ).
+Use of an identifier  is called a binding (or defining) occurrence. In all other occurrences (e.g., in expressions, assignments, and subprogram calls), an identifier stands for what it is bound to; such occurrences are called applied occurrences.
+
+
+The binding of names before the program is run is called  (also "late" or "virtual").
+An example of a static binding is a direct  function call: the function referenced by the identifier cannot change at runtime.
+But an example of dynamic binding is  code:
+ known.
+Rebinding should not be confused with mutation – "rebinding" is a change to the  code:
+The identifier .
+Late static binding is a variant of binding somewhere between static and dynamic binding. Consider the following  example:
+In this example, the PHP interpreter binds the function  had been based on late static binding, then the result would have been "bye".
+Beginning with PHP version 5.3, late static binding is supported. would be "bye":

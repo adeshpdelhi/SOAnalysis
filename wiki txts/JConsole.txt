@@ -1,0 +1,2 @@
+				 (JVM) and Java applications both on a local or remote machine.
+JConsole uses underlying features of  (JDK) and the graphical console can be started using "jconsole" command.

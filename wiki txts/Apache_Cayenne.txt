@@ -1,0 +1,6 @@
+ serialization, objects can be further persisted to non-Java clients—such as an Ajax-capable browser.
+Cayenne supports database -based configuration is required. An entire database schema can be mapped directly to Java objects quickly, all from the comfort of the GUI-based CayenneModeler. These things together make Cayenne interesting for a user who is new to the enterprise world.
+Cayenne supports other features, including caching, a complete object query syntax, relationship pre-fetching, on-demand object and relationship faulting, object inheritance, database auto-detection, and generic persisted objects. Most importantly, Cayenne can scale up or down to virtually any project size.
+
+
+Cayenne started as a project run by Objectstyle and led by Andrus Adamchik. It was released under the Apache license and in December 2006 was promoted to be a top level project of Apache.

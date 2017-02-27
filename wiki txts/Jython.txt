@@ -1,0 +1,10 @@
+
+
+
+Jython programs can import and use any Java class. Except for some standard modules, Jython programs use Java classes instead of Python modules. Jython includes almost all of the modules in the standard  (intermediate language) either on demand or statically.
+Jython was initially created in late 1997 to replace 
+The most recent release is Jython 2.7.0. It was released on 2 May 2015 and is compatible with Python 2.7.
+Although Jython implements the Python language specification, it has some differences and incompatibilities with 
+From version 2.2 on, Jython (including the standard library) is released under the 
+The command line interpreter is available under the Apache Software License.
+Jython is one of two .

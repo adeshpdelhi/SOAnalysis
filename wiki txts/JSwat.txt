@@ -1,0 +1,3 @@
+ and is freely available in both binary and source code form. In addition to the graphical interface, there is a console based version which operates very much like jdb, the debugger included with the Java Development Kit.
+Features include breakpoints with conditionals and monitors; colorized source code display; graphical display panels showing threads, stack frames, visible variables, and loaded classes; command interface for more advanced features; Java-like expression evaluation, including method invocation.
+As of 2013, JSwat was "effectively discontinued" according to its .

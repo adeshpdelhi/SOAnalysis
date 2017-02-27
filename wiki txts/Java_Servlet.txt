@@ -1,0 +1,19 @@
+A .
+
+
+Servlets are most often used to process or store a .
+To deploy and run a servlet, a  must be used. A web container (also known as a servlet container) is essentially the component of a web server that interacts with the servlets. The web container is responsible for managing the lifecycle of servlets, mapping a URL to a particular servlet and ensuring that the URL requester has the correct access rights.
+The Servlet 
+A .
+Servlets can be generated automatically from .
+The current version of Servlet is 3.1.
+The Servlet1 specification was created by Pavni Diwanji. JSR 53 defined both the Servlet 2.3 and JavaServer Page 1.2 specifications. JSR 154 specifies the Servlet 2.4 and 2.5 specifications. As of June 9, 2015, the current version of the Servlet specification is 3.1.
+In his blog on  was made into a specification.
+The advantages of using servlets are their fast performance and ease of use combined with more power over traditional  (Common Gateway Interface). Traditional CGI scripts written in Java have a number of performance disadvantages:
+Technologies like ) do not exhibit the performance disadvantages of CGI, incurred by the constant process spawning. They are, however, roughly as simple as CGI. They are therefore also in contrast with servlets which are substantially more complex.
+Three methods are central to the life cycle of a servlet. These are . They are implemented by every servlet and are invoked at specific times by the server.
+The following is a typical user scenario of these methods.
+The following example servlet prints how many times its  method was called.
+Note that  interface.
+The  is overridden and does not distinguish which HTTP request method it serves.
+The specification for Servlet technology has been implemented in many products. See a list of implementations on the  page.

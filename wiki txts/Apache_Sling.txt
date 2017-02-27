@@ -1,0 +1,5 @@
+ style of application architecture.
+Sling is different from many other 
+The Sling project was started on August 27, 2007, the project graduated as Apache top-level project.
+
+

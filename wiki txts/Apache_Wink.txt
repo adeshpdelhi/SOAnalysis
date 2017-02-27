@@ -1,0 +1,7 @@
+ style web services.
+
+
+The project was initiated in 2007 as an  HP contributed the SDK and IBM contributed a lot of integration tests.
+The Apache Wink is currently part of the  project.
+Apache Wink is composed of a Server module and a Client module. The Server module is an implementation of the  Web services.
+

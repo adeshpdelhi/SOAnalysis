@@ -1,0 +1,18 @@
+
+The main goal of JAAS is to  modules.
+
+
+For the :
+For example, an application may have this  file indicating how different authentication mechanisms are to be run to authenticate the user:
+For the application developer, JAAS is a standard library that provides:
+For the security system integrator, JAAS provides interfaces:
+Login modules are primarily concerned with authentication rather than authorization and form a widely used component of JAAS. A login module is required to implement the javax.security.auth.spi.LoginModule interface, which specifies the following methods:
+Note: A Subject is the user that is attempting to log in.
+Login modules can provide single sign on (SSO) via a particular SSO protocol/framework (e.g. , OpenID, and SPNEGO), can check for the presence of hardware security tokens (e.g. USB token), etc. In an n-tier application, Login Modules can be present on both the client side and server side.
+Login modules are written by implementing this interface; they contain the actual code for authentication. It can use various mechanisms to authenticate user credentials. The code could retrieve a password from a database and compare it to the password supplied to the module.
+The login context is the core of the JAAS framework which kicks off the authentication process by creating a Subject. As the authentication process proceeds, the subject is populated with various principals and credentials for further processing.
+A subject represents a single user, entity or system –in other words, a client– requesting authentication.
+A principal represents the face of a subject. It encapsulates features or properties of a subject. A subject can contain multiple principals.
+Credentials are nothing but pieces of information regarding the subject in consideration. They might be account numbers, passwords, certificates etc. As the credential represents some important information, the further interfaces might be useful for creating a proper and secure credential – javax.security.auth.Destroyable and javax.security.auth.Refreshable. Suppose that after the successful authentication of the user you populate the subject with a secret ID (in the form of a credential) with which the subject can execute some critical services, but the credential should be removed after a specific time. In that case, one might want to implement the Destroyable interface. Refreshable might be useful if a credential has only a limited timespan in which it is valid.
+Form authentication is another commonly used part of JAAS. In this process the user is typically presented with a web page containing a form asking for a username and password. This data is then submitted via POST to a URL containing the text "j_security_check", e.g. www.example.com/j_security_check . The credentials are checked on the server side and a session ID is returned to the client via a cookie. This authentication method is flexible in that a Java HTTP client such as Apache HTTP client can be used in place of a web-browser, e.g. in a desktop application, as long as the following standard steps are followed:
+Additional assertions can be added to the above process.

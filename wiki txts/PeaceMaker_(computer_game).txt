@@ -1,0 +1,29 @@
+, it is often pitched as "a video game to promote peace".
+The game was originally a university project started in 2005 by a small team from the 
+
+
+
+
+
+Each week, the player makes a decision regarding security, construction or politics. He may seek the advice of two advisers with differing opposite views. The Palestinian President is helped by a national and a foreign adviser. The Israeli Prime Minister has the views of a 
+A key-point of the game is that the actions of the players do not always have the expected outcome. For example, an Israeli proposal for medical aid shortly after an air strike will be turned down, and will detoriate even further the relation with the Palestinians.
+Each leader must take into account the approval of his counterpart, of both people, of the 
+The opinions of the different parties are summarised by two counters displayed on the screen. Ranging from -100 to 100, they measure the approval of two groups. In the role of the Prime Minister of Israel, those two groups are the Israeli and Palestinian people&#160;; in the role of Palestinian President, of its citizens and the 
+
+The goal of this group was to create a meaningful interactive experience about one of the most serious political conflicts in the world. Our mission was to prove that such an experience could reach new audiences and convey the message of understanding in a fresh way.
+To prototype the 
+A prototype of the game is presented at the 
+Initially, the developers did not want to "define the end-solution", in order to avoid controversy. Victory was then defined by the lowering of violence. Early players' reaction show the necessity of "a more meaningful outcome". With the input of experts from both sides and the United States, they chose the 
+This choice one of the design assumptions made by the developers. Game designer Tim Sweeney, although he admits they are debatable, claims his right to define the scope of the work. He considers that they do not favour any side, but rather peace. The developers assume that both sides want peace, that the player can make a difference, but does not have total control of its side, and that peace can be achieved through small, concrete actions.
+The first stable version of .
+
+
+Critics agree that the game model is relevant. Alexander Gambotto-Burke from 
+In July 2007, 
+The rise of Internet allows alternative distribution channels, such as 
+
+
+Can PeaceMaker achieve peace? No. That depends on the hearts and minds of the people who live in the Middle East – both in the affected areas and the neighboring countries too. Can it promote peace, which it states as its goal? Definitely, if it reaches a wide enough audience. Impact Games wants PeaceMaker to be more than merely a classroom tool; they hope it will be a genuinely popular game and a springboard for discussion among many people.
+ImpactGames launches in February 2008 the program 
+The game is divided into three steps. The player has firstly access to information about the vent and its context, using timelines and maps.
+Shortly after the launch, 

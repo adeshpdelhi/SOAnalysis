@@ -1,0 +1,11 @@
+In  of named instances as key-value pairs.
+Rather than having a single instance .
+Most people and textbooks consider this a singleton pattern).
+
+
+While it may appear that the multiton is no more than a simple  with synchronized access there are two important distinctions. First, the multiton does not allow clients to add mappings. Secondly, the multiton never returns a null or empty reference; instead, it creates and stores a multiton instance on the first request with the associated key. Subsequent requests with the same key return the original instance. A hash table is merely an implementation detail and not the only possible approach. The pattern simplifies retrieval of shared objects in an application.
+Since the object pool is created only once, being a member associated with the class (instead of the instance), the multiton retains its flat behavior rather than evolving into a .
+The multiton is unique in that it provides centralized access to a single directory (i.e. all keys are in the same namespace,  system, for example). However, a multiton is limited to wide use by a single system rather than a myriad of distributed systems.
+This pattern, like the  into an application.
+With garbage collected languages it may become a source of memory leaks as it introduces global strong references to the objects.
+In Java, the multiton pattern can be implemented using an , with the values of the type corresponding to the instances. In the case of an enumerated type with a single value, this gives the singleton pattern.

@@ -1,0 +1,5 @@
+				. It has two goals:
+By using EPF Composer you can create your own  specification referred to as the Unified Method Architecture (UMA). Major parts of UMA went into the adopted revision of SPEM, SPEM 2.0. EPF is aiming to fully support SPEM 2.0 in the near future. The UMA and SPEM schemata support the organization of large amounts of descriptions for development methods and processes. Such method content and processes do not have to be limited to software engineering, but can also cover other design and engineering disciplines, such as mechanical engineering, business transformation, sales cycles, and so on.
+
+
+The "Content Variability" capability severely limits users to one-to-one mappings. Processes trying to integrate various aspects may require block-copy-paste style clones to get around this limitation. This may be a limitation of the SPEM model and might be based on presumption that agile methods are being described as these methods tend not to have deep dependencies.

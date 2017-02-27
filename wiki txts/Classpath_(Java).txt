@@ -1,0 +1,29 @@
+.
+
+
+Similar to the classic  of a class only when the class is first used). The classpath tells Java where to look in the filesystem for files defining these classes.
+The virtual machine searches for and loads classes in this order:
+By default only the packages of the  containing the classes).
+Suppose we have a package called  containing the classes:
+and the files defining this package are stored physically under the directory ).
+The file structure looks like this:
+When we invoke Java, we specify the name of the application to run: org.mypackage.HelloWorld. However we must also tell Java where to look for the files and directories defining our package. So to launch the program, we use the following command:
+where:
+The  may be alternatively used to set the classpath. For the above example, we could also use on Windows:
+The rule is that  into the classpath in the case when loading classes from current folder is desired.
+The same applies not only to java launcher but also to , the java compiler.
+If a program uses a supporting library enclosed in a  and the corresponding physical file structure is:
+the following  is needed:
+or alternatively:
+In  and higher, one can add all jar-files in a specific directory to the classpath using wildcard notation.
+Windows example:
+Linux example:
+This works for both  options and environment classpaths.
+If a program has been enclosed in a , the directory structure is as follows:
+The  has this definition:
+The  should end with either a new line or carriage return.
+The program is launched with the following command:
+This automatically starts  must be a valid path on the root within the jar.
+Multiple classpath entries are separated with spaces:
+Being closely associated with the file system, the  For example:
+This does not apply when the Classpath is defined in , where each file path must be separated by a space ("&#160;"), regardless of the operating system.

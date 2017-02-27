@@ -1,0 +1,5 @@
+The .
+The Java Dynamic Management Kit (Java DMK) provides a set of Java classes and tools that allow easy development of secure monitoring and management solutions based on the Java Management Extensions (JMX) specifications and on the  standards.
+Java DMK is a toolkit that allows you to build monitoring and management solutions that answer the main challenge faced by networked environments today, namely dynamic maintenance. Such solutions are based on "smart agents" and result in faster problem resolution, reduced network traffic, less human intervention, and a means of managing complete systems or networks in an integrated way.
+Java DMK 5.1 is the first commercial implementation of the latest versions of the JMX standards, JMX 1.2 and JMX Remote API 1.0, and is an all-in-one offering for building secure, interoperable monitoring and management solutions on the J2SE 1.4.2 platform.
+

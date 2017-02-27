@@ -1,0 +1,10 @@
+, providing a time savings in developing applications as j2ee, especially in critical, large-volume and multi-provider environments.
+
+
+The J2EE standard includes Servlet and JSP specifications to facilitate Web application construction and rollout. Although these specifications provide the basic infrastructure for creating Web applications, they do not establish the application design.
+Creating the application execution architecture goes beyond creating a collection of common application services, such as data access, e-mail delivery or queue management objects. It must provide the base architecture for the applications, defining the tier structure and design templates used in each of them.
+The best practices and design templates that have come out of the Java community facilitate the creation of quality application architectures on which to develop the applications. However, developing an application architecture from scratch, based on templates, is costly, repetitive and more open to errors that starting with an existing one.
+openTrends' J2EE development framework is the result of:
+The development framework is designed taking into account the need to constantly upgrade and adapt a platform of this type. The openFrame development team, together with the clients where it is implemented, is currently upgrading this technology in order to improve:
+openFrame has three main modules: .
+The openTrends community has released openFrame 2.0. 

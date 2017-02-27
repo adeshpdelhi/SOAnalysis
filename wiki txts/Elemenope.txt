@@ -1,0 +1,5 @@
+Created and maintained by . elemenope may also be considered an application toolkit. elemenope is correctly spelled completely in lowercase, and is pronounced L-M-N-O-P or \"el-em-en-O-'pE\.
+
+
+elemenope has been in active development since 1999. The framework started as a manner in which to simplify the process of integrating legacy systems with new development. elemenope has served as a proving grounds for architectural concepts.
+elemenope was released as Free and Open Source Software , the Apache License 2.0 was added as an additional licensing option in 2006.

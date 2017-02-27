@@ -1,0 +1,8 @@
+
+
+
+Lift is an expressive framework for writing web applications. It draws upon concepts from peer frameworks such as . Rather, Lift is chiefly modeled upon the so-called "View First" (designer friendly) approach to web page development inspired by the Wicket framework. Lift is also designed to be a high-performance, scalable web framework by leveraging Scala actors to support more concurrent requests than is possible with a thread-per-request server.
+As .
+The main characteristics of Lift applications are:
+The stable version 1.0 of Lift was released on February 26, 2009 (two years after initiation of the project).
+Lift reached five years of continuous development on February 26, 2012.

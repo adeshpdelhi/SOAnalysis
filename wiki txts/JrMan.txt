@@ -1,0 +1,8 @@
+ by Gerardo Horvilleur, Jorge Vargas, Elmer Garduno and Alessandro Falappa.
+jrMan is available under the  (GPL)
+
+
+Release 0.4
+Shadows, texture mapping, surface shaders, light shaders, volume shaders, displacement shaders, all pixel filters, generate image to file (RGB &amp; RGBA), delayed Read Archive.
+Sphere, Torus, Cone, Disk, Cylinder, Paraboloid, Hyperboloid, Points, Patch "bilinear" and "bicubic" (all basis &amp; rational), Polygon, PointsPolygon, ObjectInstance, PatchMesh, NuPatch, Curves "linear" and "cubic" (also rational).
+Shading language compiler, Motion blur, Depth of field, Level of detail, CSG, Trim curves, Subdivision surfaces, General Polygons.

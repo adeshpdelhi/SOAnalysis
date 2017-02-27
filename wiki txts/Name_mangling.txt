@@ -1,0 +1,67 @@
+In .
+It provides a way of encoding additional information in the name of a .
+The need arises where the language allows different entities to be named with the same ).
+Any . The linker needs a great deal of information on each program entity. For example, to correctly link a function it needs its name, the number of arguments and their types, and so on.
+
+
+Although name mangling is not generally required or used by languages that do not support , which determine the manner in which parameters are sent to subroutines and results returned. Because the different calling conventions are not compatible with one another, compilers mangle symbols with codes detailing which convention should be used to call the specific routine.
+The mangling scheme was established by Microsoft, and has been informally followed by other compilers including Digital Mars, Borland, and GNU GCC, when compiling code for the Windows platforms. The scheme even applies to other languages, such as . This allows subroutines written in those languages to call, or be called by, existing Windows libraries using a calling convention different from their default.
+When compiling the following C examples:
+32 bit compilers emit, respectively:
+In the , the function name is merely prefixed by an underscore.
+The 64-bit convention on Windows (Microsoft C) has no leading underscore. This difference may in some rare cases lead to unresolved externals when porting such code to 64 bits. For example, Fortran code can use 'alias' to link against a C method by name as follows:
+This will compile and link fine under 32 bits, but generate an unresolved external '_f' under 64 bits. One workaround for this is not to use 'alias' at all (in which the method names typically need to be capitalized in C and Fortran). Another is to use the BIND option:
+ generally did not support C++ symbols, and mangling was still required.
+The . Because the name-mangling systems for such features are not standardized across compilers, few linkers can link object code that was produced by different compilers.
+A single C++ translation unit might define two functions named :
+These are distinct functions, with no relation to each other apart from the name. The C++ compiler therefore will encode the type information in the symbol name, the result being something resembling:
+Even though its name is unique,  symbols.
+The mangled symbols in this example, in the comments below the respective identifier name, are those produced by the GNU GCC 3.x compilers:
+All mangled symbols begin with  becomes
+For functions, this is then followed by the type information; as ; hence:
+For , with the complete name for the function being:
+There isn't a standard scheme by which even trivial C++ identifiers are mangled, and consequently different compiler vendors (or even different versions of the same compiler, or the same compiler on different platforms) mangle public symbols in radically different (and thus totally incompatible) ways. Consider how different C++ compilers mangle the same functions:
+Notes:
+The job of the common C++ idiom:
+is to ensure that the symbols following are "unmangled" – that the compiler emits a binary file with their names undecorated, as a C compiler would do. As C language definitions are unmangled, the C++ compiler needs to avoid mangling references to these identifiers.
+For example, the standard strings library,  usually contains something resembling:
+Thus, code such as:
+uses the correct, unmangled  had not been used, the (SunPro) C++ compiler would produce code equivalent to:
+Since those symbols do not exist in the C runtime library (), link errors would result.
+Though it would seem that standardised name mangling in the C++ language would lead to greater interoperability between compiler implementations, such a standardization by itself would not suffice to guarantee C++ compiler interoperability and it might even create a false impression that interoperability is possible and safe when it isn't. Name mangling is only one of several  for name mangling would also prevent an implementation where mangling was not required at all — for example, a linker which understood the C++ language.
+The  layout, are incompatible.
+Nevertheless, as detailed in the section above, on some platforms the full C++ ABI has been standardized, including name mangling.
+Because C++ symbols are routinely exported from , it would have to be compiled twice — once for the vendor compiler and once for GCC.
+It is good for safety purposes that compilers producing incompatible object codes (codes based on different ABIs, regarding e.g., classes and exceptions) use different name mangling schemes. This guarantees that these incompatibilities are detected at the linking phase, not when executing the software (which could lead to obscure bugs and serious stability issues).
+For this reason name decoration is an important aspect of any C++-related .
+Output:
+In Java, the  of a method or a class contains its name and the types of its method arguments and return value where applicable. The format of signatures is documented, as the language, compiler, and .class file format were all designed together (and had object-orientation and universal interoperability in mind from the start).
+The scope of anonymous classes is confined to their parent class, so the compiler must produce a "qualified" public name for the inner class, to avoid conflict where other classes with the same name (inner or not) exist in the same namespace. Similarly, anonymous classes must have "fake" public names generated for them (as the concept of anonymous classes only exists in the compiler, not the runtime). So, compiling the following java program
+will produce three  files:
+All of these class names are valid (as $ symbols are permitted in the JVM specification) and these names are "safe" for the compiler to generate, as the Java language definition prohibits $ symbols in normal java class definitions.
+Name resolution in Java is further complicated at runtime, as  instance. Classloaders are ordered hierarchically and each Thread in the JVM has a so-called context class loader, so in cases where two different classloader instances contain classes with the same name, the system first tries to load the class using the root (or system) classloader and then goes down the hierarchy to the context class loader.
+Java's native method support allows Java language programs to call out to programs written in another language (generally either C or C++). There are two name-resolution concerns here, neither of which is implemented in a particularly standard manner:
+In  will not. Python's runtime does not restrict access to such members, the mangling only prevents name collisions if a derived class defines a member with the same name.
+On encountering name mangled attributes, Python transforms these names by a single underscore and the name of the enclosing class, for example:
+To avoid name mangling in Pascal, use:
+.
+Name mangling is also necessary in ).
+Because of the case insensitivity, the name of a subroutine or function "FOO" must be converted to a canonical case and format by the Fortran compiler so that it will be linked in the same way regardless of case. Different compilers have implemented this in various ways, and no standardization has occurred. The 
+Identifiers in Fortran 90 modules must be further mangled, because the same procedure name may occur in different modules. Since the Fortran 2003 Standard requires that module procedure names not conflict with other external symbols, compilers tend to use the module name and the procedure name, with a distinct marker in between. For example, in the following module
+The name of the function will be mangled as  and generic type-bound procedures instead, the mangled names do not need to incorporate clues about the arguments.
+The Fortran 2003 BIND option overrides any name mangling done by the compiler, as shown .
+Function names are mangled by default in 
+Essentially two forms of method exist in . A method declaration in Objective-C is of the following form
+Class methods are signified by +, instance methods use -. A typical class method declaration may then look like:
+with instance methods looking like
+Each of these method declarations have a specific internal representation. When compiled, each method is named according to the following scheme for class methods:
+and this for instance methods:
+The colons in the Objective-C syntax are translated to underscores. So, the Objective-C class method .
+Each of the methods of a class are labeled in this way. However, in order to look up a method that a class may respond to would be tedious if all methods are represented in this fashion. Each of the methods is assigned a unique symbol (such as an integer). Such a symbol is known as a .
+During compilation, a table is built that maps the textual representation (such as .
+Message sends are encoded by the compiler as calls to the  lookup tables, the functions are essentially anonymous.
+The .
+The Objective-C runtime maintains information about the argument and return types of methods. However, this information is not part of the name of the method, and can vary from class to class.
+Since Objective-C does not support , there is no need for mangling of class names (that do appear as symbols in generated binaries).
+Swift keeps metadata about functions (and more) in their respective symbols, which is called name mangling. This metadata includes the function’s name, attributes, module name, argument types, return type, and more. For example:
+The mangled name for the 

@@ -1,0 +1,11 @@
+
+jGRASP is implemented in  and other systems.
+For languages other than Java, jGRASP is a useful . It can be configured to work with most free and commercial compilers for any programming language.
+
+
+The  and a "context hint" feature that displays the first line of a code structure that is off-screen when the mouse is hovered over its CSD structure.
+The Java object viewers for a Color, the image for an icon, and the binary details of a double. Multiple viewers can be combined on a single viewer canvas window and the contents can be saved to file.
+The Complexity Profile Graph and content complexity, which can be displayed individually. The CPG is integrated with the editing window in jGRASP so that highlighting a section of CPG will highlight the corresponding section of source code, and vice versa. They also scroll together, and the current visible portion of the editing window is shown in the CPG window.
+jGRASP also generates  diagrams for Java. The UML diagrams are augmented with much interactive functionality. Clicking on a dependency edge, for example, will display all of the dependencies between two classes in a separate pane. From that pane, the source code locations of the references that cause each dependency can be listed and visited.
+jGRASP was created by James Cross and Larry Barowski at the Department of Computer Science and Software Engineering in the Samuel Ginn College of Engineering at .
+The development of previous versions of GRASP was supported by research grants from ).

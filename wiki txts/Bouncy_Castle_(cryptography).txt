@@ -1,0 +1,13 @@
+1.56 (Java) 
+: Legion of the Bouncy Castle Inc.
+Bouncy Castle is Australian in origin and therefore American restrictions on the  do not apply to it.
+
+
+Bouncy Castle started when two colleagues were tired of having to re-invent a set of cryptography libraries each time they changed jobs working in server-side  (J2ME at that time) development as a hobby and a design consideration was to include the greatest range of Java VMs for the library, including those on J2ME.
+This design consideration led to the architecture that exists in Bouncy Castle.
+Some key properties of the project are:
+On 18 October 2013, a not-for-profit association, the Legion of the Bouncy Castle Inc. was established in the state of Victoria, Australia, by the core developers and others to take ownership of the project and support the ongoing development of the APIs. The association was recognised as an Australian charity with a purpose of advancement in education and a purpose that is beneficial to the community by the .
+The Bouncy Castle architecture consists of two main components that support the base cryptographic capabilities. These are known as the 'light-weight' API, and the  and similar.
+The low-level, or 'light-weight', API is a set of APIs that implement all the underlying cryptographic algorithms. The APIs were designed to be simple enough to use if needed, but provided the basic building blocks for the JCE provider. The intent is to use the low-level API in memory constrained devices (JavaME) or when easy access to the JCE libraries is not possible (such as distribution in an ). As the light-weight API is just Java code, the Java virtual machine (JVM) does not impose any restrictions on the operation of the code, and at early times of the Bouncy Castle history it was the only way to develop strong cryptography that was not crippled by the Jurisdiction Policy files which prevented any JCE providers from performing "strong" encryption.
+The JCE-compatible provider is built upon the low-level APIs. As such, the source code for the JCE provider is an example of how to implement many of the "common" crypto problems using the low-level API. Many projects have been built using the JCE provider, including an Open Source Certificate Authority .
+The 

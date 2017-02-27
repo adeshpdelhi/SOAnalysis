@@ -1,0 +1,8 @@
+ Portlet Specification request is basically a standard to determine the development of Java portal components. This specification defines standard application programming interface for Java portlet development. The primary purpose of JSR 168 is to provide a standard programming model for creating Java portlets.
+ based on JSR 168 standards are known as JSR 168 portlets.
+Initially Java portal vendors had their own portlet development framework thus those portlets were confined to specific portal servers and couldn't be deployed to the rest of the Java portals. After JSR 168 inception, Java portlets may be deployed on any Java portal servers adhering to JSR 168 specifications.
+A Portlets Catalog is a set of portlets that are ready-to-use components for enterprise portals. For those who want to adopt portals certainly need many and variety of portlets to deploy and run. Here Portlets catalog are of use.
+A JSR 168 portlets catalog makes sure that portlets under this catalog may run on any standards–compliant Java portal server. Types of portlet solution (vertical domains and technology) like collaboration, social networking, community, content management, utility, calendaring, HRM all are available in these catalogs.
+There are many open source and commercial Portlets Catalog available but JSR 168 based solutions are rare.
+JSR 168 specifications offer suitability to the developers to reuse the code to maintain a set of JSR 168 compliant portlets. For deployers, it’s easy to keep a single set of solution and deploy it on many.
+SyncEx, a known name in Portal Community, exhibits a range of JSR 168 compliant portlets.

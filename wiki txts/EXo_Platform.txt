@@ -1,0 +1,4 @@
+
+eXo Platform started in 2002 as an implementation of the 
+Late 2005, eXo Platform v2 was released.
+In May 2013, the 4th and current version of eXo Platform was introduced with a strong focus on Social Network and Social Integration capabilities.

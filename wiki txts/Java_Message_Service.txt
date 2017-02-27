@@ -1,0 +1,15 @@
+				
+
+
+Messaging is a form of ) by the introduction of an intermediary component. This approach allows software components to communicate 'indirectly' with each other. Benefits of this include message senders not needing to have precise knowledge of their receivers.
+The advantages of messaging include the ability to integrate heterogeneous platforms, reduce system bottlenecks, increase scalability, and respond more quickly to change.
+JMS v2.0 is maintained under the  343.
+The following are JMS elements:
+The JMS API supports two models:
+In the point-to-point messaging system, messages are routed to an individual consumer which maintains a queue of "incoming" messages. This messaging type is built on the concept of , senders, and receivers. Each message is addressed to a specific queue, and the receiving clients extract messages from the queues established to hold their messages. While any number of producers can send messages to the queue, each message is guaranteed to be delivered, and consumed by one consumer. Queues retain all messages sent to them until the messages are consumed or until the messages expire. If no consumers are registered to consume the messages, the queue holds them until a consumer registers to consume them.
+The  nor the subscriber knows about each other. A good analogy for this is an anonymous bulletin board
+JMS provides a way of separating the application from the  to connect to the queue or topic, and then use populate and send or publish the messages. On the receiving side, the clients then receive or subscribe to the messages.
+ for the Java Message Service.
+To use JMS, one must have a JMS provider that can manage the sessions, queues and topics. Starting from Java EE version 1.4, JMS provider has to be contained in , which was first made available in that version.
+The following is a list of JMS providers:
+A historical comparison matrix of JMS providers from 2005 is available at 

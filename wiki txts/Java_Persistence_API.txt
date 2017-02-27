@@ -1,0 +1,24 @@
+The .
+ in this context covers three areas:
+The .
+
+
+The final release date of the JPA 1.0 specification was 11 May 2006 as part of  JSR 220. The JPA 2.0 specification was released 10 December 2009. The JPA 2.1 specification was released 22 April 2013.
+A persistence  descriptor file distributed with the application.
+The  queries in syntax, but operate against entity objects rather than directly with database tables.
+Prior to the introduction of  have become themselves implementations of the Java Persistence API specification.
+The  and specification rather than in the EJB JSR/specification.
+The Java Persistence API replaces the persistence solution of EJB 2.0 CMP (Container Managed Persistence).
+The Java Persistence API was developed in part to unify the  most products supporting each of those APIs support the Java Persistence API.
+The Java Persistence API specifies persistence only for 
+The , as well as literally any other conceivable datastore.
+The designers.
+Hibernate provides an 
+Development of a new version of JPA 2.0 was started in July 2007 in the Java Community Process as JSR 317. JPA 2.0 was approved as final on 10 December 2009. The focus of JPA 2.0 was to address features that were present in some of the popular ORM vendors, but could not gain consensus approval for JPA 1.0.
+Main features included were:
+Vendors supporting JPA 2.0:
+Development of a new version of JPA 2.1 was started in July 2011 as JSR 338. JPA 2.1 was approved as final on 22 May 2013.
+Main features included were:
+Vendors supporting JPA 2.1
+Future JPA specification information is available here:
+In November 2015, Linda DeMichiel announced on the javaee-spec users mailing that Lukas Jungmann took over as the specification lead. Linda's announcement also stated, "[w]e plan to do an MR for JPA 2.2 in the Java EE 8 time frame".

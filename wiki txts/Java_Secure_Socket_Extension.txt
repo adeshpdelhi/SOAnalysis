@@ -1,0 +1,2 @@
+In , and optional client-authentication.
+JSSE, an optional package for Java versions 1.2 and 1.3, became integrated into version .

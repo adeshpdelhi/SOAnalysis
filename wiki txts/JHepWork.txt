@@ -1,0 +1,24 @@
+, thus it runs on any operating system where the Java virtual machine can be installed.
+The program is designed for interactive scientific plots in 2D and 3D and contains numerical scientific libraries implemented in Java for mathematical functions, random numbers, statistical analysis, curve fitting and other data mining algorithms. DataMelt uses high-level programming languages, such as  coding can also be used to call DataMelt numerical and graphical libraries.
+DataMelt is an attempt to create a data-analysis environment using open-source packages with a coherent user interface and tools competitive to commercial programs. The idea behind the project is to incorporate open-source mathematical and numerical software packages with  concept. A typical example will be shown below.
+Scripts and Java code (in case of the Java programming) can be run either in a GUI editor of DataMelt or as .
+DataMelt can be used everywhere where an analysis of large numerical data volumes,  software, it is not completely free for commercial usage (see below), no source code is available on the home page, and all documentation and even bug reporting requires "membership".
+
+
+DataMelt has several features useful for data analysis:
+The package supports several mathematical, data-analysis and data mining features:
+Symbolic calculations use  scripting language. The following methods are available:
+DataMelt includes the native Java and Python methods for file input and outputs. In addition, it allows to write data in the following formats:
+Data stored in external files can be viewed using browsers for convenient visualization.
+DataMelt has its roots in 
+The string "HEP" in the project name "jHepWork" abbreviates "High-Energy Physics". But due to a wide popularity outside this area of physics, it was renamed to ualization Environment). This project existed for 3 years before it was renamed to DataMelt (or, in short, DMelt).
+DataMelt is hosted by jWork.ORG portal
+DataMelt runs on Windows, Linux, Mac and the  platforms. The package for the Android is called AWork.
+The core source code of the numerical and graphical libraries is licensed by the . The interactive development environment (IDE) used by DataMelt has some restrictions for commercial usage since language files, documentation files, examples, installer, code-assist databases, interactive help are licensed by the creative-common license. Full members of the DataMelt project have several benefits, such as: the license for a commercial usage, access to the source repository, an extended help system, a user script repository and an access to the complete documentation.
+The commercial licenses cannot apply to source code that was imported or contributed to DataMelt from other authors.
+Here is an example of how to show 2D bar graphs by reading a CVS file downloaded from the  web site.
+The execution of this script plots a bar chart in a separate window. The image can be saved in a number of formats.
+Here is another simple example which illustrates how to fill a 2D histogram and display it on a canvas. The script also creates a figure in the  format. This script illustrates how to glue and mix the native JAVA classes (from the package java.util) and DataMelt classes (the package jhplot) inside a script written using the Python syntax.
+This script can be run either using DataMelt IDE or using a stand-alone Jython after specifying classpath to DataMelt libraries. The output is shown below:
+The same example can also be coded using  programming language which is supported by DataMelt.
+ is better integrated with Java and can be a factor three faster for long loops over primitives compared to Jython.

@@ -1,0 +1,25 @@
+In .
+An example is an adapter that converts the interface of a  document into a tree structure that can be displayed.
+
+
+An adapter helps two incompatible interfaces to work together. This is the real world definition for an adapter. Interfaces may be incompatible, but the inner functionality should suit the need. The Adapter design pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients.
+A adapter can be used when the wrapper must respect a particular interface and must support 
+There are two adapter patterns:
+In this adapter pattern, the adapter contains an instance of the class it wraps. In this situation, the adapter makes calls to the instance of the wrapped .
+This adapter pattern uses multiple 
+There is a further form of runtime adapter pattern as follows:
+It is desired for  data. A compile time solution is:
+However, suppose that the format of the string data must be varied. A compile time solution is to use inheritance:
+and perhaps create the correctly "formatting" object at runtime by means of the .
+A solution using "adapters" proceeds as follows:
+(i) Define an intermediary "Provider" interface, and write an implementation of that Provider interface that wraps the source of the data,  in this example, and outputs the data formatted as appropriate:
+(ii) Write an Adapter class that returns the specific implementation of the Provider:
+(iii) Register the  can be looked up at runtime:
+(iv) In code, when wishing to transfer data from , write:
+or more concisely:
+(v) The advantage can be seen in that, if it is desired to transfer the data in a second format, then look up the different adapter/provider:
+(vi) And if it is desired to output the data from :
+(vii) In this way, the use of adapters and providers allows multiple "views" by  without having to alter the class hierarchy. In general, it permits a mechanism for arbitrary data flows between objects that can be retrofitted to an existing object hierarchy.
+When implementing the adapter pattern, for clarity one can apply the class name . When the clientMethod is called, it will have access to the adaptee instance that allows for accessing the required data of the adaptee and performing operations on that data that generates the desired output.
+Output
+

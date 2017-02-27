@@ -1,0 +1,29 @@
+ database accesses with high-level object handling functions.
+Hibernate is  2.1.
+Hibernate's primary feature is mapping from Java classes to  data types. Hibernate also provides data query and retrieval facilities. It generates SQL calls and relieves the developer from the manual handling and object conversion of the result set.
+
+
+The mapping of Java classes to database tables is implemented by the configuration of an .
+There are provided facilities to arrange .
+Hibernate supports the mapping of custom value types. This makes the following scenarios possible:
+". Mapping is a way of resolving the object-relational impedance mismatch problem.
+Mapping informs the ORM tool of what Java class object to store in which database table.
+Hibernate provides an  alternative to HQL. Criteria Query is used to modify the objects and provide the restriction for the objects. HQL (Hibernate Query Language) is the object-oriented version of SQL. It generates database independent queries so that there is no need to write database-specific queries. Without this capability, changing the database would require individual SQL queries to be changed as well, leading to maintenance issues.
+Hibernate provides transparent persistence for 
+Collections of data objects are typically stored in Java collection classes such as implementations of the Set and List interfaces.  associated collections. Lazy loading is the default as of Hibernate 3.
+Related objects can be configured to  operations from one to the other. For example, a parent Album object can be configured to cascade its save and/or delete operation to its child Track objects.
+Hibernate can be used both in standalone .
+In Hibernate  of the Album entity, if it is assumed that Tracks can only be saved or retrieved from the database through the Album object. Unlike J2EE, Hibernate can switch databases.
+Hibernate was started in 2001 by Gavin King with colleagues from Cirrus Technologies as an alternative to using EJB2-style entity beans. The original goal was to offer better persistence capabilities than those offered by EJB2; by simplifying the complexities and supplementing certain missing features.
+In early 2003, the Hibernate development team began Hibernate2 releases, which offered many significant improvements over the first release.
+) later hired the lead Hibernate developers in order to further its development.
+In 2005, Hibernate version 3.0 was released. Key features included a new Interceptor/Callback architecture, user defined filters, and JDK 5.0 
+In Dec 2011, Hibernate Core 4.0.0 Final was released. This includes new features such as multi-tenancy support, introduction of ServiceRegistry (a major change in how Hibernate builds and manages "services"), better session opening from SessionFactory, improved integration via 
+In Dec 2012, Hibernate ORM 4.1.9 Final was released.
+In Mar 2013, Hibernate ORM 4.2 Final was released.
+In Dec 2013, Hibernate ORM 4.3.0 Final was released.
+In Sep 2015, Hibernate ORM 5.0.2 Final was released. It has improved bootstrapping, hibernate-java8, hibernate-spatial, Karaf support.
+The Hibernate API is provided in the 
+The org.hibernate.Session interface.
+A session is intended to last as long as the logical transaction on the database. Due to the latter feature, Session implementations are not expected to be thread safe nor to be used by multiple clients.
+The Hibernate software includes the following components:

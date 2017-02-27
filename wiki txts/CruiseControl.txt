@@ -1,0 +1,10 @@
+In  of any software development process.
+CruiseControl is  on a project they were working on. It was later extracted into a stand-alone application.
+There is a version of CruiseControl for .
+The current version is 2.8.4, released in 2010.
+
+
+The build loop is designed to run as a , builds if necessary, and publishes a notice regarding the status of the software build.
+CruiseControl provides two ways of reporting build status. The first (classic) reporting is the reporting JSP and the second is the dashboard.
+The build reporting is designed to present the results of the CruiseControl build loop. It is based on a  page. The left side of the page displays whether CruiseControl is currently building a project, and provides links to the details of previous builds. The right side of the page presents the results of the build—including compilation errors, test results and details about what files have changed since the last build.
+The dashboard was introduced in the 2.7 release. The dashboard is a web page to enable visualising the project build statuses. Previous project build results are colour-coded providing a snapshot of how the projects are doing at that moment. Users can hover the cursor over icons to see the name and information about the project. The 'Builds' tab of the dashboard shows all projects (colour-coded) sorted by name providing some more information.

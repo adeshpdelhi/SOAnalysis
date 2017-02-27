@@ -1,0 +1,12 @@
+
+
+
+FrostWire, a BitTorrent client (formerly a Gnutella client), is a collaborative effort from hundreds of Open Source and freelance developers from around the world. In late 2005, concerned developers of LimeWire's open source community announced the start of a new project fork "FrostWire" that would protect the developmental source code of the LimeWire client. The developers of FrostWire give high regard and respect to the GNU General Public License and consider it to be the ideal foundation of a creative and free enterprise market. FrostWire has evolved to replace LimeWire's BitTorrent core for that of Vuze, the Azureus BitTorrent Engine, and ultimately to remove the LimeWire's Gnutella core to become a 100% BitTorrent client that is simple to use.
+The project was started in September 2004 after LimeWire's distributor considered adding "blocking" code in response to 
+The second beta release of FrostWire was available in the last quarter of 2005.
+Since version 4.20.x, FrostWire was able to handle torrent files and featured a new junk filter. Also, in version 4.21.x support was added for most Android devices.
+Since version 5.0 (2011), FrostWire relaunched itself as a BitTorrent application, so those using the Gnutella network either have to use version 4, or switch to another client altogether.
+Since version 6.0, FrostWire adds preview files before download.
+Since around 2008 some members of the FrostWire community began to notice the distribution of the optional Ask.com toolbar in the Windows installers.
+Software based in the original FrostWire source (gnutella enabled) still exists, for example 
+FrostWire Plus for Android is a native Android BitTorrent Client+YouTube downloader. It allows you to find &amp; download any file from the distributed peer-to-peer BitTorrent Network – music, movies, apps, ebooks, images. . In addition, FrostWire is also a cloud downloader – fetching results and downloading files from two main cloud based sources – YouTube and SoundCloud. FrostWire also includes a featured Music Library &amp; Music Player. Currently version is 1.8.6.

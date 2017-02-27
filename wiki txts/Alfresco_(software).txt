@@ -1,0 +1,13 @@
+. Alfresco comes in three flavors:
+Alfresco includes a content repository, an out-of-the-box, web-based user interface for managing and using standard portal content, a  technology.
+
+
+John Newton (co-founder of .
+While Alfresco's product initially focused on document management, in May, 2006, the company announced its intention to expand into web content management by acquiring senior technical and managerial staff from 
+In October 2009, the 2009 Open Source CMS Market Share Report described Alfresco as a leading Java-based open source web content management system.
+In 2010, Alfresco sponsored a new .
+In July 2011, Alfresco and 
+In January 2012, Alfresco 4.0 was released with significant improvements to the user interface. The new Alfresco aims to move further features from Alfresco Explorer to Alfresco Share, as Alfresco Explorer is intended to be deprecated over time.
+In January 2013, Alfresco appointed Doug Dennerline, former President of , as its new CEO.
+Enterprise content management for documents, web, records, images and collaborative content development.
+Alfresco is capable of the following:

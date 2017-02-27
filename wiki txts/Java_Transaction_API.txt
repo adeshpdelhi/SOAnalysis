@@ -1,0 +1,27 @@
+				. JTA provides for:
+
+
+In the X/Open XA architecture, a transaction manager or  the transactions. The application also communicates with the individual resources using their own API to modify the resource.
+The JTA API consists of classes in two :
+The JTA is modelled on the X/Open XA architecture, but it defines two different APIs for demarcating transaction boundaries. It distinguishes between an , that is used by general client code such as a servlet or an EJB to manage the transactions.
+The JTA architecture requires that each resource manager must implement the  interface in order to be managed by the TP monitor. As stated previously, each resource will have its own specific API, for instance:
+The Java Transaction API consists of three elements: a high-level application transaction demarcation interface, a high-level transaction manager interface intended for an application server, and a standard Java mapping of the X/Open XA protocol intended for a transactional resource manager.
+The  interface provides the application the ability to control transaction boundaries programmatically. This interface may be used by Java client programs or EJB beans.
+The  method starts a global transaction and associates the transaction with the calling thread. The transaction-to-thread association is managed transparently by the Transaction Manager.
+Support for nested transactions is not required. The UserTransaction.begin method throws the NotSupportedException when the calling thread is already associated with a transaction and the transaction manager implementation does not support nested transactions.
+Transaction context propagation between application programs is provided by the underlying transaction manager implementations on the client and server machines. The transaction context format used for propagation is protocol dependent and must be negotiated between the client and server hosts. For example, if the transaction manager is an implementation of the  specification, it will use the transaction context propagation format as specified in the CORBA OTS 1.1 specification. Transaction propagation is transparent to application programs.
+The  annotation provides the application the ability to control transaction boundaries declaratively. This annotation can be applied to any class that the Java EE specification defines as a managed bean (which includes CDI managed beans).
+The code sample below illustrates the usage of @Transactional in a request scoped CDI managed bean:
+Transactional behavior can be configured via an attribute on the annotation. The available options closely mirror those of the  specification.
+The  annotation provides the application the ability to declare that the scope during which a bean lives is tied to the time a given transaction is active.
+The code sample below illustrates the usage of @TransactionScoped in a request scoped CDI managed bean:
+If method .
+)
+The code sample below illustrates the usage of UserTransaction via bean-managed transactions in an EJB session bean:
+Alternatively, the UserTransaction can be obtained from the SessionContext:
+Note though that in the example above if the  is exited. Making use of a UserTransaction is thus not necessary in EJB programming, but might be needed for very specialized code.
+The UserTransaction should be available under  (if a JTA implementation is installed in the environment).
+There exist a number of active (as of September 2010) open source JTA implementations.
+
+Atomikos 's documentation and literature on the internet show that it is a production quality implementation, which also supports recovery and some exotic features beyond the JTA API. Atomikos provides out-of-the-box Spring integration along with some nice examples. It also provides support for pooled connections for both database and JMS resources.
+ and session pooling out of the box.

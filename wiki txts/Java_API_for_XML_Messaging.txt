@@ -1,0 +1,15 @@
+				). JAXM supports both asynchronous and synchronous messaging.
+JAXM is one of the 
+
+
+The 
+Also, Java API for XML Messaging has several advantages over  such as the following:
+The complete JAXM API comes with two packages:
+Messages in JAXM are XML messages that follow the prescribed SOAP format and standards. There are two main types of SOAP messages: those that have attachments and those that do not. For example, if you want your message to contain an image, you must send an attachment with the message. The SAAJ API provides the AttachmentPart class for attachments in SOAP messages.
+A connection is required to send and receive all SOAP messages. The connection can go to a messaging provider or a particular destination. The JAXM API provides the class and interface to represent two kinds of connections:
+A SOAPConnection is a point-to-point connection for sending messages directly to a remote party.
+A ProviderConnection object represents a connection to a messaging provider. (The next section explains more about messaging providers.) When you send a message via a ProviderConnection object, the message goes to the messaging provider. The messaging provider forwards the message, following the message's routing instructions, until the message gets to the ultimate recipient's messaging provider, which in turn forwards the message to the ultimate recipient.
+A messaging provider keeps track of messages and routes them to the correct destination or destinations. It is a service that handles the transmission and routing of messages.
+A JAXM client may or may not use a messaging provider. Generally, you do not need a messaging provider if you just want to be a consumer of Web services. Some limitations of not using a messaging provider are the following:
+The client can send only request-response messages The client can act in the client role only
+Some advantages to not using a messaging provider are the following:

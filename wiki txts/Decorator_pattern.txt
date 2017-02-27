@@ -1,0 +1,25 @@
+In 
+
+
+The decorator pattern can be used to extend (decorate) the functionality of a certain object statically, or in some cases at  the original class. This wrapping could be achieved by the following sequence of steps:
+This pattern is designed so that multiple decorators can be stacked on top of each other, each time adding a new functionality to the overridden method(s).
+Note that decorators and the original class object share a common set of features. In the previous diagram, the operation() method was available in both the decorated and undecorated versions.
+The decoration features (e.g., methods, properties, or other members) are usually defined by an interface, .
+The decorator pattern is an alternative to  for selective objects.
+This difference becomes most important when there are several  incorporate the decorator pattern.
+As an example, consider a window in a  objects. At this point, either solution would be fine.
+Now, assume one also desires the ability to add borders to windows. Again, the original  or both, as we see fit. Notice that if the functionality needs to be added to all Windows, you could modify the base class and that will do. On the other hand, sometimes (e.g., using external frameworks) it is not possible, legal, or convenient to modify the base class.
+Note, in the previous example, that the "SimpleWindow" and "WindowDecorator" classes implement the "Window" interface, which defines the "draw()" method and the "getDescription()" method, that are required in this scenario, in order to decorate a window control.
+A decorator makes it possible to add or alter behavior of an interface at run-time. Alternatively, the 
+Two options are presented here, first a dynamic, runtime-composable decorator (has issues with calling decorated functions unless proxied explicitly) and a decorator that uses mixin inheritance.
+The following Java example illustrates the use of decorators using the window/scrolling scenario.
+The following classes contain the decorators for all  classes, including the decorator classes themselves.
+Here's a test program that creates a  instance which is fully decorated (i.e., with vertical and horizontal scrollbars), and prints its description:
+Below is the JUnit test class for the Test Driven Development
+The output of this program is "simple window, including vertical scrollbars, including horizontal scrollbars". Notice how the  it with a suffix.
+The next Java example illustrates the use of decorators using coffee making scenario. In this example, the scenario only includes cost and ingredients.
+The following classes contain the decorators for all  classes, including the decorator classes themselves..
+Here's a test program that creates a  instance which is fully decorated (with milk and sprinkles), and calculate cost of coffee and prints its ingredients:
+The output of this program is given below:
+Python includes a more natural way of decorating a function by using an annotation on the function that is decorated.
+Output:

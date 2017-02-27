@@ -1,0 +1,8 @@
+ search and cross reference engine. It helps programmers to search, cross-reference and navigate source code trees.
+It can understand various 
+The name comes from the term .
+OpenGrok is being developed mainly by  (CDDL).
+
+
+OpenGrok's features include:
+

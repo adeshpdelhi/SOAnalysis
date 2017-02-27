@@ -1,0 +1,8 @@
+.
+
+
+Alice was developed to address five core problems in educational programming:
+In controlled studies at 
+Alice 3 is released under an open-source license allowing redistribution of the source code, with or without modification.
+A variant of Alice 2.0 called Storytelling Alice It includes three main differences:
+The next version of Storytelling Alice is known as Looking Glass, and is being developed at 

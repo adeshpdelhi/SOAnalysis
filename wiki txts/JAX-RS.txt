@@ -1,0 +1,8 @@
+, to simplify the development and deployment of web service clients and endpoints.
+From version 1.1 on, JAX-RS is an official part of  is required.
+
+
+JAX-RS provides some annotations to aid in mapping a resource class (a ) as a web resource. The annotations include:
+In addition, it provides further annotations to  annotations take a key of some form which is used to look up the value required.
+In January 2011 the JCP formed the JSR 339 expert group to work on JAX-RS 2.0.
+Implementations of JAX-RS include:

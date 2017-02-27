@@ -1,0 +1,7 @@
+
+
+
+OpenEJB was founded by Richard Monson-Haefel and David Blevins in December 1999. At the time there were new vendors moving in the  space seemingly every week. Rather than join the space as a competitor, the project was focused entirely on providing these new platforms with a way to quickly get EJB compliance via plugging OpenEJB into their application server.
+The first to integrate OpenEJB in this fashion was Apple's  concept of putting EJBs inside the .war file.
+As part of the work that OpenEJB did to prepare for the integration with Apple's WebObjects, a very large integration test suite was developed. The test suite was developed as a generic application since it would need to be run against both , was run with OpenEJB right inside the tests rather than as a separate process, which was easy to do as the container was designed to be plugged into other platforms and make as little assumptions about its environment as possible. It was from this work that the concept of combining an EJB application with plain unit tests and an embeddable EJB container was born. Originally referred to as a "local" EJB container and what lead the project to describe itself as being able to run in two modes: Local and Remote.
+In August 2003 the project helped launch the , ported select bits of the 2.0 codebase, and eventually brought it up to the EJB 3.0 spec level in what is now called OpenEJB 3.0.

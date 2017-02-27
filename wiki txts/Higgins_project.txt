@@ -1,0 +1,3 @@
+ project dedicated to giving individuals more control over their personal identity, profile and social network data.
+The project is organized into three main areas:
+The initial code for the Higgins Project

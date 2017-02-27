@@ -1,0 +1,20 @@
+.
+
+
+ItsNat simulates a virtual 
+As of version 1.3  ItsNat provides a new stateless mode.
+ItsNat focuses on server centric  and web sites.
+When the server DOM tree is modified using Java W3C DOM APIs by the  DOM accordingly, usually as response of an AJAX event (ItsNat is heavily based on AJAX).
+The developer code in the server can register Java W3C DOM Event listeners listening for W3C DOM events, this listener registration is automatically propagated to the client. When the , for instance, clicks a "listened" element, the real browser event is sent to the server using AJAX, converted to a W3C DOM event and received by the server based listener(s).
+The original page layout is defined using pure  that can be inserted (included) as DOM into the main tree statically or dynamically (typically as a response of a user/Ajax event).
+To save server memory ItsNat provides a DOM tree node cache in a serialized form (as plain text not DOM) and DOM subtrees no longer used can be removed manually only in server saving memory (the client DOM remains untouched).
+Despite same client-server DOM contract, ItsNat provides some tolerance to DOM nodes introduced by non-ItsNat JavaScript code, static zones in server can be managed by non-ItsNat JavaScript code, DOM subtrees removed only in server can be changed freely in client, and in some locations (between and at the end of head and body elements), "intrusive" nodes are tolerated.
+In stateless mode, introduced in version 1.3, the client page sends the necessary custom data of the current state to the server usually through AJAX requests, the server with this data is able to reconstruct partially or fully the client DOM state going to be modified and generate the necessary JavaScript DOM code, returned to the client to bring it to a new state, usually modifying the client page DOM tree according to the action which motivated the request. This mode may be not so fine grane and performant than the stateful mode, however this approach is more easily scalable because there is no per client page data kept in server and therefore AJAX requests can be dispatched to different server nodes with no need of session data sharing or server affinity need in stateful mode.
+ItsNat provides an optional Component system built using the core features of the framework. These components are AJAX based and inspired in  based web framework.
+ItsNat provides several button types, text based components, labels, lists, tables, trees usually with content editable "in place".
+Any HTML element can be a component, for instance any element can be a normal button, a check box, a radio button, any element list may be a combo or a list component, for instance a group of SVG circles may be a multiple selection list component. Components can be used to generate XML too.
+ItsNat components are not intrusive because the component view (markup) is provided by the developer and attached to the component.
+ItsNat is pure Java and runs in any  v1.5 as the minimum configuration and virtually any servlet-compliant container.
+ is supported, including AJAX with some limitations.
+ 5.1.7+.
+SVG plugins (including AJAX): Adobe SVG Viewer v3  as applet.

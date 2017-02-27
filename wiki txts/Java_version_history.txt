@@ -1,0 +1,46 @@
+				.
+In addition to the language changes, much more dramatic changes have been made to the ).
+After the Java 7 release, 
+Java 8 is the only publicly supported version, while after public support periods of older versions has ended, non-public updates have been issued for Java 7 and earlier.
+
+
+The first alpha and beta Java public releases in 1995 had highly unstable . The supplied Java web browser was named WebRunner.
+The first version was released on January 23, 1996 and called 
+Major additions in the release on February 19, 1997 included:
+Codename 
+Codename 
+Codename 
+Public support and security updates for Java 1.4 ended in October 2008. Paid security updates for Oracle customers ended in February 2013.
+Codename .
+J2SE 5.0 entered its end-of-public-updates period on April 8, 2008; updates are no longer available to the public as of November 3, 2009. Updates were available to paid Oracle customers until May 2015.
+Tiger added a number of significant new language features:
+There were also the following improvements to the standard libraries:
+Java 5 is the last release of Java to officially support the Microsoft 
+Java 5 Update 5 (1.5.0_05) is the last release of Java to work on 
+Java 5 was first available on Apple Mac OS X 10.4 (Tiger) and was the default version of Java installed on Apple Mac OS X 10.5 (Leopard).
+This version introduced a new versioning system for the Java language, although the old versioning system continued to be used for developer libraries:
+Both version numbers "1.5.0" and "5.0" are used to identify this release of the Java 2 Platform Standard Edition. Version "5.0" is the product version, while "1.5.0" is the developer version. The number "5.0" is used to better reflect the level of maturity, stability, scalability and security of the J2SE.
+This correspondence continued through later releases (Java 6 = JDK 1.6, Java 7 = JDK 1.7, and so on).
+Codename .
+During the development phase, new builds including enhancements and bug fixes were released approximately weekly. Beta versions were released in February and June 2006, leading up to a final release that occurred on December 11, 2006.
+Major changes included in this version:
+Java 6 can be installed to Mac OS X 10.5 (Leopard) running on 64-bit (Core  Java 6 is also supported by both 32-bit and 64-bit machines running Mac OS X 10.6 (Snow Leopard).
+Java 6 reached the end of its supported life in February 2013, at which time all public updates, including security updates, were scheduled to be stopped.
+After Java 6 release, Sun, and later Oracle, released several updates which, while not changing any public API, enhanced end-user usability or fixed bugs.
+The 
+Some developers have noticed an issue introduced in this release which causes debuggers to miss breakpoints seemingly randomly. option will prevent the failure. Another workaround is to roll back to update 13, or to upgrade to update 16.
+Java 7 (codename  lists many of the changes.
+Additions in Java 7 include:
+Lambda (Java's implementation of 
+Java 7 was the default version to download on java.com from April 2012 until Java 8 was released.
+Oracle issued public updates to the Java 7 family on a quarterly basis
+Java 8 was released on 18 March 2014,
+Work on features was organized in terms of 
+Java 8 is not supported on  Previous updates of JDK 8 could be run under XP, but had to be installed after a forced installation by directly unzipping files from the installation executable.
+From October 2014, Java 8 has been the default version to download from the official website.
+At JavaOne 2011, Oracle discussed features they hope to have in a 2016 release of Java 9,
+Work is under way to make the Java implementation of  This work is tracked under:
+There are plans to add 
+There is speculation of introducing objects without identity (
+.
+Before OpenJDK, several .

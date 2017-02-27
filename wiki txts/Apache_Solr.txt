@@ -1,0 +1,21 @@
+
+Solr runs as a standalone full-text search server. It uses the  APIs that make it usable from most popular programming languages. Solr's external configuration allows it to be tailored to many types of application without Java coding, and it has a plugin architecture to support more advanced customization.
+Apache  and Apache Solr are both produced by the same Apache Software Foundation development team since the two projects were merged in 2010. It is common to refer to the technology or products as Lucene/Solr or Solr/Lucene.
+
+
+In 2004, Solr was created by Yonik Seeley at  as an in-house project to add search capability for the company website.
+In January 2006, CNET Networks decided to openly publish the source code by donating it to the  it entered an incubation period which helped solve organizational, legal, and financial issues.
+In January 2007, Solr graduated from incubation status into a standalone top-level project (TLP) and grew steadily with accumulated features, thereby attracting a robust community of users, contributors, and committers. Although quite new as a public project, it powered several high-traffic websites.
+In September 2008, Solr 1.3 was released with many enhancements including distributed search capabilities and performance enhancements among many others.
+In January 2009, solr &amp; enterprise search Yonik Seeley along with Grant Ingersoll and Erik Hatcher went on to launch 
+November 2009 saw the release of Solr 1.4. This version introduced enhancements in indexing, searching and faceting along with many other improvements such as Rich Document processing (
+In March 2010, the  Solr became a Lucene sub project. Separate downloads continued, but the products were now jointly developed by a single set of committers.
+In 2011 the Solr version number scheme was changed in order to match that of Lucene. After Solr 1.4, the next release of Solr was labeled 3.1, in order to keep Solr and Lucene on the same version number.
+In October 2012 Solr version 4.0 was released, including the new SolrCloud feature. 2013 and 2014 saw a number of Solr releases in the 4.x line, steadily growing the feature set and improving reliability.
+In February 2015, Solr 5.0 was released,
+In April 2016, Solr 6.0 was released. Added support for executing Parallel SQL queries across SolrCloud collections. Includes StreamExpression support and a new JDBC Driver for the SQL Interface.
+
+Excerpt:
+Solr has an active development community, both individuals and companies, who contribute new features and bug fixes. 
+Solr is bundled as the built-in search in many applications such as 
+Solr exposes industry standard 
