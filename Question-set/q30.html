@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://stackoverflow.com/questions/13855013/understanding-java-memory-management -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Understanding Java Memory Management - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Understanding Java Memory Management">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Java programmers know that JVM runs a Garbage Collector, and System.gc() would just be a suggestion to JVM to run a Garbage Collector. It is not necessarily that if we use System.gc(), it would ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/13855013/understanding-java-memory-management">
+    <link rel="canonical" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management">
+
+    
+    
+    <script type="text/javascript" async="" src="./q30_files/ados"></script><script src="./q30_files/rules-p-c1rF4kxgLUzNc.js.download"></script><script async="" src="./q30_files/quant.js.download"></script><script async="" src="./q30_files/beacon.js.download"></script><script async="" src="./q30_files/analytics.js.download"></script><script type="text/javascript" async="" src="./q30_files/ados.js.download"></script><script src="./q30_files/jquery.min.js.download"></script>
+    <script src="./q30_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./q30_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Understanding Java Memory Management&#39;" href="http://stackoverflow.com/feeds/question/13855013">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/13855013/understanding-java-memory-management">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/13855013/understanding-java-memory-management">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/13855013/understanding-java-memory-management">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:9,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:13855013});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '13855013');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1488317155,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"816d3fe09a7ed7e4ba07245c23acc06c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"devstory_onboarding_exp":{"v":"j","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"237382d76454","js/moderator.en.js":"a33415e1eed8","js/full-anon.en.js":"942d7d1de187","js/full.en.js":"3a6885c07a88","js/wmd.en.js":"a0c125bc1e56","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"bc3ebe71b5f1","js/tageditornew.en.js":"3ddc9f480232","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"759540619f52","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"d08b3740a7e2","js/explore-qlist.en.js":"88f824a42b1a","js/events.en.js":"1419425a050c","js/keyboard-shortcuts.en.js":"7473f1cb9735","js/external-editor.en.js":"71095ef40e9d","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"71095ef40e9d","js/snippet-javascript.en.js":"11b9273bb631","js/snippet-javascript-codemirror.en.js":"277350af08a2"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./q30_files/full-anon.en.js.download"></script><script async="" src="./q30_files/snippet-javascript.en.js.download"></script><script async="" src="./q30_files/post-validation.en.js.download"></script><script async="" src="./q30_files/prettify-full.en.js.download"></script><script async="" src="./q30_files/external-editor.en.js.download"></script><script type="text/javascript" src="./q30_files/adFeedback.js.download"></script><link rel="stylesheet" href="./q30_files/adFeedback.css"><link rel="stylesheet" href="./q30_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">
+            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13855013%2funderstanding-java-memory-management" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="http://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 166 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13855013%2funderstanding-java-memory-management" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 6.8 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management" class="question-hyperlink">Understanding Java Memory Management</a></h1>
+
+            
+<div class="aside-cta">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="13855013" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1385381463",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1385381463"><iframe id="ados_frame_adzerk1385381463_2729525" frameborder="0" scrolling="no" height="90" width="728" src="./q30_files/saved_resource.html"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q30_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855013">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">12</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#">favorite</a>
+        <div class="favoritecount"><b>15</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>Java programmers know that JVM runs a Garbage Collector, and System.gc() would just be a suggestion to JVM to run a Garbage Collector. It is not necessarily that if we use System.gc(), it would immediately run the GC.<br><br>Please correct me if I misunderstand Java's Garbage Collector.<br></p>
+
+<p>Is/are there any other way/s doing memory management other than relying on Java's Garbage Collector?<br>If you intend to answer the question by some sort of programming practice that would help managing the memory, please do so.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag js-gps-track" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/memory-management" class="post-tag js-gps-track" title="show questions tagged &#39;memory-management&#39;" rel="tag">memory-management</a> <a href="http://stackoverflow.com/questions/tagged/memory-leaks" class="post-tag js-gps-track" title="show questions tagged &#39;memory-leaks&#39;" rel="tag">memory-leaks</a> <a href="http://stackoverflow.com/questions/tagged/garbage-collection" class="post-tag js-gps-track" title="show questions tagged &#39;garbage-collection&#39;" rel="tag">garbage-collection</a> <a href="http://stackoverflow.com/questions/tagged/jvm" class="post-tag js-gps-track" title="show questions tagged &#39;jvm&#39;" rel="tag">jvm</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/13855013" title="short permalink to this question" class="short-link" id="link-post-13855013">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855013/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2012-12-13 07:28:40Z" class="relativetime">Dec 13 '12 at 7:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1844263/michael-ardan"><div class="gravatar-wrapper-32"><img src="./q30_files/tDCgy.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1844263/michael-ardan">Michael Ardan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,951</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855013" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="4" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19075020" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">For System.gc() haters, please explain why would you hate calling GC.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1844263/michael-ardan" title="1,951 reputation" class="comment-user owner">Michael Ardan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075020_13855013"><span title="2012-12-13 07:29:24Z" class="relativetime-clean">Dec 13 '12 at 7:29</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075075" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Have you read <a href="http://stackoverflow.com/questions/6005061/java-memory-model">this question</a>?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/966590/andrew-logvinov" title="10,832 reputation" class="comment-user">Andrew Logvinov</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075075_13855013"><span title="2012-12-13 07:32:33Z" class="relativetime-clean">Dec 13 '12 at 7:32</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075081" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You should never rely on System.gc() as in some environments it may never be called. You can prevent software from outside of the vm to do that.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1782868/sorencito" title="1,747 reputation" class="comment-user">sorencito</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075081_13855013"><span title="2012-12-13 07:32:49Z" class="relativetime-clean">Dec 13 '12 at 7:32</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075087" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I think it boils down to the System.gc() call not being reliable, and not (always) freeing the resources that need to be freed when called. So if you have a tool you can't really rely on there aren't too many reasons for you to actually use it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/804409/omu-negru" title="1,532 reputation" class="comment-user">omu_negru</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075087_13855013"><span title="2012-12-13 07:33:05Z" class="relativetime-clean">Dec 13 '12 at 7:33</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075585" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">JVM has malloc()'d a certain amount of space that is the heap.  The operating system is obligated to have that much memory available to JVM.  GC does not by rule always reduce that amount.  Depending on how JVM is configured that number will not go below a certain amount no matter how few actual objects are in memory.  Modern OS is smart enough to allow other processes to use the real physical memory and include swap space in the calculation of total reserved for JVM, but if you're in a position where this stuff is a concern in the first place, it may matter.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/331052/affe" title="33,595 reputation" class="comment-user">Affe</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075585_13855013"><span title="2012-12-13 07:57:24Z" class="relativetime-clean">Dec 13 '12 at 7:57</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855013" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick="">show <b>4</b> more comments</a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								9 Answers
+                                <span style="display:none;" itemprop="answerCount">9</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="13855164"></a>
+<div id="answer-13855164" class="answer accepted-answer" data-answerid="13855164" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855164">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">11</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The most important thing to remember about Java memory management is "nullify" your reference.</p>
+
+<p>Only objects that are not referenced are to be garbage collected.</p>
+
+<p>For example, objects in the following code is never get collected and your memory will be full just to do nothing.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="typ">List</span><span class="pln"> objs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">();</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i  </span><span class="pun">&lt;</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">MAX_VALUE</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> objs</span><span class="pun">.</span><span class="pln">add</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Object</span><span class="pun">());</span></code></pre>
+
+<p>But if you don't reference those object ... you can loop as much as you like without memory problem.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="typ">List</span><span class="pln"> objs </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">ArrayList</span><span class="pun">();</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i  </span><span class="pun">&lt;</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">MAX_VALUE</span><span class="pun">;</span><span class="pln"> i</span><span class="pun">++)</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Object</span><span class="pun">();</span></code></pre>
+
+<p>So what ever you do, make sure you remove reference to object to no longer used (set reference to <code>null</code> or clear collection).</p>
+
+<p>When the garbage collector will run is best left to JVM to decide. Well unless your program is about to start doing things that use a lot of memory and is speed critical so you may suggest JVM to run GC before going in as you may likely get the garbaged collected and extra memory to go on. Other wise, I personally see no reason to run <code>System.gc()</code>.</p>
+
+<p>Hope this help.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855164" title="short permalink to this answer" class="short-link" id="link-post-13855164">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855164/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:38:54Z" class="relativetime">Dec 13 '12 at 7:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/176180/nawaman"><div class="gravatar-wrapper-32"><img src="./q30_files/ebae38015e15bacee8dd8a61d73f5138" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/176180/nawaman">NawaMan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,773" dir="ltr">14.8k</span><span title="7 gold badges"><span class="badge1"></span><span class="badgecount">7</span></span><span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span><span title="67 bronze badges"><span class="badge3"></span><span class="badgecount">67</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855164" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19089601" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Well, not everything. Local variables (as well as method parameters) will be cleared when the method call ends so you don't need to do that. Be aware of something sticky like static members (caches are the worst), on going threads or UI related objects and everything tide to all of them.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/176180/nawaman" title="14,773 reputation" class="comment-user">NawaMan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19089601_13855164"><span title="2012-12-13 16:11:25Z" class="relativetime-clean">Dec 13 '12 at 16:11</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855164" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk571156889",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk571156889"><iframe id="ados_frame_adzerk571156889_2729527" frameborder="0" scrolling="no" height="90" width="728" src="./q30_files/saved_resource(1).html"></iframe><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q30_files/i(1).gif"></div>
+  
+<a name="13855126"></a>
+<div id="answer-13855126" class="answer" data-answerid="13855126" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855126">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">12</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Below is little summary I wrote back in the days (I stole it from some blog, but I can't remember where from - so no reference, sorry) </p>
+
+<ol>
+<li><strong>There is no manual way of doing garbage collection in Java.</strong></li>
+<li>Java Heap is divided into three generation for the sake of garbage collection. These are the young generation, tenured or old generation, and Perm area.</li>
+<li>New objects are created in the young generation and subsequently moved to the old generation.</li>
+<li>String pool is created in Perm area of Heap, Garbage collection can occur in perm space but depends on upon JVM to JVM.</li>
+<li>Minor garbage collection is used to move an object from Eden space to Survivor 1 and Survivor 2 space, and Major collection is used to move an object from young to tenured generation.</li>
+<li>Whenever Major garbage collection occurs application, threads stops during that period which will reduce application’s performance and throughput.</li>
+<li>There are few performance improvements has been applied in garbage collection in Java 6 and we usually use JRE 1.6.20 for running our application.</li>
+<li>JVM command line options <code>-Xms</code> and <code>-Xmx</code> is used to setup starting and max size for Java Heap. The ideal ratio of this parameter is either 1:1 or 1:1.5 based on my experience, for example, you can have either both <code>–Xmx</code> and <code>–Xms</code> as 1GB or –Xms 1.2 GB and 1.8 GB.</li>
+</ol>
+
+<p>Command line options: <code>-Xms:&lt;min size&gt; -Xmx:&lt;max size&gt;</code></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855126" title="short permalink to this answer" class="short-link" id="link-post-13855126">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855126/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/13855126/revisions" title="show all edits to this post">edited <span title="2016-09-16 08:15:18Z" class="relativetime">Sep 16 '16 at 8:15</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4195825/px06"><div class="gravatar-wrapper-32"><img src="./q30_files/d5a6be8edab9c465df099f8c74b3f576" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4195825/px06">px06</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">827</span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:36:26Z" class="relativetime">Dec 13 '12 at 7:36</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/579580/aviad"><div class="gravatar-wrapper-32"><img src="./q30_files/db0b5c8865db24f83b1fe9f3d3c15e6e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/579580/aviad">aviad</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,916</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span><span title="68 bronze badges"><span class="badge3"></span><span class="badgecount">68</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855126" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19076651" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">However, as much as possible, I want to use the minimal possible amount of heap size.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1844263/michael-ardan" title="1,951 reputation" class="comment-user owner">Michael Ardan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19076651_13855126"><span title="2012-12-13 08:42:46Z" class="relativetime-clean">Dec 13 '12 at 8:42</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855126" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13868964"></a>
+<div id="answer-13868964" class="answer" data-answerid="13868964" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13868964">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Just to add to the discussion: <strong>Garbage Collection is not the only form of Memory Management in Java</strong>.</p>
+
+<p>In the past, there have been efforts to avoid the GC in Java when implementing the memory management (see <a href="http://en.wikipedia.org/wiki/Real_time_Java">Real-time Specification for Java (RTSJ)</a>). These efforts were mainly dedicated to real-time and embedded programming in Java for which GC was not suitable - due to performance overhead or GC-introduced latency.</p>
+
+<p>The RTSJ characteristics</p>
+
+<ul>
+<li>Immortal and Scoped Memory Management - see below for examples.</li>
+<li>GC and Immortal/Scoped Memory can coexist withing one application</li>
+<li>RTSJ requires a specially modified JVM.</li>
+</ul>
+
+<p>RTSJ advantages:</p>
+
+<ul>
+<li>low latency, no GC pauses</li>
+<li>delivers predictable performance that is able to meet real-time system requirements</li>
+</ul>
+
+<p>Why RTSJ failed/Did not make a big impact:</p>
+
+<ul>
+<li>Scoped Memory concept is hard to program with, error-prone and difficult to learn.</li>
+<li>Advance in Real-time GC algoritms reduced the GC pause-time in such way that Real-time GCs replaced the RTSJ in most of the real-time apps. However, Scoped Memories are still used in places where no latencies are tolerated.</li>
+</ul>
+
+<p>Scoped Memory Code Example (take from <a href="http://www.javaguidehub.com/chapter-8-memory-management/59-82-an-example-of-scoped-memory-usage.html#.UMpKeYM70ac">An Example of Scoped Memory Usage</a>):</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">import</span><span class="pln"> javax</span><span class="pun">.</span><span class="pln">realtime</span><span class="pun">.*;</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">ScopedMemoryExample</span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">LTMemory</span><span class="pln"> myMem</span><span class="pun">;</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">ScopedMemoryExample</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> </span><span class="typ">Size</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+       </span><span class="com">// initialize memory</span><span class="pln">
+       myMem </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LTMemory</span><span class="pun">(</span><span class="lit">1000</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5000</span><span class="pun">);</span><span class="pln"> 
+    </span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> periodicTask</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">true</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    myMem</span><span class="pun">.</span><span class="pln">enter</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Runnable</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> run</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          </span><span class="com">// do some work in the SCOPED MEMORY</span><span class="pln">
+          </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Object</span><span class="pun">();</span><span class="pln">
+          </span><span class="pun">...</span><span class="pln">
+          </span><span class="com">// end of the enter() method, the scoped Memory is emptied.  </span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Here, a ScopedMemory implementation called <code>LTMemory</code> is preallocated. Then a thread enters the scoped memory, allocates the temporary data that are needed only during the time of the computation. After the end of the computation, the thread leaves the scoped memory which immediately makes the whole content of the specific ScopedMemory to be emptied. No latency introduced, done in constant time e.g. predictable time, no GC is triggered.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13868964" title="short permalink to this answer" class="short-link" id="link-post-13868964">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13868964/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/13868964/revisions" title="show all edits to this post">edited <span title="2012-12-14 21:00:06Z" class="relativetime">Dec 14 '12 at 21:00</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 21:41:40Z" class="relativetime">Dec 13 '12 at 21:41</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/772000/ales-plsek"><div class="gravatar-wrapper-32"><img src="./q30_files/e0e951e108fe3c1243260497ca9cb4dc" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/772000/ales-plsek">Ales Plsek</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,597</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="74 bronze badges"><span class="badge3"></span><span class="badgecount">74</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13868964" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19166441" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This comment may be out of topic. But I just want to share this. I have seen a question regarding why Java is not widely used for commercial game development ( Yes, I'm aware of Runescape and MineCraft ). Some says that GC might pause the game for about a few seconds. I think this might be a solution if their only reason is GC being slow.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1844263/michael-ardan" title="1,951 reputation" class="comment-user owner">Michael Ardan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19166441_13868964"><span title="2012-12-17 01:45:13Z" class="relativetime-clean">Dec 17 '12 at 1:45</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19228346" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">These concepts are known since 1999 so there was enough time for their adoption. The reason why Java is not used in Game industry is probably different - perhaps that platform compilers and Game engines are still developed in C/C++.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/772000/ales-plsek" title="5,597 reputation" class="comment-user">Ales Plsek</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19228346_13868964"><span title="2012-12-19 01:01:02Z" class="relativetime-clean">Dec 19 '12 at 1:01</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19228406" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I see. Thank you very much Ales!</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1844263/michael-ardan" title="1,951 reputation" class="comment-user owner">Michael Ardan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19228406_13868964"><span title="2012-12-19 01:05:16Z" class="relativetime-clean">Dec 19 '12 at 1:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13868964" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13855121"></a>
+<div id="answer-13855121" class="answer" data-answerid="13855121" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855121">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>From my experience, in java you should rely on the memory management that is provided by JVM itself. </p>
+
+<p>The point I'd focus on in this topic is to configure it in a way acceptable for your use case. Maybe checking/understanding JVM tuning options would be useful: <a href="http://docs.oracle.com/cd/E15523_01/web.1111/e13814/jvm_tuning.htm" rel="nofollow">http://docs.oracle.com/cd/E15523_01/web.1111/e13814/jvm_tuning.htm</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855121" title="short permalink to this answer" class="short-link" id="link-post-13855121">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855121/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:35:56Z" class="relativetime">Dec 13 '12 at 7:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1581069/peter-butkovic"><div class="gravatar-wrapper-32"><img src="./q30_files/53f781d013b1bdba5b7356908a82d356" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1581069/peter-butkovic">Peter Butkovic</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,768</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855121" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19077021" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">because at the end, that might be one of the few significant things you can do there. Of course, you should behave and keep referenced only those objects you really need, but generally from my experience, that's probably the only other thing you should keep in mind.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1581069/peter-butkovic" title="3,768 reputation" class="comment-user">Peter Butkovic</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19077021_13855121"><span title="2012-12-13 08:58:32Z" class="relativetime-clean">Dec 13 '12 at 8:58</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855121" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13855311"></a>
+<div id="answer-13855311" class="answer" data-answerid="13855311" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855311">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You cannot avoid garbage collection if you use Java. Maybe there are some obscure JVM implementations that do, but I don't know of any.</p>
+
+<p>A properly tuned JVM shouldn't require any System.gc() hints to operate smoothly. The exact tuning you would need depends heavily on what your application does, but in my experience, I always turn on the concurrent-mark-and-sweep option with the following flag: <code>-XX:+UseConcMarkSweepGC</code>. This flag allows the JVM to take advantage of the extra cores in your CPU to clean up dead memory on a background thread. It helps to drastically reduce the amount of time your program is forcefully paused when doing garbage collections.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855311" title="short permalink to this answer" class="short-link" id="link-post-13855311">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855311/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:50:47Z" class="relativetime">Dec 13 '12 at 7:50</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1899721/cambecc"><div class="gravatar-wrapper-32"><img src="./q30_files/fbdd67dccaf0126470851233f229a4f8" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1899721/cambecc">cambecc</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,324</span><span title="12 silver badges"><span class="badge2"></span><span class="badgecount">12</span></span><span title="21 bronze badges"><span class="badge3"></span><span class="badgecount">21</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855311" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19077594" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Hello, this is very useful. Please explain further.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1844263/michael-ardan" title="1,951 reputation" class="comment-user owner">Michael Ardan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19077594_13855311"><span title="2012-12-13 09:20:14Z" class="relativetime-clean">Dec 13 '12 at 9:20</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19078492" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Found this after a bit of googling: <a href="http://javarevisited.blogspot.jp/2011/04/garbage-collection-in-java.html" rel="nofollow noreferrer">javarevisited.blogspot.jp/2011/04/…</a>. It's a pretty good overview of how GC works in Java, included a description of concurrent-mark-and-sweep. The GC is one of the best things about the language. No more (well, much reduced) manual memory management compared to other languages like C++.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1899721/cambecc" title="2,324 reputation" class="comment-user">cambecc</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19078492_13855311"><span title="2012-12-13 09:52:41Z" class="relativetime-clean">Dec 13 '12 at 9:52</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855311" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13855113"></a>
+<div id="answer-13855113" class="answer" data-answerid="13855113" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855113">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Well, the GC is always there -- you can't create objects that are outside its grasp (unless you use native calls or allocate a direct byte buffer, but in the latter case you don't really have an object, just a bunch of bytes). That said, it's definitely possible to circumvent the GC by reusing objects. For instance, if you need a bunch of <code>ArrayList</code> objects, you could just create each one as you need it and let the GC handle memory management; or you could call <code>list.clear()</code> on each one after you finish with it, and put it onto some queue where somebody else can use it.</p>
+
+<p>Standard best practices are to <em>not</em> do that sort of reuse unless you have good reason to (ie, you've profiled and seen that the allocations + GC are a problem, and that reusing objects fixes that problem). It leads to more complicated code, and if you get it wrong it can actually make the GC's job harder (because of how the GC tracks objects).</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855113" title="short permalink to this answer" class="short-link" id="link-post-13855113">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855113/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:35:30Z" class="relativetime">Dec 13 '12 at 7:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1076640/yshavit"><div class="gravatar-wrapper-32"><img src="./q30_files/7f07c518921020e3999528597dddb462" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1076640/yshavit">yshavit</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 28,660" dir="ltr">28.7k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span><span title="77 bronze badges"><span class="badge3"></span><span class="badgecount">77</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855113" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19075159" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">With modern JVM's the amount of work needed to pool and reuse objects is much larger than the work needed just to allocate new, short-lived ones.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/53897/thorbj%c3%b8rn-ravn-andersen" title="50,162 reputation" class="comment-user">Thorbjørn Ravn Andersen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075159_13855113"><span title="2012-12-13 07:36:56Z" class="relativetime-clean">Dec 13 '12 at 7:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075225" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@ThorbjørnRavnAndersen In most cases, yes. An application I'm working on (java-based RDBMS) has a case in which reusing objects helps significantly -- we reuse rows as we advance the cursor, and over a couple million rows it ends up being a big win. But again, we know this because we did the profiling to prove it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1076640/yshavit" title="28,660 reputation" class="comment-user">yshavit</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075225_13855113"><span title="2012-12-13 07:39:41Z" class="relativetime-clean">Dec 13 '12 at 7:39</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075254" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Then you have additional work besides mere allocation for an object to be reusable.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/53897/thorbj%c3%b8rn-ravn-andersen" title="50,162 reputation" class="comment-user">Thorbjørn Ravn Andersen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075254_13855113"><span title="2012-12-13 07:40:43Z" class="relativetime-clean">Dec 13 '12 at 7:40</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19075311" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@ThorbjørnRavnAndersen Yes, we do. But I consider that part of the same answer, because in practice an allocated chunk of zero'ed out bytes isn't very useful. In order to save on the other costs, we also have to take the hit of "manually" managing the memory management.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1076640/yshavit" title="28,660 reputation" class="comment-user">yshavit</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19075311_13855113"><span title="2012-12-13 07:43:04Z" class="relativetime-clean">Dec 13 '12 at 7:43</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19076094" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@MichaelArdan No, I mean rather than having each row be created as <code>new Row(backingBytes)</code> and then simply losing track of that row when we don't need it anymore (at which point it'll be eligible for GC), we create it once and then keep calling <code>row.init(backingBytes)</code> to go to the next row. But the point I tried to bring up in my answer, and which Thorbjørn emphasized, is that this is a rare case. In most all cases, you basically just need to make sure that a GC root (basically, any Thread or Runnable) doesn't hold onto objects longer that it needs to; the GC will take care of the rest.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1076640/yshavit" title="28,660 reputation" class="comment-user">yshavit</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#comment19076094_13855113"><span title="2012-12-13 08:19:49Z" class="relativetime-clean">Dec 13 '12 at 8:19</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855113" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="13855119"></a>
+<div id="answer-13855119" class="answer" data-answerid="13855119" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13855119">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Basically the idea in Java is that you should not deal with memory except using "new" to allocate new objects and ensure that there is no references left to objects when you are done with them.  </p>
+
+<p>All the rest is deliberately left to the Java Runtime and is - also deliberately - defined as vaguely as possible to allow the JVM designers the most freedom in doing so efficiently.</p>
+
+<p>To use an analogy:  Your operating system manages named areas of harddisk space (called "files") for you.  Including deleting and reusing areas you do not want to use any more.  You do not circumvent that mechanism but leave it to the operating system</p>
+
+<p>You should focus on writing clear, simple code and ensure that your objects are properly done with.  This will give the JVM the best possible working conditions.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/13855119" title="short permalink to this answer" class="short-link" id="link-post-13855119">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/13855119/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-12-13 07:35:51Z" class="relativetime">Dec 13 '12 at 7:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/53897/thorbj%c3%b8rn-ravn-andersen"><div class="gravatar-wrapper-32"><img src="./q30_files/2e71c1745ebc5401c8c8dfbf7c9a5d30" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/53897/thorbj%c3%b8rn-ravn-andersen">Thorbjørn Ravn Andersen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 50,162" dir="ltr">50.2k</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="121 silver badges"><span class="badge2"></span><span class="badgecount">121</span></span><span title="249 bronze badges"><span class="badge3"></span><span class="badgecount">249</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13855119" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13855119" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="41033827"></a>
+<div id="answer-41033827" class="answer" data-answerid="41033827" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="41033827">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I would suggest to take a look at the following tutorials and its contents</p>
+
+<p>This is a four part tutorial series to know about the basics of garbage collection in <code>Java</code>:</p>
+
+<ol>
+<li><p>Java Garbage Collection Introduction</p></li>
+<li><p>How Java Garbage Collection Works?</p></li>
+<li><p>Types of Java Garbage Collectors</p></li>
+<li><p>Monitoring and Analyzing Java Garbage Collection</p></li>
+</ol>
+
+<p>I found <a href="http://javapapers.com/java/java-garbage-collection-introduction/" rel="nofollow noreferrer">This tutorial</a> very helpful.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/41033827" title="short permalink to this answer" class="short-link" id="link-post-41033827">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/41033827/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/41033827/revisions" title="show all edits to this post">edited <span title="2016-12-08 09:25:00Z" class="relativetime">Dec 8 '16 at 9:25</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4390212/dimasan"><div class="gravatar-wrapper-32"><img src="./q30_files/JrUii.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4390212/dimasan">DimaSan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,868</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span><span title="33 bronze badges"><span class="badge3"></span><span class="badgecount">33</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-12-08 07:15:48Z" class="relativetime">Dec 8 '16 at 7:15</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/6919038/tasawar-hussain"><div class="gravatar-wrapper-32"><img src="./q30_files/picture" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/6919038/tasawar-hussain">Tasawar Hussain</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">45</span><span title="8 bronze badges"><span class="badge3"></span><span class="badgecount">8</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-41033827" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-41033827" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="42389140"></a>
+<div id="answer-42389140" class="answer" data-answerid="42389140" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="42389140">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>"Nullify"ing the reference once it is not required is the best way to make an object eligible for Garbage collection.</p>
+
+<p>There are 4 ways in which an object can be Garbage collected.
+1. point the reference to null, once it is no longer required.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="typ">String</span><span class="pln"> s </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">(</span><span class="str">"Java"</span><span class="pun">);</span></code></pre>
+
+<p>Once this String is not required, you can point it to null.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="pln">s </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span></code></pre>
+
+<p>Hence, s will be eligible for Garbage collection.</p>
+
+<ol start="2">
+<li><p>point one object to another, so that both reference points to same object and one of the object is eligible for GC.</p>
+
+<p>String s1 = new String("Java");</p>
+
+<p>String s2 = new String("C++");</p></li>
+</ol>
+
+<p>In future if s2 also needs to pointed to s1 then;</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="pln">s1 </span><span class="pun">=</span><span class="pln"> s2</span><span class="pun">;</span></code></pre>
+
+<p>Then the object having "C++" will be eligible for GC.</p>
+
+<ol start="3">
+<li><p>All the objects created within a method are eligible for GC once the method is completed. Hence, once the method is destroyed from the stack of the thread then the corresponding objects in that method will be destroyed.</p></li>
+<li><p>Island of Isolation is another concept where the objects with internal links and no extrinsic link to reference is eligible for Garbage collection.
+<a href="http://stackoverflow.com/questions/792831/island-of-isolation-of-garbage-collection">"Island of isolation" of Garbage Collection</a></p></li>
+</ol>
+
+<p>Examples:
+Below is a method of Camera class in android. See how the developer has pointed mCameraSource to null once it is not required. This is expert level code.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> release</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">mCameraSource </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            mCameraSource</span><span class="pun">.</span><span class="pln">release</span><span class="pun">();</span><span class="pln">
+            mCameraSource </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">}</span></code></pre>
+
+<p>How Garbage Collector works?<br>
+Garbage collection is performed by the daemon thread called Garbage Collector. When there is sufficient memory available that time this demon thread has low priority and it runs in background. But when JVM finds that the heap is full and JVM wants to reclaim some memory then it increases the priority of Garbage collector thread and calls Runtime.getRuntime.gc() method which searches for all the objects which are not having reference or null reference and destroys those objects. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/42389140" title="short permalink to this answer" class="short-link" id="link-post-42389140">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/42389140/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/42389140/revisions" title="show all edits to this post">edited <span title="2017-02-22 12:29:57Z" class="relativetime">Feb 22 at 12:29</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-02-22 10:51:08Z" class="relativetime">Feb 22 at 10:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2106934/utsav"><div class="gravatar-wrapper-32"><img src="./q30_files/7d29cd79756208cfd1a7c814c477ddd6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2106934/utsav">Utsav</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">172</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="2 silver badges"><span class="badge2"></span><span class="badgecount">2</span></span><span title="9 bronze badges"><span class="badge3"></span><span class="badgecount">9</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-42389140" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-42389140" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/13855013/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="13855013">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="http://stackoverflow.com/search?q=memory+management+java">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="816d3fe09a7ed7e4ba07245c23acc06c">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f13855013%2funderstanding-java-memory-management%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f13855013%2funderstanding-java-memory-management%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" name="privacy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" name="tos" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/memory-management" class="post-tag" title="show questions tagged &#39;memory-management&#39;" rel="tag">memory-management</a> <a href="http://stackoverflow.com/questions/tagged/memory-leaks" class="post-tag" title="show questions tagged &#39;memory-leaks&#39;" rel="tag">memory-leaks</a> <a href="http://stackoverflow.com/questions/tagged/garbage-collection" class="post-tag" title="show questions tagged &#39;garbage-collection&#39;" rel="tag">garbage-collection</a> <a href="http://stackoverflow.com/questions/tagged/jvm" class="post-tag" title="show questions tagged &#39;jvm&#39;" rel="tag">jvm</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2012-12-13 07:28:40Z"><b>4 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>35361 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management?lastactivity" class="lastactivity-link" title="2017-02-22 12:29:57Z">6 days ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk64833491",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk64833491"><iframe id="ados_frame_adzerk64833491_2729526" frameborder="0" scrolling="no" height="250" width="300" src="./q30_files/saved_resource(2).html"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/13855013/understanding-java-memory-management#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q30_files/i(2).gif"></div>
+            <div id="hireme" class="clc-jobs-multi orange tagged"><a class="top " href="https://stackoverflow.com/jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=43xiFZ6skHDFg3XJJz9PJiYGBgYBBhBQzbzMkB2jwcBwAogZWBh6NoBEGRmBBJN0kzATg8QkZgZ2FgaWA3m5my0Xak6ym63nwMCQ4wxUxMKQcmDqxHbL2Ynz7BhZshLLEhmyct7M7Et6f9I1DAA&amp;cr=10440&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs&amp;sig=SP5fb-N1bs4lbQ"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Wanted: Master of Java at Concirrus Ltd. Click to learn more." href="https://stackoverflow.com/jobs/130300/wanted-master-of-java-concirrus-ltd" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=43xiFZ6skHDFg3XJJz9PJiYGBgYBBhBQzbzMkB2jwcBwAogZWBh6NoBEGRmBBJN0kzATg8QkZgZ2FgaWA3m5my0Xak6ym63nwMCQ4wxUxMKQcmDqxHbL2Ynz7BhZshLLEhmyct7M7Et6f9I1DAA&amp;cr=234008&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F130300%2Fwanted-master-of-java-concirrus-ltd&amp;sig=-oDYn_U46CFbVQ"><div class="title">Wanted: Master of Java</div><div><span class="company">Concirrus Ltd</span><span class="location">New Delhi, India</span></div><span class="post-tag">html</span><span class="post-tag">html5</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=43xiFZ6skHDFg3XJJz9PJiYGBgYBBhBQzbzMkB2jwcBwAogZWBh6NoBEGRmBBJN0kzATg8QkZgZ2FgaWA3m5my0Xak6ym63nwMCQ4wxUxMKQcmDqxHbL2Ynz7BhZshLLEhmyct7M7Et6f9I1DAA&amp;cr=234008&amp;ct=-1&amp;sig=A3EVnCu-i3ikfg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Java Chief Software Architect - $100K at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/129483/java-chief-software-architect-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=43xiFZ6skHDFg3XJJz9PJiYGBgYBBhBQzbzMkB2jwcBwAogZWBh6NoBEGRmBBJN0kzATg8QkZgZ2FgaWA3m5my0Xak6ym63nwMCQ4wxUxMKQcmDqxHbL2Ynz7BhZshLLEhmyct7M7Et6f9I1DAA&amp;cr=17260&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F129483%2Fjava-chief-software-architect-100k-crossover&amp;sig=uohL0b04_4NL1w"><div class="title">Java Chief Software Architect - $100K</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">cloud</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=43xiFZ6skHDFg3XJJz9PJiYGBgYBBhBQzbzMkB2jwcBwAogZWBh6NoBEGRmBBJN0kzATg8QkZgZ2FgaWA3m5my0Xak6ym63nwMCQ4wxUxMKQcmDqxHbL2Ynz7BhZshLLEhmyct7M7Et6f9I1DAA&amp;cr=17260&amp;ct=-1&amp;sig=S_tq2LJ4FlLukQ" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><img src="./q30_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'ApERXWEgYNQIAAAAACVp0wACAAAAAgAAAAA8AAAAfGphdmF8bWVtb3J5LW1hbmFnZW1lbnR8bWVtb3J5LWxlYWtzfGdhcmJhZ2UtY29sbGVjdGlvbnxqdm18AJbUw9GxHiTwpkU';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,u||console.warn("clc_request missing"),t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=bd570ea4a858"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/792831?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">28</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/792831/island-of-isolation-of-garbage-collection?noredirect=1&amp;lq=1" class="question-hyperlink">“Island of isolation” of Garbage Collection</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/6005061?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">27</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/6005061/java-memory-model?noredirect=1&amp;lq=1" class="question-hyperlink">Java Memory Model</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/14453782?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">3</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/14453782/what-are-possible-reasons-to-cause-running-out-of-heap-space-and-are-there-best?noredirect=1&amp;lq=1" class="question-hyperlink">What are possible reasons to cause running out of heap space and Are there best practice to avoid it?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/14193389?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/14193389/java-empty-the-cache-before-outofmemoryerror?noredirect=1&amp;lq=1" class="question-hyperlink">Java Empty the cache before OutOfMemoryError</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/324499?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">8</div></a><a href="http://stackoverflow.com/questions/324499/java-still-uses-system-memory-after-deallocation-of-objects-and-garbage-collecti?rq=1" class="question-hyperlink">Java still uses system memory after deallocation of objects and garbage collection</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1752714?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="http://stackoverflow.com/questions/1752714/memory-profiling-for-java-desktop-application?rq=1" class="question-hyperlink">Memory profiling for Java desktop application</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2448941?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">8</div></a><a href="http://stackoverflow.com/questions/2448941/force-full-garbage-collection-when-memory-occupation-goes-beyond-a-certain-thres?rq=1" class="question-hyperlink">Force full garbage collection when memory occupation goes beyond a certain threshold</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2550529?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">21</div></a><a href="http://stackoverflow.com/questions/2550529/why-is-memory-management-so-visible-in-java-vm?rq=1" class="question-hyperlink">Why is memory management so visible in Java VM?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6470651?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2011</div></a><a href="http://stackoverflow.com/questions/6470651/creating-a-memory-leak-with-java?rq=1" class="question-hyperlink">Creating a memory leak with Java</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/8265240?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">24</div></a><a href="http://stackoverflow.com/questions/8265240/burst-memory-usage-in-java?rq=1" class="question-hyperlink">Burst memory usage in Java</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/11766323?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">-2</div></a><a href="http://stackoverflow.com/questions/11766323/memory-management-in-memory-managed-environment?rq=1" class="question-hyperlink">Memory management in memory managed environment</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/15141011?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">32</div></a><a href="http://stackoverflow.com/questions/15141011/massive-memory-hemorrhage-that-causes-heap-size-to-go-from-about-64mb-to-1-5gb?rq=1" class="question-hyperlink">Massive memory hemorrhage that causes heap size to go from about 64mb, to 1.5gb in roughly 8 seconds. Issue with garbage collector?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/16315959?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">9</div></a><a href="http://stackoverflow.com/questions/16315959/garbage-collection-vs-manual-memory-management?rq=1" class="question-hyperlink">Garbage collection vs manual memory management</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/28319636?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">4</div></a><a href="http://stackoverflow.com/questions/28319636/when-thread-in-java-is-removed-from-memory?rq=1" class="question-hyperlink">When thread in Java is removed from memory?</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="http://workplace.stackexchange.com/questions/85896/how-to-disclose-negative-information-about-a-candidate-when-id-rather-not-revea" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to disclose negative information about a candidate when I'd rather not reveal its source?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/69363/why-isnt-there-an-oscar-for-tv-series-like-with-the-golden-globes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why isn't there an Oscar for TV Series, like with the Golden Globes?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301733/what-does-it-mean-to-say-that-the-turtle-armor-increases-chances-of-being-targe" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does it mean to say that the Turtle Armor "increases chances of being targeted by enemies"?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/152606/is-there-a-field-length-that-is-too-short-to-allow-harmful-sql-injection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a field length that is too short to allow harmful sql injection?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/49588/this-puzzle-design-was-a-disaster" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    This puzzle design was a DISASTER!
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/95757/how-can-i-entice-my-tactical-players-to-embrace-cinematic-combat" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I entice my tactical players to embrace cinematic combat?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72505/can-twin-stars-be-born" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can twin stars be born?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/15990/is-there-a-legal-way-that-can-be-used-to-force-the-president-of-united-states-un" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a legal way that can be used to force the President of United States undergo a mental health examination?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/15459/due-to-the-sheep-in-the-settlement-the-surrounding-area-has-no-mosquitoes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "Due to the sheep in the settlement the surrounding area has no mosquitoes"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/835433/how-does-regsvr32-work" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    how does regsvr32 work
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-japanese" title="Japanese Language Stack Exchange"></div><a href="http://japanese.stackexchange.com/questions/43956/proper-term-for-study" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:257 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Proper term for "study"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-magento" title="Magento Stack Exchange"></div><a href="http://magento.stackexchange.com/questions/162183/quick-questions-for-marketplace-magento2" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:479 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Quick questions for marketplace magento2
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153586/benevolent-aliens-who-initially-refuse-to-show-themselves" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Benevolent aliens who (initially) refuse to show themselves
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2165704/puzzle-does-the-following-prove-that-pa-is-inconsistent" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Puzzle: Does the following prove that PA is inconsistent?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/111707/simple-csv-dsv-importer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Simple CSV/DSV importer
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/35920/how-can-pilots-lacking-instruments-interpret-vectors-given-by-atc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can pilots lacking instruments interpret vectors given by ATC?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72435/aliens-and-us-would-they-have-any-reason-to-interact-with-us" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Aliens and Us: Would they have any reason to interact with us?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/230269/is-it-possible-to-have-r-write-out-sbn-and-sbx-files" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:79 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to have R write out .sbn and .sbx files?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72379/how-do-you-tell-time-on-a-world-with-9-year-days" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do you tell time on a world with 9-year days?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/53874/how-common-are-mistakes-while-playing-guitar" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How common are mistakes while playing guitar?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/42510245/is-it-possible-to-extend-the-using-block-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to extend the 'using' block in C#?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/289440/fpga-programming-without-ip" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    FPGA: Programming without IP
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/111477/la-la-land-no-wait-moo-moo-moonlight" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    La La Land... no wait, Moo Moo Moonlight
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2164074/what-are-examples-of-vectors-that-are-not-usually-called-vectors" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are examples of vectors that are not usually called vectors?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/13855013" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/13855013/ivc/aa7f');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/13855013/ivc/aa7f" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+        </div>
+    </div><script async="" src="./q30_files/clc.min.js.download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.2.28.25254
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('java,memory-management,memory-leaks,garbage-collection,jvm');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|java|memory-management|memory-leaks|garbage-collection|jvm|');
+                ga('pageData.set', 'dimension2', '|java|memory-management|memory-leaks|garbage-collection|jvm|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>

@@ -1,0 +1,2372 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>design patterns - What is MVC (Model View Controller)? - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="What is MVC (Model View Controller)?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;ve heard the term MVC (Model View Controller) tossed about with a ton of Buzz lately, but what really is it?">
+    <meta property="og:url" content="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller">
+    <link rel="canonical" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller">
+
+    
+    
+    <script type="text/javascript" async="" src="./q36_files/ados"></script><script src="./q36_files/rules-p-c1rF4kxgLUzNc.js.download"></script><script async="" src="./q36_files/quant.js.download"></script><script async="" src="./q36_files/beacon.js.download"></script><script async="" src="./q36_files/analytics.js.download"></script><script type="text/javascript" async="" src="./q36_files/ados.js.download"></script><script src="./q36_files/jquery.min.js.download"></script>
+    <script src="./q36_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./q36_files/all.css">
+
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:1,shownCommentCount:1,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:129921});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '129921');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1488317644,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"816d3fe09a7ed7e4ba07245c23acc06c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"devstory_onboarding_exp":{"v":"j","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"237382d76454","js/moderator.en.js":"a33415e1eed8","js/full-anon.en.js":"942d7d1de187","js/full.en.js":"3a6885c07a88","js/wmd.en.js":"a0c125bc1e56","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"bc3ebe71b5f1","js/tageditornew.en.js":"3ddc9f480232","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"759540619f52","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"d08b3740a7e2","js/explore-qlist.en.js":"88f824a42b1a","js/events.en.js":"1419425a050c","js/keyboard-shortcuts.en.js":"7473f1cb9735","js/external-editor.en.js":"71095ef40e9d","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"71095ef40e9d","js/snippet-javascript.en.js":"11b9273bb631","js/snippet-javascript-codemirror.en.js":"277350af08a2"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./q36_files/full-anon.en.js.download"></script><script async="" src="./q36_files/snippet-javascript.en.js.download"></script><script async="" src="./q36_files/post-validation.en.js.download"></script><script type="text/javascript" src="./q36_files/adFeedback.js.download"></script><link rel="stylesheet" href="./q36_files/adFeedback.css"><link rel="stylesheet" href="./q36_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">
+            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f129921%2fwhat-is-mvc-model-view-controller" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="http://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 166 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f129921%2fwhat-is-mvc-model-view-controller" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 6.8 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller" class="question-hyperlink">What is MVC (Model View Controller)? [closed]</a></h1>
+
+            
+<div class="aside-cta">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="129921" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk651308087",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk651308087"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129921">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">20</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#">favorite</a>
+        <div class="favoritecount"><b>15</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I've heard the term MVC (Model View Controller) tossed about with a ton of Buzz lately, but what really is it?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/model-view-controller" class="post-tag js-gps-track" title="show questions tagged &#39;model-view-controller&#39;" rel="tag">model-view-controller</a> <a href="http://stackoverflow.com/questions/tagged/design-patterns" class="post-tag js-gps-track" title="show questions tagged &#39;design-patterns&#39;" rel="tag">design-patterns</a> <a href="http://stackoverflow.com/questions/tagged/glossary" class="post-tag js-gps-track" title="show questions tagged &#39;glossary&#39;" rel="tag">glossary</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/129921" title="short permalink to this question" class="short-link" id="link-post-129921">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129921/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/129921/revisions" title="show all edits to this post">edited <span title="2008-09-24 22:02:33Z" class="relativetime">Sep 24 '08 at 22:02</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1693/steve-m"><div class="gravatar-wrapper-32"><img src="./q36_files/7dbc53d4ccb31c1889b6f8f8e30ced74" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1693/steve-m">Steve M</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,525</span><span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span><span title="40 silver badges"><span class="badge2"></span><span class="badgecount">40</span></span><span title="62 bronze badges"><span class="badge3"></span><span class="badgecount">62</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2008-09-24 20:56:06Z" class="relativetime">Sep 24 '08 at 20:56</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/7831/chris-pietschmann"><div class="gravatar-wrapper-32"><img src="./q36_files/d565ce4d3fdf8007e1d707362cca9465" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/7831/chris-pietschmann">Chris Pietschmann</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 17,694" dir="ltr">17.7k</span><span title="27 gold badges"><span class="badge1"></span><span class="badgecount">27</span></span><span title="92 silver badges"><span class="badge2"></span><span class="badgecount">92</span></span><span title="145 bronze badges"><span class="badge3"></span><span class="badgecount">145</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                        <tr>
+            <td class="special-status" colspan="2">
+                <div class="question-status">
+        <h2>                    <b>closed</b> as off-topic by <a href="http://stackoverflow.com/users/1114/jeremy-banks">Jeremy Banks</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2015-05-14 01:05:28Z" class="relativetime">May 14 '15 at 1:05</span></span>
+</h2>
+        <p></p><ul class="close-as-off-topic-status-list"><li>This question does not appear to be about programming within the scope defined in the <a href="http://stackoverflow.com/help/on-topic">help center</a>.</li></ul><span class="close-status-suffix">If this question can be reworded to fit the rules in the <a href="http://stackoverflow.com/help/closed-questions">help center</a>, please <a href="http://stackoverflow.com/posts/129921/edit">edit the question</a>.</span><p></p>
+    </div>
+            </td>
+        </tr>
+    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129921" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-48559019" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I'm voting to close this question as off-topic because it's an abstract/theoretical question about programming, which is more the domain of Programmers.SE than Stack Overflow, but even over there it's considered too broad: <a href="http://programmers.stackexchange.com/questions/127624/what-is-mvc-really">the equivalent question on their site</a> has been closed, though readers may still find the answers useful.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1114/jeremy-banks" title="56,901 reputation" class="comment-user">Jeremy Banks<span class="mod-flair" title="moderator">♦</span></a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment48559019_129921"><span title="2015-05-14 01:05:28Z" class="relativetime-clean">May 14 '15 at 1:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129921" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								13 Answers
+                                <span style="display:none;" itemprop="answerCount">13</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="129935"></a>
+<div id="answer-129935" class="answer accepted-answer" data-answerid="129935" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129935">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">20</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You might want to take a look at what Martin Fowler has to say about MVC, MVP and UI architectures in general at <a href="http://martinfowler.com/eaaDev/uiArchs.html" rel="noreferrer">Martin Fowlers site</a>. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129935" title="short permalink to this answer" class="short-link" id="link-post-129935">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129935/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 20:58:43Z" class="relativetime">Sep 24 '08 at 20:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/21733/ruben"><div class="gravatar-wrapper-32"><img src="./q36_files/59d98a003416098772527c38f309b3bc" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/21733/ruben">Ruben</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,598</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="16 silver badges"><span class="badge2"></span><span class="badgecount">16</span></span><span title="32 bronze badges"><span class="badge3"></span><span class="badgecount">32</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129935" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129935" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1086245085",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1086245085"></div>
+  
+<a name="129952"></a>
+<div id="answer-129952" class="answer" data-answerid="129952" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129952">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">9</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I like <a href="http://www.martinfowler.com/eaaDev/uiArchs.html" rel="noreferrer">this article</a> by Martin Fowler.  You'll see that MVC is actually more or less dead, strictly speaking, in its original domain of rich UI programming.  The distinction between View and Controller doesn't apply to most modern UI toolkits.</p>
+
+<p>The term seems to have found new life in web programming circles recently.  I'm not sure whether that's truly MVC though, or just re-using the name for some closely related but subtly different ideas.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129952" title="short permalink to this answer" class="short-link" id="link-post-129952">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129952/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:01:47Z" class="relativetime">Sep 24 '08 at 21:01</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3974/luke-halliwell"><div class="gravatar-wrapper-32"><img src="./q36_files/53db2d8a7872cf6a75f1ac9ae712a8d2" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3974/luke-halliwell">Luke Halliwell</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,008</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="28 bronze badges"><span class="badge3"></span><span class="badgecount">28</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129952" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129952" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129937"></a>
+<div id="answer-129937" class="answer" data-answerid="129937" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129937">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>MVC is a design pattern originally pioneered in the olden days of smalltalk.</p>
+
+<p>The concept was that a model would represent your application state and logic, and controllers would handle IO between "Views".</p>
+
+<p>A View was a representation of the state in the model. For example, your model may be a spreadsheet document, and you may have a view that represents it as a spreadsheet and a view that represents it as a pivot table.</p>
+
+<p>Modern MVC has been polluted with fake MVC web junk, so I'll let others answer that.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129937" title="short permalink to this answer" class="short-link" id="link-post-129937">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129937/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 20:59:02Z" class="relativetime">Sep 24 '08 at 20:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1965/flyswat"><div class="gravatar-wrapper-32"><img src="./q36_files/ad348387d020a15171daed0ab492a49b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1965/flyswat">FlySwat</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 92,874" dir="ltr">92.9k</span><span title="56 gold badges"><span class="badge1"></span><span class="badgecount">56</span></span><span title="217 silver badges"><span class="badge2"></span><span class="badgecount">217</span></span><span title="294 bronze badges"><span class="badge3"></span><span class="badgecount">294</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129937" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-31674" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You make the statement "Modern MVC has been polluted with fake MVC web junk" and then avoid addressing it, deferring to "others" that will answer that. Why do you feel this way and why don't <i>you</i> elucidate for us?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1790/jason-bunting" title="41,409 reputation" class="comment-user">Jason Bunting</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31674_129937"><span title="2008-09-24 21:03:20Z" class="relativetime-clean">Sep 24 '08 at 21:03</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-31721" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I deferred to others because I knew that in 10 minutes there would 8 answers equating MVC to Rails :)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1965/flyswat" title="92,874 reputation" class="comment-user">FlySwat</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31721_129937"><span title="2008-09-24 21:16:47Z" class="relativetime-clean">Sep 24 '08 at 21:16</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-31733" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Ah, I see...you are saying Rails is <i>not</i> really MVC? I don't know much about Rails, so I can't address that myself...</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1790/jason-bunting" title="41,409 reputation" class="comment-user">Jason Bunting</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31733_129937"><span title="2008-09-24 21:22:51Z" class="relativetime-clean">Sep 24 '08 at 21:22</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-31738" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Rails, and most other web MVC frameworks move business logic to the controller (and sometimes the view!) and usually use the model as a dumb datastore.  In a purist viewpoint, this is not MVC...however it works, Stackoverflow is using ASP.NET MVC...same idea there.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1965/flyswat" title="92,874 reputation" class="comment-user">FlySwat</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31738_129937"><span title="2008-09-24 21:25:29Z" class="relativetime-clean">Sep 24 '08 at 21:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-34142461" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I find this discussion somewhat revealing. <a href="http://c2.com/cgi/wiki?WhatsaControllerAnyway" rel="nofollow noreferrer">c2.com/cgi/wiki?WhatsaControllerAnyway</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/133747/huggie" title="5,097 reputation" class="comment-user">huggie</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment34142461_129937"><span title="2014-03-17 07:09:58Z" class="relativetime-clean">Mar 17 '14 at 7:09</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129937" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129960"></a>
+<div id="answer-129960" class="answer" data-answerid="129960" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129960">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>As the tag on your question states its a design pattern.  But that probably doesn't help you.  Basically what it is, is a way to organize your code into logical groupings that keep the various pieces separate and easily modifiable.</p>
+
+<p>Simplification:
+Model = Data structure / Business Logic
+View = Output layer (i.e HTML code)
+Controller = Message transfer layer</p>
+
+<p>So when people talk about MVC what they are talking about is dividing up there code into these logical groups to keep it clean and structured, and hopefully loosely coupled.  By following this design pattern you should be able to build applications that could have there View completely changed into something else without ever having to touch your controller or model (i.e. switching from HTML to RSS).  </p>
+
+<p>There are tons and tons of tutorials out there just google for it and I'm sure you'll turn up at least one that will explain it in terms that click with you.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129960" title="short permalink to this answer" class="short-link" id="link-post-129960">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129960/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:02:21Z" class="relativetime">Sep 24 '08 at 21:02</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/16445/rob-booth"><div class="gravatar-wrapper-32"><img src="./q36_files/28953a8a82fc5800a821728573158893" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/16445/rob-booth">Rob Booth</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,360</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="17 bronze badges"><span class="badge3"></span><span class="badgecount">17</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129960" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129960" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="29689808"></a>
+<div id="answer-29689808" class="answer" data-answerid="29689808" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="29689808">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Here is a naive description of MVC : <a href="http://www.devcodenote.com/2015/04/mvc-model-view-controller.html" rel="nofollow">http://www.devcodenote.com/2015/04/mvc-model-view-controller.html</a></p>
+
+<p>A snippet:</p>
+
+<p>Definition : It is a design pattern which separates an application into multiple layers of functionality.</p>
+
+<p>The layers:</p>
+
+<p>Model
+Represents data.
+It acts as an interface between the database and the application (as a data object).
+It will handle validations, associations, transactions etc.</p>
+
+<p>Controller
+It gathers and processes data.
+Handles code which does data selection and data messaging.</p>
+
+<p>View
+Displays output to the users.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/29689808" title="short permalink to this answer" class="short-link" id="link-post-29689808">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/29689808/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-04-17 03:37:45Z" class="relativetime">Apr 17 '15 at 3:37</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1416923/abhishek-jain"><div class="gravatar-wrapper-32"><img src="./q36_files/3c6527176436dabd4ce00be8016e8557" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1416923/abhishek-jain">Abhishek Jain</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,042</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="40 bronze badges"><span class="badge3"></span><span class="badgecount">40</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-29689808" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-29689808" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="130017"></a>
+<div id="answer-130017" class="answer" data-answerid="130017" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="130017">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The MVC or Model-View-Controller User Interface Paradigm was first described by Trygve Reenskaug of the Xerox PARC.  In first appeared in print in Byte magazine volume 6, number 8, in August of 1981.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/130017" title="short permalink to this answer" class="short-link" id="link-post-130017">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/130017/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:11:13Z" class="relativetime">Sep 24 '08 at 21:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/13930/dacracot"><div class="gravatar-wrapper-32"><img src="./q36_files/24b2aa5d96bd01b950eb32a47cc617d1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/13930/dacracot">dacracot</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 11,691" dir="ltr">11.7k</span><span title="20 gold badges"><span class="badge1"></span><span class="badgecount">20</span></span><span title="80 silver badges"><span class="badge2"></span><span class="badgecount">80</span></span><span title="137 bronze badges"><span class="badge3"></span><span class="badgecount">137</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-130017" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-31725" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Xerox PARC also invented smalltalk, and MVC was a fundamental concept of it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1965/flyswat" title="92,874 reputation" class="comment-user">FlySwat</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31725_130017"><span title="2008-09-24 21:17:33Z" class="relativetime-clean">Sep 24 '08 at 21:17</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-1247314" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Here is Reenskaug's article... <a href="http://folk.uio.no/trygver/2003/javazone-jaoo/MVC_pattern.pdf" rel="nofollow noreferrer">folk.uio.no/trygver/2003/javazone-jaoo/MVC_pattern.pdf</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/13930/dacracot" title="11,691 reputation" class="comment-user">dacracot</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment1247314_130017"><span title="2009-09-10 14:28:30Z" class="relativetime-clean">Sep 10 '09 at 14:28</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-130017" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129930"></a>
+<div id="answer-129930" class="answer" data-answerid="129930" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129930">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Wikipedia seems to describe it best so far:</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Model-view-controller" rel="nofollow noreferrer">http://en.wikipedia.org/wiki/Model-view-controller</a></p>
+
+<p>Model-view-controller (MVC) is an architectural pattern used in software engineering. Successful use of the pattern isolates business logic from user interface considerations, resulting in an application where it is easier to modify either the visual appearance of the application or the underlying business rules without affecting the other. In MVC, the model represents the information (the data) of the application and the business rules used to manipulate the data; the view corresponds to elements of the user interface such as text, checkbox items, and so forth; and the controller manages details involving the communication to the model of user actions such as keystrokes and mouse movements</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129930" title="short permalink to this answer" class="short-link" id="link-post-129930">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129930/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        answered <a href="http://stackoverflow.com/posts/129930/revisions" title="show all edits to this post"><span title="2008-09-24 20:57:37Z" class="relativetime">Sep 24 '08 at 20:57</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature owner">   
+       
+
+    <div class="user-info">
+    <div class="user-details">
+        <span class="community-wiki" title="This post is community owned as of Sep 24 &#39;08 at 20:57. Votes do not generate reputation, and it can be edited by users with 100 rep">
+            community wiki
+        </span>
+    </div><br>
+    <div class="user-details">
+        <a id="history-129930" href="http://stackoverflow.com/posts/129930/revisions" title="show revision history for this post">
+        Chris Pietschmann
+        </a>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129930" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129930" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129933"></a>
+<div id="answer-129933" class="answer" data-answerid="129933" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129933">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>This <a href="http://web.archive.org/web/20131109224547/http://www.oreillynet.com/onlamp/blog/2007/06/what_is_mvc.html" rel="nofollow noreferrer">What is MVC</a> blog article on Oreilly has you covered.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129933" title="short permalink to this answer" class="short-link" id="link-post-129933">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129933/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/129933/revisions" title="show all edits to this post">edited <span title="2014-07-08 10:08:51Z" class="relativetime">Jul 8 '14 at 10:08</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/960757/tlama"><div class="gravatar-wrapper-32"><img src="./q36_files/J8bse.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/960757/tlama">TLama</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 55,082" dir="ltr">55.1k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="109 silver badges"><span class="badge2"></span><span class="badgecount">109</span></span><span title="177 bronze badges"><span class="badge3"></span><span class="badgecount">177</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 20:58:29Z" class="relativetime">Sep 24 '08 at 20:58</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/10322/ctcherry"><div class="gravatar-wrapper-32"><img src="./q36_files/fa46a3814b72439b1d2efa8f7c9162c2" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/10322/ctcherry">ctcherry</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 20,664" dir="ltr">20.7k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="45 silver badges"><span class="badge2"></span><span class="badgecount">45</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129933" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-874020" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">what is the difference between application logic and business logic? because in this article it says model contains business logic and controller contains application logic. I'm confused with that.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/108372/jaywith-7" title="569 reputation" class="comment-user">Jaywith.7</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment874020_129933"><span title="2009-06-30 05:59:59Z" class="relativetime-clean">Jun 30 '09 at 5:59</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-879833" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I think the article is trying to draw a distinction between code that is directly related to the problem(s) you are solving (thats the code in the models - for example calculating an invoice total) and the code that is responsible for directing requests and passing information around (thats the code in the controllers - handling get/post and response formats, etc). I don't think calling them business and application logic was the best choice of words.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/10322/ctcherry" title="20,664 reputation" class="comment-user">ctcherry</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment879833_129933"><span title="2009-07-01 06:44:02Z" class="relativetime-clean">Jul 1 '09 at 6:44</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129933" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="26235587"></a>
+<div id="answer-26235587" class="answer" data-answerid="26235587" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="26235587">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>MVC is a software architecture pattern that separates representation from user interaction.
+Generally, the model consists of application data and functions that interact with it, while the view presents this data to the user; the controller mediates between the two.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/26235587" title="short permalink to this answer" class="short-link" id="link-post-26235587">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/26235587/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-10-07 12:04:47Z" class="relativetime">Oct 7 '14 at 12:04</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2846626/jswoody"><div class="gravatar-wrapper-32"><img src="./q36_files/4cfe6d1e20efadd5834d54a8b5c0341f" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2846626/jswoody">jswoody</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">17</span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26235587" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-26235587" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="29457330"></a>
+<div id="answer-29457330" class="answer" data-answerid="29457330" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="29457330">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>MVC Design Pattern:</p>
+
+<p>4 parts = User, View, Controller, Model.</p>
+
+<p>User:
+ - sees the View and uses the Controller.</p>
+
+<p>Model:
+ - holds the data and updates the Model that there is new data/state.</p>
+
+<p>View:
+ - displays the data that the Model has.</p>
+
+<p>Controller:
+ - takes the request from the user to get or set information, then communicates with either the View or Model, resp.
+ - it "gets" via the View.
+ - it "sets" via the Model.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/29457330" title="short permalink to this answer" class="short-link" id="link-post-29457330">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/29457330/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-04-05 12:35:17Z" class="relativetime">Apr 5 '15 at 12:35</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3325989/specialk1st"><div class="gravatar-wrapper-32"><img src="./q36_files/A25iW.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3325989/specialk1st">specialk1st</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">381</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-29457330" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-29457330" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="130012"></a>
+<div id="answer-130012" class="answer" data-answerid="130012" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="130012">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It is a way of separating the underlying functionality of your application (model) from the way it interacts with the user (view). The controller coordinates how the model and view talk to each other.</p>
+
+<p>Whilst it is all the rage at the moment, it is important to remember that preventing the model itself being able to determine exactly how its data is presented to the user can seen as a negative thing. The most obvious example is with HTML. The original intention of HTML was that there should be a clear separation of the model (HTML) from the view (rendered webpage) via a controller (the browser). There has been such a backlash against this original intention that browsers are criticised if they do not render a page pixel perfect to the designer's  desired view.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/130012" title="short permalink to this answer" class="short-link" id="link-post-130012">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/130012/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:10:41Z" class="relativetime">Sep 24 '08 at 21:10</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/7122/david-arno"><div class="gravatar-wrapper-32"><img src="./q36_files/31fdbe39c7657652fb5f34cdef2c78c9" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/7122/david-arno">David Arno</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 23,958" dir="ltr">24k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="49 silver badges"><span class="badge2"></span><span class="badgecount">49</span></span><span title="95 bronze badges"><span class="badge3"></span><span class="badgecount">95</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-130012" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-130012" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129946"></a>
+<div id="answer-129946" class="answer" data-answerid="129946" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129946">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>MVC is a way to partition a user interface element into 3 distinct concepts.  The model is the data on which the interface operates.  The view is how the element is represented visually (or maybe audibly?).  The controller is the logic that operates on the data.</p>
+
+<p>For example, if you have some text you want to manipulate in a UI.  A simple string could represent the data.  The view could be a text field.  The controller is the logic that translates input from the user - say character or mouse input - and makes changes to the underlying data model.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129946" title="short permalink to this answer" class="short-link" id="link-post-129946">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129946/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:00:49Z" class="relativetime">Sep 24 '08 at 21:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/16476/adamc"><div class="gravatar-wrapper-32"><img src="./q36_files/c3ebe11626190110ded69abe6cfcb00e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/16476/adamc">AdamC</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,265</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="57 bronze badges"><span class="badge3"></span><span class="badgecount">57</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129946" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-31670" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This is fake Web MVC...In real MVC, the controller is simply the IO bridge, and the model does all data manipulation.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1965/flyswat" title="92,874 reputation" class="comment-user">FlySwat</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#comment31670_129946"><span title="2008-09-24 21:02:28Z" class="relativetime-clean">Sep 24 '08 at 21:02</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129946" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="129996"></a>
+<div id="answer-129996" class="answer" data-answerid="129996" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="129996">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">-2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Like many have said already, MVC is a design pattern. I'm teaching one of my coworkers now and have explained it this way:</p>
+
+<p><strong>M</strong>odels - The data access layer. This can be direct data access, web services, etc</p>
+
+<p><strong>V</strong>iews - The presentation layer of your application.</p>
+
+<p><strong>C</strong>ontrollers - This is the business logic for your application.</p>
+
+<p>This pattern enhances test-driven development.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/129996" title="short permalink to this answer" class="short-link" id="link-post-129996">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/129996/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-24 21:08:27Z" class="relativetime">Sep 24 '08 at 21:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/21318/jason-n-gaylord"><div class="gravatar-wrapper-32"><img src="./q36_files/c1690de3e6e919e6984f009343cf7f9a" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/21318/jason-n-gaylord">Jason N. Gaylord</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,541</span><span title="8 gold badges"><span class="badge1"></span><span class="badgecount">8</span></span><span title="39 silver badges"><span class="badge2"></span><span class="badgecount">39</span></span><span title="82 bronze badges"><span class="badge3"></span><span class="badgecount">82</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-129996" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-129996" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/model-view-controller" class="post-tag" title="show questions tagged &#39;model-view-controller&#39;" rel="tag">model-view-controller</a> <a href="http://stackoverflow.com/questions/tagged/design-patterns" class="post-tag" title="show questions tagged &#39;design-patterns&#39;" rel="tag">design-patterns</a> <a href="http://stackoverflow.com/questions/tagged/glossary" class="post-tag" title="show questions tagged &#39;glossary&#39;" rel="tag">glossary</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2008-09-24 20:56:06Z"><b>8 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>35353 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller?lastactivity" class="lastactivity-link" title="2015-04-17 03:37:45Z">1 year ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1379901284",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1379901284"><div id="careersadsdoublehigh" style="display:none;"></div><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/129921/what-is-mvc-model-view-controller#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q36_files/i.gif"></div>
+            <div id="hireme" class="clc-jobs-multi blue tagged"><a class="top " href="https://stackoverflow.com/jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=10439&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs&amp;sig=KjONynvmKaCXPg"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Senior C++ developer; banking, financial, or quantitative experience is a plus at Essential Algorithms Solutions. Click to learn more." href="https://stackoverflow.com/jobs/127837/senior-c-plus-plus-developer-banking-financial-or-essential-algorithms-solutions" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=13984&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F127837%2Fsenior-c-plus-plus-developer-banking-financial-or-essential-algorithms-solutions&amp;sig=JT3PhvbRvGiEoQ"><div class="title">Senior C++ developer; banking, financial, or quantitative experience is a plus</div><div><span class="company">Essential Algorithms Solutions</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag">html5</span><span class="post-tag">responsive-design</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=13984&amp;ct=-1&amp;sig=dWXlkYh3bhHuDg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Wanted: Master of Java at Concirrus Ltd. Click to learn more." href="https://stackoverflow.com/jobs/130300/wanted-master-of-java-concirrus-ltd" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=234008&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F130300%2Fwanted-master-of-java-concirrus-ltd&amp;sig=rmhnopoPm7lHbg"><div class="title">Wanted: Master of Java</div><div><span class="company">Concirrus Ltd</span><span class="location">New Delhi, India</span></div><span class="post-tag">html</span><span class="post-tag">html5</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=234008&amp;ct=-1&amp;sig=oJ7MaMdQ86KiJg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Java Chief Software Architect - $100K at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/129483/java-chief-software-architect-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=17260&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F129483%2Fjava-chief-software-architect-100k-crossover&amp;sig=Vkw9KYBtFbuRdA"><div class="title">Java Chief Software Architect - $100K</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">cloud</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=17260&amp;ct=-1&amp;sig=y6eCnZ6E4ej3dg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Android Developer - Gurgaon at Directi. Click to learn more." href="https://stackoverflow.com/jobs/131495/android-developer-gurgaon-directi" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=234793&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F131495%2Fandroid-developer-gurgaon-directi&amp;sig=7Hp14F_TyCmZ1Q"><div class="title">Android Developer - Gurgaon</div><div><span class="company">Directi</span><span class="location">Gurugram, India</span></div><span class="post-tag">android</span><span class="post-tag highlight">java</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4-Q-sqRNMeGKB-vlMD9PJiYGBgYWBhBo_M3IkB2twcBwHIgZmBl6NoBEGRlBCqSZzRgYFpiBxVMOCD_NsEzfLmMn3STMxCAxiZmBnZmB5cBW--WWEiFRdrP1HBgYcpyBWkFqixyqLSum5NgxsmQlliXO5hVlYtCcClTOzCB4QKykz_KErjFUjmHlHNXtLHuNtyx_DQA&amp;cr=234793&amp;ct=-1&amp;sig=0oegVRlQOpBxaA" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><img src="./q36_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'AufRwYQhYNQIAAAAAIH7AQACAAAAAgAAAAAwAAAAfG1vZGVsLXZpZXctY29udHJvbGxlcnxkZXNpZ24tcGF0dGVybnN8Z2xvc3Nhcnl8AOgJiNajN4oZNCI';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,u||console.warn("clc_request missing"),t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=bd570ea4a858"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/416066?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">4</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/416066/what-is-mvc-in-relation-to-the-zend-framework?noredirect=1&amp;lq=1" class="question-hyperlink">What is MVC, in relation to the Zend framework?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/26206632?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/26206632/javafx-customcontrolt-is-this-possible?noredirect=1&amp;lq=1" class="question-hyperlink">JavaFX CustomControl&lt;T&gt;: Is this possible?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/16200516?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/16200516/need-help-understanding-mvc?noredirect=1&amp;lq=1" class="question-hyperlink">Need help understanding MVC</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/6295313?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/6295313/model-view-controller-design-pattern?noredirect=1&amp;lq=1" class="question-hyperlink">Model View Controller Design Pattern</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/18353167?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/18353167/app-design-to-mvc-pattern?noredirect=1&amp;lq=1" class="question-hyperlink">App design to MVC pattern</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/36640875?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/36640875/java-passing-values-to-another-frame?noredirect=1&amp;lq=1" class="question-hyperlink">Java passing values to another frame</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/22929522?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/22929522/mvc-in-web-how-should-i-use-session-if-i-dont-wanna-it-appear-in-model-and?noredirect=1&amp;lq=1" class="question-hyperlink">MVC in web: How should I use 'session' if I don't wanna it appear in 'model' and 'library'?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/27135197?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/27135197/choose-algorithm-in-accordance-with-chosen-item-in-combobox?noredirect=1&amp;lq=1" class="question-hyperlink">Choose algorithm in accordance with chosen item in combobox</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/31504719?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/31504719/use-of-controller-in-mvc?noredirect=1&amp;lq=1" class="question-hyperlink">Use of controller in MVC</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2056?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1512</div></a><a href="http://stackoverflow.com/questions/2056/what-are-mvp-and-mvc-and-what-is-the-difference?rq=1" class="question-hyperlink">What are MVP and MVC and what is the difference?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/3058?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1093</div></a><a href="http://stackoverflow.com/questions/3058/what-is-inversion-of-control?rq=1" class="question-hyperlink">What is Inversion of Control?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/667781?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">834</div></a><a href="http://stackoverflow.com/questions/667781/what-is-the-difference-between-mvc-and-mvvm?rq=1" class="question-hyperlink">What is the difference between MVC and MVVM?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/964256?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="http://stackoverflow.com/questions/964256/model-view-controller?rq=1" class="question-hyperlink">Model View Controller</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1317693?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">43</div></a><a href="http://stackoverflow.com/questions/1317693/what-is-model-view-presenter?rq=1" class="question-hyperlink">What is Model View Presenter?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2621725?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">6</div></a><a href="http://stackoverflow.com/questions/2621725/mvc-model-view-controller-does-the-view-call-the-model?rq=1" class="question-hyperlink">MVC: Model View Controller — does the View call the Model?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2626803?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">33</div></a><a href="http://stackoverflow.com/questions/2626803/mvc-model-view-controller-can-it-be-explained-in-simple-terms?rq=1" class="question-hyperlink">MVC (model-view-controller) - can it be explained in simple terms?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2925054?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">383</div></a><a href="http://stackoverflow.com/questions/2925054/mvc-pattern-in-android?rq=1" class="question-hyperlink">MVC pattern in Android?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/3547736?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">9</div></a><a href="http://stackoverflow.com/questions/3547736/what-specifically-belongs-in-a-model-a-view-and-a-controller?rq=1" class="question-hyperlink">What, specifically, belongs in a Model, a View, and a Controller?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/5210535?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">979</div></a><a href="http://stackoverflow.com/questions/5210535/passing-data-between-view-controllers?rq=1" class="question-hyperlink">Passing Data between View Controllers</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153571/identify-a-french-comic-series-about-a-female-adventurer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Identify a (French?) comic series about a female adventurer
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-judaism" title="Mi Yodeya"></div><a href="http://judaism.stackexchange.com/questions/80379/does-judaism-consider-women-inferior" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:248 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does Judaism consider women inferior?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/88941/which-us-states-have-criminalized-hitchhiking" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which US states have criminalized hitchhiking?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301733/what-does-it-mean-to-say-that-the-turtle-armor-increases-chances-of-being-targe" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does it mean to say that the Turtle Armor "increases chances of being targeted by enemies"?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153502/are-there-differently-coloured-races-of-man-in-middle-earth-and-if-so-how-are-t" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are there differently coloured races of Man in Middle-Earth, and if so how are they explained?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/16000/if-i-registered-to-vote-in-the-nov-2016-elections-will-i-also-be-registered-to" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If I registered to vote in the nov 2016 elections, will I also be registered to vote in proceeding special elections?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/20412/how-to-find-the-optimum-balance-between-amount-of-fuel-and-number-of-engines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to find the optimum balance between amount of fuel and number of engines?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375700/verb-that-describes-voters-putting-a-politician-out-of-office-by-voting-for-a-di" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Verb that describes voters putting a politician out of office by voting for a different candidate
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-writers" title="Writers Stack Exchange"></div><a href="http://writers.stackexchange.com/questions/26954/what-is-the-difference-between-issn-and-isbn" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:166 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the difference between ISSN and ISBN?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301723/what-does-king-of-the-hill-mean-in-overwatch" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does "King of the Hill" mean in Overwatch?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/156533/worded-mastermind-game-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Worded Mastermind game in Python
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/69325/why-is-riley-sad" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is Riley sad?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="http://money.stackexchange.com/questions/76670/can-a-car-company-refuse-to-give-me-a-copy-of-my-contract-or-balance-details" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a car company refuse to give me a copy of my contract or balance details?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/44264/groups-for-which-ddh-is-easy-but-cdh-is-hard" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Groups for which DDH is easy but CDH is hard
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/356249/remove-chapter-name-from-header-just-from-first-page-of-tocs" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Remove chapter name from header just from first page of TOCs
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375905/single-word-antonym-for-cheapest" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Single-word antonym for "cheapest"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/35920/how-can-pilots-lacking-instruments-interpret-vectors-given-by-atc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can pilots lacking instruments interpret vectors given by ATC?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2162888/prove-that-the-sum-of-pythagorean-triples-is-always-even" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Prove that the sum of pythagorean triples is always even
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/34421/does-changing-control-of-an-object-update-that-objects-timestamp" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does changing control of an object update that object's timestamp?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2165879/difficult-sequence-convergence" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Difficult Sequence Convergence
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/69366/why-arent-the-front-of-oscar-winner-envelopes-marked-with-the-award-theyre-for" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why aren't the front of Oscar winner envelopes marked with the award they're for?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/49588/this-puzzle-design-was-a-disaster" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    This puzzle design was a DISASTER!
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/88870/does-declining-room-service-deny-housekeepers-of-their-income" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does declining room service deny housekeepers of their income?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/85722/what-is-the-preferable-way-to-share-data" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the preferable way to share data?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+		<script>
+StackExchange.ready(function(){$.get('/posts/129921/ivc/683e');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/129921/ivc/683e" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang"></div></div>
+
+
+        </div>
+    </div><script async="" src="./q36_files/clc.min.js.download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.2.28.25254
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('model-view-controller,design-patterns,glossary');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|model-view-controller|design-patterns|glossary|');
+                ga('pageData.set', 'dimension2', '|model-view-controller|design-patterns|glossary|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>

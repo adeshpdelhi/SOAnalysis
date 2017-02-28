@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Why is method overloading and overriding needed in java? - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Why is method overloading and overriding needed in java?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="Possible Duplicate:
+  Polymorphism vs Overriding vs Overloading  
+I&#39;m struggling to know why method overloading and overriding needed in java?  
+
+I have read some articles regarding this but not a...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java">
+    <link rel="canonical" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java">
+
+    
+    
+    <script type="text/javascript" async="" src="./q7_files/ados"></script><script src="./q7_files/rules-p-c1rF4kxgLUzNc.js.download"></script><script async="" src="./q7_files/quant.js.download"></script><script async="" src="./q7_files/beacon.js.download"></script><script async="" src="./q7_files/analytics.js.download"></script><script type="text/javascript" async="" src="./q7_files/ados.js.download"></script><script src="./q7_files/jquery.min.js.download"></script>
+    <script src="./q7_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./q7_files/all.css">
+
+            <script>StackExchange.helpers.removeParameterFromQueryString("s");</script>
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:6,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:14228520});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '14228520');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1488311532,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"816d3fe09a7ed7e4ba07245c23acc06c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"devstory_onboarding_exp":{"v":"j","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"346ce8bead60","js/moderator.en.js":"eae0740c0d85","js/full-anon.en.js":"2088f8b22c19","js/full.en.js":"cd6eed27f4cf","js/wmd.en.js":"62e1e101239e","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"118cb359bcc6","js/tageditor.en.js":"29e438511df3","js/tageditornew.en.js":"ac6995165955","js/inline-tag-editing.en.js":"77dde44800e2","js/revisions.en.js":"47de10a8358f","js/review.en.js":"c2fd7fd5ca64","js/tagsuggestions.en.js":"91ec144ebee0","js/post-validation.en.js":"fce27e94a6e2","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"f17bde20f2c6","js/keyboard-shortcuts.en.js":"34d15ef55e73","js/external-editor.en.js":"cb487078c372","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"cb487078c372","js/snippet-javascript.en.js":"b53121382bc3","js/snippet-javascript-codemirror.en.js":"075df844c6dd"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./q7_files/full-anon.en.js.download"></script><script async="" src="./q7_files/snippet-javascript.en.js.download"></script><script async="" src="./q7_files/post-validation.en.js.download"></script><script async="" src="./q7_files/prettify-full.en.js.download"></script><script type="text/javascript" src="./q7_files/adFeedback.js.download"></script><link rel="stylesheet" href="./q7_files/adFeedback.css"><link rel="stylesheet" href="./q7_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed">
+    <div class="-container">
+        <div class="-main">
+            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f14228520%2fwhy-is-method-overloading-and-overriding-needed-in-java" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="http://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 166 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f14228520%2fwhy-is-method-overloading-and-overriding-needed-in-java" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 6.8 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java" class="question-hyperlink">Why is method overloading and overriding needed in java? [duplicate]</a></h1>
+
+            
+<div class="aside-cta">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="14228520" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1787140733",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1787140733"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="14228520">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">9</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#">favorite</a>
+        <div class="favoritecount"><b>6</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<blockquote>
+  <p><strong>Possible Duplicate:</strong><br>
+  <a href="http://stackoverflow.com/questions/154577/polymorphism-vs-overriding-vs-overloading">Polymorphism vs Overriding vs Overloading</a>  </p>
+</blockquote>
+
+
+
+<p>I'm struggling to know why <strong>method overloading and overriding needed</strong> in java?  </p>
+
+<p>I have read some articles regarding this but not able to catch why it's needed practically?</p>
+
+<p>I also visited the below url in stackoverflow but i'm not clear in this topic yet.</p>
+
+<p><a href="http://stackoverflow.com/questions/2469767/java-overloading-and-overriding">Java overloading and overriding</a></p>
+
+<p>Any practical example will be appreciated. </p>
+
+<p>Thanks in advance.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag js-gps-track" title="show questions tagged &#39;java&#39;" rel="tag">java</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/14228520" title="short permalink to this question" class="short-link" id="link-post-14228520">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/14228520/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/14228520/revisions" title="show all edits to this post">edited <span title="2013-01-09 05:22:42Z" class="relativetime">Jan 9 '13 at 5:22</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/214010/mikera"><div class="gravatar-wrapper-32"><img src="./q7_files/2bfafb4d16a6dc78abef970bcab9ca97" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/214010/mikera">mikera</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 79,645" dir="ltr">79.6k</span><span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span><span title="194 silver badges"><span class="badge2"></span><span class="badgecount">194</span></span><span title="351 bronze badges"><span class="badge3"></span><span class="badgecount">351</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2013-01-09 04:59:03Z" class="relativetime">Jan 9 '13 at 4:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1737125/user-half"><div class="gravatar-wrapper-32"><img src="./q7_files/5208df1f4dc2d980e0d2fe502a6c9485" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1737125/user-half">user_half</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">152</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="15 bronze badges"><span class="badge3"></span><span class="badgecount">15</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                        <tr>
+            <td class="special-status" colspan="2">
+                <div class="question-status">
+        <h2>                    <b>marked</b> as duplicate by <a href="http://stackoverflow.com/users/89391/miku">miku</a>, <a href="http://stackoverflow.com/users/522444/hovercraft-full-of-eels">Hovercraft Full Of Eels</a>, <a href="http://stackoverflow.com/users/18157/jim-garrison">Jim Garrison</a>, <a href="http://stackoverflow.com/users/119775/jean-fran%c3%a7ois-corbett">Jean-François Corbett</a>, <a href="http://stackoverflow.com/users/95/marek-grzenkowicz">Marek Grzenkowicz</a> <span dir="ltr"><span title="2013-01-09 08:39:12Z" class="relativetime">Jan 9 '13 at 8:39</span></span>
+</h2>
+        <p>This question has been asked before and already has an answer. If those answers do not fully address your question, please <a href="http://stackoverflow.com/questions/ask">ask a new question</a>.</p>
+    </div>
+            </td>
+        </tr>
+    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-14228520" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19738253" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy"><a href="http://en.wikipedia.org/wiki/Function_overloading" rel="nofollow noreferrer">en.wikipedia.org/wiki/Function_overloading</a>    <a href="http://en.wikipedia.org/wiki/Method_overriding" rel="nofollow noreferrer">en.wikipedia.org/wiki/Method_overriding</a>    both have practical examples.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1520364/karthik-t" title="23,161 reputation" class="comment-user">Karthik T</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738253_14228520"><span title="2013-01-09 05:02:00Z" class="relativetime-clean">Jan 9 '13 at 5:02</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19738256" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What don't you understand from the link you cited?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1093528/fge" title="70,502 reputation" class="comment-user">fge</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738256_14228520"><span title="2013-01-09 05:02:10Z" class="relativetime-clean">Jan 9 '13 at 5:02</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19738296" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@fge: I can able to understand the difference between both but it's not clear for me when and how to choose this polymorphic types.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1737125/user-half" title="152 reputation" class="comment-user owner">user_half</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738296_14228520"><span title="2013-01-09 05:05:04Z" class="relativetime-clean">Jan 9 '13 at 5:05</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19738339" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You might choose to override a method when you're using inheritance.  You choose to overload a method when you want to use the same method name with different kinds of arguments.  There really is no concept of choosing between the two... they're completely different.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/778118/jahroy" title="14,076 reputation" class="comment-user">jahroy</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738339_14228520"><span title="2013-01-09 05:08:18Z" class="relativetime-clean">Jan 9 '13 at 5:08</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19738349" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@jahroy: Thanks for your comments. But still there are people like me  interested in knowing the things which we don't know. Kindly help me if you can.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1737125/user-half" title="152 reputation" class="comment-user owner">user_half</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738349_14228520"><span title="2013-01-09 05:08:38Z" class="relativetime-clean">Jan 9 '13 at 5:08</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-14228520" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								3 Answers
+                                <span style="display:none;" itemprop="answerCount">3</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="14228621"></a>
+<div id="answer-14228621" class="answer accepted-answer" data-answerid="14228621" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="14228621">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">14</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>From <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/methods.html" rel="noreferrer">doc</a><br>
+<strong>Method Overloading:</strong> Suppose that you have a class that can use calligraphy to draw various types of data (strings, integers, and so on) and that contains a method for drawing each data type. It is cumbersome to use a new name for each method—for example, drawString, drawInteger, drawFloat, and so on. In the Java programming language, you can use the same name for all the drawing methods but pass a different argument list to each method. Thus, the data drawing class might declare four methods named draw, each of which has a different parameter list.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">DataArtist</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="pun">...</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> draw</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> s</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="pun">...</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> draw</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="pun">...</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> draw</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> f</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="pun">...</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> draw</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">double</span><span class="pln"> f</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="pun">...</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>Overloaded methods are differentiated by the number and the type of the arguments passed into the method. In the code sample, <code>draw(String s)</code> and <code>draw(int i)</code> are distinct and unique methods because they require different argument types.</p>
+
+<p>You cannot declare more than one method with the same name and the same number and type of arguments, because the compiler cannot tell them apart.</p>
+
+<p>The compiler does not consider return type when differentiating methods, so you cannot declare two methods with the same signature even if they have a different return type.</p>
+
+<p><strong>Method overriding</strong>, in object oriented programming, is a language feature that allows a subclass or child class to provide a specific implementation of a method that is already provided by one of its superclasses or parent classes. The implementation in the subclass overrides (replaces) the implementation in the superclass by providing a method that has same name, same parameters or signature, and same return type as the method in the parent class. The version of a method that is executed will be determined by the object that is used to invoke it. If an object of a parent class is used to invoke the method, then the version in the parent class will be executed, but if an object of the subclass is used to invoke the method, then the version in the child class will be executed.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/14228621" title="short permalink to this answer" class="short-link" id="link-post-14228621">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/14228621/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/14228621/revisions" title="show all edits to this post">edited <span title="2013-01-09 05:18:28Z" class="relativetime">Jan 9 '13 at 5:18</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-01-09 05:10:01Z" class="relativetime">Jan 9 '13 at 5:10</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/942391/sumit-singh"><div class="gravatar-wrapper-32"><img src="./q7_files/GRoza.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/942391/sumit-singh">Sumit Singh</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 16,335" dir="ltr">16.3k</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="42 silver badges"><span class="badge2"></span><span class="badgecount">42</span></span><span title="82 bronze badges"><span class="badge3"></span><span class="badgecount">82</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-14228621" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19738423" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for your valuable answer.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1737125/user-half" title="152 reputation" class="comment-user owner">user_half</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738423_14228621"><span title="2013-01-09 05:13:34Z" class="relativetime-clean">Jan 9 '13 at 5:13</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19738484" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Your welcome :)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/942391/sumit-singh" title="16,335 reputation" class="comment-user">Sumit Singh</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19738484_14228621"><span title="2013-01-09 05:17:36Z" class="relativetime-clean">Jan 9 '13 at 5:17</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-14228621" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1561437760",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1561437760"></div>
+  
+<a name="14228735"></a>
+<div id="answer-14228735" class="answer" data-answerid="14228735" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="14228735">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p><strong>Overriding</strong></p>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/java/IandI/override.html">Java Docs</a> says:</p>
+
+<blockquote>
+  <p>An instance method in a subclass with the same signature (name, plus
+  the number and the type of its parameters) and return type as an
+  instance method in the superclass overrides the superclass's method.</p>
+  
+  <p>The ability of a subclass to override a method allows a class to
+  inherit from a superclass whose behavior is "close enough" and then to
+  modify behavior as needed.</p>
+</blockquote>
+
+<p>Overriding is a feature that is available while using Inheritance. </p>
+
+<p><strong>It is used when a class that extends from another class wants to use most of the feature of the parent class and wants to implement specific functionality in certain cases.</strong> </p>
+
+<p>In such cases we can create methods with the same name and signature as in the parent class. This way the new method masks the parent method and would get invoked by default.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">Thought</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> message</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"I feel like I am diagonally parked in a parallel universe."</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Advice</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Thought</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">  </span><span class="com">// @Override annotation in Java 5 is optional but helpful.</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> message</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Warning: Dates in calendar are closer than they appear."</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p><strong><a href="http://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">Overloading</a></strong></p>
+
+<p>Overloading in Java is the ability to create multiple methods of the same name, but with different parameters. </p>
+
+<p><strong>The main advantage of this is cleanliness of code.</strong> </p>
+
+<p>Let's take the <code>String.valueOf</code> method. The overloaded versions of this method are defined as: </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">boolean</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">char</span><span class="pln"> c</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">char</span><span class="pun">[]</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">char</span><span class="pun">[]</span><span class="pln"> data</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> offset</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> count</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> d</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">float</span><span class="pln"> f</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="kwd">long</span><span class="pln"> l</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOf</span><span class="pun">(</span><span class="typ">Object</span><span class="pln"> obj</span><span class="pun">)</span><span class="pln"> </span></code></pre>
+
+<p>This means that if we have any type of variable, we can get a String representation of it by using <code>String.valueOf(variable)</code>. </p>
+
+<p>If overloading was not allowed we'd have methods that look like this... </p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfBoolean</span><span class="pun">(</span><span class="kwd">boolean</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfChar</span><span class="pun">(</span><span class="kwd">char</span><span class="pln"> c</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfCharArray</span><span class="pun">(</span><span class="kwd">char</span><span class="pun">[]</span><span class="pln"> data</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfCharArrayWithOffset</span><span class="pun">(</span><span class="kwd">char</span><span class="pun">[]</span><span class="pln"> data</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> offset</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> count</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfDouble</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> d</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfFloat</span><span class="pun">(</span><span class="kwd">float</span><span class="pln"> f</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfInt</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfLong</span><span class="pun">(</span><span class="kwd">long</span><span class="pln"> l</span><span class="pun">)</span><span class="pln"> 
+</span><span class="kwd">static</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> valueOfObject</span><span class="pun">(</span><span class="typ">Object</span><span class="pln"> obj</span><span class="pun">)</span><span class="pln"> </span></code></pre>
+
+<p>...which is very ugly and harder to read than the overloaded solution.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/14228735" title="short permalink to this answer" class="short-link" id="link-post-14228735">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/14228735/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/14228735/revisions" title="show all edits to this post">edited <span title="2013-01-09 05:27:09Z" class="relativetime">Jan 9 '13 at 5:27</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-01-09 05:21:09Z" class="relativetime">Jan 9 '13 at 5:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1167744/parth"><div class="gravatar-wrapper-32"><img src="./q7_files/bbbb7377676c449ca3973cb3ae75a3c1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1167744/parth">Parth</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,074</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="44 bronze badges"><span class="badge3"></span><span class="badgecount">44</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-14228735" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-19739246" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for sharing this.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1737125/user-half" title="152 reputation" class="comment-user owner">user_half</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#comment19739246_14228735"><span title="2013-01-09 06:06:44Z" class="relativetime-clean">Jan 9 '13 at 6:06</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-14228735" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="14228653"></a>
+<div id="answer-14228653" class="answer" data-answerid="14228653" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="14228653">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>The answer primarily centers around the use of <code>interface</code>s and <code>abstract class</code>es. </p>
+
+<p>Let's say you have a block of code:</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">abstract</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> testAbstract </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">int</span><span class="pln"> a</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> b</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> c</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> testFunction</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Override me!"</span><span class="pun">);</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="str">"default"</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setValuesByFormula</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">double</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"No formula set!"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>This isn't the bet example, but let's say this is intended to allow the user to set <code>a</code>, <code>b</code>, and <code>c</code> from a formula. The user would like to create a new instance of this:</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">class</span><span class="pln"> testClass </span><span class="kwd">extends</span><span class="pln"> testAbstract </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>The class <code>testClass</code> currently contains... nothing. But it extends <code>testAbstract</code> and thus has a function <code>setValuesByFormula</code>. When the user tries to call this, however, the system outputs the message: <code>No formula set!</code></p>
+
+<p>What the user must do at this point is <code>@Override</code> the original function. Thus, the new class becomes:</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">class</span><span class="pln"> testClass </span><span class="kwd">extends</span><span class="pln"> testInterface </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setValuesByFormula</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">double</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">//A not really relevant formula goes here.</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>This stops the message <code>No formula set!</code> as the user has created their own formula. This is needed for a couple main reasons:</p>
+
+<ol>
+<li>If a function is inherited from a superclass, often the child will want to override that function. However, the superclass may have default code for its class. Thus, the user must override this function if they wish to use their own code.</li>
+<li>Often, superclasses want to ensure with default code that a certain function will return without error. There are also other instances where default code is helpful. Thus, this provides an alternative: if the user does not need the default code, they can override it.</li>
+</ol>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/14228653" title="short permalink to this answer" class="short-link" id="link-post-14228653">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/14228653/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/14228653/revisions" title="show all edits to this post">edited <span title="2016-12-17 12:20:11Z" class="relativetime">Dec 17 '16 at 12:20</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/-1/community"><div class="gravatar-wrapper-32"><img src="./q7_files/a007be5a61f6aa8f3e85ae2fc18dd66e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/-1/community">Community</a><span class="mod-flair" title="moderator">♦</span>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-01-09 05:13:32Z" class="relativetime">Jan 9 '13 at 5:13</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1131435/emrakul"><div class="gravatar-wrapper-32"><img src="./q7_files/WHTda.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1131435/emrakul">Emrakul</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,889</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="61 bronze badges"><span class="badge3"></span><span class="badgecount">61</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-14228653" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-14228653" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2013-01-09 04:59:03Z"><b>4 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>42861 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java?lastactivity" class="lastactivity-link" title="2016-12-17 12:20:11Z">2 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1374560476",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1374560476"><div id="careersadsdoublehigh" style="display:none;"></div><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/14228520/why-is-method-overloading-and-overriding-needed-in-java#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q7_files/i.gif"></div>
+            <div id="hireme" class="clc-jobs-multi orange tagged"><a class="top " href="https://stackoverflow.com/jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=10439&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs&amp;sig=v3MvL4RLiQKtlQ"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Embedded FW developer at Disruptive Technologies. Click to learn more." href="https://stackoverflow.com/jobs/134269/embedded-fw-developer-disruptive-technologies" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=235240&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F134269%2Fembedded-fw-developer-disruptive-technologies&amp;sig=5Ze_x6XqX5mrQQ"><div class="title">Embedded FW developer</div><div><span class="company">Disruptive Technologies</span><span class="location">Oslo, Norway</span></div><div class="opts"><span class="opt remote">Remote</span></div></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=235240&amp;ct=-1&amp;sig=fxZBUOn0advMMg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Wanted: Master of Java at Concirrus Ltd. Click to learn more." href="https://stackoverflow.com/jobs/130300/wanted-master-of-java-concirrus-ltd" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=234008&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F130300%2Fwanted-master-of-java-concirrus-ltd&amp;sig=IcsL1Z3UXS-lXw"><div class="title">Wanted: Master of Java</div><div><span class="company">Concirrus Ltd</span><span class="location">New Delhi, India</span></div><span class="post-tag">html</span><span class="post-tag">html5</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=234008&amp;ct=-1&amp;sig=edp_Db7-ALfb9w" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Java Chief Software Architect - $100K at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/129484/java-chief-software-architect-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=17268&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F129484%2Fjava-chief-software-architect-100k-crossover&amp;sig=sfHK2NFVlez1ig"><div class="title">Java Chief Software Architect - $100K</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">cloud</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=17268&amp;ct=-1&amp;sig=CV-hhVcGBo8yzw" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Technical Product Manager - $100k at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/133026/technical-product-manager-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=232764&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F133026%2Ftechnical-product-manager-100k-crossover&amp;sig=f6-7sHzyrlrhMg"><div class="title">Technical Product Manager - $100k</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">nosql</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4xTqKPcWTrjiwbrbzM-TiYmBgYGFAQQ0ZG4yZEdrMDAc1wCL9WwAiTIygjjSn0SZGF5MY2ZgY2G4eun4ubmWzaHv7KSbhJkYJCYxM7CzMLAcyMvdbLlQc5LdbCMHBoYSZ7AZKQcE7dotf8rMtWNkyUosS5zNIsjEYNPLDJGbOrHdcnbiPKgcQ8G7x3UxkV7PGC4AAA&amp;cr=232764&amp;ct=-1&amp;sig=KkAeptQk7R9oaA" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><img src="./q7_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'AqseiEkTYNQIAAAAACgc2QACAAAAAgAAAAAGAAAAfGphdmF8AHFspebly-Lwm7Q';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,u||console.warn("clc_request missing"),t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=bd570ea4a858"});        </script>
+			<div class="module" id="chat-feature">
+
+    <h4><a href="http://chat.stackoverflow.com/" id="h-chat-link" title="105 users active in 47 rooms the last 60 minutes">105 People Chatting</a></h4>
+    <div class="related" id="ad502-rooms"><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="PHP"><a href="http://chat.stackoverflow.com/rooms/11">PHP</a></span></h3><span title="2017-02-28 17:56:07Z" class="ad502-last-message">1 hour ago - <a href="http://chat.stackoverflow.com/users/508666">PeeHaa</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/508666"><img height="23" width="23" title="PeeHaa: 1 hour ago" src="./q7_files/cv2rE.png"></a><a href="http://chat.stackoverflow.com/users/3942918"><img height="23" width="23" title="Paul Crovella: 1 hour ago" src="./q7_files/Rup3Y.jpg"></a><a href="http://chat.stackoverflow.com/users/1925055"><img height="23" width="23" title="ibanore: 2 hours ago" src="./q7_files/d425bbf2f1fd518bea9dfde49561daad"></a><a href="http://chat.stackoverflow.com/users/538216"><img height="23" width="23" title="Levi Morrison: 2 hours ago" src="./q7_files/e91a4b631b4bb7f0c477626617dd3926"></a><a href="http://chat.stackoverflow.com/users/599857"><img height="23" width="23" title="Leigh: 2 hours ago" src="./q7_files/ee78d6533f78f174e8252dce7d2cd0b7"></a><a href="http://chat.stackoverflow.com/users/3605516"><img height="23" width="23" title="Linus: 2 hours ago" src="./q7_files/t5toz.jpg"></a><a href="http://chat.stackoverflow.com/users/727208"><img height="23" width="23" title="tereško: 3 hours ago" src="./q7_files/d2bba3700fd3a3e8cc12888edd980525"></a></div></div><div class="ad502-room"><h3 class="ad502-room-h3"><span class="ad502-room-title" title="JavaScript"><a href="http://chat.stackoverflow.com/rooms/17">JavaScript</a></span></h3><span title="2017-02-28 17:57:41Z" class="ad502-last-message">1 hour ago - <a href="http://chat.stackoverflow.com/users/44041">Filip Dupanović</a></span><br><div class="ad502-users"><a href="http://chat.stackoverflow.com/users/3161092"><img height="23" width="23" title="towc: 1 hour ago" src="./q7_files/oVs5E.png"></a><a href="http://chat.stackoverflow.com/users/2620028"><img height="23" width="23" title="Hatter is Mad: 1 hour ago" src="./q7_files/UmUPu.jpg"></a><a href="http://chat.stackoverflow.com/users/1408759"><img height="23" width="23" title="ndugger: 1 hour ago" src="./q7_files/PH8Vg.png"></a><a href="http://chat.stackoverflow.com/users/956900"><img height="23" width="23" title="Luggage: 1 hour ago" src="./q7_files/4416acf0ee6259443ee3cca16d894d14"></a><a href="http://chat.stackoverflow.com/users/44041"><img height="23" width="23" title="Filip Dupanović: 1 hour ago" src="./q7_files/ef09ee2a5aaee27f3630e1842f30fbac"></a><a href="http://chat.stackoverflow.com/users/1596138"><img height="23" width="23" title="Jhawins: 1 hour ago" src="./q7_files/SIjyi.jpg"></a><a href="http://chat.stackoverflow.com/users/829835"><img height="23" width="23" title="rlemon: 2 hours ago" src="./q7_files/6ay1r.jpg"></a></div></div></div>
+    <script>
+    // <!--
+        StackExchange.ready(
+        function () {
+            var options = {
+                chatUrl: 'http://chat.stackoverflow.com',
+                reloadUrl: '/api/recent-chat',
+                preloadData: {"activeUsers":105,"activeRooms":47,"rooms":[{"name":"PHP","id":11,"lastPost":1488304567,"posts":2676069,"users":[{"name":"PeeHaa","id":508666,"emailhash":"!https://i.stack.imgur.com/cv2rE.png?s=128\u0026g=1","lastPost":1488304568},{"name":"Paul Crovella","id":3942918,"emailhash":"!https://i.stack.imgur.com/Rup3Y.jpg?s=128\u0026g=1","lastPost":1488304514},{"name":"ibanore","id":1925055,"emailhash":"d425bbf2f1fd518bea9dfde49561daad","lastPost":1488304323},{"name":"Levi Morrison","id":538216,"emailhash":"e91a4b631b4bb7f0c477626617dd3926","lastPost":1488303924},{"name":"Leigh","id":599857,"emailhash":"ee78d6533f78f174e8252dce7d2cd0b7","lastPost":1488303790},{"name":"Linus","id":3605516,"emailhash":"!https://i.stack.imgur.com/t5toz.jpg?s=128\u0026g=1","lastPost":1488301739},{"name":"tereško","id":727208,"emailhash":"d2bba3700fd3a3e8cc12888edd980525","lastPost":1488299899}],"messages":[{"date":1488304567,"user":"PeeHaa","userid":508666}],"singleImage":false,"tags":["php"]},{"name":"JavaScript","id":17,"lastPost":1488304661,"posts":3850120,"users":[{"name":"towc","id":3161092,"emailhash":"!https://i.stack.imgur.com/oVs5E.png?s=128\u0026g=1","lastPost":1488304640},{"name":"Hatter is Mad","id":2620028,"emailhash":"!https://i.stack.imgur.com/UmUPu.jpg?s=128\u0026g=1","lastPost":1488304564},{"name":"ndugger","id":1408759,"emailhash":"!https://i.stack.imgur.com/PH8Vg.png?s=128\u0026g=1","lastPost":1488304528},{"name":"Luggage","id":956900,"emailhash":"4416acf0ee6259443ee3cca16d894d14","lastPost":1488304526},{"name":"Filip Dupanović","id":44041,"emailhash":"ef09ee2a5aaee27f3630e1842f30fbac","lastPost":1488304523},{"name":"Jhawins","id":1596138,"emailhash":"!https://i.stack.imgur.com/SIjyi.jpg?s=128\u0026g=1","lastPost":1488304459},{"name":"rlemon","id":829835,"emailhash":"!https://i.stack.imgur.com/6ay1r.jpg?s=128\u0026g=1","lastPost":1488302232}],"messages":[{"date":1488304661,"user":"Filip Dupanović","userid":44041}],"singleImage":false,"tags":["ecmascript","ecmascript-6","javascript","nodejs","typescript"]}]} 
+            };
+
+            StackExchange.chatAd.init(options);
+        });
+    // -->
+    </script>
+
+</div>
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/154577?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">249</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/154577/polymorphism-vs-overriding-vs-overloading?noredirect=1&amp;lq=1" class="question-hyperlink">Polymorphism vs Overriding vs Overloading</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/38967498?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/38967498/exact-need-of-method-overloading-in-java?noredirect=1&amp;lq=1" class="question-hyperlink">Exact need of Method Overloading in Java</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/24238077?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">3</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/24238077/why-should-we-override-a-method?noredirect=1&amp;lq=1" class="question-hyperlink">Why should we override a method?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/28064692?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">28</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/28064692/why-override-equals-instead-of-using-another-method-name?noredirect=1&amp;lq=1" class="question-hyperlink">Why override equals instead of using another method name</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/2469767?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">12</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/2469767/java-overloading-and-overriding?noredirect=1&amp;lq=1" class="question-hyperlink">Java overloading and overriding</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/40480?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">4018</div></a><a href="http://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value?rq=1" class="question-hyperlink">Is Java “pass-by-reference” or “pass-by-value”?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1678122?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">970</div></a><a href="http://stackoverflow.com/questions/1678122/must-override-a-superclass-method-errors-after-importing-a-project-into-eclips?rq=1" class="question-hyperlink">'Must Override a Superclass Method' Errors after importing a project into Eclipse</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2223386?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">342</div></a><a href="http://stackoverflow.com/questions/2223386/why-doesnt-java-allow-overriding-of-static-methods?rq=1" class="question-hyperlink">Why doesn't Java allow overriding of static methods?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2265503?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">172</div></a><a href="http://stackoverflow.com/questions/2265503/why-do-i-need-to-override-the-equals-and-hashcode-methods-in-java?rq=1" class="question-hyperlink">Why do I need to override the equals and hashCode methods in Java?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/5585779?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1895</div></a><a href="http://stackoverflow.com/questions/5585779/converting-string-to-int-in-java?rq=1" class="question-hyperlink">Converting String to Int in Java?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6470651?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2011</div></a><a href="http://stackoverflow.com/questions/6470651/creating-a-memory-leak-with-java?rq=1" class="question-hyperlink">Creating a memory leak with Java</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6841333?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">4912</div></a><a href="http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result?rq=1" class="question-hyperlink">Why is subtracting these two times (in 1927) giving a strange result?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/8881291?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2292</div></a><a href="http://stackoverflow.com/questions/8881291/why-is-char-preferred-over-string-for-passwords?rq=1" class="question-hyperlink">Why is char[] preferred over String for passwords?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/11227809?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">17139</div></a><a href="http://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array?rq=1" class="question-hyperlink">Why is it faster to process a sorted array than an unsorted array?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/21947452?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2029</div></a><a href="http://stackoverflow.com/questions/21947452/why-is-printing-b-dramatically-slower-than-printing?rq=1" class="question-hyperlink">Why is printing “B” dramatically slower than printing “#”?</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153556/is-earth-the-home-planet-of-the-culture" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Earth the home planet of The Culture?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-writers" title="Writers Stack Exchange"></div><a href="http://writers.stackexchange.com/questions/26954/what-is-the-difference-between-issn-and-isbn" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:166 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the difference between ISSN and ISBN?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/34421/does-changing-control-of-an-object-update-that-objects-timestamp" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does changing control of an object update that object's timestamp?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-judaism" title="Mi Yodeya"></div><a href="http://judaism.stackexchange.com/questions/80331/can-one-go-back-in-time-to-complete-a-minyan" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:248 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can one go back in time to complete a minyan?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375934/the-implicit-meaning-of-enough-leaves-added" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    The implicit meaning of 'enough leaves added'
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/42510245/is-it-possible-to-extend-the-using-block-in-c" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to extend the 'using' block in C#?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/347991/find-list-of-directories-one-level-deep-from-matching-directory" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Find list of directories one level deep from matching directory
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/289411/modelling-a-capacitor-whose-dielectric-has-resistance-as-a-circuit-element" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Modelling a capacitor whose dielectric has resistance as a circuit element
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-crypto" title="Cryptography Stack Exchange"></div><a href="http://crypto.stackexchange.com/questions/44264/groups-for-which-ddh-is-easy-but-cdh-is-hard" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:281 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Groups for which DDH is easy but CDH is hard
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153586/benevolent-aliens-who-initially-refuse-to-show-themselves" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Benevolent aliens who (initially) refuse to show themselves
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/35915/risk-of-icing-with-water-moisture-on-wings-prior-to-takeoff" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Risk of icing with water moisture on wings prior to takeoff
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="http://music.stackexchange.com/questions/53874/how-common-are-mistakes-while-playing-guitar" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How common are mistakes while playing guitar?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/69334/movie-about-the-last-man-on-earth-who-loses-his-glasses-and-cant-read-books" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Movie about the last man on Earth who loses his glasses and can't read books
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2164822/probability-pa-and-b" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    probability P(A and B)
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153571/identify-a-french-comic-series-about-a-female-adventurer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Identify a (French?) comic series about a female adventurer
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/16000/if-i-registered-to-vote-in-the-nov-2016-elections-will-i-also-be-registered-to" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If I registered to vote in the nov 2016 elections, will I also be registered to vote in proceeding special elections?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/105474/two-icons-for-one-input-field" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Two icons for one input field
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375905/single-word-antonym-for-cheapest" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Single-word antonym for "cheapest"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="http://ell.stackexchange.com/questions/120903/where-to-put-do-not-in-sentence-where-is-an-adverbs-of-frequency" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Where to put 'do not' in sentence where is an adverbs of frequency.
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301723/what-does-king-of-the-hill-mean-in-overwatch" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does "King of the Hill" mean in Overwatch?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/156533/worded-mastermind-game-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Worded Mastermind game in Python
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/88941/which-us-states-have-criminalized-hitchhiking" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Which US states have criminalized hitchhiking?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="http://retrocomputing.stackexchange.com/questions/2366/what-conventions-and-language-extensions-did-people-use-to-program-the-8086-and" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:648 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What conventions and language extensions did people use to program the 8086 and 80286?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/95777/does-a-zero-damage-attack-still-count-as-a-hit" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does a zero-damage attack still count as a hit?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+		<script>
+StackExchange.ready(function(){$.get('/posts/14228520/ivc/fd3f');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/14228520/ivc/fd3f" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+        </div>
+    </div><script async="" src="./q7_files/clc.min.js.download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.2.28.25251
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('java');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|java|');
+                ga('pageData.set', 'dimension2', '|java|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>

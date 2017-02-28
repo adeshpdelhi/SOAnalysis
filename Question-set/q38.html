@@ -1,0 +1,3110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Factory Pattern. When to use factory methods? - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Factory Pattern. When to use factory methods?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="When is it a good idea to use factory methods within an object instead of a Factory class?">
+    <meta property="og:url" content="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods">
+    <link rel="canonical" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods">
+
+    
+    
+    <script type="text/javascript" async="" src="./q38_files/ados"></script><script src="./q38_files/rules-p-c1rF4kxgLUzNc.js.download"></script><script async="" src="./q38_files/quant.js.download"></script><script async="" src="./q38_files/beacon.js.download"></script><script async="" src="./q38_files/analytics.js.download"></script><script type="text/javascript" async="" src="./q38_files/ados.js.download"></script><script src="./q38_files/jquery.min.js.download"></script>
+    <script src="./q38_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./q38_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Factory Pattern. When to use factory methods?&#39;" href="http://stackoverflow.com/feeds/question/69849">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:69849});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '69849');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1488317742,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"816d3fe09a7ed7e4ba07245c23acc06c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"devstory_onboarding_exp":{"v":"j","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"237382d76454","js/moderator.en.js":"a33415e1eed8","js/full-anon.en.js":"942d7d1de187","js/full.en.js":"3a6885c07a88","js/wmd.en.js":"a0c125bc1e56","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"bc3ebe71b5f1","js/tageditornew.en.js":"3ddc9f480232","js/inline-tag-editing.en.js":"2ddfa79492e7","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"759540619f52","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"d08b3740a7e2","js/explore-qlist.en.js":"88f824a42b1a","js/events.en.js":"1419425a050c","js/keyboard-shortcuts.en.js":"7473f1cb9735","js/external-editor.en.js":"71095ef40e9d","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"71095ef40e9d","js/snippet-javascript.en.js":"11b9273bb631","js/snippet-javascript-codemirror.en.js":"277350af08a2"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./q38_files/full-anon.en.js.download"></script><script async="" src="./q38_files/snippet-javascript.en.js.download"></script><script async="" src="./q38_files/post-validation.en.js.download"></script><script async="" src="./q38_files/prettify-full.en.js.download"></script><script async="" src="./q38_files/external-editor.en.js.download"></script><script type="text/javascript" src="./q38_files/adFeedback.js.download"></script><link rel="stylesheet" href="./q38_files/adFeedback.css"><link rel="stylesheet" href="./q38_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">
+            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f69849%2ffactory-pattern-when-to-use-factory-methods" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="http://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 166 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f69849%2ffactory-pattern-when-to-use-factory-methods" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 6.8 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods" class="question-hyperlink">Factory Pattern. When to use factory methods?</a></h1>
+
+            
+<div class="aside-cta">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="69849" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1395057684",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1395057684"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="69849">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">181</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#">favorite</a>
+        <div class="favoritecount"><b>110</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>When is it a good idea to use factory methods within an object instead of a Factory class?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/design-patterns" class="post-tag js-gps-track" title="show questions tagged &#39;design-patterns&#39;" rel="tag">design-patterns</a> <a href="http://stackoverflow.com/questions/tagged/factory" class="post-tag js-gps-track" title="show questions tagged &#39;factory&#39;" rel="tag">factory</a> <a href="http://stackoverflow.com/questions/tagged/factory-pattern" class="post-tag js-gps-track" title="show questions tagged &#39;factory-pattern&#39;" rel="tag">factory-pattern</a> <a href="http://stackoverflow.com/questions/tagged/factory-method" class="post-tag js-gps-track" title="show questions tagged &#39;factory-method&#39;" rel="tag">factory-method</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/69849" title="short permalink to this question" class="short-link" id="link-post-69849">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/69849/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/69849/revisions" title="show all edits to this post">edited <span title="2016-06-03 15:09:10Z" class="relativetime">Jun 3 '16 at 15:09</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4999394/ravindra-babu"><div class="gravatar-wrapper-32"><img src="./q38_files/nAGmt.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4999394/ravindra-babu">Ravindra babu</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,660" dir="ltr">14.7k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="56 silver badges"><span class="badge2"></span><span class="badgecount">56</span></span><span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2008-09-16 06:38:24Z" class="relativetime">Sep 16 '08 at 6:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <span class="anonymous-gravatar"></span>
+    </div>
+    <div class="user-details">
+        jjshell
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-69849" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-69849" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								14 Answers
+                                <span style="display:none;" itemprop="answerCount">14</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="2430719"></a>
+<div id="answer-2430719" class="answer" data-answerid="2430719" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="2430719">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">289</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I like thinking about design pattens in terms of my classes being 'people,' and the patterns are the ways that the people talk to each other.</p>
+
+<p>So, to me the factory pattern is like a hiring agency.  You've got someone that will need a variable number of workers.  This person may know some info they need in the people they hire, but that's it.</p>
+
+<p>So, when they need a new employee, they call the hiring agency and tell them what they need.  Now, to actually <em>hire</em> someone, you need to know a lot of stuff - benefits, eligibility verification, etc.  But the person  hiring doesn't need to know any of this - the hiring agency handles all of that.</p>
+
+<p>In the same way, using a Factory allows the consumer to create new objects without having to know the details of how they're created, or what their dependencies are - they only have to give the information they actually want.</p>
+
+<pre><code>public interface IThingFactory
+{
+    Thing GetThing(string theString);
+}
+
+public class ThingFactory : IThingFactory
+{
+    public Thing GetThing(string theString)
+    {
+        return new Thing(theString, firstDependency, secondDependency);
+    }
+}
+</code></pre>
+
+<p>So, now the consumer of the ThingFactory can get a Thing, without having to know about the dependencies of the Thing, except for the string data that comes from the consumer.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/2430719" title="short permalink to this answer" class="short-link" id="link-post-2430719">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/2430719/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-03-12 05:38:54Z" class="relativetime">Mar 12 '10 at 5:38</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/129175/kyoryu"><div class="gravatar-wrapper-32"><img src="./q38_files/7dfde74197332a0e35c6cb45be7d93dd" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/129175/kyoryu">kyoryu</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 10,483" dir="ltr">10.5k</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-2430719" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-24323354" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">9</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Where does the concrete implementation of GetThing() retrieve the values of firstDependency and secondDependency?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/299354/mikeyg36" title="905 reputation" class="comment-user">Mikeyg36</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment24323354_2430719"><span title="2013-05-31 18:09:26Z" class="relativetime-clean">May 31 '13 at 18:09</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-27496488" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="supernova">38</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Could someone tell me how this answers the OP's question? This merely describes what 'Factory Pattern' is and then add an example of 'Factory Method', which is just one of three 'Factory Patterns'. In another word, I see no comparison anywhere. I would recommend people who are scratching their head after this answer to see <a href="http://corey.quickshiftconsulting.com/1/post/2009/5/first-post.html" rel="nofollow noreferrer">this blog post</a> by Corey Broderick, but even this explanation does not answer when to use which.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/986067/forethinker" title="1,458 reputation" class="comment-user">Forethinker</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment27496488_2430719"><span title="2013-09-07 04:30:36Z" class="relativetime-clean">Sep 7 '13 at 4:30</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-35476146" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">OP's question clearly mentions <code>within an object instead of a Factory class</code>. I think he meant the scenario where you make the ctor private and use a static method to instantiate the class (create an object). But to follow this example one must instantiate the <code>ThingFactory</code> class first to get <code>Thing</code> objects, which makes this a <code>Factory class</code> in effect.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/446519/nero-thezero" title="1,249 reputation" class="comment-user">Nero theZero</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment35476146_2430719"><span title="2014-04-21 09:13:27Z" class="relativetime-clean">Apr 21 '14 at 9:13</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-51700853" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Sorry, but the explanation is crap, because a constructor can also be written in a way to hide the dependencies. The key background information that you want to separate the information of dependency creation from dependency management is missing. Besides, the question was about within the same class, the answer is no way related to that.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/3554264/christian-hujer" title="6,089 reputation" class="comment-user">Christian Hujer</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment51700853_2430719"><span title="2015-08-08 10:25:52Z" class="relativetime-clean">Aug 8 '15 at 10:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-54779459" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">OP asked <i>when</i>. Kyoryu answered <i>how</i>. Although the style of the answer is commendable, in the context of this question, it is just noise.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/653708/8bitjunkie" title="5,464 reputation" class="comment-user">8bitjunkie</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment54779459_2430719"><span title="2015-11-03 11:25:06Z" class="relativetime-clean">Nov 3 '15 at 11:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-2430719" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk634834739",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk634834739"><iframe id="ados_frame_adzerk634834739_2729598" frameborder="0" scrolling="no" height="90" width="728" src="./q38_files/saved_resource.html"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q38_files/i.gif"></div>
+  
+<a name="399988"></a>
+<div id="answer-399988" class="answer" data-answerid="399988" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="399988">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">60</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Factory methods should be considered as an alternative to constructors - mostly when constructors aren't expressive enough, ie.</p>
+
+<pre><code>class Foo{
+  public Foo(bool withBar);
+}
+</code></pre>
+
+<p>is not as expressive as:</p>
+
+<pre><code>class Foo{
+  public static Foo withBar();
+  public static Foo withoutBar();
+}
+</code></pre>
+
+<p>Factory classes are useful when you need a complicated process for constructing the object, when the construction need a dependency that you do not want for the actual class, when you need to construct different objects etc.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/399988" title="short permalink to this answer" class="short-link" id="link-post-399988">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/399988/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-12-30 10:53:17Z" class="relativetime">Dec 30 '08 at 10:53</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/5542/rasmus-faber"><div class="gravatar-wrapper-32"><img src="./q38_files/60a02c390b3aaa8afc9a427298e95fca" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/5542/rasmus-faber">Rasmus Faber</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 32,704" dir="ltr">32.7k</span><span title="18 gold badges"><span class="badge1"></span><span class="badgecount">18</span></span><span title="108 silver badges"><span class="badge2"></span><span class="badgecount">108</span></span><span title="162 bronze badges"><span class="badge3"></span><span class="badgecount">162</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-399988" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-38464947" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Where is the Factory class here?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1173112/koray-tugay" title="5,303 reputation" class="comment-user">Koray Tugay</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment38464947_399988"><span title="2014-07-16 15:48:18Z" class="relativetime-clean">Jul 16 '14 at 15:48</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-38467315" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">6</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@KorayTugay: There is no factory class, only factory methods. The question is about when to use factory <i>methods</i> instead of a factory class. But factory methods are more an alternative to constructors than an alternative to factory classes. (I do not know why the top answer is rated so highly despite only talking about factory classes).</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/5542/rasmus-faber" title="32,704 reputation" class="comment-user">Rasmus Faber</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment38467315_399988"><span title="2014-07-16 16:51:29Z" class="relativetime-clean">Jul 16 '14 at 16:51</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-64544310" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It should be noted that static factory methods are completely different from the Gang of Four: Factory Method design pattern.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1371329/jaco0646" title="3,075 reputation" class="comment-user">jaco0646</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment64544310_399988"><span title="2016-07-25 21:20:13Z" class="relativetime-clean">Jul 25 '16 at 21:20</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-399988" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="10559506"></a>
+<div id="answer-10559506" class="answer" data-answerid="10559506" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="10559506">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">44</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>One situation where I personally find separate Factory classes to make sense is when the final object you are trying to create relies on several other objects. E.g, in PHP: Suppose you have a <code>House</code> object, which in turn has a <code>Kitchen</code> and a <code>LivingRoom</code> object, and the <code>LivingRoom</code> object has a <code>TV</code> object inside as well. </p>
+
+<p>The simplest method to achieve this is having each object create their children on their construct method, but if the properties are relatively nested, when your <code>House</code> fails creating you will probably spend some time trying to isolate exactly what is failing.</p>
+
+<p>The alternative is to do the following (dependency injection, if you like the fancy term):</p>
+
+<pre class="lang-php prettyprint prettyprinted"><code><span class="pln">$TVObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> TV</span><span class="pun">(</span><span class="pln">$param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">,</span><span class="pln"> $param3</span><span class="pun">);</span><span class="pln">
+$LivingroomObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LivingRoom</span><span class="pun">(</span><span class="pln">$TVObj</span><span class="pun">,</span><span class="pln"> $param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">);</span><span class="pln">
+$KitchenroomObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Kitchen</span><span class="pun">(</span><span class="pln">$param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">);</span><span class="pln">
+$HouseObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">House</span><span class="pun">(</span><span class="pln">$LivingroomObj</span><span class="pun">,</span><span class="pln"> $KitchenroomObj</span><span class="pun">);</span></code></pre>
+
+<p>Here if the process of creating a <code>House</code> fails there is only one place to look, but having to use this chunk every time one wants a new <code>House</code> is far from convenient. Enter the Factories:</p>
+
+<pre class="lang-php prettyprint prettyprinted"><code><span class="kwd">class</span><span class="pln"> </span><span class="typ">HouseFactory</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> create</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        $TVObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> TV</span><span class="pun">(</span><span class="pln">$param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">,</span><span class="pln"> $param3</span><span class="pun">);</span><span class="pln">
+        $LivingroomObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LivingRoom</span><span class="pun">(</span><span class="pln">$TVObj</span><span class="pun">,</span><span class="pln"> $param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">);</span><span class="pln">
+        $KitchenroomObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Kitchen</span><span class="pun">(</span><span class="pln">$param1</span><span class="pun">,</span><span class="pln"> $param2</span><span class="pun">);</span><span class="pln">
+        $HouseObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">House</span><span class="pun">(</span><span class="pln">$LivingroomObj</span><span class="pun">,</span><span class="pln"> $KitchenroomObj</span><span class="pun">);</span><span class="pln">
+
+        </span><span class="kwd">return</span><span class="pln"> $HouseObj</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+$houseFactory </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">HouseFactory</span><span class="pun">();</span><span class="pln">
+$HouseObj </span><span class="pun">=</span><span class="pln"> $houseFactory</span><span class="pun">-&gt;</span><span class="pln">create</span><span class="pun">();</span></code></pre>
+
+<p>Thanks to the factory here the process of creating a <code>House</code> is abstracted (in that you don't need to create and set up every single dependency when you just want to create a <code>House</code>) and at the same time centralized which makes it easier to maintain. There are other reasons why using separate Factories can be beneficial (e.g. testability) but I find this specific use case to illustrate best how Factory classes can be useful.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/10559506" title="short permalink to this answer" class="short-link" id="link-post-10559506">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/10559506/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/10559506/revisions" title="show all edits to this post">edited <span title="2015-06-24 05:55:11Z" class="relativetime">Jun 24 '15 at 5:55</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4519059/sha-t"><div class="gravatar-wrapper-32"><img src="./q38_files/MBHID.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4519059/sha-t">shA.t</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,418</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-05-11 22:47:47Z" class="relativetime">May 11 '12 at 22:47</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1329367/mahn"><div class="gravatar-wrapper-32"><img src="./q38_files/e5c88ee091c849042e3bd66ab3e0d8ff" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1329367/mahn">Mahn</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,293</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="64 bronze badges"><span class="badge3"></span><span class="badgecount">64</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-10559506" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="3" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-28476810" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">How would someone do a unit test on this though? I thought using the "new" keyword in a class was considered bad practice because it can't be unit tested. Or is a factory meant to be a bit of an exception to that rule?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/945775/agmlauncher" title="3,164 reputation" class="comment-user">AgmLauncher</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment28476810_10559506"><span title="2013-10-08 03:58:34Z" class="relativetime-clean">Oct 8 '13 at 3:58</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-28511459" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@AgmLauncher I had the same question as well when I got started with unit testing, check out: <a href="http://stackoverflow.com/questions/10128780/performing-unit-testing-with-nested-dependencies-and-factory-classes" title="performing unit testing with nested dependencies and factory classes">stackoverflow.com/questions/10128780/…</a></span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1329367/mahn" title="9,293 reputation" class="comment-user">Mahn</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment28511459_10559506"><span title="2013-10-08 21:36:10Z" class="relativetime-clean">Oct 8 '13 at 21:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-35477727" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Didn't get this. How exactly the params for creating different objects are passed to the <code>HouseFactory</code> class?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/446519/nero-thezero" title="1,249 reputation" class="comment-user">Nero theZero</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment35477727_10559506"><span title="2014-04-21 10:14:24Z" class="relativetime-clean">Apr 21 '14 at 10:14</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-35967582" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@NerotheZero I omitted that in the example for the sake of simplicity, but you would essentially either have them hardcoded inside the class, or pass them as arguments of <code>HouseFactory::create</code>. It'd be perfectly okay for instance to have a create call such as <code>$houseFactory-&gt;create($TVParam1, $TVParam2, $livingRoomParam1, $livingRoomParam2);</code> etc.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1329367/mahn" title="9,293 reputation" class="comment-user">Mahn</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment35967582_10559506"><span title="2014-05-04 21:11:24Z" class="relativetime-clean">May 4 '14 at 21:11</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37483316" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@Mahn, Wouldn't you end up having alot of params in the end?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/632951/pacerier" title="32,573 reputation" class="comment-user">Pacerier</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment37483316_10559506"><span title="2014-06-17 12:25:33Z" class="relativetime-clean">Jun 17 '14 at 12:25</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-10559506" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick="">show <b>3</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="17668707"></a>
+<div id="answer-17668707" class="answer" data-answerid="17668707" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="17668707">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">14</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It is important to clearly differentiate the idea behind using factory or factory method.
+Both are meant to address mutually exclusive different kind of object creation problems.</p>
+
+<p>Let's be specific about "factory method":</p>
+
+<p>First thing is that, when you are developing library or APIs which in turn will be used for further application development, then factory method is one of the best selections for creation pattern. Reason behind; <strong>We know that when to create an object of required functionality(s) but type of object will remain undecided or it will be decided ob dynamic parameters being passed</strong>.</p>
+
+<p>Now the point is, approximately same can be achieved by using factory pattern itself but one huge drawback will introduce into the system if factory pattern will be used for above highlighted problem, it is that your logic of crating different objects(sub classes objects) will be specific to some business condition so in future when you need to extend your library's functionality for other platforms(In more technically, you need to add more sub classes of basic interface or abstract class so factory will return those objects also in addition to existing one based on some dynamic parameters) then every time you need to change(extend) the logic of factory class which will be costly operation and not good from design perspective.
+On the other side, if "factory method" pattern will be used to perform the same thing then you just need to create additional functionality(sub classes) and get it registered dynamically by injection which doesn't require changes in your base code.</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">interface</span><span class="pln"> </span><span class="typ">Deliverable</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="com">/*********/</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">abstract</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">DefaultProducer</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> taskToBeDone</span><span class="pun">()</span><span class="pln"> 
+    </span><span class="pun">{</span><span class="pln">   
+        </span><span class="typ">Deliverable</span><span class="pln"> deliverable </span><span class="pun">=</span><span class="pln"> factoryMethodPattern</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">abstract</span><span class="pln"> </span><span class="typ">Deliverable</span><span class="pln"> factoryMethodPattern</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">SpecificDeliverable</span><span class="pln"> </span><span class="kwd">implements</span><span class="pln"> </span><span class="typ">Deliverable</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+ </span><span class="com">/***SPECIFIC TASK CAN BE WRITTEN HERE***/</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">SpecificProducer</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">DefaultProducer</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">Deliverable</span><span class="pln"> factoryMethodPattern</span><span class="pun">()</span><span class="pln"> 
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">SpecificDeliverable</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">MasterApplicationProgram</span><span class="pln"> 
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> arg</span><span class="pun">[])</span><span class="pln"> 
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">DefaultProducer</span><span class="pln"> defaultProducer </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">SpecificProducer</span><span class="pun">();</span><span class="pln">
+        defaultProducer</span><span class="pun">.</span><span class="pln">taskToBeDone</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/17668707" title="short permalink to this answer" class="short-link" id="link-post-17668707">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/17668707/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/17668707/revisions" title="show all edits to this post">edited <span title="2015-06-24 06:02:02Z" class="relativetime">Jun 24 '15 at 6:02</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4519059/sha-t"><div class="gravatar-wrapper-32"><img src="./q38_files/MBHID.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4519059/sha-t">shA.t</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,418</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="19 silver badges"><span class="badge2"></span><span class="badgecount">19</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-07-16 05:32:38Z" class="relativetime">Jul 16 '13 at 5:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2251992/prakash-chhipa"><div class="gravatar-wrapper-32"><img src="./q38_files/eadcc1a899275e1ce184fa8f4061e377" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2251992/prakash-chhipa">Prakash Chhipa</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">139</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-17668707" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-17668707" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="71394"></a>
+<div id="answer-71394" class="answer" data-answerid="71394" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="71394">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">10</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>They're also useful when you need several "constructors" with the same parameter type but with different behavior. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/71394" title="short permalink to this answer" class="short-link" id="link-post-71394">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/71394/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/71394/revisions" title="show all edits to this post">edited <span title="2013-12-06 08:45:49Z" class="relativetime">Dec 6 '13 at 8:45</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-16 11:31:31Z" class="relativetime">Sep 16 '08 at 11:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/5409/rik"><div class="gravatar-wrapper-32"><img src="./q38_files/190c7a1f867d5371b731e504e96c66b6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/5409/rik">Rik</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 18,896" dir="ltr">18.9k</span><span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span><span title="38 silver badges"><span class="badge2"></span><span class="badgecount">38</span></span><span title="58 bronze badges"><span class="badge3"></span><span class="badgecount">58</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-71394" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-71394" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="30465141"></a>
+<div id="answer-30465141" class="answer" data-answerid="30465141" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="30465141">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">8</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It is good idea to use <strong>factory methods</strong> inside object when:</p>
+
+<ol>
+<li>Object's class doesn't know what exact sub-classes it have to create</li>
+<li>Object's class is designed so that objects it creates were specified by sub-classes</li>
+<li>Object's class delegates its duties to auxiliary sub-classes and doesn't know what exact class will take these duties</li>
+</ol>
+
+<p>It is good idea to use <strong>abstract factory</strong> class when:</p>
+
+<ol>
+<li>Your object shouldn't depend on how its inner objects are created and designed</li>
+<li>Group of linked objects should be used together and you need to serve this constraint</li>
+<li>Object should be configured by one of several possible families of linked objects that will be a part of your parent object</li>
+<li>It is required to share child objects showing interfaces only but not an implementation</li>
+</ol>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/30465141" title="short permalink to this answer" class="short-link" id="link-post-30465141">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/30465141/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-05-26 17:29:58Z" class="relativetime">May 26 '15 at 17:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/3877717/denis-efimov"><div class="gravatar-wrapper-32"><img src="./q38_files/picture" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/3877717/denis-efimov">Denis Efimov</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,042</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="26 bronze badges"><span class="badge3"></span><span class="badgecount">26</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-30465141" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-30465141" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="69861"></a>
+<div id="answer-69861" class="answer" data-answerid="69861" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="69861">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>It's really a matter of taste. Factory classes can be abstracted/interfaced away as necessary, whereas factory methods are lighter weight (and also tend to be testable, since they don't have a defined type, but they will require a well-known registration point, akin to a service locator but for locating factory methods).</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/69861" title="short permalink to this answer" class="short-link" id="link-post-69861">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/69861/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-16 06:40:26Z" class="relativetime">Sep 16 '08 at 6:40</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1554/brad-wilson"><div class="gravatar-wrapper-32"><img src="./q38_files/2560112a578efab82a5fddd7284ef4f2" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1554/brad-wilson">Brad Wilson</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 34,980" dir="ltr">35k</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="58 silver badges"><span class="badge2"></span><span class="badgecount">58</span></span><span title="75 bronze badges"><span class="badge3"></span><span class="badgecount">75</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-69861" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-69861" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="70179"></a>
+<div id="answer-70179" class="answer" data-answerid="70179" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="70179">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Factory classes are useful for when the object type that they return has a private constructor, when different factory classes set different properties on the returning object, or when a specific factory type is coupled with its returning concrete type. </p>
+
+<p><strong>WCF</strong> uses ServiceHostFactory classes to retrieve ServiceHost objects in different situations. The standard ServiceHostFactory is used by IIS to retrieve ServiceHost instances for <em>.svc</em> files, but a WebScriptServiceHostFactory is used for services that return serializations to JavaScript clients. ADO.NET Data Services has its own special  DataServiceHostFactory and ASP.NET has its  ApplicationServicesHostFactory since its services have private constructors.</p>
+
+<p>If you only have one class that's consuming the factory, then you can just use a factory method within that class.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/70179" title="short permalink to this answer" class="short-link" id="link-post-70179">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/70179/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/70179/revisions" title="show all edits to this post">edited <span title="2008-09-16 08:01:55Z" class="relativetime">Sep 16 '08 at 8:01</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-16 07:50:12Z" class="relativetime">Sep 16 '08 at 7:50</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1659/mark-cidade"><div class="gravatar-wrapper-32"><img src="./q38_files/6cc331c477243ced5ff968a32a7dd14f" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1659/mark-cidade">Mark Cidade</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 74,397" dir="ltr">74.4k</span><span title="25 gold badges"><span class="badge1"></span><span class="badgecount">25</span></span><span title="185 silver badges"><span class="badge2"></span><span class="badgecount">185</span></span><span title="215 bronze badges"><span class="badge3"></span><span class="badgecount">215</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-70179" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-70179" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="32471927"></a>
+<div id="answer-32471927" class="answer" data-answerid="32471927" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="32471927">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Consider a scenario when you have to design an Order and Customer class. For simplicity and initial requirements you do not feel need of factory for Order class and fill your application with many 'new Order()' statements. Things are working well.</p>
+
+<p>Now a new requirement comes into picture that Order object cannot be instantiated without Customer association (new dependency). Now You have following considerations.</p>
+
+<p>1- You create constructor overload which will work only for new implementations. (Not acceptable).
+2- You change Order() signatures and change each and every invokation. (Not a good practice and real pain).</p>
+
+<p>Instead If you have created a factory for Order Class you only have to change one line of code and you are good to go. I suggest Factory class for almost every aggregate association. Hope that helps.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/32471927" title="short permalink to this answer" class="short-link" id="link-post-32471927">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/32471927/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-09-09 06:00:02Z" class="relativetime">Sep 9 '15 at 6:00</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4296800/muhammad-awais"><div class="gravatar-wrapper-32"><img src="./q38_files/photo.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4296800/muhammad-awais">Muhammad Awais</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-32471927" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-32471927" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="35857241"></a>
+<div id="answer-35857241" class="answer" data-answerid="35857241" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="35857241">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Let's understand difference between <code>Factory</code> and <code>FactoryMethod</code> with an example</p>
+
+<pre><code>interface Shape{
+    public double getArea();
+}
+class Rectangle implements Shape{
+    double length;
+    double width;
+    public Rectangle(double length,double width){
+        this.length = length;
+        this.width = width;
+    }
+    public double getArea(){
+        return length * width;
+    }
+}
+class Square implements Shape{
+    double length;
+    public Square(double length){
+        this.length = length;
+    }
+    public double getArea(){
+        return length * length;
+    }
+}
+class ShapeFactory{
+    public static Shape getShape(String type){
+        Shape s = null;
+        if ( type.equals("Rectangle")){
+            // get values of lenght and width without hard coding in real time application
+            s = new Rectangle(10,20);
+        }else if ( type.equals("Square")){
+            // get values of lenght without hard coding in real time application
+            s = new Square(10);
+        }
+        return s; 
+    }
+}
+
+public class FactoryAndFactoryMethod{
+    public static void main(String args[]){
+        Shape s = ShapeFactory.getShape("Rectangle");
+        System.out.println("Area of shape for Rectangle instance:"+s.getArea());
+        s = ShapeFactory.getShape("Square");
+        System.out.println("Area of shape for Square instance:"+s.getArea());
+    }
+}
+</code></pre>
+
+<p>output:</p>
+
+<pre><code>Area of shape for Rectangle instance:200.0
+Area of shape for Square instance:100.0
+</code></pre>
+
+<p><strong>Factory:</strong></p>
+
+<blockquote>
+  <p>Creates objects without exposing the instantiation logic to the client.</p>
+</blockquote>
+
+<p><strong>FactoryMethod</strong></p>
+
+<blockquote>
+  <p>Define an interface for creating an object, but let the subclasses decide which class to instantiate. The Factory method lets a class defer instantiation to subclasses</p>
+</blockquote>
+
+<p>In above example, <code>getArea()</code> is <code>Factory method</code> in <code>Shape</code> interface.
+<code>Rectangle</code> and <code>Square</code> are sub-classes of <code>Shape</code> interface.</p>
+
+<p><strong>Key notes:</strong></p>
+
+<ol>
+<li><code>ShapeFactory</code> simply creates relevant <code>Shape</code> to <code>Client</code> based on parameters passed to the method. </li>
+<li>Now <code>Client</code> calls <code>Factory Method</code> (in this example: <code>getArea())</code> without knowing the actual type of the object. </li>
+<li><code>Client</code> is loosely coupled with actual implementation of factory method in sub class. It does not care about the concrete class. </li>
+</ol>
+
+<p><strong>Use case:</strong></p>
+
+<p>When to use: <code>Client</code> doesn't know what concrete classes it will be required to create at runtime, but just wants to get a class that will do the job.</p>
+
+<p>Have a look at related SE question to understand structure of these patterns : <a href="http://stackoverflow.com/questions/1001767/what-is-the-basic-difference-between-the-factory-and-abstract-factory-patterns/35714637#35714637">What is the basic difference between the Factory and Abstract Factory Patterns?</a></p>
+
+<p>The only deviation from class diagram of <code>Factory Method</code> and current <code>example</code> : <code>getShape</code>() has been defined as static method in <code>ShapeFactory</code>. If we follow the pattern strictly, we should have one <code>AbstractShapeFactory</code> with a abstract method <code>getShape</code>() and concrete <code>ShapeFactory</code> return relevant Shape by providing implementation for   <code>getShape</code>() method.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/35857241" title="short permalink to this answer" class="short-link" id="link-post-35857241">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/35857241/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/35857241/revisions" title="show all edits to this post">edited <span title="2016-03-08 15:27:51Z" class="relativetime">Mar 8 '16 at 15:27</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2016-03-08 01:19:39Z" class="relativetime">Mar 8 '16 at 1:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/4999394/ravindra-babu"><div class="gravatar-wrapper-32"><img src="./q38_files/nAGmt.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/4999394/ravindra-babu">Ravindra babu</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 14,660" dir="ltr">14.7k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="56 silver badges"><span class="badge2"></span><span class="badgecount">56</span></span><span title="79 bronze badges"><span class="badge3"></span><span class="badgecount">79</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-35857241" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-35857241" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="41532346"></a>
+<div id="answer-41532346" class="answer" data-answerid="41532346" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="41532346">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>According to sourcemaking website, it's intentions are:</p>
+
+<ul>
+<li><p>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.</p></li>
+<li><p>Defining a "virtual" constructor.</p></li>
+<li><p>The new operator considered harmful.</p></li>
+</ul>
+
+<p>An example of how it can be used:</p>
+
+<pre><code>abstract class AbstractFactoryMethod {
+    abstract function makePHPBook($param);
+}
+
+class OReillyFactoryMethod extends AbstractFactoryMethod
+{
+    function makePHPBook($param)
+    {
+        $book = NULL;  
+        switch ($param) {
+            case "us":
+                $book = new OReillyPHPBook();
+            break;
+            // Other classes...
+            case "other":
+                $book = new SamsPHPBook();
+            break;
+            default:
+                $book = new OReillyPHPBook();
+            break;        
+    }
+
+    return $book;
+}
+</code></pre>
+
+<p>And then the testing:</p>
+
+<pre><code>function testFactoryMethod($factoryMethodInstance)
+{
+    $phpUs = $factoryMethodInstance-&gt;makePHPBook("us");
+    echo 'us php Author: '.$phpUs-&gt;getAuthor();
+    echo 'us php Title: '.$phpUs-&gt;getTitle();
+}
+
+echo 'Testing OReillyFactoryMethod';
+$factoryMethodInstance = new OReillyFactoryMethod();
+testFactoryMethod($factoryMethodInstance);
+</code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/41532346" title="short permalink to this answer" class="short-link" id="link-post-41532346">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/41532346/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-01-08 11:45:56Z" class="relativetime">Jan 8 at 11:45</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/7363403/alexander-beat"><div class="gravatar-wrapper-32"><img src="./q38_files/picture(1)" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/7363403/alexander-beat">Alexander Beat</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">31</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-41532346" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-41532346" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="70298"></a>
+<div id="answer-70298" class="answer" data-answerid="70298" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="70298">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Factory classes are more heavyweight, but give you certain advantages. In cases when you need to build your objects from multiple, raw data sources they allow you to encapsulate only the building logic (and maybe the aggregation of the data) in one place. There it can be tested in abstract without being concerned with the object interface.</p>
+
+<p>I have found this a useful pattern, particularly where I am unable to replace and inadequate ORM and want to efficiently instantiate many objects from DB table joins or stored procedures.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/70298" title="short permalink to this answer" class="short-link" id="link-post-70298">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/70298/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-16 08:16:50Z" class="relativetime">Sep 16 '08 at 8:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/6924/jonfm"><div class="gravatar-wrapper-32"><img src="./q38_files/6c0f73480e8de246c7adca37006231c9" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/6924/jonfm">jonfm</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">184</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-70298" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-70298" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="24784504"></a>
+<div id="answer-24784504" class="answer" data-answerid="24784504" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="24784504">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I'm quoting from the book PHP Masters. </p>
+
+<p>The factory pattern is perfect for instantiating one of many variants in a driver-based-setup, such as different storage engines for your configuration, session, or cache. The biggest value in the factory pattern is that it can encapsulate what would normally be a lot of object setup into a single, simple method call. For example, when setting up a logger object, you need to set up the log type (file-based, MySQL, or SQLite, for example), log location, and potentially, items like credentials. </p>
+
+<p>The factory pattern is used to augment the new operator when you're instantiating objects, and lets you unify the complexities that might occur in setting up an object, or many types of similar objects. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/24784504" title="short permalink to this answer" class="short-link" id="link-post-24784504">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/24784504/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-07-16 15:18:42Z" class="relativetime">Jul 16 '14 at 15:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1280520/julian"><div class="gravatar-wrapper-32"><img src="./q38_files/73X0s.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1280520/julian">Julian</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">796</span><span title="8 silver badges"><span class="badge2"></span><span class="badgecount">8</span></span><span title="31 bronze badges"><span class="badge3"></span><span class="badgecount">31</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-24784504" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-24784504" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="27735620"></a>
+<div id="answer-27735620" class="answer" data-answerid="27735620" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="27735620">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I liken factories to the concept of libraries. For example you can have a library for working with numbers and another for working with shapes. You can store the functions of these libraries in logically named directories as <code>Numbers</code> or <code>Shapes</code>. These are generic types that could include integers, floats, dobules, longs or rectangles, circles, triangles, pentagons in the case of shapes.</p>
+
+<p>The factory petter uses polymorphism, dependency injection and Inversion of control.</p>
+
+<p>The stated purpose of the Factory Patterns is: <code>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.</code></p>
+
+<p>So let's say that you are building an Operating System or Framework and you are building all the discrete components.</p>
+
+<p>Here is a simple example of the concept of the Factory Pattern in PHP. I may not be 100% on all of it but it's intended to serve as a simple example. I am not an expert.</p>
+
+<pre><code>class NumbersFactory {
+    public static function makeNumber( $type, $number ) {
+        $numObject = null;
+        $number = null;
+
+        switch( $type ) {
+            case 'float':
+                $numObject = new Float( $number );
+                break;
+            case 'integer':
+                $numObject = new Integer( $number );
+                break;
+            case 'short':
+                $numObject = new Short( $number );
+                break;
+            case 'double':
+                $numObject = new Double( $number );
+                break;
+            case 'long':
+                $numObject = new Long( $number );
+                break;
+            default:
+                $numObject = new Integer( $number );
+                break;
+        }
+
+        return $numObject;
+    }
+}
+
+/* Numbers interface */
+abstract class Number {
+    protected $number;
+
+    public function __construct( $number ) {
+        $this-&gt;number = $number;
+    }
+
+    abstract public function add();
+    abstract public function subtract();
+    abstract public function multiply();
+    abstract public function divide();
+}
+/* Float Implementation */
+class Float extends Number {
+    public function add() {
+        // implementation goes here
+    }
+
+    public function subtract() {
+        // implementation goes here
+    }
+
+    public function multiply() {
+        // implementation goes here
+    }
+
+    public function divide() {
+        // implementation goes here
+    }
+}
+/* Integer Implementation */
+class Integer extends Number {
+    public function add() {
+        // implementation goes here
+    }
+
+    public function subtract() {
+        // implementation goes here
+    }
+
+    public function multiply() {
+        // implementation goes here
+    }
+
+    public function divide() {
+        // implementation goes here
+    }
+}
+/* Short Implementation */
+class Short extends Number {
+    public function add() {
+        // implementation goes here
+    }
+
+    public function subtract() {
+        // implementation goes here
+    }
+
+    public function multiply() {
+        // implementation goes here
+    }
+
+    public function divide() {
+        // implementation goes here
+    }
+}
+/* Double Implementation */
+class Double extends Number {
+    public function add() {
+        // implementation goes here
+    }
+
+    public function subtract() {
+        // implementation goes here
+    }
+
+    public function multiply() {
+        // implementation goes here
+    }
+
+    public function divide() {
+        // implementation goes here
+    }
+}
+/* Long Implementation */
+class Long extends Number {
+    public function add() {
+        // implementation goes here
+    }
+
+    public function subtract() {
+        // implementation goes here
+    }
+
+    public function multiply() {
+        // implementation goes here
+    }
+
+    public function divide() {
+        // implementation goes here
+    }
+}
+
+$number = NumbersFactory::makeNumber( 'float', 12.5 );
+</code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/27735620" title="short permalink to this answer" class="short-link" id="link-post-27735620">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/27735620/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-01-01 23:17:22Z" class="relativetime">Jan 1 '15 at 23:17</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1798677/robert-rocha"><div class="gravatar-wrapper-32"><img src="./q38_files/fpKuw.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1798677/robert-rocha">Robert Rocha</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">2,842</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-27735620" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-54231199" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I understand what's happening here, but I don't get what the point of it is. What is <code>NumbersFactory::makeNumber( 'float', 12.5 );</code> giving me over just saying <code>new Float(12.5);</code> if I know I need a <code>Float</code>? This is what I don't understand about factories... what is the point?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/851885/badhorsie" title="5,725 reputation" class="comment-user">BadHorsie</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment54231199_27735620"><span title="2015-10-19 11:48:59Z" class="relativetime-clean">Oct 19 '15 at 11:48</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-54258388" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It lets you choose different implementations and does not bind you to only one. An interface is established and all implementations must guarantee and honor it.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1798677/robert-rocha" title="2,842 reputation" class="comment-user">Robert Rocha</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#comment54258388_27735620"><span title="2015-10-20 02:21:37Z" class="relativetime-clean">Oct 20 '15 at 2:21</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-27735620" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/69849/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="69849">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.co.in/">
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="816d3fe09a7ed7e4ba07245c23acc06c">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?ssrc=question_page&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f69849%2ffactory-pattern-when-to-use-factory-methods%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f69849%2ffactory-pattern-when-to-use-factory-methods%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" name="privacy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" name="tos" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2008-09-16 06:38:24Z"><b>8 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>84725 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods?lastactivity" class="lastactivity-link" title="2017-01-08 11:45:56Z">1 month ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk590854251",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk590854251"><iframe id="ados_frame_adzerk590854251_2729597" frameborder="0" scrolling="no" height="250" width="300" src="./q38_files/saved_resource(1).html"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/69849/factory-pattern-when-to-use-factory-methods#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q38_files/i(1).gif"></div>
+            <div id="hireme" class="clc-jobs-multi blue tagged"><a class="top " href="https://stackoverflow.com/jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=41wxY8JBxYQrHqzvlfw8mZgYGBgEGEDgpgAjQ3aMBgPDCSBmYGbo2QASZWQEEkzSPDIMDNlAzMTMIHTgdF6l5R5FS9vZLIJMDDa9zCDVKQd-_qqx1D1TbMfIkpVYlsjwSPdH0q6_wctftwAA&amp;cr=10440&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs&amp;sig=tFwH6vNNw7fpTQ"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Engineering Development Manager(PHP) at OLX India. Click to learn more." href="https://stackoverflow.com/jobs/119453/engineering-development-manager-php-olx-india" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=41wxY8JBxYQrHqzvlfw8mZgYGBgEGEDgpgAjQ3aMBgPDCSBmYGbo2QASZWQEEkzSPDIMDNlAzMTMIHTgdF6l5R5FS9vZLIJMDDa9zCDVKQd-_qqx1D1TbMfIkpVYlsjwSPdH0q6_wctftwAA&amp;cr=7275&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F119453%2Fengineering-development-manager-php-olx-india&amp;sig=acWqdETN5_LSjw"><div class="title">Engineering Development Manager(PHP)</div><div><span class="company">OLX India</span><span class="location">Gurugram, India</span></div><div class="opts"><span class="opt relocate">Relocation</span></div><span class="post-tag">php</span><span class="post-tag">mysql</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=41wxY8JBxYQrHqzvlfw8mZgYGBgEGEDgpgAjQ3aMBgPDCSBmYGbo2QASZWQEEkzSPDIMDNlAzMTMIHTgdF6l5R5FS9vZLIJMDDa9zCDVKQd-_qqx1D1TbMfIkpVYlsjwSPdH0q6_wctftwAA&amp;cr=7275&amp;ct=-1&amp;sig=PEM23w013Yk6iw" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Technical Product Manager - $100k at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/133026/technical-product-manager-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=41wxY8JBxYQrHqzvlfw8mZgYGBgEGEDgpgAjQ3aMBgPDCSBmYGbo2QASZWQEEkzSPDIMDNlAzMTMIHTgdF6l5R5FS9vZLIJMDDa9zCDVKQd-_qqx1D1TbMfIkpVYlsjwSPdH0q6_wctftwAA&amp;cr=232764&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F133026%2Ftechnical-product-manager-100k-crossover&amp;sig=0UFx2N1d2iWQYA"><div class="title">Technical Product Manager - $100k</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">nosql</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=41wxY8JBxYQrHqzvlfw8mZgYGBgEGEDgpgAjQ3aMBgPDCSBmYGbo2QASZWQEEkzSPDIMDNlAzMTMIHTgdF6l5R5FS9vZLIJMDDa9zCDVKQd-_qqx1D1TbMfIkpVYlsjwSPdH0q6_wctftwAA&amp;cr=232764&amp;ct=-1&amp;sig=GEcLEIfgI_5CCA" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><img src="./q38_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'AnIKeL8hYNQIAAAAANkQAQACAAAAAgAAAAA4AAAAfGRlc2lnbi1wYXR0ZXJuc3xmYWN0b3J5fGZhY3RvcnktcGF0dGVybnxmYWN0b3J5LW1ldGhvZHwAdha8JOkE1NRKFA';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,u||console.warn("clc_request missing"),t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=bd570ea4a858"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/3349971?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">6</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/3349971/why-should-one-use-factory-method-to-create-objects?noredirect=1&amp;lq=1" class="question-hyperlink">Why should one use factory method to create objects</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/13087432?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/13087432/any-advantages-using-a-factory-to-get-a-particular-object?noredirect=1&amp;lq=1" class="question-hyperlink">Any advantages using a factory to get a particular object?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/30304828?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/30304828/what-is-factory-method-in-java?noredirect=1&amp;lq=1" class="question-hyperlink">What is factory method in java?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/21169301?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/21169301/value-of-factory-classes?noredirect=1&amp;lq=1" class="question-hyperlink">Value of Factory Classes</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/42009200?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">-1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/42009200/what-is-the-need-for-creating-factory-method-when-we-can-directly-create-object?noredirect=1&amp;lq=1" class="question-hyperlink">What is the need for creating factory method when we can directly create object inside main for the derived class?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/1001767?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">359</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/1001767/what-is-the-basic-difference-between-the-factory-and-abstract-factory-patterns?noredirect=1&amp;lq=1" class="question-hyperlink">What is the basic difference between the Factory and Abstract Factory Patterns?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/1992384?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">30</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/1992384/program-to-an-interface-what-does-it-mean?noredirect=1&amp;lq=1" class="question-hyperlink">“Program to an interface”. What does it mean?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/4331199?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">18</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/4331199/when-to-use-the-abstract-factory-pattern?noredirect=1&amp;lq=1" class="question-hyperlink">When to use the abstract factory pattern?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/10128780?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">13</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/10128780/performing-unit-testing-with-nested-dependencies-and-factory-classes?noredirect=1&amp;lq=1" class="question-hyperlink">Performing unit testing with nested dependencies and Factory classes</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/16560878?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">4</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/16560878/object-allocation-through-new-operator-or-some-interface?noredirect=1&amp;lq=1" class="question-hyperlink">Object Allocation through new operator or some interface</a>
+</div>					<div class="spacer more">
+				<a href="http://stackoverflow.com/questions/linked/69849?lq=1">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/557742?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes large">328</div></a><a href="http://stackoverflow.com/questions/557742/dependency-injection-vs-factory-pattern?rq=1" class="question-hyperlink">Dependency Injection vs Factory Pattern</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/757743?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">345</div></a><a href="http://stackoverflow.com/questions/757743/what-is-the-difference-between-builder-design-pattern-and-factory-design-pattern?rq=1" class="question-hyperlink">What is the difference between Builder Design pattern and Factory Design pattern?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1001767?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">359</div></a><a href="http://stackoverflow.com/questions/1001767/what-is-the-basic-difference-between-the-factory-and-abstract-factory-patterns?rq=1" class="question-hyperlink">What is the basic difference between the Factory and Abstract Factory Patterns?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2079902?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">42</div></a><a href="http://stackoverflow.com/questions/2079902/factory-abstract-factory-and-factory-method?rq=1" class="question-hyperlink">Factory, Abstract Factory and Factory Method</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/4209791?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">122</div></a><a href="http://stackoverflow.com/questions/4209791/design-patterns-abstract-factory-vs-factory-method?rq=1" class="question-hyperlink">Design Patterns: Abstract Factory vs Factory Method</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/4331199?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">18</div></a><a href="http://stackoverflow.com/questions/4331199/when-to-use-the-abstract-factory-pattern?rq=1" class="question-hyperlink">When to use the abstract factory pattern?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/5120768?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">205</div></a><a href="http://stackoverflow.com/questions/5120768/how-to-implement-the-factory-method-pattern-in-c-correctly?rq=1" class="question-hyperlink">How to implement the factory method pattern in C++ correctly</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/5739611?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">190</div></a><a href="http://stackoverflow.com/questions/5739611/differences-between-abstract-factory-pattern-and-factory-method?rq=1" class="question-hyperlink">Differences between Abstract Factory Pattern and Factory Method</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/9118151?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">7</div></a><a href="http://stackoverflow.com/questions/9118151/factory-method-vs-factory-object?rq=1" class="question-hyperlink">Factory Method VS Factory Object</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/13029261?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">85</div></a><a href="http://stackoverflow.com/questions/13029261/design-patterns-factory-vs-factory-method-vs-abstract-factory?rq=1" class="question-hyperlink">Design Patterns: Factory vs Factory method vs Abstract Factory</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/315303/would-a-gas-weigh-less-than-a-liquid-if-they-have-the-same-mass" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Would a gas "weigh" less than a liquid if they have the same mass?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/49593/welcome-to-the-american-puzzling-championship" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Welcome to the American Puzzling Championship!
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72347/what-is-the-hardest-wood-possible-and-where-would-this-be-a-practical-material" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the hardest wood possible, and where would this be a practical material?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/35920/how-can-pilots-lacking-instruments-interpret-vectors-given-by-atc" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can pilots lacking instruments interpret vectors given by ATC?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/16001/how-can-i-respond-to-whataboutism" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I respond to Whataboutism?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/835433/how-does-regsvr32-work" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    how does regsvr32 work
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72285/what-would-an-out-of-water-submarine-for-water-breathing-mer-people-look-like" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What would an out-of-water submarine (for water-breathing mer-people) look like?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/34421/does-changing-control-of-an-object-update-that-objects-timestamp" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does changing control of an object update that object's timestamp?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/20412/how-to-find-the-optimum-balance-between-amount-of-fuel-and-number-of-engines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to find the optimum balance between amount of fuel and number of engines?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375945/idiom-for-a-speech-with-redundant-information" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Idiom for a speech with redundant information
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/152612/visiting-the-u-s-for-a-security-conference" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Visiting the U.S. for a security conference
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/111380/i-copied-my-password-to-the-clipboard-can-you-delete-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I copied my password to the clipboard! Can you delete it?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/230269/is-it-possible-to-have-r-write-out-sbn-and-sbx-files" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:79 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to have R write out .sbn and .sbx files?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301733/what-does-it-mean-to-say-that-the-turtle-armor-increases-chances-of-being-targe" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does it mean to say that the Turtle Armor "increases chances of being targeted by enemies"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="http://outdoors.stackexchange.com/questions/15459/due-to-the-sheep-in-the-settlement-the-surrounding-area-has-no-mosquitoes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    "Due to the sheep in the settlement the surrounding area has no mosquitoes"
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-wordpress" title="WordPress Development Stack Exchange"></div><a href="http://wordpress.stackexchange.com/questions/258277/best-practice-for-php" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:110 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Best Practice for PHP
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-judaism" title="Mi Yodeya"></div><a href="http://judaism.stackexchange.com/questions/80379/does-judaism-consider-women-inferior" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:248 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does Judaism consider women inferior?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2162888/prove-that-the-sum-of-pythagorean-triples-is-always-even" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Prove that the sum of pythagorean triples is always even
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/356249/remove-chapter-name-from-header-just-from-first-page-of-tocs" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Remove chapter name from header just from first page of TOCs
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/289440/fpga-programming-without-ip" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    FPGA: Programming without IP
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375934/the-implicit-meaning-of-enough-leaves-added" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    The implicit meaning of 'enough leaves added'
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="http://retrocomputing.stackexchange.com/questions/2366/what-conventions-and-language-extensions-did-people-use-to-program-the-8086-and" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:648 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What conventions and language extensions did people use to program the 8086 and 80286?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153571/identify-a-french-comic-series-about-a-female-adventurer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Identify a (French?) comic series about a female adventurer
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72435/aliens-and-us-would-they-have-any-reason-to-interact-with-us" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Aliens and Us: Would they have any reason to interact with us?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/69849" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/69849/ivc/683e');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/69849/ivc/683e" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang"></div></div>
+
+
+        </div>
+    </div><script async="" src="./q38_files/clc.min.js.download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.2.28.25254
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('design-patterns,factory,factory-pattern,factory-method');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|design-patterns|factory|factory-pattern|factory-method|');
+                ga('pageData.set', 'dimension2', '|design-patterns|factory|factory-pattern|factory-method|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>

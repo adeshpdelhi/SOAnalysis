@@ -1,0 +1,2569 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#17708526 -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>java - Difference between HashMap, LinkedHashMap and TreeMap - Stack Overflow</title>
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Difference between HashMap, LinkedHashMap and TreeMap">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="What is the difference between HashMap, LinkedHashMap and TreeMap in Java? 
+I don&#39;t see any difference in the output as all the three has keySet and values. What are Hashtables?
+
+Map m1 = new HashM...">
+    <meta property="og:url" content="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526">
+    <link rel="canonical" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526">
+
+    
+    
+    <script type="text/javascript" async="" src="./q12_files/ados"></script><script src="./q12_files/rules-p-c1rF4kxgLUzNc.js.download"></script><script async="" src="./q12_files/quant.js.download"></script><script async="" src="./q12_files/beacon.js.download"></script><script async="" src="./q12_files/analytics.js.download"></script><script type="text/javascript" async="" src="./q12_files/ados.js.download"></script><script src="./q12_files/jquery.min.js.download"></script>
+    <script src="./q12_files/stub.en.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./q12_files/all.css">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Difference between HashMap, LinkedHashMap and TreeMap&#39;" href="http://stackoverflow.com/feeds/question/2889777">
+            <script>StackExchange.helpers.removeParameterFromQueryString("s");</script>
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:2889777});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '2889777');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text', true); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1488313175,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"816d3fe09a7ed7e4ba07245c23acc06c","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true,"ab":{"question_show_tweaks":{"v":"altern_unansw_cta","g":1},"devstory_onboarding_exp":{"v":"j","g":2}}},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"analytics":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"346ce8bead60","js/moderator.en.js":"eae0740c0d85","js/full-anon.en.js":"2088f8b22c19","js/full.en.js":"cd6eed27f4cf","js/wmd.en.js":"62e1e101239e","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"c37948fe0a99","js/help.en.js":"118cb359bcc6","js/tageditor.en.js":"29e438511df3","js/tageditornew.en.js":"ac6995165955","js/inline-tag-editing.en.js":"77dde44800e2","js/revisions.en.js":"47de10a8358f","js/review.en.js":"c2fd7fd5ca64","js/tagsuggestions.en.js":"91ec144ebee0","js/post-validation.en.js":"fce27e94a6e2","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"f17bde20f2c6","js/keyboard-shortcuts.en.js":"34d15ef55e73","js/external-editor.en.js":"cb487078c372","js/adops.en.js":"9a6a7812a212","js/external-editor.en.js":"cb487078c372","js/snippet-javascript.en.js":"b53121382bc3","js/snippet-javascript-codemirror.en.js":"075df844c6dd"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+<script async="" src="./q12_files/full-anon.en.js.download"></script><script async="" src="./q12_files/snippet-javascript.en.js.download"></script><script async="" src="./q12_files/post-validation.en.js.download"></script><script async="" src="./q12_files/prettify-full.en.js.download"></script><script type="text/javascript" src="./q12_files/adFeedback.js.download"></script><link rel="stylesheet" href="./q12_files/adFeedback.css"><link rel="stylesheet" href="./q12_files/jobs-multi.min.css" type="text/css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+<header class="so-header js-so-header _fixed _scrolling">
+    <div class="-container">
+        <div class="-main">
+            
+            <a href="http://stackoverflow.com/" class="-logo ">
+                <span class="-img">Stack Overflow</span>
+            </a>
+
+            <nav class="navigation">
+                <ol class="-list">
+                        <li class="-item _current">
+        <a id="nav-questions" href="http://stackoverflow.com/questions" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+    </li>
+
+    <li class="-item">
+        <a id="nav-jobs" href="http://stackoverflow.com/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Jobs</a>
+    </li>
+                        <li class="-item">
+        <a id="nav-docs" href="http://stackoverflow.com/documentation" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:7})">Documentation <small class="beta-badge">beta</small></a>
+    </li>
+                        <li class="-item">
+        <a id="nav-tags" href="http://stackoverflow.com/tags" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+    </li>
+
+                        <li class="-item">
+        <a id="nav-users" href="http://stackoverflow.com/users" class="-link js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+    </li>
+
+                </ol>
+            </nav>
+
+            <form id="search" action="http://stackoverflow.com/search" method="get" class="searchbar" autocomplete="off">
+                <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                <input name="q" type="text" placeholder="Search..." value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" class="btn js-search-submit">
+                    <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M12.864 11.32h-.813l-.288-.277A6.66 6.66 0 0 0 13.38 6.69a6.69 6.69 0 1 0-6.69 6.69 6.66 6.66 0 0 0 4.354-1.617l.278.288v.813L16.467 18 18 16.467l-5.136-5.146zm-6.174 0a4.625 4.625 0 0 1-4.632-4.63A4.625 4.625 0 0 1 6.69 2.058a4.625 4.625 0 0 1 4.63 4.632 4.625 4.625 0 0 1-4.63 4.63z"></path></svg>
+                </button>
+            </form>
+
+        </div>
+        
+
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="http://stackoverflow.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+                    <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                        
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f2889777%2fdifference-between-hashmap-linkedhashmap-and-treemap%2f17708526" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="http://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+        <ol class="-list">
+            
+    <li class="-item"><a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" class="-link js-help-button" title="Help Center and other resources">
+        <svg viewBox="0 0 18 18" width="18" height="18" role="icon"><path fill-rule="evenodd" d="M9 0a9 9 0 1 0 .001 18.001A9 9 0 0 0 9 0zm.812 13.126c-.02.716-.55 1.157-1.238 1.137-.659-.02-1.177-.49-1.157-1.209.02-.715.566-1.17 1.225-1.15.691.021 1.194.507 1.17 1.222zm1.956-5.114c-.168.237-.546.542-1.02.912l-.527.361c-.257.197-.417.43-.502.695-.044.141-.076.507-.084.752-.004.048-.032.156-.181.156H7.883c-.165 0-.185-.096-.18-.144.023-.667.12-1.218.397-1.66.374-.594 1.426-1.221 1.426-1.221.161-.12.286-.25.382-.39.177-.24.321-.51.321-.8 0-.333-.08-.65-.293-.915-.249-.31-.518-.458-1.036-.458-.51 0-.808.257-1.021.594-.213.338-.177.735-.177 1.097H5.746c0-1.366.357-2.238 1.112-2.752.51-.35 1.162-.502 1.921-.502.996 0 1.788.184 2.487.715.647.49.988 1.181.988 2.113 0 .575-.2 1.057-.486 1.447z"></path></svg>
+    </a></li>
+                <li class="-item">
+        <a href="http://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 166 Stack Exchange sites">
+            <svg viewBox="0 0 18 19" width="18" height="19" role="icon"><path fill-rule="evenodd" d="M0 14a2 2 0 0 0 2 2h10v3l3-3h1a2 2 0 0 0 2-2v-2H0v2zM16 0H2a2 2 0 0 0-2 2v2h18V2a2 2 0 0 0-2-2zM0 6h18v4H0V6z"></path></svg>
+        </a>
+    </li>
+
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                    <a href="https://stackoverflow.com/users/login?ssrc=head&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f2889777%2fdifference-between-hashmap-linkedhashmap-and-treemap%2f17708526" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;utm_source=stackoverflow.com&amp;utm_medium=dev-story&amp;utm_campaign=signup-redirect" class="login-link btn" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function () { StackExchange.topbar.init(); });
+            StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+    <div class="container">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+<div id="herobox" class="alternate">
+    <div class="test"></div>
+        <div id="close">
+            <a title="click to minimize"><span>x</span> Dismiss</a>
+        </div>
+    <div class="content">
+        <b>Join the Stack Overflow Community</b>
+        <div class="separator"></div>
+        <div class="blurb">
+            Stack Overflow is a community of 6.8 million programmers, just like you, helping each other.
+                <br>
+Join them; it only takes a minute:                <br>
+        </div>
+        <a href="http://stackoverflow.com/users/signup?ssrc=hero&amp;returnurl=%2fusers%2fstory%2fcurrent&amp;amp;utm_source=stackoverflow.com&amp;amp;utm_medium=dev-story&amp;amp;utm_campaign=signup-redirect" id="tell-me-more" class="button">Sign up</a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap" class="question-hyperlink">Difference between HashMap, LinkedHashMap and TreeMap</a></h1>
+
+            
+<div class="aside-cta">
+    <a href="http://stackoverflow.com/questions/ask" class="btn-outlined">Ask Question</a>
+</div>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="2889777" id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1964046515",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1964046515"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="2889777">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">595</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#">favorite</a>
+        <div class="favoritecount"><b>359</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>What is the difference between <code>HashMap</code>, <code>LinkedHashMap</code> and <code>TreeMap</code> in Java? 
+I don't see any difference in the output as all the three has <code>keySet</code> and <code>values</code>. What are <code>Hashtable</code>s?</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="typ">Map</span><span class="pln"> m1 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">HashMap</span><span class="pun">();</span><span class="pln">
+m1</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"map"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"HashMap"</span><span class="pun">);</span><span class="pln">
+m1</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2"</span><span class="pun">);</span><span class="pln">
+m1</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"mathew"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Hyden"</span><span class="pun">);</span><span class="pln">
+m1</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2s"</span><span class="pun">);</span><span class="pln">
+print</span><span class="pun">(</span><span class="pln">m1</span><span class="pun">.</span><span class="pln">keySet</span><span class="pun">());</span><span class="pln"> 
+print</span><span class="pun">(</span><span class="pln">m1</span><span class="pun">.</span><span class="pln">values</span><span class="pun">());</span><span class="pln"> 
+
+</span><span class="typ">SortedMap</span><span class="pln"> sm </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">TreeMap</span><span class="pun">();</span><span class="pln">
+sm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"map"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"TreeMap"</span><span class="pun">);</span><span class="pln">
+sm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2"</span><span class="pun">);</span><span class="pln">
+sm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"mathew"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Hyden"</span><span class="pun">);</span><span class="pln">
+sm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2s"</span><span class="pun">);</span><span class="pln">
+print</span><span class="pun">(</span><span class="pln">sm</span><span class="pun">.</span><span class="pln">keySet</span><span class="pun">());</span><span class="pln"> 
+print</span><span class="pun">(</span><span class="pln">sm</span><span class="pun">.</span><span class="pln">values</span><span class="pun">());</span><span class="pln">
+
+</span><span class="typ">LinkedHashMap</span><span class="pln"> lm </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LinkedHashMap</span><span class="pun">();</span><span class="pln">
+lm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"map"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"LinkedHashMap"</span><span class="pun">);</span><span class="pln">
+lm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2"</span><span class="pun">);</span><span class="pln">
+lm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"mathew"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"Hyden"</span><span class="pun">);</span><span class="pln">
+lm</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="str">"schildt"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"java2s"</span><span class="pun">);</span><span class="pln">
+print</span><span class="pun">(</span><span class="pln">lm</span><span class="pun">.</span><span class="pln">keySet</span><span class="pun">());</span><span class="pln"> 
+print</span><span class="pun">(</span><span class="pln">lm</span><span class="pun">.</span><span class="pln">values</span><span class="pun">());</span></code></pre>
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag js-gps-track" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/map" class="post-tag js-gps-track" title="show questions tagged &#39;map&#39;" rel="tag">map</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/2889777" title="short permalink to this question" class="short-link" id="link-post-2889777">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/2889777/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/2889777/revisions" title="show all edits to this post">edited <span title="2014-06-30 13:49:51Z" class="relativetime">Jun 30 '14 at 13:49</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/661933/nawfal"><div class="gravatar-wrapper-32"><img src="./q12_files/a60e16ef8a1f18164882bfbc7d1a1ea1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/661933/nawfal">nawfal</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 31,426" dir="ltr">31.4k</span><span title="30 gold badges"><span class="badge1"></span><span class="badgecount">30</span></span><span title="195 silver badges"><span class="badge2"></span><span class="badgecount">195</span></span><span title="241 bronze badges"><span class="badge3"></span><span class="badgecount">241</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2010-05-22 21:10:15Z" class="relativetime">May 22 '10 at 21:10</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/98514/kevin"><div class="gravatar-wrapper-32"><img src="./q12_files/1414fd68e16729db11e544785bb3c0f3" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/98514/kevin">Kevin</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">6,337</span><span title="18 gold badges"><span class="badge1"></span><span class="badgecount">18</span></span><span title="56 silver badges"><span class="badge2"></span><span class="badgecount">56</span></span><span title="99 bronze badges"><span class="badge3"></span><span class="badgecount">99</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-2889777" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-2889777" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								11 Answers
+                                <span style="display:none;" itemprop="answerCount">11</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="2889800"></a>
+<div id="answer-2889800" class="answer accepted-answer" data-answerid="2889800" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="2889800">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">771</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>All three classes implement the <code>Map</code> interface and offer mostly the same functionality. The most important difference is the order in which iteration through the entries will happen:</p>
+
+<ul>
+<li><code>HashMap</code> makes absolutely no guarantees about the iteration order. It can (and will) even change completely when new elements are added.</li>
+<li><code>TreeMap</code> will iterate according to the "natural ordering" of the keys according to their <code>compareTo()</code> method (or an externally supplied <code>Comparator</code>). Additionally, it implements the <a href="http://java.sun.com/javase/6/docs/api/java/util/SortedMap.html" rel="noreferrer"><code>SortedMap</code></a> interface, which contains methods that depend on this sort order.</li>
+<li><code>LinkedHashMap</code> will iterate in the order in which the entries were put into the map</li>
+</ul>
+
+<p><a href="http://en.wikipedia.org/wiki/Hashtable" rel="noreferrer">"Hashtable"</a> is the generic name for hash-based maps. In the context of the Java API,
+<code>Hashtable</code> is an obsolete class from the days of Java 1.1 before the collections framework existed. It should not be used anymore, because its API is cluttered with obsolete methods that duplicate functionality, and its methods are synchronized (which can decrease performance and is generally useless). Use <a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ConcurrentHashMap.html" rel="noreferrer">ConcurrrentHashMap</a> instead of Hashtable. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/2889800" title="short permalink to this answer" class="short-link" id="link-post-2889800">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/2889800/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/2889800/revisions" title="show all edits to this post">edited <span title="2013-09-12 06:13:44Z" class="relativetime">Sep 12 '13 at 6:13</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1201272/aura"><div class="gravatar-wrapper-32"><img src="./q12_files/f14a54a0a73271e46b96c17f8fc127ed" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1201272/aura">AurA</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">7,272</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span><span title="51 bronze badges"><span class="badge3"></span><span class="badgecount">51</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2010-05-22 21:18:16Z" class="relativetime">May 22 '10 at 21:18</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/16883/michael-borgwardt"><div class="gravatar-wrapper-32"><img src="./q12_files/0382297f273df0a544b0c6c2734de096" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/16883/michael-borgwardt">Michael Borgwardt</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 253,945" dir="ltr">254k</span><span title="52 gold badges"><span class="badge1"></span><span class="badgecount">52</span></span><span title="377 silver badges"><span class="badge2"></span><span class="badgecount">377</span></span><span title="614 bronze badges"><span class="badge3"></span><span class="badgecount">614</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-2889800" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="2" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-2938131" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What is then Map actually and whats the difference between Map,HashMap and Hashtables.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/98514/kevin" title="6,337 reputation" class="comment-user owner">Kevin</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment2938131_2889800"><span title="2010-05-22 21:21:35Z" class="relativetime-clean">May 22 '10 at 21:21</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-2938136" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@theband: Map is an interface. HashMap and Hashtable both implement it; as I wrote, Hashtable is a legacy class.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/16883/michael-borgwardt" title="253,945 reputation" class="comment-user">Michael Borgwardt</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment2938136_2889800"><span title="2010-05-22 21:22:51Z" class="relativetime-clean">May 22 '10 at 21:22</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-2938188" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="supernova">61</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">A notable difference between <code>Hashtable</code> and <code>HashMap</code> is that in a Hashtable, "neither the key nor the value can be null". This constraint does not exist on the latter.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/276052/aioobe" title="261,361 reputation" class="comment-user">aioobe</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment2938188_2889800"><span title="2010-05-22 21:36:04Z" class="relativetime-clean">May 22 '10 at 21:36</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-25681408" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@AshkanN: Yes - in fact those are the standard ways to implement sorting. TreeMap has a constructor that takes a Comparator to use, and if none is provided, it expects all objects added to implement Comparable.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/16883/michael-borgwardt" title="253,945 reputation" class="comment-user">Michael Borgwardt</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment25681408_2889800"><span title="2013-07-14 07:33:30Z" class="relativetime-clean">Jul 14 '13 at 7:33</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-43824330" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You can choose whether you want the LinkedHashMap iteration in insertion-order or access-order.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1235867/lbalazscs" title="10,925 reputation" class="comment-user">lbalazscs</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment43824330_2889800"><span title="2014-12-30 13:21:42Z" class="relativetime-clean">Dec 30 '14 at 13:21</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-2889800" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick="">show <b>2</b> more comments</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1843583722",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1843583722"><iframe id="ados_frame_adzerk1843583722_2729527" frameborder="0" scrolling="no" height="90" width="728" src="./q12_files/saved_resource.html"></iframe><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q12_files/i.gif"></div>
+  
+<a name="17708526"></a>
+<div id="answer-17708526" class="answer" data-answerid="17708526" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="17708526">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post high-scored-post">1043</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+<div class="bounty-award-container"><span class="bounty-award" title="This answer has been awarded bounties worth 25 reputation by Community">+25</span></div>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I prefer visual presentation: </p>
+
+<pre class="lang-none prettyprint prettyprinted"><code><span class="pln">╔══════════════╦═════════════════════╦═══════════════════╦═════════════════════╗
+║   Property   ║       HashMap       ║      TreeMap      ║     LinkedHashMap   ║
+╠══════════════╬═════════════════════╬═══════════════════╬═════════════════════╣
+║              ║  no guarantee order ║ sorted according  ║                     ║
+║   Order      ║ will remain constant║ to the natural    ║    insertion-order  ║
+║              ║      over time      ║    ordering       ║                     ║
+╠══════════════╬═════════════════════╬═══════════════════╬═════════════════════╣
+║  Get/put     ║                     ║                   ║                     ║
+║   remove     ║         O(1)        ║      O(log(n))    ║         O(1)        ║
+║ containsKey  ║                     ║                   ║                     ║
+╠══════════════╬═════════════════════╬═══════════════════╬═════════════════════╣
+║              ║                     ║   NavigableMap    ║                     ║
+║  Interfaces  ║         Map         ║       Map         ║         Map         ║
+║              ║                     ║    SortedMap      ║                     ║
+╠══════════════╬═════════════════════╬═══════════════════╬═════════════════════╣
+║              ║                     ║                   ║                     ║
+║     Null     ║       allowed       ║    only values    ║       allowed       ║
+║ values/keys  ║                     ║                   ║                     ║
+╠══════════════╬═════════════════════╩═══════════════════╩═════════════════════╣
+║              ║   Fail-fast behavior of an iterator cannot be guaranteed      ║
+║   Fail-fast  ║ impossible to make any hard guarantees in the presence of     ║
+║   behavior   ║           unsynchronized concurrent modification              ║
+╠══════════════╬═════════════════════╦═══════════════════╦═════════════════════╣
+║              ║                     ║                   ║                     ║
+║Implementation║      buckets        ║   Red-Black Tree  ║    double-linked    ║
+║              ║                     ║                   ║       buckets       ║
+╠══════════════╬═════════════════════╩═══════════════════╩═════════════════════╣
+║      Is      ║                                                               ║
+║ synchronized ║              implementation is not synchronized               ║
+╚══════════════╩═══════════════════════════════════════════════════════════════╝</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/17708526" title="short permalink to this answer" class="short-link" id="link-post-17708526">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/17708526/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/17708526/revisions" title="show all edits to this post">edited <span title="2017-01-10 16:03:44Z" class="relativetime">Jan 10 at 16:03</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/-1/community"><div class="gravatar-wrapper-32"><img src="./q12_files/a007be5a61f6aa8f3e85ae2fc18dd66e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/-1/community">Community</a><span class="mod-flair" title="moderator">♦</span>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-07-17 19:24:52Z" class="relativetime">Jul 17 '13 at 19:24</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/946224/shevchyk"><div class="gravatar-wrapper-32"><img src="./q12_files/MT4kx.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/946224/shevchyk">shevchyk</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 22,281" dir="ltr">22.3k</span><span title="9 gold badges"><span class="badge1"></span><span class="badgecount">9</span></span><span title="37 silver badges"><span class="badge2"></span><span class="badgecount">37</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-17708526" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="1" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-29970005" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for visual presentation. Can you provide some links for  List and Set visual presentation. Thanks again.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/884778/dhiral-pandya" title="5,004 reputation" class="comment-user">Dhiral Pandya</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment29970005_17708526"><span title="2013-11-21 04:30:37Z" class="relativetime-clean">Nov 21 '13 at 4:30</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37091856" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">9</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">In addition to insertion-order, LinkedHashMap also supports access-order (when using the constructor with the boolean access-order param).</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/196211/eyal-schneider" title="16,203 reputation" class="comment-user">Eyal Schneider</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment37091856_17708526"><span title="2014-06-05 09:23:08Z" class="relativetime-clean">Jun 5 '14 at 9:23</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-43188585" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Double Linked Buckets? I think that adds unnecessary overhead of searching for the bucket for insertion/removal operations (because it has to search for the right bucket to put the object in). I always thought that LinkedHashMap implementations would be similar to that of a Map but with a little extra overhead of "entries list" (may be as a linked list) that's used for iteration purposes. Are you sure, shevchyk? If yes, can you explain or give me some online links that back your statement?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1079362/sai-dubbaka" title="371 reputation" class="comment-user">Sai Dubbaka</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment43188585_17708526"><span title="2014-12-08 22:42:39Z" class="relativetime-clean">Dec 8 '14 at 22:42</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-48875023" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@SaiDubbaka LinkedHashMap has the double linked buckets BUT ALSO the bucket table HashMap has. It's not replacing it. This means that accessing buckets is done in the same way as in HashMap, as the linked list is there for iteration in insertion order (or access order) only.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/2277808/gerardo-lastra" title="335 reputation" class="comment-user">Gerardo Lastra</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment48875023_17708526"><span title="2015-05-22 09:53:24Z" class="relativetime-clean">May 22 '15 at 9:53</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-55108742" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It may be worth mentioning, that O(1) is the best case scenario (which we wouldn't usually call O, see <a href="http://stackoverflow.com/questions/471199/what-is-the-difference-between-%CE%98n-and-on">this question</a>)</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/4014509/sebastian-s" title="1,492 reputation" class="comment-user">Sebastian S</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment55108742_17708526"><span title="2015-11-12 09:15:57Z" class="relativetime-clean">Nov 12 '15 at 9:15</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-17708526" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick="">show <b>1</b> more comment</a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="2889796"></a>
+<div id="answer-2889796" class="answer" data-answerid="2889796" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="2889796">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">49</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>All three represent mapping from unique keys to values, and therefore implement the <a href="http://java.sun.com/javase/6/docs/api/java/util/Map.html" rel="noreferrer">Map</a> interface.</p>
+
+<ol>
+<li><p>HashMap is a map based on <a href="http://en.wikipedia.org/wiki/Hash_function" rel="noreferrer">hashing</a> of the keys. It supports O(1) get/put operations. Keys must have <a href="http://java.sun.com/javase/6/docs/api/java/lang/Object.html#hashCode()" rel="noreferrer">consistent implementations of <code>hashCode()</code> and <code>equals()</code></a> for this to work. </p></li>
+<li><p>LinkedHashMap is very similar to HashMap, but it adds awareness to the order at which items are added (or accessed), so the iteration order is the same as insertion order (or access order, depending on construction parameters).</p></li>
+<li><p>TreeMap is a tree based mapping. Its put/get operations take O(log n) time. It requires items to have some comparison mechanism, either with Comparable or Comparator. The iteration order is determined by this mechanism.</p></li>
+</ol>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/2889796" title="short permalink to this answer" class="short-link" id="link-post-2889796">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/2889796/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/2889796/revisions" title="show all edits to this post">edited <span title="2014-07-30 11:48:15Z" class="relativetime">Jul 30 '14 at 11:48</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/211563/andrew-marshall"><div class="gravatar-wrapper-32"><img src="./q12_files/d32a10a2f047dec1e5582e74cba6b3ec" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/211563/andrew-marshall">Andrew Marshall</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 66,804" dir="ltr">66.8k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="146 silver badges"><span class="badge2"></span><span class="badgecount">146</span></span><span title="163 bronze badges"><span class="badge3"></span><span class="badgecount">163</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2010-05-22 21:17:13Z" class="relativetime">May 22 '10 at 21:17</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/196211/eyal-schneider"><div class="gravatar-wrapper-32"><img src="./q12_files/2a25b405968b6e5c2f1d45602365308e" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/196211/eyal-schneider">Eyal Schneider</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 16,203" dir="ltr">16.2k</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="27 silver badges"><span class="badge2"></span><span class="badgecount">27</span></span><span title="56 bronze badges"><span class="badge3"></span><span class="badgecount">56</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-2889796" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-15867037" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">So if I understand correctly, the only difference between LinkedHashMap and TreeMap is performance, given that the order of insertion is the same as the natural order?</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/998318/moshe-shaham" title="4,889 reputation" class="comment-user">Moshe Shaham</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment15867037_2889796"><span title="2012-08-11 18:56:11Z" class="relativetime-clean">Aug 11 '12 at 18:56</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-19581502" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="hot">15</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">@MosheShaham As he said in # 2: <code>LinkedHashMap</code> will iterate in the insertion order, not the natural order. So if you add <code>(2,5,3)</code> to a <code>LinkedHashMap</code> and do a for each over it, it will return <code>2,5,3</code>. If it were <code>2,5,3</code> to a <code>TreeMap</code> it will return <code>2,3,5</code>.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1476154/grinch" title="433 reputation" class="comment-user">grinch</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment19581502_2889796"><span title="2013-01-03 14:29:00Z" class="relativetime-clean">Jan 3 '13 at 14:29</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-37090550" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Tree map also has a lot of other nice tricks. Like head and tail maps.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/205521/thomas-ahle" title="17,196 reputation" class="comment-user">Thomas Ahle</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment37090550_2889796"><span title="2014-06-05 08:49:04Z" class="relativetime-clean">Jun 5 '14 at 8:49</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-2889796" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="12147789"></a>
+<div id="answer-12147789" class="answer" data-answerid="12147789" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="12147789">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">29</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Just some more input from my own experience with maps, on when I would use each one:</p>
+
+<ul>
+<li>HashMap - Most useful when looking for a best-performance (fast) implementation.</li>
+<li>TreeMap (SortedMap interface) - Most useful when I'm concerned with being able to sort or iterate over the keys in a particular order that I define.</li>
+<li>LinkedHashMap - Combines advantages of guaranteed ordering from TreeMap without the increased cost of maintaining the TreeMap.  (It is almost as fast as the HashMap).  In particular, the LinkedHashMap also provides a great starting point for creating a Cache object by overriding the <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/util/LinkedHashMap.html#removeEldestEntry%28java.util.Map.Entry%29"><code>removeEldestEntry()</code></a> method.  This lets you create a Cache object that can expire data using some criteria that you define.</li>
+</ul>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/12147789" title="short permalink to this answer" class="short-link" id="link-post-12147789">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/12147789/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/12147789/revisions" title="show all edits to this post">edited <span title="2013-04-25 18:30:09Z" class="relativetime">Apr 25 '13 at 18:30</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2012-08-27 18:51:24Z" class="relativetime">Aug 27 '12 at 18:51</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/13140/ogre-psalm33"><div class="gravatar-wrapper-32"><img src="./q12_files/f0720ad6a8c5589e573d15e9a75438d4" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/13140/ogre-psalm33">Ogre Psalm33</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8,191</span><span title="15 gold badges"><span class="badge1"></span><span class="badgecount">15</span></span><span title="52 silver badges"><span class="badge2"></span><span class="badgecount">52</span></span><span title="75 bronze badges"><span class="badge3"></span><span class="badgecount">75</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-12147789" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-23188564" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="warm">9</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">To be precise, TreeMap doesn't keep the elements in order.  It keeps the keys in order.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/543738/l-s" title="1,317 reputation" class="comment-user">L S</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment23188564_12147789"><span title="2013-04-25 12:40:08Z" class="relativetime-clean">Apr 25 '13 at 12:40</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-12147789" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="7802592"></a>
+<div id="answer-7802592" class="answer" data-answerid="7802592" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="7802592">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">27</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<h3>HashMap</h3>
+
+<ul>
+<li>It has pair values(keys,values)</li>
+<li>NO duplication key values</li>
+<li>unordered unsorted</li>
+<li>it allows one null key and more than one null values</li>
+</ul>
+
+<h3>HashTable</h3>
+
+<ul>
+<li>same as hash map</li>
+<li>it does not allows null keys and null values</li>
+</ul>
+
+<h3>LinkedHashMap</h3>
+
+<ul>
+<li>It is ordered version of map implementation</li>
+<li>Based on linked list and hashing data structures</li>
+</ul>
+
+<h3>TreeMap</h3>
+
+<ul>
+<li>Ordered and sortered version</li>
+<li>based on hashing data structures</li>
+</ul>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7802592" title="short permalink to this answer" class="short-link" id="link-post-7802592">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7802592/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/7802592/revisions" title="show all edits to this post">edited <span title="2014-07-30 11:52:30Z" class="relativetime">Jul 30 '14 at 11:52</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/211563/andrew-marshall"><div class="gravatar-wrapper-32"><img src="./q12_files/d32a10a2f047dec1e5582e74cba6b3ec" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/211563/andrew-marshall">Andrew Marshall</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 66,804" dir="ltr">66.8k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="146 silver badges"><span class="badge2"></span><span class="badgecount">146</span></span><span title="163 bronze badges"><span class="badge3"></span><span class="badgecount">163</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-10-18 04:55:52Z" class="relativetime">Oct 18 '11 at 4:55</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1000404/prem-kumar"><div class="gravatar-wrapper-32"><img src="./q12_files/a72c957862ee90c940219668547a74e2" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1000404/prem-kumar">Prem Kumar</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">271</span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7802592" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-54964648" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Also HashTable is synchronized. Anyways,, I like your answer, clean and clear.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/1055715/surasin-tancharoen" title="919 reputation" class="comment-user">Surasin Tancharoen</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment54964648_7802592"><span title="2015-11-08 14:11:28Z" class="relativetime-clean">Nov 8 '15 at 14:11</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7802592" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="28228281"></a>
+<div id="answer-28228281" class="answer" data-answerid="28228281" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="28228281">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">26</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>See where each class is in the class hierarchy in the following diagram (<a href="http://3.bp.blogspot.com/-LUCDWSG5qXE/Uy_ee5bIR5I/AAAAAAAAAZA/oY1hR_1fcwk/s1600/Java+collection+cheat+sheet.PNG" rel="nofollow noreferrer">bigger one</a>). TreeMap implements <code>SortedMap</code> and <code>NavigableMap</code> while <code>HashMap</code> doesn't.</p>
+
+<p><code>HashTable</code> is obsolete and the corresponding <code>ConcurrentHashMap</code> class should be used.
+<img src="./q12_files/MtCX2.png" alt="enter image description here"></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/28228281" title="short permalink to this answer" class="short-link" id="link-post-28228281">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/28228281/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/28228281/revisions" title="show all edits to this post">edited <span title="2017-01-10 21:11:51Z" class="relativetime">Jan 10 at 21:11</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2165980/26hmkk"><div class="gravatar-wrapper-32"><img src="./q12_files/19db3ec4e3c14ca117c4a8034fa12deb" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2165980/26hmkk">26hmkk</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">507</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-01-30 02:28:49Z" class="relativetime">Jan 30 '15 at 2:28</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/115722/bin-chen"><div class="gravatar-wrapper-32"><img src="./q12_files/53d772560dee205d93fa80b8cef79274" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/115722/bin-chen">Bin Chen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 15,389" dir="ltr">15.4k</span><span title="23 gold badges"><span class="badge1"></span><span class="badgecount">23</span></span><span title="108 silver badges"><span class="badge2"></span><span class="badgecount">108</span></span><span title="147 bronze badges"><span class="badge3"></span><span class="badgecount">147</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-28228281" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-28228281" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="17706384"></a>
+<div id="answer-17706384" class="answer" data-answerid="17706384" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="17706384">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">12</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<blockquote>
+  <p>HashMap makes absolutely not guarantees about the iteration order. It
+  can (and will) even change completely when new elements are added.
+  TreeMap will iterate according to the "natural ordering" of the keys
+  according to their compareTo() method (or an externally supplied
+  Comparator). Additionally, it implements the SortedMap interface,
+  which contains methods that depend on this sort order. LinkedHashMap
+  will iterate in the order in which the entries were put into the map</p>
+</blockquote>
+
+<p>Look at how performance varying..
+<img src="./q12_files/9Ete5.jpg" alt="enter image description here"></p>
+
+<p>Tree map which is an implementation of Sorted map. The complexity of the put, get and containsKey operation is O(log n) due to the Natural ordering</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/17706384" title="short permalink to this answer" class="short-link" id="link-post-17706384">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/17706384/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/17706384/revisions" title="show all edits to this post">edited <span title="2015-09-28 17:29:32Z" class="relativetime">Sep 28 '15 at 17:29</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/720655/pelumi"><div class="gravatar-wrapper-32"><img src="./q12_files/14e22cfa8ebe9749ea16275693d256f7" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/720655/pelumi">pelumi</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">541</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="20 bronze badges"><span class="badge3"></span><span class="badgecount">20</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2013-07-17 17:29:48Z" class="relativetime">Jul 17 '13 at 17:29</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1869846/ruchira-gayan-ranaweera"><div class="gravatar-wrapper-32"><img src="./q12_files/f83cc994c98e417a3e0e0971c0480293" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1869846/ruchira-gayan-ranaweera">Ruchira Gayan Ranaweera</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 21,351" dir="ltr">21.4k</span><span title="12 gold badges"><span class="badge1"></span><span class="badgecount">12</span></span><span title="44 silver badges"><span class="badge2"></span><span class="badgecount">44</span></span><span title="82 bronze badges"><span class="badge3"></span><span class="badgecount">82</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-17706384" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-17706384" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="4871361"></a>
+<div id="answer-4871361" class="answer" data-answerid="4871361" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="4871361">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">9</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>@Amit: <code>SortedMap</code> is an interface whereas <code>TreeMap</code> is a class which implements the <code>SortedMap</code> interface. That means if follows the protocol which <code>SortedMap</code> asks its implementers to do.
+A tree unless implemented as search tree, can't give you ordered data because tree can be any kind of tree. So to make TreeMap work like Sorted order, it implements SortedMap ( e.g, Binary Search Tree - BST, balanced BST like AVL and R-B Tree , even Ternary Search Tree - mostly used for iterative searches in ordered way ).</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">TreeMap</span><span class="pun">&lt;</span><span class="pln">K</span><span class="pun">,</span><span class="pln">V</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">AbstractMap</span><span class="pun">&lt;</span><span class="pln">K</span><span class="pun">,</span><span class="pln">V</span><span class="pun">&gt;</span><span class="pln">
+</span><span class="kwd">implements</span><span class="pln"> </span><span class="typ">SortedMap</span><span class="pun">&lt;</span><span class="pln">K</span><span class="pun">,</span><span class="pln">V</span><span class="pun">&gt;,</span><span class="pln"> </span><span class="typ">Cloneable</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Serializable</span></code></pre>
+
+<p>In NUT-SHELL
+<code>HashMap</code> : gives data in O(1) , no ordering</p>
+
+<p><code>TreeMap</code> : gives data in O(log N), base 2. with ordered keys</p>
+
+<p><code>LinkedHashMap</code> : is Hash table with linked list (think of indexed-SkipList) capability to store data in the way it gets inserted in the tree. Best suited to implement LRU ( least recently used ).</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/4871361" title="short permalink to this answer" class="short-link" id="link-post-4871361">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/4871361/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/4871361/revisions" title="show all edits to this post">edited <span title="2013-09-22 21:46:03Z" class="relativetime">Sep 22 '13 at 21:46</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1618135/blackpanther"><div class="gravatar-wrapper-32"><img src="./q12_files/UqWor.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1618135/blackpanther">blackpanther</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,913</span><span title="5 gold badges"><span class="badge1"></span><span class="badgecount">5</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="45 bronze badges"><span class="badge3"></span><span class="badgecount">45</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-02-02 06:21:11Z" class="relativetime">Feb 2 '11 at 6:21</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/306819/siddhusingh"><div class="gravatar-wrapper-32"><img src="./q12_files/dd75cc276ca4b29e97f7dfcd6087faf0" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/306819/siddhusingh">siddhusingh</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">621</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="14 silver badges"><span class="badge2"></span><span class="badgecount">14</span></span><span title="25 bronze badges"><span class="badge3"></span><span class="badgecount">25</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-4871361" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-4871361" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="30890058"></a>
+<div id="answer-30890058" class="answer" data-answerid="30890058" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="30890058">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">9</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Let me put it simple:</p>
+
+<ul>
+<li><strong>HashMap</strong> is implemented as a hash table, and there is no ordering on keys or values.</li>
+<li><strong>TreeMap</strong> is implemented based on red-black tree structure, and it is ordered by the key.</li>
+<li><strong>LinkedHashMap</strong> preserves the insertion order</li>
+<li><strong>Hashtable</strong> is synchronized, in contrast to HashMap. It has an overhead for synchronization.This is the reason that HashMap should be used if the program is thread-safe.</li>
+</ul>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/30890058" title="short permalink to this answer" class="short-link" id="link-post-30890058">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/30890058/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/30890058/revisions" title="show all edits to this post">edited <span title="2015-06-17 11:34:43Z" class="relativetime">Jun 17 '15 at 11:34</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/379693/paresh-mayani"><div class="gravatar-wrapper-32"><img src="./q12_files/2c9f04076de133db434c7d9966ac6f6b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/379693/paresh-mayani">Paresh Mayani</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 80,023" dir="ltr">80k</span><span title="56 gold badges"><span class="badge1"></span><span class="badgecount">56</span></span><span title="197 silver badges"><span class="badge2"></span><span class="badgecount">197</span></span><span title="256 bronze badges"><span class="badge3"></span><span class="badgecount">256</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2015-06-17 11:19:53Z" class="relativetime">Jun 17 '15 at 11:19</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1859100/vivek-panday"><div class="gravatar-wrapper-32"><img src="./q12_files/L5kdH.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1859100/vivek-panday">Vivek Panday</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">504</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="16 bronze badges"><span class="badge3"></span><span class="badgecount">16</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-30890058" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-30890058" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="2889783"></a>
+<div id="answer-2889783" class="answer" data-answerid="2889783" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="2889783">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>These are different implementations of the same interface. Each implementation has some advantages and some disadvantages (fast insert, slow search) or vice versa.</p>
+
+<p>For details look at the javadoc of <a href="http://java.sun.com/javase/6/docs/api/java/util/TreeMap.html" rel="noreferrer">TreeMap</a>, <a href="http://java.sun.com/javase/6/docs/api/java/util/HashMap.html" rel="noreferrer">HashMap</a>, <a href="http://java.sun.com/javase/6/docs/api/java/util/LinkedHashMap.html" rel="noreferrer">LinkedHashMap</a>.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/2889783" title="short permalink to this answer" class="short-link" id="link-post-2889783">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/2889783/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-05-22 21:12:23Z" class="relativetime">May 22 '10 at 21:12</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/170974/tangens"><div class="gravatar-wrapper-32"><img src="./q12_files/2b6926afa33bebcf9244c54b32cbdf31" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/170974/tangens">tangens</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 24,866" dir="ltr">24.9k</span><span title="10 gold badges"><span class="badge1"></span><span class="badgecount">10</span></span><span title="93 silver badges"><span class="badge2"></span><span class="badgecount">93</span></span><span title="120 bronze badges"><span class="badge3"></span><span class="badgecount">120</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-2889783" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-2938117" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">What are Hashtables actually and what makes it differ from a Map.</span>
+                    –&nbsp;<a href="http://stackoverflow.com/users/98514/kevin" title="6,337 reputation" class="comment-user owner">Kevin</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#comment2938117_2889783"><span title="2010-05-22 21:16:09Z" class="relativetime-clean">May 22 '10 at 21:16</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-2889783" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="42300116"></a>
+<div id="answer-42300116" class="answer" data-answerid="42300116" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="42300116">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>All offer a key-&gt;value map and a way to iterate through the keys. The most important distinction between
+these classes are the time guarantees and the ordering of the keys.</p>
+
+<ol>
+<li>HashMap offers 0(1) lookup and insertion. If you iterate through the keys, though, the ordering of the
+keys is essentially arbitrary. It is implemented by an array of linked lists.</li>
+<li>TreeMap offers O(log N) lookup and insertion. Keys are ordered, so if you need to iterate through
+the keys in sorted order, you can. This means that keys must implement the Comparable interface.TreeMap is implemented by a Red-Black Tree.</li>
+<li>LinkedHashMap offers 0(1) lookup and insertion. Keys are ordered by their insertion order. It is
+implemented by doubly-linked buckets.</li>
+</ol>
+
+<p>Imagine you passed an empty TreeMap, HashMap, and LinkedHashMap into the following function:</p>
+
+<pre class="lang-java prettyprint prettyprinted"><code><span class="kwd">void</span><span class="pln"> insertAndPrint</span><span class="pun">(</span><span class="typ">AbstractMap</span><span class="pun">&lt;</span><span class="typ">Integer</span><span class="pun">,</span><span class="pln"> </span><span class="typ">String</span><span class="pun">&gt;</span><span class="pln"> map</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">int</span><span class="pun">[]</span><span class="pln"> array</span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="pun">-</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">};</span><span class="pln">
+  </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> x </span><span class="pun">:</span><span class="pln"> array</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    map</span><span class="pun">.</span><span class="pln">put</span><span class="pun">(</span><span class="pln">x</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toString</span><span class="pun">(</span><span class="pln">x</span><span class="pun">));</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> k</span><span class="pun">:</span><span class="pln"> map</span><span class="pun">.</span><span class="pln">keySet</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="typ">System</span><span class="pun">.</span><span class="pln">out</span><span class="pun">.</span><span class="pln">print</span><span class="pun">(</span><span class="pln">k </span><span class="pun">+</span><span class="pln"> </span><span class="str">", "</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+
+<p>The output for each will look like the results below.<br></p>
+
+<p>For HashMap, the output was, in my own tests, { 0, 1, -1}, but it could be any ordering. There is no guarantee on the
+ordering.<br>
+Treemap,the output was,{ -1, 0, 1}<br>
+LinkedList,the output was,{ 1, -1, 0}</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/42300116" title="short permalink to this answer" class="short-link" id="link-post-42300116">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/42300116/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2017-02-17 14:16:11Z" class="relativetime">Feb 17 at 14:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/6779797/jsroyal"><div class="gravatar-wrapper-32"><img src="./q12_files/5hDpF.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/6779797/jsroyal">jsroyal</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">87</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="14 bronze badges"><span class="badge3"></span><span class="badgecount">14</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-42300116" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-42300116" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+				    <div class="question-status">
+        <h2>                    <b>protected</b> by <a href="http://stackoverflow.com/users/168175/flexo">Flexo</a><span class="mod-flair" title="moderator">♦</span> <span dir="ltr"><span title="2012-03-16 14:30:10Z" class="relativetime">Mar 16 '12 at 14:30</span></span>
+</h2>
+        <p>
+Thank you for your interest in this question. 
+Because it has attracted low-quality or spam answers that had to be removed, posting an answer now requires 10 <a href="http://stackoverflow.com/help/whats-reputation">reputation</a> on this site (the <a href="http://stackoverflow.com/help/privileges/new-user">association bonus does not count</a>).
+<br><br>
+Would you like to answer one of these <a href="http://stackoverflow.com/unanswered?fromProtectedNotice=true">unanswered questions</a> instead?
+</p>
+    </div>
+
+
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="http://stackoverflow.com/questions/tagged/map" class="post-tag" title="show questions tagged &#39;map&#39;" rel="tag">map</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2010-05-22 21:10:15Z"><b>6 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>406519 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526?lastactivity" class="lastactivity-link" title="2017-02-17 14:16:11Z">11 days ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk117784484",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk117784484"><div id="careersadsdoublehigh" style="display:none;"></div><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap/17708526#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./q12_files/i(1).gif"></div>
+            <div id="hireme" class="clc-jobs-multi orange tagged"><a class="top " href="https://stackoverflow.com/jobs" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=10439&amp;ct=1&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs&amp;sig=HZgtdJBqjCw82w"><span>Looking for a job?</span></a><div class="middle"><ul class="jobs"><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Wanted: Master of Java at Concirrus Ltd. Click to learn more." href="https://stackoverflow.com/jobs/130300/wanted-master-of-java-concirrus-ltd" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=234008&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F130300%2Fwanted-master-of-java-concirrus-ltd&amp;sig=2hxsETTshvEztg"><div class="title">Wanted: Master of Java</div><div><span class="company">Concirrus Ltd</span><span class="location">New Delhi, India</span></div><span class="post-tag">html</span><span class="post-tag">html5</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=234008&amp;ct=-1&amp;sig=-deVwIJJ3lfVOg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Android Developer - Gurgaon at Directi. Click to learn more." href="https://stackoverflow.com/jobs/131495/android-developer-gurgaon-directi" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=234793&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F131495%2Fandroid-developer-gurgaon-directi&amp;sig=H_hZ5-axsHhDVw"><div class="title">Android Developer - Gurgaon</div><div><span class="company">Directi</span><span class="location">Gurugram, India</span></div><span class="post-tag">android</span><span class="post-tag highlight">java</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=234793&amp;ct=-1&amp;sig=dZga6gW0LSzQZg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Java Software Architect - $60k at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/129485/java-software-architect-60k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=17264&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F129485%2Fjava-software-architect-60k-crossover&amp;sig=KWYDUJepJ7KdbQ"><div class="title">Java Software Architect - $60k</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">cloud</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=17264&amp;ct=-1&amp;sig=BEMcvaimSoOdPg" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li><li class="&quot;clc-dismissable&quot;"><div class="job-wrap"><a class="job" title="Java Chief Software Architect - $100K at Crossover. Click to learn more." href="https://stackoverflow.com/jobs/129483/java-chief-software-architect-100k-crossover" target="_blank" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=17260&amp;ct=0&amp;url=https%3A%2F%2Fstackoverflow.com%2Fjobs%2F129483%2Fjava-chief-software-architect-100k-crossover&amp;sig=nDUC3isL42VUew"><div class="title">Java Chief Software Architect - $100K</div><div><span class="company">Crossover</span><span class="location">No office location</span></div><div class="opts"><span class="opt remote">Remote</span></div><span class="post-tag highlight">java</span><span class="post-tag">cloud</span></a></div><a class="clc-dismiss" data-clc-click="https://clc.stackoverflow.com/click?an=4_zjcVhOPOGKB-tKfT9PJiYGBgYWBhAwlNBhyI7WYGA4rgEW69kAEmVkBHGkm4SZGCQmMTOwszCwHMjL3Wy5UHOS3WxeUSYGzanMDCwsDIIHNr2cZqn6It-OkSUrsSxxtoEDA0OBM9iklANV_9ssNTTnwOT0gHI5QDlGkNzUie2WsxPnQeUYtiZde1PL0PGn5jkA&amp;cr=17260&amp;ct=-1&amp;sig=5bF7zX3Mdnd2xQ" data-clc-meta-target="-1"><span class="clc-tooltip above-left">dismiss this job</span></a></li></ul></div><img src="./q12_files/impression.gif" class="impression" style="display: none;"></div>
+        <script>
+window.clc_request = 'Alk25xwXYNQIAAAAADEYLAACAAAAAgAAAAAKAAAAfGphdmF8bWFwfADeZdIbcX9KtFfH';
+;(function(n){var t,u,r,i;try{if(typeof[].indexOf!="function")return;if(window.attachEvent&&!window.addEventListener)return;if(n.allowed[0]!=="*"&&n.allowed.indexOf(location.hostname)===-1)return;if(t=window,t.clc=t.clc||{},u=t.clc_request||t.clcfl_request,u||console.warn("clc_request missing"),t.clc.init=t.clc.init||[],t.clc.init.push(function(n){return n.load()}),t.clc.options){for(r in t.clc.options)n[r]=t.clc.options[r];t.clc.options=n}else t.clc.options=n;i=document.createElement("script");i.async=!0;i.src=n.lib;document.body.appendChild(i)}catch(f){console.error("[clc] Error in loader:",f)}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","blog.codinghorror.com","talent.stackoverflow.com"],"h":"clc.stackoverflow.com","u":"https://clc.stackoverflow.com/markup.js","lib":"https://cdn.sstatic.net/clc/clc.min.js?v=bd570ea4a858"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/2444359?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">105</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/2444359/what-is-the-difference-between-a-hashmap-and-a-treemap?noredirect=1&amp;lq=1" class="question-hyperlink">What is the difference between a HashMap and a TreeMap?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/5329358?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">68</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/5329358/treemap-or-hashmap?noredirect=1&amp;lq=1" class="question-hyperlink">TreeMap or HashMap?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/7057430?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">15</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/7057430/treemap-or-hashmap-faster?noredirect=1&amp;lq=1" class="question-hyperlink">TreeMap or HashMap faster</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/29253474?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/29253474/hashmap-can-keep-always-the-same-order?noredirect=1&amp;lq=1" class="question-hyperlink">HashMap can keep always the same order?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/38453168?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/38453168/real-time-use-case-of-treemap-and-hashmap?noredirect=1&amp;lq=1" class="question-hyperlink">real time use case of treemap and hashmap?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/471199?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">314</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/471199/what-is-the-difference-between-%ce%98n-and-on?noredirect=1&amp;lq=1" class="question-hyperlink">What is the difference between Θ(n) and O(n)?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/4108604?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">87</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/4108604/java-comparable-vs-comparator?noredirect=1&amp;lq=1" class="question-hyperlink">Java : Comparable vs Comparator</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/11929542?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">8</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/11929542/how-to-ignore-the-case-sensitive-when-we-look-for-a-key-in-the-map?noredirect=1&amp;lq=1" class="question-hyperlink">How to ignore the case sensitive when we look for a key in the Map?</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/41726286?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">14</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/41726286/map-alternative-for-primitive-values?noredirect=1&amp;lq=1" class="question-hyperlink">Map alternative for primitive values</a>
+</div>
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/23957581?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">2</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/23957581/java-array-with-multiple-data-types?noredirect=1&amp;lq=1" class="question-hyperlink">Java Array with multiple data types</a>
+</div>					<div class="spacer more">
+				<a href="http://stackoverflow.com/questions/linked/2889777?lq=1">see more linked questions…</a>
+			</div>
+	</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/40471?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2470</div></a><a href="http://stackoverflow.com/questions/40471/differences-between-hashmap-and-hashtable?rq=1" class="question-hyperlink">Differences between HashMap and Hashtable?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/215497?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1777</div></a><a href="http://stackoverflow.com/questions/215497/in-java-difference-between-default-public-protected-and-private?rq=1" class="question-hyperlink">In Java, difference between default, public, protected, and private</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/1066589?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2234</div></a><a href="http://stackoverflow.com/questions/1066589/iterate-through-a-hashmap?rq=1" class="question-hyperlink">Iterate through a HashMap</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/2444359?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">105</div></a><a href="http://stackoverflow.com/questions/2444359/what-is-the-difference-between-a-hashmap-and-a-treemap?rq=1" class="question-hyperlink">What is the difference between a HashMap and a TreeMap?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6382817?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">2</div></a><a href="http://stackoverflow.com/questions/6382817/difference-between-linkedhashmap-hashmap-map-hashtable?rq=1" class="question-hyperlink">difference between linkedhashmap, hashmap, map, hashtable</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6663428?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">2</div></a><a href="http://stackoverflow.com/questions/6663428/differences-of-performances-between-nsdictionary-obj-c-and-hashmap-java?rq=1" class="question-hyperlink">differences of performances between NSDictionary (obj-c) and HashMap (java)</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/6802483?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">451</div></a><a href="http://stackoverflow.com/questions/6802483/how-to-directly-initialize-a-hashmap-in-a-literal-way?rq=1" class="question-hyperlink">How to directly initialize a HashMap (in a literal way)?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/7784452?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="http://stackoverflow.com/questions/7784452/i-1-access-to-a-treemap?rq=1" class="question-hyperlink">i-1 access to a TreeMap</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/10442775?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">5</div></a><a href="http://stackoverflow.com/questions/10442775/performance-of-treemap-hashmap-and-linkedhashmap?rq=1" class="question-hyperlink">Performance of TreeMap, HashMap and LinkedHashMap?</a></div><div class="spacer js-gps-track"><a href="http://stackoverflow.com/q/11412480?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="http://stackoverflow.com/questions/11412480/comparing-treemap-contents-gives-incorrect-answer?rq=1" class="question-hyperlink">Comparing TreeMap contents gives incorrect answer</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-retrocomputing" title="Retrocomputing Stack Exchange"></div><a href="http://retrocomputing.stackexchange.com/questions/2366/what-conventions-and-language-extensions-did-people-use-to-program-the-8086-and" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:648 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What conventions and language extensions did people use to program the 8086 and 80286?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-judaism" title="Mi Yodeya"></div><a href="http://judaism.stackexchange.com/questions/80379/does-judaism-consider-women-inferior" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:248 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does Judaism consider women inferior?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/153586/benevolent-aliens-who-initially-refuse-to-show-themselves" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Benevolent aliens who (initially) refuse to show themselves
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-christianity" title="Christianity Stack Exchange"></div><a href="http://christianity.stackexchange.com/questions/55532/whats-up-with-churches-and-guitars-in-this-joke-from-the-big-bang-theory" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:304 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What's up with churches and guitars in this joke from The Big Bang Theory?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/289406/lm317-with-a-load-of-less-than-1-5a" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    LM317 with a load of less than 1.5A
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/152606/is-there-a-field-length-that-is-too-short-to-allow-harmful-sql-injection" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a field length that is too short to allow harmful sql injection?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/111477/la-la-land-no-wait-moo-moo-moonlight" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    La La Land... no wait, Moo Moo Moonlight
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375730/can-genocide-be-used-for-the-mass-murder-of-disabled-people" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can "genocide" be used for the mass murder of disabled people?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375905/single-word-antonym-for-cheapest" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Single-word antonym for "cheapest"?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/72435/aliens-and-us-would-they-have-any-reason-to-interact-with-us" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Aliens and Us: Would they have any reason to interact with us?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/356210/what-are-my-options-for-inserting-a-back-page-into-my-document" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are my options for inserting a back page into my document?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/301723/what-does-king-of-the-hill-mean-in-overwatch" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What does "King of the Hill" mean in Overwatch?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/289411/modelling-a-capacitor-whose-dielectric-has-resistance-as-a-circuit-element" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Modelling a capacitor whose dielectric has resistance as a circuit element
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/111678/n-dimensional-nn-array-filled-with-n" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    N-dimensional N^N array filled with N
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/375700/verb-that-describes-voters-putting-a-politician-out-of-office-by-voting-for-a-di" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Verb that describes voters putting a politician out of office by voting for a different candidate
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/835345/bootable-windows-server-2016-usb-drive" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Bootable Windows Server 2016 USB Drive
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="http://politics.stackexchange.com/questions/16000/if-i-registered-to-vote-in-the-nov-2016-elections-will-i-also-be-registered-to" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    If I registered to vote in the nov 2016 elections, will I also be registered to vote in proceeding special elections?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/69366/why-arent-the-front-of-oscar-winner-envelopes-marked-with-the-award-theyre-for" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why aren't the front of Oscar winner envelopes marked with the award they're for?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/88870/does-declining-room-service-deny-housekeepers-of-their-income" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does declining room service deny housekeepers of their income?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-space" title="Space Exploration Stack Exchange"></div><a href="http://space.stackexchange.com/questions/20412/how-to-find-the-optimum-balance-between-amount-of-fuel-and-number-of-engines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:508 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to find the optimum balance between amount of fuel and number of engines?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/2162888/prove-that-the-sum-of-pythagorean-triples-is-always-even" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Prove that the sum of pythagorean triples is always even
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/315134/easy-to-perform-quantitative-experiments-at-home" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Easy to perform quantitative experiments at home
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-sitecore" title="Sitecore Stack Exchange"></div><a href="http://sitecore.stackexchange.com/questions/4648/is-there-a-getdefaultmediaurloptions-function" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:664 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a GetDefaultMediaUrlOptions function?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/156533/worded-mastermind-game-in-python" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Worded Mastermind game in Python
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/2889777" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/2889777/ivc/3dfe');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/2889777/ivc/3dfe" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+        </div>
+    </div><script async="" src="./q12_files/clc.min.js.download"></script>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://stackoverflow.blog/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="https://www.stackoverflowbusiness.com/advertise">advertising info</a>
+                        <a href="http://stackoverflow.com/jobs/directory/developer-jobs">developer jobs directory</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                        <li><a href="http://softwareengineering.stackexchange.com/" title="professionals, academics, and students working within the systems development life cycle who care about creating, delivering, and maintaining software responsibly">Software Engineering</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="information security professionals">Information Security</a></li>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Wolfram Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="http://expressionengine.stackexchange.com/" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                        <li><a href="http://crypto.stackexchange.com/" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://codereview.stackexchange.com/" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="http://magento.stackexchange.com/" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="http://dsp.stackexchange.com/" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="http://raspberrypi.stackexchange.com/" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="http://codegolf.stackexchange.com/" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://movies.stackexchange.com/" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="http://music.stackexchange.com/" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://ell.stackexchange.com/" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="http://japanese.stackexchange.com/" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="http://anime.stackexchange.com/" title="anime and manga fans">Anime &amp; Manga</a></li>
+                        <li><a href="http://mechanics.stackexchange.com/" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (17)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://chemistry.stackexchange.com/" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="http://biology.stackexchange.com/" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="http://cs.stackexchange.com/" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                        <li><a href="http://philosophy.stackexchange.com/" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="https://www.stackoverflowbusiness.com/talent">Stack Overflow Talent</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo © 2017 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2017.2.28.25251
+            </div>
+                </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('java,map');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-1');
+                ga('create', 'UA-5620270-59', {name: 'pageData', sampleRate: 5 });
+                ga('set', 'dimension2', '|java|map|');
+                ga('pageData.set', 'dimension2', '|java|map|');
+                ga('send', 'pageview');
+                ga('pageData.send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    
+</body></html>
