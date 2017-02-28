@@ -57,6 +57,8 @@ for line in fin:
 	bloblist = bloblist + [tb(line)]
 fin.close()
 
+print ("Import finished")
+
 # bloblist = [document1, document2, document3]
 for i, blob in enumerate(bloblist):
 	print("Top words in document {}".format(i + 1))

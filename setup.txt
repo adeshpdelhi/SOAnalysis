@@ -1,0 +1,9 @@
+sudo apt-get install python-pip git
+sudo pip install --upgrade gensim textblob
+git clone https://github.com/adeshpdelhi/SOAnalysis
+python -m textblob.download_corpora
+import nltk
+nltk.download()
+	d
+	stopwords
+	wordnet
