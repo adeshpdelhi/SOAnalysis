@@ -15,12 +15,6 @@ def idf(word, bloblist):
 def tfidf(word, blob, bloblist):
 	return tf(word, blob) * idf(word, bloblist)
 
-
-document2 = tb("""Python, from the Greek word , is a genus of
-nonvenomous pythons[2] found in Africa and Asia. Currently, 7 species are
-recognised.[2] A member of this genus, P. reticulatus, is among the longest
-snakes known.""")
-
 import glob
 import re
 import collections
@@ -49,9 +43,17 @@ def fix_line(line):
 				line = line + " "+ verb_lmtzr
 	return line
 
-bloblist = [tb(fix_line("Abstract class	Interface Abstract class can have abstract and non-abstract methods. Interface can have only abstract methods. Since Java 8, it can have default and static methods also. Abstract class doesn't support multiple inheritance.	Interface supports multiple inheritance. Abstract class can have final, non-final, static and non-static variables.	Interface has only static and final variables. 4) Abstract class can provide the implementation of interface.	Interface can't provide the implementation of abstract class. The abstract keyword is used to declare abstract class.	The interface keyword is used to declare interface."))]
 
+def get_weighted_dictionary(answer):
+	global bloblist
+	print ("Building dictionary")
+	bloblist = [tb(fix_line(answer))] + bloblist
+	weighted_dictionary = compute_weighted_dictionary(bloblist)
+	print ("Dictionary built")
+
+bloblist = []
 fin = open('out_posts_20000.txt', "r")
+# fin = open('SO500Q.txt', "r")
 for line in fin:
 	line = fix_line(line)
 	bloblist = bloblist + [tb(line)]
@@ -59,10 +61,21 @@ fin.close()
 
 print ("Import finished")
 
-# bloblist = [document1, document2, document3]
-for i, blob in enumerate(bloblist):
-	print("Top words in document {}".format(i + 1))
-	scores = {word: tfidf(word, blob, bloblist) for word in blob.words}
-	sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-	for word, score in sorted_words[:10]:
-		print("Word: {}, TF-IDF: {}".format(word, round(score, 5)))
+def compute_weighted_dictionary(bloblist):
+	weighted_dictionary = {}
+	# bloblist = [document1, document2, document3]
+	for i, blob in enumerate(bloblist):
+		print("Top words in document {}".format(i + 1))
+		scores = {word: tfidf(word, blob, bloblist) for word in blob.words}
+		sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+		for word, score in sorted_words[:10]:
+			print("Word: {}, TF-IDF: {}".format(word, round(score, 5)))
+			weighted_dictionary[word] = round(score, 5)
+		break
+	print weighted_dictionary
+	return weighted_dictionary
+
+if __name__ == "__main__":
+	answer = [tb(fix_line("Encapsulation is a strategy used as part of abstraction. Encapsulation refers to the state of objects - objects encapsulate their state and hide it from the outside; outside users of the class interact with it through its methods, but cannot access the classes state directly. So the class abstracts away the implementation details related to its state.Abstraction is a more generic term, it can also be achieved by (amongst others) subclassing. For example, the interface List in the standard library is an abstraction for a sequence of items, indexed by their position, concrete examples of a List are an ArrayList or a LinkedList. Code that interacts with a List abstracts over the detail of which kind of a list it is using.Abstraction is often not possible without hiding underlying state by encapsulation - if a class exposes its internal state, it can't change its inner workings, and thus cannot be abstracted.Abstraction is the concept of describing something in simpler terms, i.e abstracting away the details, in order to focus on what is important (This is also seen in abstract art, for example, where the artist focuses on the building blocks of images, such as colour or shapes). The same idea translates to OOP by using an inheritance hierarchy, where more abstract concepts are at the top and more concrete ideas, at the bottom, build upon their abstractions. At its most abstract level there is no implementation details at all and perhaps very few commonalities, which are added as the abstraction decreases.As an example, at the top might be an interface with a single method, then the next level, provides several abstract classes, which may or may not fill in some of the details about the top level, but branches by adding their own abstract methods, then for each of these abstract classes are concrete classes providing implementations of all the remaining methods.Encapsulation is a technique. It may or may not be for aiding in abstraction, but it is certainly about information hiding and/or organisation. It demands data and functions be grouped in some way - of course good OOP practice demands that they should be grouped by abstraction. However, there are other uses which just aid in maintainability etc."))]
+	get_weighted_dictionary(answer)
+

@@ -43,7 +43,7 @@ for i in range(len(answers)):
 	temp_tokens = [w for w in fix_line(answers[i]).split(" ") if not w in stops]
 	keywords = keywords + temp_tokens
 
-keywords = set(keywords)
+# keywords = set(keywords)
 print keywords
 
 keywords_found = []
@@ -67,10 +67,14 @@ for i in range(len(s1)):
 	for j in range(theshold1):
 		if(i+j>=len(s1)):
 			break
-		for word in s1[i+j].split(" "):
-			if(word in keywords):
-				counter = counter + 1
-				keywords_found_temp = keywords_found_temp + [word]
+		splitted_line = s1[i+j].split(" ")
+		for index in range(len(splitted_line) - 1):
+			word = splitted_line[index]
+			next_word = splitted_line[index + 1]
+			for index_keywords in range(len(keywords)):
+				if(keywords[index_keywords] == word and keywords[index_keywords + 1] == next_word):
+					counter = counter + 1
+					keywords_found_temp = keywords_found_temp + [(word,next_word)]
 	if(counter > max1):
 		max1i = i
 		keywords_found = keywords_found_temp
