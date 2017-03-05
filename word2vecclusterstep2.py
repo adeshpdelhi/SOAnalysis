@@ -1,5 +1,6 @@
 from sklearn.cluster import KMeans
 import time
+from gensim import models
 from gensim.models import Word2Vec
 
 model = Word2Vec.load("SO3826Qmodel")

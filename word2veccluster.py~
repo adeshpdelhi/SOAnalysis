@@ -12,7 +12,6 @@ for line in fin:
 			temp_tokens = temp_tokens + [t]
 	temp_tokens = [w for w in temp_tokens if not w in stops]
 	sentences = sentences + [temp_tokens]
-print sentences
 
 fin.close()
 
@@ -42,9 +41,5 @@ model.init_sims(replace=True)
 
 # It can be helpful to create a meaningful model name and 
 # save the model for later use. You can load it later using Word2Vec.load()
-print "similarity = .. "
-print model.similarity('java', 'class')
 model_name = "SO3826Qmodel"
 model.save(model_name)
-
-
