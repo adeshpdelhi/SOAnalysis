@@ -1,5 +1,8 @@
 from nltk.corpus import stopwords
 stops = set(stopwords.words("english"))
+import re
+from nltk.stem.wordnet import WordNetLemmatizer
+lmtzr = WordNetLemmatizer()
 fin = open('SO3826Q.txt', 'r')
 min_len = 3
 sentences = []
@@ -9,7 +12,12 @@ for line in fin:
 	temp_tokens = []
 	for t in tokens:
 		if(len(t)>=min_len):
-			temp_tokens = temp_tokens + [t]
+			noun_lmtzr = lmtzr.lemmatize(t,'n').encode('ascii')
+			verb_lmtzr = lmtzr.lemmatize(t,'v').encode('ascii')
+			if(len(t)!= len(noun_lmtzr)):
+				temp_tokens = temp_tokens + [noun_lmtzr]
+			else:
+				temp_tokens = temp_tokens + [verb_lmtzr]
 	temp_tokens = [w for w in temp_tokens if not w in stops]
 	sentences = sentences + [temp_tokens]
 print sentences
