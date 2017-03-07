@@ -68,7 +68,7 @@ def compute_weighted_dictionary(bloblist):
 		print("Top words in document {}".format(i + 1))
 		scores = {word: tfidf(word, blob, bloblist) for word in blob.words}
 		sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-		for word, score in sorted_words[:10]:
+		for word, score in sorted_words[:20]:
 			print("Word: {}, TF-IDF: {}".format(word, round(score, 5)))
 			weighted_dictionary[word] = round(score, 5)
 		break
