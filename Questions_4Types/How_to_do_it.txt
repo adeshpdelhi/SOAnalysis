@@ -1,0 +1,16 @@
+How to implement the Java comparable interface?
+Implementing Class Adapter Pattern in Java
+How to write a test code for a Battery Class?
+How should I initialize a complex instance variable in Java?
+How to write a test code for a Battery Class?
+How do I test a class that has private methods, fields or inner classes?
+How to efficiently iterate over each Entry in a Map?
+How do you assert that a certain exception is thrown in JUnit 4 tests?
+How to generate random integers within a specific range in Java?
+How can I test if an array contains a certain value?
+How do I create a file and write to it in Java?
+Representation/Modeling of data in Java (Class vs. Instance Variable)
+How to avoid Java code in JSP files?
+How to declare an array in Java?
+How do servlets work? Instantiation, sessions, shared variables and multithreading
+How to get the specific instance of a class from one of the instance variables that belong to it
