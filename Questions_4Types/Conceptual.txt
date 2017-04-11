@@ -1,0 +1,35 @@
+Encapsulation vs Abstraction?
+JAVA - Abstraction
+Difference between Data abstraction and procedural abstraction in java
+Java overloading and overriding
+Why is method overloading and overriding needed in java? [duplicate]
+Operator overloading and overriding in Java
+What is a serialVersionUID and why should I use it?
+Java serialization: readObject() vs. readResolve()
+Is the final keyword necessary in the Java singleton class?
+What's the equivalent of C's “static” keyword in Java?
+Static keyword usage in Java [duplicate]
+How final keyword works
+Overridden methods cannot throw exceptions Java [duplicate]
+Java: checked vs unchecked exception explanation
+When NOT to use the static keyword in Java?
+What is MVC (Model View Controller)? [closed]
+Checking (un)checked exceptions (Java)
+Dealing With Java Default Level Access Specifiers
+Difference between HashMap, LinkedHashMap and TreeMap
+ArrayList and List Java
+Does Functional Programming Replace GoF Design Patterns?
+Distinguishing between Java threads and OS threads?
+Synchronized Get Methods in Java
+Why should a Java class implement comparable?
+Design Patterns: Factory vs Factory method vs Abstract Factory
+Factory Pattern. When to use factory methods?
+Using java.net.URLConnection to fire and handle HTTP requests
+Synchornised method on java 
+Java-Thread Vs Runnable 
+Java Threads - Start()
+
+
+
+
+
