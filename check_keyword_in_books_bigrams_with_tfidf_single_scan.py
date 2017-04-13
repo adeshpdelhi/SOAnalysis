@@ -116,5 +116,5 @@ for i in range(len(s1)):
 print max1
 print "Index " + str(max1i)
 print convertToDictionary(keywords_found)
-print total_matches/window_size
+print total_matches
 print convertToDictionary(keywords_found_total)
