@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import compute_tfidf
 
 import sys
@@ -16,6 +17,7 @@ fin2 = open('core_java2.txt','r')
 # answers = ["Inheritance in java is a mechanism in which one object acquires all the properties and behaviors of parent object. The idea behind inheritance in java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also. Inheritance represents the IS-A relationship, also known as parent-child relationship. Why use inheritance? For Method Overriding (so runtime polymorphism can be achieved). For Code Reusability. Keyword extends. Types single multilevel hierarchical multiple hybrid"]
 
 # answers = ["Nested classes represent a special type of relationship that is it can access all the members (data members and methods) of outer class including private. Nested classes are used to develop more readable and maintainable code because it logically group classes and interfaces in one place only. Code Optimization: It requires less code to write."]
+answers = ["Inheritance in java is a mechanism in which one object acquires all the properties and behaviors of parent object."]
 
 s1 = fin1.readlines()
 s2 = fin2.readlines()
@@ -75,7 +77,6 @@ keywords_found = []
 keywords_found_total = []
 
 window_size = 100
-threshold_minimum_score_to_qualify_as_match = 4.5
 
 max1 = -1
 max1i = -1
@@ -98,9 +99,6 @@ for i in range(len(s1)):
 		max1i = i
 		keywords_found = keywords_found_temp
 	max1 = max(max1, counter)
-	if(counter>threshold_minimum_score_to_qualify_as_match):
-		total_matches+=1
-		keywords_found_total = keywords_found_total + keywords_found_temp
 
 print max1
 print "Index " + str(max1i)

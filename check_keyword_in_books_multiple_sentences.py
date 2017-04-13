@@ -4,9 +4,8 @@ fin1 = open('core_java1.txt','r')
 fin2 = open('core_java2.txt','r')
 
 # keywords = ["unallocated", "memory", "access", "null", "pointer", "exception"]
-# Inheritance in java is a mechanism in which one object acquires all the properties and behaviors of parent object. The idea behind inheritance in java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of parent class, and you can add new methods and fields also. Inheritance represents the IS-A relationship, also known as parent-child relationship. Why use inheritance? For Method Overriding (so runtime polymorphism can be achieved). For Code Reusability. Keyword extends. Types single multilevel hierarchical multiple hybrid
-answers = ["Inheritance in java is a mechanism in which one object acquires all the properties and behaviors of parent object."]
-# answers = ["NullPointerExceptions are exceptions that occur when you try to use a reference that points to no location in memory (null) as though it were referencing an object Calling a method on a null reference or trying to access a field of a null reference will trigger a NullPointerException memory null unallocated"]
+
+answers = ["NullPointerExceptions are exceptions that occur when you try to use a reference that points to no location in memory (null) as though it were referencing an object Calling a method on a null reference or trying to access a field of a null reference will trigger a NullPointerException memory null unallocated"]
 
 s1 = fin1.readlines()
 s2 = fin2.readlines()
@@ -49,7 +48,7 @@ print keywords
 
 keywords_found = []
 
-theshold1 = 2
+theshold1 = 50
 theshold2 = 100
 
 max1 = -1
